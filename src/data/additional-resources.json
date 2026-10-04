@@ -1,0 +1,6 @@
+[
+  {"id":"A001","title":"Thinking in React","url":"https://react.dev/learn/thinking-in-react","category":"TypeScript & UI","description":"Practice breaking an interface into components and deciding where state belongs.","checked":"2026-10-04","taskIds":["TS17","TS18","TS19"]},
+  {"id":"A002","title":"Next.js: build a dashboard","url":"https://nextjs.org/learn/dashboard-app","category":"Projects","description":"A guided application project covering routing, data, and application structure.","checked":"2026-10-04","taskIds":["TS20","TS21","TS31"]},
+  {"id":"A003","title":"The TypeScript Handbook","url":"https://www.typescriptlang.org/docs/handbook/intro","category":"TypeScript & UI","description":"A structured companion for everyday TypeScript fundamentals.","checked":"2026-10-04","taskIds":["TS08","TS09","TS10","TS11","TS12","TS14"]},
+  {"id":"A004","title":"PostgreSQL: getting started","url":"https://www.postgresql.org/docs/current/tutorial-start.html","category":"CS & SQL","description":"Start with database concepts and work through the official SQL tutorial.","checked":"2026-10-04","taskIds":["CS12","CS13","CS14","CS07","CS08","CS09","CS10","CS11","G05"]}
+]

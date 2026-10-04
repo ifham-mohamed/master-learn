@@ -1,0 +1,306 @@
+[
+  {
+    "id": "S001",
+    "url": "https://www.oracle.com/java/technologies/java-se-support-roadmap.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://www.oracle.com/java/technologies/java-se-support-roadmap.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S002",
+    "url": "https://docs.spring.io/spring-framework/reference/index.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-framework/reference/index.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S003",
+    "url": "https://docs.spring.io/spring-boot/system-requirements.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-boot/system-requirements.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S004",
+    "url": "https://www.hackerrank.com/reports/developer-skills-report-2025",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://www.hackerrank.com/reports/developer-skills-report-2025",
+    "state": "Reachable"
+  },
+  {
+    "id": "S005",
+    "url": "https://docs.spring.io/spring-data/jpa/reference/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-data/jpa/reference/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S006",
+    "url": "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-data/jpa/reference/jpa.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S007",
+    "url": "https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S008",
+    "url": "https://docs.spring.io/spring-data/jpa/reference/jpa/locking.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-data/jpa/reference/jpa/locking.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S009",
+    "url": "https://docs.spring.io/spring-security/reference/servlet/authentication/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-security/reference/servlet/authentication/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S010",
+    "url": "https://docs.spring.io/spring-security/reference/servlet/authorization/index.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-security/reference/servlet/authorization/index.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S011",
+    "url": "https://docs.spring.io/spring-framework/reference/testing/unit.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-framework/reference/testing/unit.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S012",
+    "url": "https://docs.spring.io/spring-framework/reference/testing.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-framework/reference/testing.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S013",
+    "url": "https://docs.spring.io/spring-boot/reference/testing/testcontainers.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-boot/reference/testing/testcontainers.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S014",
+    "url": "https://github.blog/news-insights/octoverse/typescript-python-and-the-ai-feedback-loop-changing-software-development/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://github.blog/news-insights/octoverse/typescript-python-and-the-ai-feedback-loop-changing-software-development/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S015",
+    "url": "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-6-0.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://www.typescriptlang.org/docs/handbook/release-notes/typescript-6-0.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S016",
+    "url": "https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S017",
+    "url": "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S018",
+    "url": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S019",
+    "url": "https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics",
+    "state": "Reachable"
+  },
+  {
+    "id": "S020",
+    "url": "https://survey.stackoverflow.co/2025/technology",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://survey.stackoverflow.co/2025/technology",
+    "state": "Reachable"
+  },
+  {
+    "id": "S021",
+    "url": "https://careersatdoordash.com/blog/doordash-is-rebuilding-its-engineering-interviews-around-ai/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://careersatdoordash.com/blog/doordash-is-rebuilding-its-engineering-interviews-around-ai/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S022",
+    "url": "https://careers.microsoft.com/v2/global/en/hiring-tips/technical-interviewing",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://careers.microsoft.com/v2/global/en/hiring-tips/technical-interviewing",
+    "state": "Reachable"
+  },
+  {
+    "id": "S023",
+    "url": "https://survey.stackoverflow.co/2025/ai",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://survey.stackoverflow.co/2025/ai",
+    "state": "Reachable"
+  },
+  {
+    "id": "S024",
+    "url": "https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S025",
+    "url": "https://careers.linkedin.com/Howwehire/ai-usage",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://careers.linkedin.com/Howwehire/ai-usage",
+    "state": "Reachable"
+  },
+  {
+    "id": "S026",
+    "url": "https://openai.com/interview-guide/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://openai.com/interview-guide/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S027",
+    "url": "https://www.ibm.com/careers/application-process",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://www.ibm.com/careers/application-process",
+    "state": "Reachable"
+  },
+  {
+    "id": "S028",
+    "url": "https://coderpad.io/survey-reports/coderpad-state-of-tech-hiring-2026/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://coderpad.io/survey-reports/coderpad-state-of-tech-hiring-2026/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S029",
+    "url": "https://docs.spring.io/spring-security/reference/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-security/reference/",
+    "state": "Reachable"
+  },
+  {
+    "id": "S030",
+    "url": "https://support.codesignal.com/hc/en-us/articles/38842912848151-Product-Updates-February-2026",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://support.codesignal.com/hc/en-us/articles/38842912848151-Product-Updates-February-2026",
+    "state": "Reachable"
+  },
+  {
+    "id": "S031",
+    "url": "https://www.postgresql.org/docs/current/tutorial-window.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://www.postgresql.org/docs/current/tutorial-window.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S032",
+    "url": "https://docs.spring.io/spring-boot/how-to/data-initialization.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://docs.spring.io/spring-boot/how-to/data-initialization.html",
+    "state": "Reachable"
+  },
+  {
+    "id": "S033",
+    "url": "https://www.aboutamazon.com/news/workplace/artificial-intelligence-resume-jobs-hiring-amazon",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://www.aboutamazon.com/news/workplace/artificial-intelligence-resume-jobs-hiring-amazon",
+    "state": "Reachable"
+  },
+  {
+    "id": "S034",
+    "url": "https://spring.io/blog/2025/11/20/spring-boot-4-0-0-available-now/",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://spring.io/blog/2025/11/20/spring-boot-4-0-0-available-now/",
+    "state": "Reachable"
+  },
+  {
+    "id": "A001",
+    "url": "https://react.dev/learn/thinking-in-react",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://react.dev/learn/thinking-in-react",
+    "state": "Reachable"
+  },
+  {
+    "id": "A002",
+    "url": "https://nextjs.org/learn/dashboard-app",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://nextjs.org/learn/dashboard-app",
+    "state": "Reachable"
+  },
+  {
+    "id": "A003",
+    "url": "https://www.typescriptlang.org/docs/handbook/intro",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://www.typescriptlang.org/docs/handbook/intro",
+    "state": "Reachable"
+  },
+  {
+    "id": "A004",
+    "url": "https://www.postgresql.org/docs/current/tutorial-start.html",
+    "checked": "2026-10-04",
+    "status": 200,
+    "finalUrl": "https://www.postgresql.org/docs/current/tutorial-start.html",
+    "state": "Reachable"
+  }
+]
