@@ -148,3 +148,7 @@ Follow [the complete GitHub Pages guide](docs/DEPLOYMENT.md). No other hosting s
 Use `npm run build:pages`, `npm run check:pages`, and `npm run preview:pages` to test the static site at `http://localhost:3200/master-learn/`. The export includes learning snapshots and supports repository subpaths and direct task-page refreshes. Local files appear online after committing, pushing, and deploying.
 
 On Pages, Google sync uses a temporary browser token and reconnects after reload. The encrypted server session described above applies only to the local Node version. No secret, backend API, or private-app password is included in the static export. Published content is public; review personal learning files before deploying. Browser progress stays local to each origin and is not automatically migrated.
+
+### Reconnecting Google on Pages
+
+Google access now survives client-side navigation between app pages until its token expires. A full browser refresh still clears the in-memory token. The site remembers only a non-secret previously-connected marker and offers **Reconnect Google**, using Google's prompt option to avoid forcing account selection again. Google may still require account selection or consent. **Use another Google account** explicitly opens the account chooser. No access token or refresh token is stored in localStorage, sessionStorage, or the repository. Reconnection never writes spreadsheet cells; review and sync remain separate actions.

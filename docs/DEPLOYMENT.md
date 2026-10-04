@@ -108,3 +108,7 @@ The Pages build deliberately does not read `.env.local`. Never export server-onl
 | Build fails | Open the failed job in Actions and read its error. No hosting-service setup is needed. |
 
 References: [GitHub Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [Next.js static export](https://nextjs.org/docs/app/guides/static-exports), [Google browser token model](https://developers.google.com/identity/oauth2/web/guides/use-token-model).
+
+### Reconnecting Google on Pages
+
+Google access now survives client-side navigation between app pages until its token expires. A full browser refresh still clears the in-memory token. The site remembers only a non-secret previously-connected marker and offers **Reconnect Google**, using Google's prompt option to avoid forcing account selection again. Google may still require account selection or consent. **Use another Google account** explicitly opens the account chooser. No access token or refresh token is stored in localStorage, sessionStorage, or the repository. Reconnection never writes spreadsheet cells; review and sync remain separate actions.

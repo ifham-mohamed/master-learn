@@ -2,7 +2,11 @@
 
 import Script from "next/script";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
+import {
+  browserGoogleConnection as connectionStore,
+  emptyGoogleConnection,
+} from "@/lib/browser-google-connection";
 import { useTracker } from "./tracker-provider";
 import {
   planSheetChanges,
@@ -27,6 +31,7 @@ declare global {
           initTokenClient(config: {
             client_id: string;
             scope: string;
+            prompt?: string;
             callback: (response: TokenResponse) => void;
             error_callback: () => void;
           }): { requestAccessToken(): void };
@@ -38,11 +43,44 @@ declare global {
 }
 const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || "";
 const scope = "https://www.googleapis.com/auth/spreadsheets";
+const rememberedKey = `learnspace-google-previous-connection:${clientId}`;
+function wasConnected() {
+  try {
+    return localStorage.getItem(rememberedKey) === "yes";
+  } catch {
+    return false;
+  }
+}
+function rememberConnection(value: boolean) {
+  try {
+    if (value) localStorage.setItem(rememberedKey, "yes");
+    else localStorage.removeItem(rememberedKey);
+  } catch {}
+  window.dispatchEvent(new Event("learnspace-google-history"));
+}
+function subscribeHistory(listener: () => void) {
+  window.addEventListener("storage", listener);
+  window.addEventListener("learnspace-google-history", listener);
+  return () => {
+    window.removeEventListener("storage", listener);
+    window.removeEventListener("learnspace-google-history", listener);
+  };
+}
 export function BrowserSheetSync() {
   const { localProgress } = useTracker();
   const [ready, setReady] = useState(false);
-  const [token, setToken] = useState("");
-  const [expires, setExpires] = useState(0);
+  const connection = useSyncExternalStore(
+    connectionStore.subscribe,
+    connectionStore.get,
+    emptyGoogleConnection,
+  );
+  const token = connection?.token || "";
+  const expires = connection?.expires || 0;
+  const remembered = useSyncExternalStore(
+    subscribeHistory,
+    wasConnected,
+    () => false,
+  );
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
@@ -59,7 +97,7 @@ export function BrowserSheetSync() {
     if (!token) return;
     const timeout = setTimeout(
       () => {
-        setToken("");
+        connectionStore.set(null);
         setReview(null);
         setMessage("Google access expired. Sign in again to review and sync.");
       },
@@ -67,7 +105,9 @@ export function BrowserSheetSync() {
     );
     return () => clearTimeout(timeout);
   }, [token, expires]);
-  function connect() {
+  function connect(chooseAccount = false) {
+    if (!window.google || busy) return;
+    setBusy(true);
     setError("");
     setMessage("");
     setReview(null);
@@ -75,7 +115,9 @@ export function BrowserSheetSync() {
       .initTokenClient({
         client_id: clientId,
         scope,
+        prompt: chooseAccount || !remembered ? "select_account" : "",
         callback: (response) => {
+          setBusy(false);
           if (
             !response.access_token ||
             response.error ||
@@ -86,16 +128,21 @@ export function BrowserSheetSync() {
             );
             return;
           }
-          setToken(response.access_token);
-          setExpires(Date.now() + (response.expires_in || 3600) * 1000 - 30000);
+          connectionStore.set({
+            token: response.access_token,
+            expires: Date.now() + (response.expires_in || 3600) * 1000 - 30000,
+          });
+          rememberConnection(true);
           setMessage(
             "Connected for this session. Review changes before syncing.",
           );
         },
-        error_callback: () =>
+        error_callback: () => {
+          setBusy(false);
           setError(
             "Google sign-in was closed or blocked. Allow the popup and try again.",
-          ),
+          );
+        },
       })
       .requestAccessToken();
   }
@@ -106,6 +153,8 @@ export function BrowserSheetSync() {
     setReview(null);
     setAcceptConflicts(false);
     try {
+      if (!connectionStore.valid())
+        throw new Error("Reconnect Google before reviewing changes.");
       const changes = planSheetChanges(
         await readMasterPlan(token),
         JSON.parse(local),
@@ -213,6 +262,13 @@ export function BrowserSheetSync() {
           spreadsheets, while this app targets only your linked Final Tracker
           workbook.
         </p>
+        <p className="inline-notice" role="status">
+          {token
+            ? "Connected to Google Sheets. You can move between app pages without reconnecting."
+            : remembered
+              ? "You previously connected Google. Your learning progress is safe. After a refresh, click Reconnect Google to renew access; Google may ask you to choose an account."
+              : "Google authorization is separate from your saved learning progress. Connect when you are ready to review and sync."}
+        </p>
         <p>
           <a
             className="back-link"
@@ -233,17 +289,33 @@ export function BrowserSheetSync() {
             <button
               className="button secondary"
               disabled={!ready || busy}
-              onClick={connect}
+              onClick={() => connect()}
             >
-              {token ? "Reconnect Google account" : "Sign in with Google"}
+              {busy
+                ? "Working…"
+                : token
+                  ? "Renew Google access"
+                  : remembered
+                    ? "Reconnect Google"
+                    : "Sign in with Google"}
             </button>
+            {remembered && (
+              <button
+                className="button secondary"
+                disabled={!ready || busy}
+                onClick={() => connect(true)}
+              >
+                Use another Google account
+              </button>
+            )}
             {token && (
               <button
                 className="button secondary"
                 disabled={busy}
                 onClick={() => {
                   window.google?.accounts.oauth2.revoke(token, () => {});
-                  setToken("");
+                  connectionStore.set(null);
+                  rememberConnection(false);
                   setReview(null);
                   setMessage("Disconnected. Local progress has been kept.");
                 }}

@@ -93,3 +93,10 @@ This supersedes the Render deployment plan above. The Render Blueprint and hoste
 - Browser Sheets sync retains explicit review, conflict acknowledgement, pre-write recheck, and post-write verification. Access tokens remain in memory; expiry clears the connection, and refresh requires reconnecting. The Pages build needs only the public OAuth client ID. Live Google authorization/writes were not exercised in this preview.
 - Added a GitHub Pages workflow, repository-subpath configuration, static snapshot export, static preview/check commands, and a complete setup guide. Remote Actions and actual Pages publication remain unverified until the user enables Pages and pushes the commits. The preview used an unset Google client ID and correctly displayed setup instructions.
 - Published learning content is public and changes only on deployment. Browser progress remains origin-specific; no migration/import was added. The encrypted server session applies only to local Node use.
+
+## Pages Google reconnect improvement — 5 October 2026
+
+- Moved temporary authorization from the sync component to a page-memory store, preserving it across client-side route navigation. Expiry still invalidates access; a new browser runtime starts disconnected.
+- Remembered only a non-secret previous-connection flag in browser storage. Returning users see Reconnect Google, with an empty prompt to avoid forcing Google's default account chooser. A separate account-switch action explicitly requests the chooser. Reconnection is user-triggered and never writes spreadsheet data.
+- Seventeen automated tests, lint, and type checking passed. The added test checks connection retention across view unsubscription, expiry rejection, clearing, and an empty new runtime. Live Google popup behavior was not exercised; Google can still require interaction.
+- Full-refresh login persistence remains unavailable in the selected in-memory Pages design. No token persistence or automatic refresh token flow was added. Documentation describes this limitation explicitly.
