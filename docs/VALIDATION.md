@@ -68,3 +68,5 @@ Checked on 4 October 2026.
 - Added Google OAuth token-based manual review/sync UI, before/after cell changes, explicit conflict acknowledgement, pre-write recheck, and post-write verification. No database, client secret, or service-account credentials are used.
 - Twelve tests passed, including row-ID lookup, header/duplicate/formula rejection, conflict detection, untouched remote field preservation, already-synced values, and numeric completion dates. Type checking, lint, and production build passed.
 - Live OAuth and writes are not verified: no Google OAuth client ID is configured. The UI explains setup and disables review until connected. No cells in the real spreadsheet were changed.
+
+- Localhost connection fix: startup scripts bind to localhost instead of IPv4-only 127.0.0.1, matching the OAuth origin and this machine's IPv6 localhost resolution. Rebuilt with the configured public client ID and verified the production sync page loads at http://localhost:3100/sync.

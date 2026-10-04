@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open [the local workspace](http://127.0.0.1:3000). For a production build, run `npm run build`, then `npm start`.
+Open [the local workspace](http://localhost:3000). For a production build, run `npm run build`, then `npm start`.
 
 ## How to use it
 
@@ -70,7 +70,7 @@ This structure is scaffolded for all 236 tasks across 11 categories. Templates c
 
 Relative Markdown links such as `[Results](../results/evidence.md)` open the matching file in this task. Local Markdown image paths work too; save assets in one of the five sections. Remote images, embedded raw HTML in Markdown, executable MDX, SVG, and unsupported file formats are not rendered. Nested folders are supported. JSX is displayed as source: start your separate React/Next.js project on another port and put its URL in a results document.
 
-**Start with the complete example:** [CS12 JOINs in the app](http://127.0.0.1:3000/tasks/CS12), or [read its theory](learning/cs-and-sql/CS12/theory/01-worked-example.md). It includes SQL, an illustrative JSX component, a static HTML result, notes, and executed assertions. Run `python learning/cs-and-sql/CS12/code/run_example.py` using Python 3. It creates a temporary in-memory SQLite database and rewrites only the example's `results/evidence.md` and `results/output.json`. Store personal notes separately.
+**Start with the complete example:** [CS12 JOINs in the app](http://localhost:3000/tasks/CS12), or [read its theory](learning/cs-and-sql/CS12/theory/01-worked-example.md). It includes SQL, an illustrative JSX component, a static HTML result, notes, and executed assertions. Run `python learning/cs-and-sql/CS12/code/run_example.py` using Python 3. It creates a temporary in-memory SQLite database and rewrites only the example's `results/evidence.md` and `results/output.json`. Store personal notes separately.
 
 The content endpoint is read-only and restricted to known task folders. Hidden files, symbolic links/junctions, dependencies, build output, and virtual environments are excluded. Preview limits are 1 MB for text, 20 MB for downloads, 500 files per task, and eight levels of nested folders. Keep credentials out of learning files. Files are visible to anyone who can access the app; the default local server binds to this computer. Deployment requires a Node.js server and the `learning/` directory on disk; a static export cannot provide this feature. Browser progress and project files are separate stores: back up both.
 
@@ -142,3 +142,4 @@ The live workbook mapping was checked on 5 October 2026: G Status, H Evidence, I
 Only locally changed fields relative to the imported curriculum are proposed. This is not two-way synchronization: unrelated sheet edits are not imported, and resetting a field to its imported value does not propose a change. Avoid concurrent sheet editing: the sheet is rechecked before the write, but those are separate requests. Writes are followed by verification. Tokens stay in memory until reload or disconnect; disconnect revokes the grant. Local progress remains saved after syncing. Google requests spreadsheet access; application requests target only the linked Final Tracker workbook.
 
 No OAuth client is bundled. Actual sign-in and live writes require your configured client and consent. Keep using the same origin: localhost and 127.0.0.1 have separate browser progress stores.
+
