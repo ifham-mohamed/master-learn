@@ -36,7 +36,16 @@ Checked on 4 October 2026.
 - Compact navigation kept the graduation logo clear of Overview, and expansion remained clickable. The task page at a 390px viewport had no document-level horizontal overflow; content tabs scroll within their own area.
 - No warnings or errors were captured in the clean in-app browser during these checks. Root-only hydration suppression tolerates the supplied extension-injected attribute; the user's extension itself was not modified or independently reproduced.
 
-## Current limits
+## Responsive layout and theme update — 5 October 2026
+
+- Removed the learning grid's maximum height, which allowed content to overflow beneath the footer. The viewer now follows the full document height.
+- Compared document bottoms with footer positions for long source and Markdown at 320px, 820px, 1144px, and 1920px viewports. The footer followed the document, with no document-level horizontal overflow. Checked the dark overview at 390px too.
+- Added shared pastel surface/text tokens, light/dark mode, a remembered theme choice, and a graduation-cap SVG favicon. Native View Transitions reveal the new theme from the button; unsupported browsers and reduced-motion preferences skip the animation.
+- Verified theme switching and persistence after reload. Browser console checks returned no warnings/errors during these interactions.
+- Eight automated tests, type checking, lint, and the production build passed. The build now includes the icon route (259 prerendered entries).
+- Removed the four saved JPEG previews. Future temporary UI captures belong in the ignored `artifacts/` folder.
+
+## Remaining limits
 
 - `npm audit --omit=dev` reports no production dependency vulnerabilities. The full audit currently reports five high-severity entries in the development lint dependency chain (`eslint-config-next` → `@next/eslint-plugin-next` → `fast-glob` → `micromatch` → `braces`). These are related entries for a nested-pattern denial-of-service advisory. No patched `braces` release was available in the registry when checked; do not downgrade Next.js to satisfy the audit's proposed major-version change. Recheck the tooling dependencies when a compatible patch is released.
 - Local progress belongs to the browser origin. Switching hostnames or ports creates a separate store. Clearing storage removes local updates. The original files remain intact.
