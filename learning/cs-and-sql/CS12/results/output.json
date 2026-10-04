@@ -1,0 +1,87 @@
+{
+  "ranAt": "2026-10-04T18:40:12.715564+00:00",
+  "python": "3.12.14",
+  "sqlite": "3.53.1",
+  "results": {
+    "inner_join": {
+      "passed": true,
+      "rows": [
+        [
+          "Ada",
+          101
+        ],
+        [
+          "Ada",
+          102
+        ],
+        [
+          "Lin",
+          103
+        ]
+      ]
+    },
+    "left_join": {
+      "passed": true,
+      "rows": [
+        [
+          "Ada",
+          101
+        ],
+        [
+          "Ada",
+          102
+        ],
+        [
+          "Lin",
+          103
+        ],
+        [
+          "Sam",
+          null
+        ]
+      ]
+    },
+    "no_orders": {
+      "passed": true,
+      "rows": [
+        [
+          "Sam"
+        ]
+      ]
+    },
+    "order_counts": {
+      "passed": true,
+      "rows": [
+        [
+          "Ada",
+          2
+        ],
+        [
+          "Lin",
+          1
+        ],
+        [
+          "Sam",
+          0
+        ]
+      ]
+    },
+    "paid_orders_keep_customers": {
+      "passed": true,
+      "rows": [
+        [
+          "Ada",
+          101
+        ],
+        [
+          "Lin",
+          103
+        ],
+        [
+          "Sam",
+          null
+        ]
+      ]
+    }
+  }
+}

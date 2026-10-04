@@ -1,0 +1,34 @@
+# B05 — Create Spring Boot service skeleton + typed Next/React client shell
+
+Projects · week 5–5 · Core · Build
+
+[Open in Learnspace](http://127.0.0.1:3000/tasks/B05)
+
+## Task outcome
+
+Demonstrate the working output, relevant tests, and one design trade-off.
+
+## Practice prompt
+
+CS/SQL: TCP/UDP + HTTP request lifecycle
+Design: Requirements + API + data model
+AI practice: AI-assisted orientation only; verify generated setup
+Create Spring Boot service skeleton + typed Next/React client shell
+Requirements - Clarify a booking service
+API design - Order API
+Data model - POS order + inventory
+Tokens/context - Estimate context needed for repo task
+Model limitations - Find unsupported claim/code assumption
+
+## Work here
+
+- [Theory](theory/concepts.md)
+- [Notes](notes/journal.md)
+- [Code](code/README.md)
+- [Results](results/evidence.md)
+- [Resources](resources/links.md)
+
+Prerequisites: B04.
+Original workbook: Master Plan row 63.
+
+These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.

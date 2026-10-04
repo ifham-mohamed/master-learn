@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Shell } from "@/components/shell";
 import { TrackerProvider } from "@/components/tracker-provider";
 import "./globals.css";
+import "./navigation.css";
+import "./learning.css";
 export const metadata: Metadata = {
   title: {
     default: "Learnspace — Your engineering journey",
@@ -14,7 +16,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    // Browser extensions may add root attributes before hydration (for example
+    // data-redeviation-bs-uid). Tolerate root-only differences; descendants
+    // retain React's hydration checks.
+    <html lang="en" suppressHydrationWarning>
       <body>
         <TrackerProvider>
           <Shell>{children}</Shell>

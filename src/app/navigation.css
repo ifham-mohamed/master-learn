@@ -1,0 +1,357 @@
+/* Navigation states are kept separate from the curriculum's page styles. */
+.sidebar {
+  padding-top: 25px;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #d8e3db transparent;
+}
+.sidebar-heading {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 0 32px;
+  min-height: 42px;
+}
+.sidebar > * {
+  flex-shrink: 0;
+}
+.sidebar-heading .brand {
+  margin: 0;
+  gap: 9px;
+  font-size: 20px;
+  letter-spacing: -0.8px;
+}
+.brand-icon {
+  width: 36px;
+  height: 38px;
+  flex-shrink: 0;
+}
+.brand-text {
+  white-space: nowrap;
+}
+.brand-subtitle {
+  font-size: 7px;
+  letter-spacing: 1.2px;
+  margin-top: 4px;
+}
+.desktop-sidebar-control {
+  flex-shrink: 0;
+}
+.sidebar-toggle {
+  width: 30px;
+  height: 34px;
+  border-radius: 7px;
+  color: #71867a;
+  border: 1px solid transparent;
+}
+.sidebar-toggle:hover {
+  background: #edf4ef;
+  color: #296449;
+  border-color: #dce8df;
+}
+.tooltip-anchor {
+  display: block;
+  min-width: 0;
+}
+.navigation-tooltip {
+  position: fixed;
+  z-index: 100;
+  transform: translateY(-50%);
+  max-width: 208px;
+  padding: 9px 12px;
+  background: #263f34;
+  color: #fff;
+  border: 1px solid #375447;
+  border-radius: 8px;
+  box-shadow: 0 5px 18px #122f2924;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  animation: tooltip-appear 0.12s ease-out;
+}
+.navigation-tooltip::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: calc(50% - 4px);
+  width: 8px;
+  height: 8px;
+  background: #263f34;
+  transform: rotate(45deg);
+  border-left: 1px solid #375447;
+  border-bottom: 1px solid #375447;
+}
+@keyframes tooltip-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.nav-link {
+  min-height: 44px;
+  position: relative;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+.nav-label {
+  white-space: nowrap;
+}
+.nav-link.active {
+  box-shadow: inset 0 0 0 1px #dce9df;
+}
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 13px;
+  bottom: 13px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: #438567;
+}
+.focus-link {
+  min-height: 40px;
+  gap: 10px;
+}
+.focus-link.active {
+  background: #f0f5f1;
+  color: #2e6b4c;
+  font-weight: 600;
+}
+.focus-icon {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--track);
+}
+.sidebar-rule {
+  margin: 21px 10px;
+}
+.sidebar-bottom {
+  margin-top: auto;
+}
+.profile {
+  flex-shrink: 0;
+}
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ffffffed;
+  backdrop-filter: blur(14px);
+}
+.sidebar nav a:focus-visible,
+.sidebar-toggle:focus-visible {
+  outline: 2px solid #438567;
+  outline-offset: 2px;
+}
+
+@media (min-width: 761px) {
+  .sidebar {
+    transition:
+      width 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      padding 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .main-shell {
+    transition: margin-left 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .sidebar-heading {
+    height: 42px;
+    padding-right: 36px;
+  }
+  .desktop-sidebar-control {
+    position: absolute;
+    left: calc(100% - 30px);
+    top: 2px;
+    z-index: 2;
+    transition:
+      left 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.2s ease,
+      transform 0.28s ease;
+  }
+  .sidebar-toggle {
+    height: 38px;
+  }
+  .brand-icon svg {
+    transition:
+      opacity 0.16s ease,
+      transform 0.2s ease;
+  }
+  .sidebar-collapsed {
+    --sidebar: 80px;
+  }
+  .sidebar-collapsed .sidebar {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .sidebar-collapsed .sidebar-heading {
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 24px;
+  }
+  /* The control slides into the logo slot instead of creating a second row. */
+  .sidebar-collapsed .desktop-sidebar-control {
+    left: 7px;
+    opacity: 0;
+    transform: scale(0.72);
+    pointer-events: none;
+  }
+  .sidebar-collapsed .sidebar-heading:hover .desktop-sidebar-control,
+  .sidebar-collapsed .desktop-sidebar-control:has(button:focus-visible) {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+  .sidebar-collapsed .sidebar-heading:hover .brand-icon svg,
+  .sidebar-collapsed
+    .sidebar-heading:has(button:focus-visible)
+    .brand-icon
+    svg {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  .sidebar-collapsed .sidebar-toggle {
+    width: 36px;
+    height: 38px;
+    border-radius: 11px;
+    background: var(--green);
+    color: #fff;
+    border-color: var(--green);
+  }
+  .sidebar-collapsed .sidebar-toggle:hover {
+    background: #205f47;
+  }
+  .sidebar-collapsed .sidebar-toggle:focus-visible {
+    outline-offset: 4px;
+  }
+  @media (hover: none) {
+    /* Touch devices with desktop-width layouts must not depend on hover. */
+    .sidebar-collapsed .desktop-sidebar-control {
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+    }
+  }
+  .sidebar-collapsed .brand-text,
+  .sidebar-collapsed .nav-label,
+  .sidebar-collapsed .nav-count,
+  .sidebar-collapsed .workspace-label,
+  .sidebar-collapsed .sidebar-bottom,
+  .sidebar-collapsed .profile-text,
+  .sidebar-collapsed .online-dot {
+    display: none;
+  }
+  .sidebar-collapsed .nav-link {
+    justify-content: center;
+    padding: 0;
+    width: 50px;
+    min-height: 44px;
+    margin: 4px 0;
+    border-radius: 10px;
+  }
+  .sidebar-collapsed .nav-link svg {
+    width: 20px;
+    height: 20px;
+  }
+  .sidebar-collapsed .sidebar-rule {
+    margin: 18px 9px;
+  }
+  .sidebar-collapsed .focus-link {
+    justify-content: center;
+    padding: 0;
+    min-height: 42px;
+    border-radius: 10px;
+    margin: 3px 0;
+  }
+  .sidebar-collapsed .focus-icon {
+    width: 31px;
+    height: 31px;
+    border-radius: 8px;
+    background: var(--track-bg);
+  }
+  .sidebar-collapsed .all-tracks {
+    justify-content: center;
+    margin: 5px 0 18px;
+    min-height: 36px;
+    border-radius: 8px;
+    color: #698170;
+  }
+  .sidebar-collapsed .all-tracks:hover {
+    background: #eef4ee;
+  }
+  .sidebar-collapsed .profile {
+    justify-content: center;
+    margin-top: auto;
+    padding: 19px 0;
+  }
+}
+@media (max-width: 760px) {
+  .desktop-sidebar-control {
+    display: none;
+  }
+  .sidebar {
+    width: min(292px, calc(100vw - 48px));
+    padding: 26px 20px 0;
+    box-shadow: 8px 0 35px #173c271c;
+  }
+  .sidebar-heading {
+    margin-bottom: 28px;
+    padding-right: 25px;
+  }
+  .sidebar-heading .brand {
+    font-size: 21px;
+  }
+  .mobile-close {
+    top: 27px;
+    right: 13px;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    color: #647b6c;
+  }
+  .mobile-close:hover {
+    background: #eef4ee;
+  }
+  .mobile-menu {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #e2ebe4;
+    border-radius: 8px;
+    background: #fafcf9;
+    margin-right: 5px;
+  }
+  .nav-link {
+    min-height: 46px;
+  }
+  .nav-scrim {
+    cursor: default;
+    backdrop-filter: blur(3px);
+  }
+  .navigation-tooltip {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .main-shell,
+  .nav-link,
+  .navigation-tooltip {
+    transition: none;
+    animation: none;
+  }
+  .desktop-sidebar-control,
+  .brand-icon svg {
+    transition: none;
+  }
+}

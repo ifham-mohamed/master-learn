@@ -15,6 +15,8 @@ Open [the local workspace](http://127.0.0.1:3000). For a production build, run `
 
 ## How to use it
 
+Use the panel button beside the Learnspace logo to collapse the desktop navigation. In compact mode the button tucks into the graduation logo; hover over the logo or reach it with Tab to reveal the expand control. The logo and button share one position, leaving Overview unobstructed. Compact mode shows labeled tooltips on hover and keyboard focus and is remembered on this device. On mobile, the menu opens a full drawer; Escape or the backdrop closes it and returns focus to the menu button.
+
 - **Overview** connects the selected week, recorded progress, workload, and learning tracks.
 - **Weekly journey** lets you explore all 24 weeks. The selected week is remembered on this device.
 - **Master plan** supports search, category filters, and status filters. Open any task for its full deliverable, practice prompt, prerequisites, original references, and suggested guides.
@@ -25,7 +27,48 @@ Open [the local workspace](http://127.0.0.1:3000). For a production build, run `
 
 Browsing is the default. **Edit progress** enables task-only editing: status, evidence, next action, hours, confidence, completion date, and mock scores/results. Updates are stored in this browser under `learnspace-progress-v1`, without accounts or a cloud service. Editing is switched off on reload. Progress and filters persist. **Export local progress** downloads a JSON backup; automatic backup restoration is not implemented. Clearing browser storage removes local updates. The original workbook is never rewritten.
 
-## Folder structure
+## Learn through your own files
+
+Open **Learning workspace** in the sidebar, filter by category or week, and choose a task. Every task has five tabs: Theory, Notes, Code, Results, and Resources. Edit the corresponding files in your editor; the open task checks for changes every five seconds while the page is visible, and when you return to it. **Refresh files** also reloads the selected document. Added, changed, and removed files appear without rebuilding the app.
+
+```text
+learning/
+  cs-and-sql/
+    CS12/
+      README.md                  Task outcome and original context
+      theory/concepts.md         Understand and explain the concepts
+      notes/journal.md           Predictions, questions, and reflections
+      code/                      Source files and experiments
+      results/evidence.md        Commands, actual output, and conclusions
+      resources/links.md         Original references and further reading
+```
+
+This structure is scaffolded for all 236 tasks across 11 categories. Templates contain task-specific outcomes and category-specific questions; they are starting points, not completed lessons. Run `npm run learning:init` to create missing templates after an import. It never overwrites existing files. Folder names follow category slugs and stable workbook task IDs; arbitrary new task IDs must first be added to the curriculum.
+
+1. Read the task outcome, then explain the theory in your own words.
+2. Write your prediction or approach in Notes.
+3. Save code under Code and run it with the appropriate tools in your editor or terminal.
+4. Save actual output, screenshots, a report, or a project URL under Results.
+5. Record what changed in your understanding and the sources you used.
+6. Enable **Edit progress** when ready and record evidence and completion separately. Saving files never automatically marks learning complete.
+
+| Saved content | How it appears |
+| --- | --- |
+| `.md`, `.markdown` | Formatted Markdown with tables, code blocks, and links; source toggle |
+| JSX, TSX, JavaScript, TypeScript, Python, Java, SQL and other supported code | Readable source; copy and download controls |
+| `.html`, `.htm` | Sandboxed static preview; inline CSS and embedded data images work; scripts, forms, network assets, and navigation are blocked |
+| PNG, JPEG, GIF, WebP, AVIF | Image preview |
+| PDF | Download to your PDF reader |
+| JSON, CSV, YAML, TXT, LOG | Text/source preview |
+| Website or running project URL in Markdown | External link opened in a separate tab |
+
+Relative Markdown links such as `[Results](../results/evidence.md)` open the matching file in this task. Local Markdown image paths work too; save assets in one of the five sections. Remote images, embedded raw HTML in Markdown, executable MDX, SVG, and unsupported file formats are not rendered. Nested folders are supported. JSX is displayed as source: start your separate React/Next.js project on another port and put its URL in a results document.
+
+**Start with the complete example:** [CS12 JOINs in the app](http://127.0.0.1:3000/tasks/CS12), or [read its theory](learning/cs-and-sql/CS12/theory/01-worked-example.md). It includes SQL, an illustrative JSX component, a static HTML result, notes, and executed assertions. Run `python learning/cs-and-sql/CS12/code/run_example.py` using Python 3. It creates a temporary in-memory SQLite database and rewrites only the example's `results/evidence.md` and `results/output.json`. Store personal notes separately.
+
+The content endpoint is read-only and restricted to known task folders. Hidden files, symbolic links/junctions, dependencies, build output, and virtual environments are excluded. Preview limits are 1 MB for text, 20 MB for downloads, 500 files per task, and eight levels of nested folders. Keep credentials out of learning files. Files are visible to anyone who can access the app; the default local server binds to this computer. Deployment requires a Node.js server and the `learning/` directory on disk; a static export cannot provide this feature. Browser progress and project files are separate stores: back up both.
+
+## Application folders
 
 ```text
 sources/                     Untouched input files
@@ -36,10 +79,13 @@ src/
     [view]/                  Weekly plan, master plan, practice, projects, resources, guide
     tasks/[id]/              Individual task pages
     tracks/[slug]/           Category views
+    learning/                Searchable learning workspace library
+    api/learning/[id]/        Read-only live file listing and previews
   components/                Navigation, views, task details, local state, shared components
   data/                      Normalized curriculum and resource availability results
   lib/                       Data types, completion rules, validation, formatting
 scripts/                     Reproducible workbook import and resource checking
+learning/                    Editable learning files, grouped by category and task
 tests/                       Data integrity and progress rule tests
 docs/
   ANALYSIS.md                Complete source inventory and interpretation
@@ -70,3 +116,7 @@ npm run build
 ```
 
 Fonts are bundled locally. The app does not need a database, credentials, or third-party font requests. See [analysis](docs/ANALYSIS.md) and [validation](docs/VALIDATION.md) for the source findings and exact limits.
+
+## Hydration and browser extensions
+
+The reported `data-redeviation-bs-uid` attribute is absent from the app source and appears to be inserted by a browser extension before React loads. The root `<html>` uses React's `suppressHydrationWarning` to tolerate root-level attribute differences only. Descendant hydration checks remain enabled. This does not remove the extension or fix unrelated hydration problems; if other warnings appear, compare a browser session with extensions disabled and inspect the named component. See [React's hydration documentation](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors).

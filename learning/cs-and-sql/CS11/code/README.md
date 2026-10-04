@@ -1,0 +1,18 @@
+# CS11 experiments
+
+Place source files or a small project here. Nested folders are supported. Learnspace displays the source; run programs in your editor or terminal.
+
+## Deliverable
+
+Recognize and mitigate conflicting lock orders
+Recognize race/deadlock scenarios and mitigation
+
+## Run instructions
+
+Record prerequisites, exact versions, setup commands, and a repeatable command.
+
+## Checks
+
+Describe a normal case, edge case, and failure case. Save real output in ../results/.
+
+For a web project, record its separately running URL in [resources](../resources/links.md). Generated folders such as node_modules, .next, dist, build, and .venv are excluded from the viewer.

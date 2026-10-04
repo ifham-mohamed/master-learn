@@ -19,6 +19,7 @@ import {
   type Task,
 } from "@/lib/tracker";
 import { statuses, type Progress } from "@/lib/progress";
+import { LearningWorkspace } from './learning-workspace';
 
 export function TaskDetail({ id }: { id: string }) {
   const { tasks, editing, setEditing } = useTracker();
@@ -61,6 +62,7 @@ export function TaskDetail({ id }: { id: string }) {
           </div>
         </div>
       </div>
+      <LearningWorkspace key={id} taskId={id}/>
       <div className="detail-layout">
         <div>
           <section className="panel detail-panel">
