@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import { isGitHubPages, assetUrl } from "@/lib/deployment";
 import remarkGfm from "remark-gfm";
 import { ArrowRight, BookOpen, Search } from "lucide-react";
 
@@ -284,7 +285,7 @@ export function ApplicationGuide() {
     };
   }, [query]);
   const matches = chapters.filter((chapter) =>
-    `${chapter.title} ${chapter.summary} ${chapter.body}`
+    `${chapter.title} ${chapter.summary} ${isGitHubPages ? chapter.body.replace(/The setup page explains the client ID[\s\S]*?Review and sync remain manual\./, "On GitHub Pages, only the public client ID is used. Sign in again after reload; tokens remain in memory. Review and sync remain manual.") : chapter.body}`
       .toLowerCase()
       .includes(query.trim().toLowerCase()),
   );
@@ -304,6 +305,14 @@ export function ApplicationGuide() {
           </Link>
         </div>
       </div>
+      {isGitHubPages && (
+        <p className="inline-notice">
+          GitHub Pages edition: instructions about live editor refresh apply
+          only to local development. Publish saved files by committing and
+          pushing to GitHub; wait for the Pages deployment. Google sync uses a
+          temporary browser connection. This site has no private-app password.
+        </p>
+      )}
       <div className="handbook-layout">
         <aside className="handbook-index">
           <label className="handbook-search">
@@ -360,8 +369,28 @@ export function ApplicationGuide() {
                 <p>{chapter.summary}</p>
               </header>
               <div className="learning-prose">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {chapter.body}
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    a: ({ href, children }) => (
+                      <a
+                        href={
+                          href?.startsWith("/") && !href.startsWith("//")
+                            ? assetUrl(href)
+                            : href
+                        }
+                      >
+                        {children}
+                      </a>
+                    ),
+                  }}
+                >
+                  {isGitHubPages
+                    ? chapter.body.replace(
+                        /The setup page explains the client ID[\s\S]*?Review and sync remain manual\./,
+                        "On GitHub Pages, only the public client ID is used. Sign in again after reload; tokens remain in memory. Review and sync remain manual.",
+                      )
+                    : chapter.body}
                 </ReactMarkdown>
               </div>
               <a className="handbook-back" href="#handbook-top">

@@ -52,7 +52,7 @@ const navigation = [
 ] as const;
 
 export function Shell({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
+  const pathname = usePathname().replace(/\/$/, "") || "/";
   const [open, setOpen] = useState(false);
   const collapsed = useSyncExternalStore(
     subscribeSidebar,

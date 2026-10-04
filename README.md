@@ -127,7 +127,7 @@ Fonts are bundled locally. Local browsing needs no database or credentials; opti
 
 The reported `data-redeviation-bs-uid` attribute is absent from the app source and appears to be inserted by a browser extension before React loads. The root `<html>` uses React's `suppressHydrationWarning` to tolerate root-level attribute differences only. Descendant hydration checks remain enabled. This does not remove the extension or fix unrelated hydration problems; if other warnings appear, compare a browser session with extensions disabled and inspect the named component. See [React's hydration documentation](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors).
 
-## Google Sheets progress sync
+## Google Sheets progress sync (local Node app)
 
 Open **Google Sheets sync** from the sidebar, Master Plan, or a task's evidence panel. The connection now uses a persistent encrypted server session instead of a temporary browser token. No database is required. A random HttpOnly cookie identifies the session; Google access and refresh tokens stay encrypted on disk in `.local/google-sessions/` and are renewed on the server when needed.
 
@@ -141,8 +141,10 @@ The live workbook mapping is G Status, H Evidence, I Next action, M Actual hours
 
 Use one trusted Node.js server with persistent local disk. Multi-instance/serverless hosting requires a shared session store; public hosting also needs app-level access control and HTTPS. Protect the environment file and session folder with OS permissions. Browser progress still belongs to its origin: localhost and 127.0.0.1 remain separate stores.
 
-## Deploy from GitHub
+## Deploy to GitHub Pages
 
-Follow [the complete deployment guide](docs/DEPLOYMENT.md). GitHub stores the project; the supplied Render Blueprint runs Node.js with persistent storage, preserving the file reader and Google sessions. GitHub Pages cannot run these server features. This Render setup requires a paid service and disk; nothing has been provisioned.
+Follow [the complete GitHub Pages guide](docs/DEPLOYMENT.md). No other hosting service or database is needed. Enable Settings → Pages → GitHub Actions, add the optional public Google client ID as an Actions variable, and run **Deploy GitHub Pages**. Pushes to main publish subsequent updates.
 
-The hosted app uses HTTPS and a private app password (`APP_ACCESS_PASSWORD`, 20+ characters, username `learner`). Google authorization is separate. GitHub Actions runs checks; deploy manually in Render after pushing and passing checks. Keep personal content in a private repository. Local learning files reach the hosted site after committing, pushing, and deploying. Localhost browser progress does not migrate to the new origin.
+Use `npm run build:pages`, `npm run check:pages`, and `npm run preview:pages` to test the static site at `http://localhost:3200/master-learn/`. The export includes learning snapshots and supports repository subpaths and direct task-page refreshes. Local files appear online after committing, pushing, and deploying.
+
+On Pages, Google sync uses a temporary browser token and reconnects after reload. The encrypted server session described above applies only to the local Node version. No secret, backend API, or private-app password is included in the static export. Published content is public; review personal learning files before deploying. Browser progress stays local to each origin and is not automatically migrated.

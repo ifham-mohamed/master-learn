@@ -1,97 +1,110 @@
-# Deploy from GitHub with all features
+# Deploy with GitHub Pages only
 
-GitHub stores the project and runs checks; **Render runs the website**. This app needs Node.js for its learning-file reader and encrypted Google sessions. GitHub Pages cannot run this backend. No database is needed.
+The app now supports a static GitHub Pages build. No Render, hosting server, paid disk, or database is required. Google Sheets remains optional and connects directly from your browser to Google.
 
-The supplied `render.yaml` uses one paid Node web service and a 1 GB persistent disk. Render's free services do not support persistent disks. Review [current pricing](https://render.com/pricing) before creating anything. No paid service or public deployment has been created by these changes.
+## What changes on Pages
 
-## 1. Prepare GitHub
+- All task pages, dashboard, handbook, themes, and browser-saved progress work.
+- Learning folders are converted into published JSON documents and downloadable files during the build. Edit locally, commit, and push to publish changes. Your PC files cannot update a remote static site until deployment finishes.
+- Google Sheets uses browser authorization with the public client ID only. Tokens remain in memory and are cleared on reload; reconnect before reviewing and syncing. The encrypted 30-day server connection is available only in the local Node app. Client secrets and refresh tokens are never shipped to Pages.
+- A Pages site has no application password. Treat published curriculum and learning files as public, even if the source repository is private. Review notes and results before publishing. Google authorization protects your spreadsheet, not the published website.
+- Progress is saved in the browser, not in GitHub. Changing origins (localhost to github.io) does not migrate progress. Export existing progress for your records; backup import and two-way Sheets import are not implemented.
 
-Run from the project directory:
+## 1. Push the code
 
-```sh
-npm ci
-npm test
-npm run lint
-npm run build
-npm run typecheck
+From `C:\projects\swe-learn`, inspect and push the prepared commits:
+
+```powershell
 git status
-```
-
-Review the tracked learning notes, results, and original workbook data. Use a private repository for personal content. Never commit `.env.local`, `.local/`, Google credentials, or the app password; the first two paths are already ignored.
-
-The configured remote is `git@github.com:ifham-mohamed/master-learn.git`. Publish reviewed commits:
-
-```sh
 git push origin main
 ```
 
-Wait for **Application checks** in GitHub Actions. The workflow requires no Google secrets and does not deploy a Pages site. Disable an older Pages deployment if you configured one for this repository.
+Repository: `ifham-mohamed/master-learn`. Never commit `.env.local`, `.local/`, tokens, or secrets. The Pages build uses an isolated copy of approved build inputs and publishes only `out/`, not the project directory.
 
-## 2. Create the host
+## 2. Enable GitHub Pages
 
-1. Sign in to [Render](https://dashboard.render.com/) and connect GitHub with access to this repository.
-2. Choose **New → Blueprint**, select the repository, branch `main`, and root `render.yaml`.
-3. Review the paid service and disk before creating them. Keep one instance and the persistent disk; do not choose a static site or free instance.
-4. Enter the environment values below. If Render has not assigned your address yet, temporarily enter `https://placeholder.example` for APP_ORIGIN; replace it immediately after creation, before Google sign-in.
-5. Create the Blueprint. Copy the assigned HTTPS origin, for example `https://master-learn-xxxx.onrender.com`. Do not assume this example name is available.
-6. Set **Environment → APP_ORIGIN** to the actual origin without a trailing slash; save and redeploy.
+1. Open the repository on GitHub.
+2. Go to **Settings → Pages**.
+3. Under **Build and deployment → Source**, select **GitHub Actions**. Do not select a branch or Jekyll theme.
+4. If using GitHub Free, Pages is available for public repositories. Private-repository availability depends on your GitHub plan. Making a repository public also exposes its tracked files and history, so review them first.
 
-| Variable | Value |
-| --- | --- |
-| `GOOGLE_CLIENT_ID` | Your Web application OAuth client ID. |
-| `GOOGLE_CLIENT_SECRET` | Its secret, entered directly in Render. |
-| `GOOGLE_SESSION_KEY` | A stable random 64-character hexadecimal key. Generate below. |
-| `APP_ORIGIN` | Your exact assigned HTTPS origin, with no path or trailing slash. |
-| `APP_ACCESS_PASSWORD` | A unique password of at least 20 characters from your password manager. Username is `learner`. |
-| `GOOGLE_SESSION_DIR` | `/var/data/google-sessions`, already supplied by the Blueprint. |
+## 3. Configure optional Google sign-in
 
-Generate a separate hosted encryption key locally. This intentionally prints the new secret in **your own terminal**. Paste it directly into Render and your password manager; do not share its output or commit it:
+1. Go to **Settings → Secrets and variables → Actions → Variables**.
+2. Add a **repository variable** named `NEXT_PUBLIC_GOOGLE_CLIENT_ID`.
+3. Set its value to your existing Google Web application client ID ending in `.apps.googleusercontent.com`. This identifier is public. Do not add the client secret, session key, or app password.
+4. In Google Cloud Console, enable **Google Sheets API** for that client's project.
+5. Open **Google Auth Platform → Clients → your Web application client**.
+6. Under **Authorized JavaScript origins**, add exactly:
 
-```sh
-node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"
+```text
+https://ifham-mohamed.github.io
 ```
 
-Keep the key unchanged during later deployments. Encrypted sessions reside on the attached `/var/data` disk. Protect disk backups and the key separately. Avoid infrastructure logging that records OAuth callback query strings; the application does not log tokens or authorization codes.
+Do not include `/master-learn`, `/sync`, or a trailing slash. Pages uses a popup token flow and needs no `/api/google/callback` redirect. Keep the localhost callback if you still use the secure local server.
 
-## 3. Configure Google
+7. Under **Audience**, add your Google account as a test user if the app is External and in Testing. Use an account that can edit Final Tracker.
+8. Save. Google settings can take time to propagate. If testing the static preview locally, also register `http://localhost:3200` as a JavaScript origin.
 
-1. In [Google Cloud Console](https://console.cloud.google.com/), select your project and enable **Google Sheets API**.
-2. Open **Google Auth Platform → Audience**. For an External app in Testing, add your Google account as a test user.
-3. Open **Clients → your Web application client**.
-4. Under **Authorized redirect URIs**, add `https://YOUR-ACTUAL-HOST/api/google/callback`, replacing the host with your real Render address. This is a redirect URI, not a JavaScript origin. Keep the localhost callback if you still use the local app.
-5. Save. If you later use a custom domain, update both APP_ORIGIN and this redirect URI.
+## 4. Run deployment
 
-## 4. Connect and verify
+1. Open GitHub **Actions → Deploy GitHub Pages**.
+2. Select **Run workflow**, branch `main`, then **Run workflow**. This is useful if the first push ran before Pages or the variable was configured.
+3. Wait for the build and deploy jobs to finish successfully. The workflow tests the application, builds every page and learning snapshot, checks static links/assets, and uploads only the export.
+4. Open the URL displayed by the deployment. With the current repository name it should be:
 
-1. Open the hosted HTTPS address. The browser asks for the private app credentials: username **learner**, password **APP_ACCESS_PASSWORD**. This protects the learning files and the whole app. It is separate from Google sign-in. Browsers control password-prompt persistence; close the browser or clear its authentication state after using a shared computer.
-2. Open **Google Sheets sync** in the sidebar, or visit `/sync`.
-3. Click **Sign in with Google**, choose an account that can edit Final Tracker, and grant Sheets access.
-4. Confirm **Connected securely**. Refresh, reopen the browser, and restart the Render service to check persistence. If the connection disappears after restart, check the disk directory, unchanged key, and hostname.
-5. Save an intended task update in **Edit progress**. Select **Review changes**, inspect the proposed cells, then **Sync to Google Sheets**. Check the success message and corresponding Master Plan row. Refreshing and signing in never write automatically.
+```text
+https://ifham-mohamed.github.io/master-learn/
+```
 
-Connections last up to 30 days. Google can revoke them earlier; External apps in Testing with Sheets permission normally need reconnection after seven days. Disconnect removes the local session and attempts to revoke Google access.
+The Google sync page is `https://ifham-mohamed.github.io/master-learn/sync/`.
 
-## 5. Continue learning and deploy updates
+5. Verify a task such as `/master-learn/tasks/CS12/`, its Theory/Code/Results tabs, a direct refresh on that route, theme switching, and local progress saving.
+6. Open Google Sheets sync, select **Sign in with Google**, grant Sheets access, and then **Review changes**. Only click **Sync to Google Sheets** after checking the cells. Sign-in and refresh never write automatically.
 
-- Practice locally in `learning/<category>/<task-id>/theory`, `notes`, `code`, `results`, and `resources`. Execute practice projects locally and record real results; the website displays code and links to separate apps rather than executing it.
-- Commit and push the learning files you want online. Wait for GitHub checks, then select Render **Manual Deploy → Deploy latest commit**. Automatic deploys are disabled in the Blueprint.
-- The online reader sees files on its own server. It cannot read unpushed files on your PC. Editing Render's checkout is temporary; redeploying can replace it. Keep learning content in Git. Only Google sessions use the persistent disk in this configuration.
-- Browser progress belongs to its browser and origin. Moving from localhost to the hosted address does not transfer it. Export your old progress for your records and keep the old browser/origin until preserved. Backup import and two-way Sheets import are not implemented; Sheets sync only pushes reviewed changed fields.
-- Back up the disk and keep the encryption key securely. Use one server instance; the file store and request queue do not support multiple workers.
+## 5. Publish subsequent learning
+
+Edit files under `learning/<category>/<task-id>/theory`, `notes`, `code`, `results`, and `resources`. Run practice code on your computer and save actual outputs in results. Commit and push the specific files you want online:
+
+```powershell
+git add learning/cs-and-sql/CS12
+git commit -m "docs: record SQL JOIN practice"
+git push origin main
+```
+
+Each push to `main` triggers the Pages workflow. Wait for success and refresh the site. Files above 20 MB are omitted with a workspace warning; text previews above 1 MB offer a download. HTML is shown in a script-disabled frame; raw HTML downloads are published as text so opening them cannot execute scripts on your Pages origin. Generated/hidden files and symlinks are excluded from learning snapshots.
+
+## Local Pages preview
+
+```powershell
+npm run build:pages
+npm run check:pages
+npm run preview:pages
+```
+
+Open `http://localhost:3200/master-learn/`. This preview serves only static files, just like Pages. It runs separately from the local Node version on port 3100; stop the preview with Ctrl+C when started in your terminal.
+
+For Google sign-in in this preview, set the public identifier before building:
+
+```powershell
+$env:NEXT_PUBLIC_GOOGLE_CLIENT_ID = "your-client-id.apps.googleusercontent.com"
+npm run build:pages
+```
+
+The Pages build deliberately does not read `.env.local`. Never export server-only credentials. The default base path is `/master-learn`; set `PAGES_BASE_PATH` to an empty string for a root/custom-domain site, or to `/new-repository-name` if renamed. GitHub's workflow obtains the correct path from Pages configuration automatically.
 
 ## Troubleshooting
 
-| Problem | Action |
+| Problem | Fix |
 | --- | --- |
-| Site cannot load | Check Render build/deployment logs. Locally, build then run `npm run start -- --port 3100`. |
-| Hosted startup fails | Set an exact HTTPS APP_ORIGIN, 20+ character APP_ACCESS_PASSWORD, and GOOGLE_SESSION_DIR on persistent disk. |
-| Browser credential prompt | Enter `learner` and the private app password, not your Google password. |
-| Setup incomplete | Read missing variable names on `/sync`, set them in Render Environment, restart. |
-| `redirect_uri_mismatch` | Google's redirect URI must exactly match APP_ORIGIN plus `/api/google/callback`. |
-| Google access denied | Check test-user membership, Sheets API, client secret, requested permission, and workbook edit access. |
-| Reconnect after every deploy | Check persistent disk mount, GOOGLE_SESSION_DIR, stable key, and unchanged origin. |
-| Seven-day disconnection | Often expected for Google apps in Testing. Reconnect; Google controls publishing/verification requirements. |
-| Missing online notes | Commit, push, then redeploy. |
-| Review expired or values changed | Review again; reviews expire after ten minutes and are rechecked before writing. |
+| Deploy job says Pages not configured | Set Settings → Pages → Source to GitHub Actions, then rerun. |
+| Google button unavailable | Set NEXT_PUBLIC_GOOGLE_CLIENT_ID as an Actions repository variable and rerun deployment. |
+| Google origin error | Register `https://ifham-mohamed.github.io` as an Authorized JavaScript origin, without repository path. |
+| Google popup denied | Check test-user membership, Sheets API, account edit access, and popup/browser settings. |
+| Reconnect after refresh | Expected on Pages. There is no backend to retain or renew a private Google session. |
+| Missing new notes | Check that files were committed and pushed and the latest deployment succeeded. |
+| Local progress missing | Different origins/browsers have different storage; your old progress remains at the old origin. |
+| 404 or broken styling | Use the workflow-generated URL and base path. Upload only the built out artifact, never src or .next. |
+| Build fails | Open the failed job in Actions and read its error. No hosting-service setup is needed. |
 
-References: [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages), [Next.js self-hosting](https://nextjs.org/docs/app/guides/self-hosting), [Render disks](https://render.com/docs/disks), [Blueprint reference](https://render.com/docs/blueprint-spec), [Google OAuth](https://developers.google.com/identity/protocols/oauth2/web-server).
+References: [GitHub Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [Next.js static export](https://nextjs.org/docs/app/guides/static-exports), [Google browser token model](https://developers.google.com/identity/oauth2/web/guides/use-token-model).

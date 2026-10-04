@@ -82,3 +82,14 @@ This section supersedes the older browser-only OAuth, missing-client-ID, and loc
 - Hosted access tests cover missing configuration, anonymous/incorrect credentials, static asset protection, accepted credentials, and the public health response. Local browsing remains accessible without the hosted password.
 - No remote deployment or Google Cloud changes were made. Live sign-in requires the user's client secret and exact callback registration. No real spreadsheet cells were written. Repository commits are local until pushed.
 - Hosting files come from the deployed Git checkout; local unpushed learning files and existing browser-origin progress do not transfer automatically. The encrypted file store is limited to a single server with persistent disk. Google Testing refresh tokens may expire after seven days despite the app's 30-day session limit.
+
+## GitHub Pages edition — 5 October 2026
+
+This supersedes the Render deployment plan above. The Render Blueprint and hosted startup command were removed; the secure local Node app remains available.
+
+- The static build completed with 260 exported HTML pages and 1,189 learning files across all 236 tasks. The build runs in an isolated staging folder, excludes backend routes/proxy and local environment files, and publishes only out/.
+- Sixteen automated tests passed. Lint and type checking passed. The export checker verified local HTML asset/link targets under /master-learn and confirmed no API routes or environment/session files are present in the published file tree.
+- Browser verification against a plain static server confirmed direct CS12 task loading, document/source display, relative links switching to recorded results, direct-route reload, Pages-specific Google setup, and active sidebar selection with trailing slashes. No browser warnings/errors were captured during these checks.
+- Browser Sheets sync retains explicit review, conflict acknowledgement, pre-write recheck, and post-write verification. Access tokens remain in memory; expiry clears the connection, and refresh requires reconnecting. The Pages build needs only the public OAuth client ID. Live Google authorization/writes were not exercised in this preview.
+- Added a GitHub Pages workflow, repository-subpath configuration, static snapshot export, static preview/check commands, and a complete setup guide. Remote Actions and actual Pages publication remain unverified until the user enables Pages and pushes the commits. The preview used an unset Google client ID and correctly displayed setup instructions.
+- Published learning content is public and changes only on deployment. Browser progress remains origin-specific; no migration/import was added. The encrypted server session applies only to local Node use.

@@ -1,3 +1,4 @@
+import { isGitHubPages, assetUrl, staticFilePath } from "./deployment";
 export const contentSections = [
   "theory",
   "notes",
@@ -26,7 +27,13 @@ export type LearningManifest = {
 };
 export type LearningDocument = { file: LearningFile; content: string };
 export function learningFileUrl(id: string, path: string, raw = false) {
+  if (isGitHubPages) return assetUrl(staticFilePath(id, path, raw));
   return `/api/learning/${encodeURIComponent(id)}?path=${encodeURIComponent(path)}${raw ? "&raw=1" : ""}`;
+}
+export function learningManifestUrl(id: string) {
+  return isGitHubPages
+    ? assetUrl(`/learning-data/${encodeURIComponent(id)}/manifest.json`)
+    : `/api/learning/${encodeURIComponent(id)}`;
 }
 
 /** Resolve relative document links against the selected file, confined to its task. */

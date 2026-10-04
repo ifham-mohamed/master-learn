@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev --hostname localhost",
     "build": "next build",
+    "build:pages": "tsx scripts/build-pages.ts",
+    "check:pages": "node scripts/check-pages.mjs",
+    "preview:pages": "node scripts/preview-pages.mjs",
     "start": "next start --hostname localhost",
-    "start:hosted": "node scripts/start-hosted.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "tsx --test tests/*.test.ts",

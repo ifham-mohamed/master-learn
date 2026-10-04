@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { isGitHubPages } from "@/lib/deployment";
 import {
   BookOpen,
   Check,
@@ -22,6 +23,7 @@ import {
 import {
   contentSections,
   learningFileUrl,
+  learningManifestUrl,
   resolveLearningLink,
   type ContentSection,
   type LearningManifest,
@@ -46,7 +48,7 @@ const icons = {
 async function readJson<T>(url: string, signal?: AbortSignal): Promise<T> {
   const response = await fetch(url, { cache: "no-store", signal });
   const data = await response.json();
-  if (!response.ok)
+  if (!response.ok || data.error)
     throw new Error(data.error || "Could not load the learning content.");
   return data;
 }
@@ -63,7 +65,7 @@ export function LearningWorkspace({ taskId }: { taskId: string }) {
     async (signal?: AbortSignal) => {
       try {
         const data = await readJson<LearningManifest>(
-          `/api/learning/${encodeURIComponent(taskId)}`,
+          learningManifestUrl(taskId),
           signal,
         );
         setManifest((previous) =>
@@ -85,9 +87,11 @@ export function LearningWorkspace({ taskId }: { taskId: string }) {
     const controller = new AbortController();
     // Fetch asynchronously; no state is derived synchronously from the effect.
     const initial = setTimeout(() => void refresh(controller.signal), 0);
-    const interval = setInterval(() => {
-      if (!document.hidden) void refresh(controller.signal);
-    }, 5000);
+    const interval = isGitHubPages
+      ? undefined
+      : setInterval(() => {
+          if (!document.hidden) void refresh(controller.signal);
+        }, 5000);
     const onFocus = () => {
       if (!document.hidden) void refresh(controller.signal);
     };
@@ -138,7 +142,9 @@ export function LearningWorkspace({ taskId }: { taskId: string }) {
           <h2>Your task workspace</h2>
           <p>
             Your files, connected to your learning. Save in your editor and read
-            them here.
+            them here.{" "}
+            {isGitHubPages &&
+              "On GitHub Pages, commit and push your files; they appear after the next deployment."}
           </p>
         </div>
         <div className="learning-actions">
@@ -147,7 +153,9 @@ export function LearningWorkspace({ taskId }: { taskId: string }) {
             {error
               ? "Needs attention"
               : manifest
-                ? "Auto-refresh · 5s"
+                ? isGitHubPages
+                  ? "Published files"
+                  : "Auto-refresh · 5s"
                 : "Loading files"}
           </span>
           <button
@@ -306,7 +314,10 @@ export function LearningWorkspace({ taskId }: { taskId: string }) {
                 <code>
                   {manifest.folder}/{section}/
                 </code>
-                . It will appear here automatically.
+                .{" "}
+                {isGitHubPages
+                  ? "Commit and push, then wait for deployment to see it here."
+                  : "It will appear here automatically."}
               </p>
             </div>
           )}
@@ -405,7 +416,7 @@ function DocumentViewer({
           )}
           <a
             href={learningFileUrl(taskId, file.path, true)}
-            download
+            download={file.name}
             aria-label="Download file"
           >
             <Download size={15} />
@@ -420,7 +431,7 @@ function DocumentViewer({
         <div className="learning-image">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`${learningFileUrl(taskId, file.path, true)}&v=${encodeURIComponent(file.revision)}`}
+            src={`${learningFileUrl(taskId, file.path, true)}${isGitHubPages ? "?" : "&"}v=${encodeURIComponent(file.revision)}`}
             alt={file.name}
           />
         </div>
@@ -446,10 +457,10 @@ function DocumentViewer({
             urlTransform={transformUrl}
             components={{
               a: ({ href, children }) => {
-                if (href?.startsWith("/api/learning/")) {
-                  const linked = new URL(href, "http://local").searchParams.get(
-                    "path",
-                  );
+                const linked = files.find(
+                  (entry) => learningFileUrl(taskId, entry.path, true) === href,
+                )?.path;
+                if (linked) {
                   return (
                     <a
                       href={href}
@@ -476,7 +487,12 @@ function DocumentViewer({
                 );
               },
               img: ({ src, alt }) =>
-                typeof src === "string" && src.startsWith("/api/learning/") ? (
+                typeof src === "string" &&
+                files.some(
+                  (entry) =>
+                    entry.kind === "image" &&
+                    learningFileUrl(taskId, entry.path, true) === src,
+                ) ? (
                   // Local file previews intentionally bypass image optimization.
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={src} alt={alt || "Learning result"} />

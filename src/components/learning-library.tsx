@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { isGitHubPages } from "@/lib/deployment";
 import { useState } from "react";
 import { ArrowRight, BookOpen, FolderOpen, Search } from "lucide-react";
 import { categories, tasks, slug } from "@/lib/tracker";
@@ -37,8 +38,11 @@ export function LearningLibrary() {
           <h2>A workspace that grows with you</h2>
           <p>
             Open a task, copy its folder path, and work in your editor. Saved
-            documents appear automatically in the task viewer. Run code and web
-            projects separately, then bring the results back.
+            documents appear{" "}
+            {isGitHubPages
+              ? "after you commit, push, and deploy to GitHub Pages"
+              : "automatically in the task viewer"}
+            . Run code and web projects separately, then bring the results back.
           </p>
           <Link href="/tasks/CS12">
             Explore the complete SQL JOINs example <ArrowRight size={15} />

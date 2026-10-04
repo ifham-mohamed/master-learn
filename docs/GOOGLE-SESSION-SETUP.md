@@ -1,4 +1,6 @@
-# Keep Google Sheets connected across reloads
+# Keep Google Sheets connected across reloads (local Node app only)
+
+For GitHub Pages, use [the Pages setup](DEPLOYMENT.md) instead. Pages uses browser authorization and only the public client ID; it cannot use these server credentials.
 
 This replaces the old browser-only token flow. Google tokens are stored in AES-256-GCM encrypted files under `.local/google-sessions/`. The browser holds an opaque HttpOnly, SameSite=Lax cookie; HTTPS also uses Secure. No database is required. Local HTTP is allowed only for loopback development. Keep the app on one origin.
 
@@ -33,4 +35,4 @@ Use a single trusted Node.js server with persistent local disk. Do not expose th
 
 [Google server-side OAuth and offline access](https://developers.google.com/identity/protocols/oauth2/web-server) · [Refresh-token expiration rules](https://developers.google.com/identity/protocols/oauth2#expiration) · [Google account permissions](https://myaccount.google.com/permissions)
 
-For hosted setup, follow [the deployment guide](DEPLOYMENT.md). The supplied hosted startup requires HTTPS, persistent session storage, and a private app password.
+The selected deployment is now GitHub Pages. The server session implementation remains available for local use only.
