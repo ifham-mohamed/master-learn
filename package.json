@@ -6,6 +6,7 @@
     "dev": "next dev --hostname localhost",
     "build": "next build",
     "start": "next start --hostname localhost",
+    "start:hosted": "node scripts/start-hosted.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "tsx --test tests/*.test.ts",

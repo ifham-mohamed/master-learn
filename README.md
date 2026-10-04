@@ -121,7 +121,7 @@ npm run lint
 npm run build
 ```
 
-Fonts are bundled locally. The app does not need a database, credentials, or third-party font requests. See [analysis](docs/ANALYSIS.md) and [validation](docs/VALIDATION.md) for the source findings and exact limits.
+Fonts are bundled locally. Local browsing needs no database or credentials; optional Google sync needs OAuth configuration. See [analysis](docs/ANALYSIS.md) and [validation](docs/VALIDATION.md) for the source findings and exact limits.
 
 ## Hydration and browser extensions
 
@@ -129,17 +129,20 @@ The reported `data-redeviation-bs-uid` attribute is absent from the app source a
 
 ## Google Sheets progress sync
 
-Open **Google Sheets sync** from the sidebar, Master Plan, or a task's evidence panel. This optional connection uses Google sign-in and the Sheets API without a database or service-account key. Standard API use has no additional charge, subject to [Google's quotas](https://developers.google.com/workspace/sheets/api/limits).
+Open **Google Sheets sync** from the sidebar, Master Plan, or a task's evidence panel. The connection now uses a persistent encrypted server session instead of a temporary browser token. No database is required. A random HttpOnly cookie identifies the session; Google access and refresh tokens stay encrypted on disk in `.local/google-sessions/` and are renewed on the server when needed.
 
-1. Create/select a Google Cloud project and enable the Sheets API.
-2. Configure Google Auth Platform branding/audience; add your account as a test user in Testing mode.
-3. Create a Web application OAuth client and register your exact JavaScript origins, such as `http://localhost:3000` and `http://localhost:3100`. Follow [Google's token-model setup](https://developers.google.com/identity/oauth2/web/guides/use-token-model).
-4. Copy `.env.example` to `.env.local`, set `NEXT_PUBLIC_GOOGLE_CLIENT_ID` to the public client ID, and restart development or rebuild/restart production. No client secret is used.
-5. Save task progress locally, sign in on `/sync`, choose **Review changes**, inspect every proposed cell, then click **Sync to Google Sheets**. Conflicts require acknowledgement in the review UI.
+Follow [the secure connection setup](docs/GOOGLE-SESSION-SETUP.md). Keep your existing client ID, add a server-only `GOOGLE_CLIENT_SECRET`, generate a stable `GOOGLE_SESSION_KEY` with `node scripts/setup-google-session.mjs`, and register `http://localhost:3100/api/google/callback` as an Authorized redirect URI. Set `APP_ORIGIN` to the exact origin you use. Never prefix secrets with NEXT_PUBLIC or commit `.env.local`/`.local`.
 
-The live workbook mapping was checked on 5 October 2026: G Status, H Evidence, I Next action, M Actual hours, N Confidence, R Completed on, Z Technical score, AA Communication score, AB Mock result. Rows are found by task ID. J/S/AD/AE formulas and other fields remain untouched. Dates are numeric spreadsheet dates. RAW input stores text literally, including a leading equals sign.
+After this migration, connect once. Refreshes and browser/server restarts keep the connection for up to 30 days, unless Google expires or revokes it earlier. OAuth apps in Testing with Sheets access normally require reconnection after seven days. Disconnect removes the local session and attempts Google revocation; failures are reported. Clearing cookies or changing the encryption key requires another sign-in. Standard Sheets API use has no additional charge within [Google's quotas](https://developers.google.com/workspace/sheets/api/limits).
 
-Only locally changed fields relative to the imported curriculum are proposed. This is not two-way synchronization: unrelated sheet edits are not imported, and resetting a field to its imported value does not propose a change. Avoid concurrent sheet editing: the sheet is rechecked before the write, but those are separate requests. Writes are followed by verification. Tokens stay in memory until reload or disconnect; disconnect revokes the grant. Local progress remains saved after syncing. Google requests spreadsheet access; application requests target only the linked Final Tracker workbook.
+Save task progress, select **Review changes**, inspect before/after cells, then click **Sync to Google Sheets**. Conflicts require acknowledgement. Reviews last ten minutes; the server checks local and sheet values again before writing and verifies the result afterward. No automatic writes occur on refresh or sign-in.
 
-No OAuth client is bundled. Actual sign-in and live writes require your configured client and consent. Keep using the same origin: localhost and 127.0.0.1 have separate browser progress stores.
+The live workbook mapping is G Status, H Evidence, I Next action, M Actual hours, N Confidence, R Completed on, Z Technical score, AA Communication score, AB Mock result. Rows are found by task ID. J/S/AD/AE formulas and all other fields remain untouched. Dates use numeric spreadsheet dates; RAW input stores text literally. This remains a one-way push of locally changed fields relative to the imported curriculum. Unrelated sheet edits are not imported, and resetting to an imported value does not propose an update. Avoid concurrent editing while syncing.
 
+Use one trusted Node.js server with persistent local disk. Multi-instance/serverless hosting requires a shared session store; public hosting also needs app-level access control and HTTPS. Protect the environment file and session folder with OS permissions. Browser progress still belongs to its origin: localhost and 127.0.0.1 remain separate stores.
+
+## Deploy from GitHub
+
+Follow [the complete deployment guide](docs/DEPLOYMENT.md). GitHub stores the project; the supplied Render Blueprint runs Node.js with persistent storage, preserving the file reader and Google sessions. GitHub Pages cannot run these server features. This Render setup requires a paid service and disk; nothing has been provisioned.
+
+The hosted app uses HTTPS and a private app password (`APP_ACCESS_PASSWORD`, 20+ characters, username `learner`). Google authorization is separate. GitHub Actions runs checks; deploy manually in Render after pushing and passing checks. Keep personal content in a private repository. Local learning files reach the hosted site after committing, pushing, and deploying. Localhost browser progress does not migrate to the new origin.

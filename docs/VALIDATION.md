@@ -70,3 +70,15 @@ Checked on 4 October 2026.
 - Live OAuth and writes are not verified: no Google OAuth client ID is configured. The UI explains setup and disables review until connected. No cells in the real spreadsheet were changed.
 
 - Localhost connection fix: startup scripts bind to localhost instead of IPv4-only 127.0.0.1, matching the OAuth origin and this machine's IPv6 localhost resolution. Rebuilt with the configured public client ID and verified the production sync page loads at http://localhost:3100/sync.
+
+## Persistent Google sessions and Node deployment — 5 October 2026
+
+This section supersedes the older browser-only OAuth, missing-client-ID, and local-only deployment notes above.
+
+- Replaced in-memory browser tokens with authorization-code OAuth, PKCE, single-use state, encrypted server-side token storage, and an opaque HttpOnly cookie. Access-token renewal occurs on the server; reviews and writes remain explicit.
+- Fifteen tests passed, including encrypted-store reopen, tamper rejection, callback/PKCE exchange, callback replay rejection, restored connection status, token renewal, cross-origin rejection, disconnect, expiry, and hosted access protection. Google HTTP responses were mocked; this is not a live OAuth or spreadsheet-write test.
+- Type checking, lint, and the production build passed. The local production sync page loads and reports the one remaining configuration item: GOOGLE_CLIENT_SECRET. Browser warnings/errors were empty during the setup-page check. The existing public client ID and a generated local session key are present; no secret values were printed.
+- Added a Render Blueprint for one paid Node service and persistent disk, a hosted startup check, private-app HTTP Basic access protection, a health endpoint, and GitHub Actions checks. The YAML parses and its environment/manual-deployment value types were checked. Render account-side Blueprint validation and Linux CI have not yet run.
+- Hosted access tests cover missing configuration, anonymous/incorrect credentials, static asset protection, accepted credentials, and the public health response. Local browsing remains accessible without the hosted password.
+- No remote deployment or Google Cloud changes were made. Live sign-in requires the user's client secret and exact callback registration. No real spreadsheet cells were written. Repository commits are local until pushed.
+- Hosting files come from the deployed Git checkout; local unpushed learning files and existing browser-origin progress do not transfer automatically. The encrypted file store is limited to a single server with persistent disk. Google Testing refresh tokens may expire after seven days despite the app's 30-day session limit.
