@@ -8,6 +8,65 @@
   border-radius: 16px;
   margin-bottom: 24px;
 }
+.sync-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+.sync-table {
+  overflow: auto;
+  margin: 18px 0;
+}
+.sync-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.sync-table th,
+.sync-table td {
+  padding: 12px;
+  border: 1px solid var(--border);
+  text-align: left;
+  min-width: 120px;
+  max-width: 380px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.sync-table th {
+  background: var(--pastel-blue);
+}
+.sync-table small,
+.sync-table strong {
+  display: block;
+  margin-top: 6px;
+}
+.sync-table strong {
+  color: var(--green);
+}
+.sync-consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 18px 0;
+  line-height: 1.7;
+}
+.sync-consent input {
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+.sync-field-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.sync-field-grid > div {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  background: var(--soft-surface);
+}
 .handbook-welcome > svg {
   flex-shrink: 0;
   color: var(--green);
@@ -68,6 +127,31 @@
 }
 .handbook-index nav a:hover {
   background: var(--pastel-mint);
+}
+.handbook-index nav a[aria-current="location"] {
+  background: var(--pastel-mint);
+  color: var(--green);
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--green);
+}
+.guide-section summary > svg {
+  flex-shrink: 0;
+  transition: transform 180ms ease;
+}
+.guide-section details[open] > summary > svg {
+  transform: rotate(90deg);
+}
+.guide-section summary:hover {
+  background: var(--soft-surface);
+}
+.guide-section summary:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: -3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .guide-section summary > svg {
+    transition: none;
+  }
 }
 .handbook-index > p {
   color: var(--muted);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -184,6 +184,8 @@ Use a useful evidence reference such as \`learning/cs-and-sql/CS12/results/evide
 Use **Export local progress** at the top of this page to download a JSON backup. Backup import is not implemented. Clearing browser storage removes progress. Switching between \`localhost\`, \`127.0.0.1\`, or ports such as 3000 and 3100 creates a separate browser store, so keep using one address for daily work.
 
 The original workbook is never rewritten by the app. Practice-bank counts and schedule settings remain imported snapshots. If you host the app elsewhere, its learning files are readable by people who can access that server; keep private credentials out of these files.
+
+**Optional Google Sheets connection:** Open [Google Sheets sync](/sync) to configure free Google sign-in without a database. After saving progress locally, choose Review changes, inspect the exact Master Plan fields, then click Sync to Google Sheets. This explicitly updates the linked online spreadsheet; the original local workbook stays unchanged. Only locally changed progress fields are proposed, not curriculum definitions or formulas. The setup page explains the required OAuth client ID.
 `,
   },
   {
@@ -252,6 +254,35 @@ Before you finish: save all files, rerun the relevant experiment or checks, reco
 
 export function ApplicationGuide() {
   const [query, setQuery] = useState("");
+  const [active, setActive] = useState("guide-start");
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const sections = Array.from(
+          document.querySelectorAll<HTMLElement>(
+            ".handbook-chapter, #original-guidance",
+          ),
+        );
+        const current =
+          sections
+            .filter((section) => section.getBoundingClientRect().top <= 160)
+            .at(-1) || sections[0];
+        if (current) setActive(current.id);
+      });
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("hashchange", update);
+    window.addEventListener("resize", update);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("hashchange", update);
+      window.removeEventListener("resize", update);
+    };
+  }, [query]);
   const matches = chapters.filter((chapter) =>
     `${chapter.title} ${chapter.summary} ${chapter.body}`
       .toLowerCase()
@@ -287,11 +318,26 @@ export function ApplicationGuide() {
           </label>
           <nav aria-label="Handbook chapters">
             {matches.map((chapter) => (
-              <a href={`#guide-${chapter.id}`} key={chapter.id}>
+              <a
+                href={`#guide-${chapter.id}`}
+                key={chapter.id}
+                aria-current={
+                  active === `guide-${chapter.id}` ? "location" : undefined
+                }
+                onClick={() => setActive(`guide-${chapter.id}`)}
+              >
                 {chapter.title}
               </a>
             ))}
-            <a href="#original-guidance">Original workbook guidance</a>
+            <a
+              href="#original-guidance"
+              aria-current={
+                active === "original-guidance" ? "location" : undefined
+              }
+              onClick={() => setActive("original-guidance")}
+            >
+              Original workbook guidance
+            </a>
           </nav>
           <p role="status">
             {matches.length} of {chapters.length} chapters
