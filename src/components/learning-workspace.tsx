@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import {
@@ -128,6 +129,9 @@ export function LearningWorkspace({ taskId }: { taskId: string }) {
       className="learning-workspace"
       aria-label="Task learning workspace"
     >
+      <Link className="workspace-help-link" href="/guide">
+        New here? Read the learning & coding guide →
+      </Link>
       <div className="learning-heading">
         <div>
           <div className="eyebrow">LEARN · EXPERIMENT · DOCUMENT</div>

@@ -5,6 +5,7 @@ import "./globals.css";
 import "./navigation.css";
 import "./learning.css";
 import "./theme.css";
+import "./handbook.css";
 export const metadata: Metadata = {
   title: {
     default: "Learnspace — Your engineering journey",

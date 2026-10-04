@@ -15,6 +15,8 @@ Open [the local workspace](http://127.0.0.1:3000). For a production build, run `
 
 ## How to use it
 
+Open **Plan & guidance** for the searchable in-app application handbook. Its nine chapters cover first-session setup, navigation, task folders, a practice routine, running code and separate web projects, file formats, progress backups, the application codebase, and troubleshooting. The handbook is also linked from the learning library and every task workspace. Original workbook guidance remains below it.
+
 Use the moon/sun button in the header to switch between pastel light and dark themes. Your choice is remembered on this browser; on first visit the app follows your system preference. The theme reveals outward from the button when browser support is available. Reduced-motion preferences and older browsers receive an immediate change. The graduation-cap favicon matches the workspace identity.
 
 Long learning documents stay in the normal page flow, with the learning-loop footer below their final line. Wide code blocks and tables scroll horizontally inside their own area. On small screens the file list moves above the document and the section tabs scroll horizontally; content is never cut off by a fixed document height.

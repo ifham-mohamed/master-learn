@@ -43,6 +43,11 @@ export function LearningLibrary() {
           <Link href="/tasks/CS12">
             Explore the complete SQL JOINs example <ArrowRight size={15} />
           </Link>
+          <p>
+            <Link href="/guide">
+              Read the application & practice handbook <BookOpen size={15} />
+            </Link>
+          </p>
         </div>
       </div>
       <div className="filter-bar">

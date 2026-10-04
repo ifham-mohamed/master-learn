@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ApplicationGuide } from "./application-guide";
 import { useState } from "react";
 import {
   ArrowDownToLine,
@@ -843,7 +844,7 @@ export function Workspace({
     <>
       <Heading
         label="THE CONTEXT BEHIND THE PLAN"
-        title="A thoughtful way to learn"
+        title="Your application & practice handbook"
         description="Keep the purpose, original guidance, and evidence behind every task close at hand."
       >
         <button className="button secondary" onClick={exportProgress}>
@@ -851,7 +852,10 @@ export function Workspace({
           Export local progress
         </button>
       </Heading>
-      <section className="guide-intro">
+      <div id="handbook-top">
+        <ApplicationGuide />
+      </div>
+      <section className="guide-intro" id="original-guidance">
         <span className="track-icon color-0">
           <TrendingUp size={24} />
         </span>

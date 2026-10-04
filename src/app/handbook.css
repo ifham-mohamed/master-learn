@@ -1,0 +1,155 @@
+.handbook-welcome {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px;
+  background: var(--pastel-blue);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.handbook-welcome > svg {
+  flex-shrink: 0;
+  color: var(--green);
+}
+.handbook-welcome p {
+  margin: 12px 0 18px;
+  color: var(--muted);
+  max-width: 760px;
+  line-height: 1.8;
+}
+.handbook-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 36px;
+}
+.handbook-index {
+  position: sticky;
+  top: 100px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  max-height: calc(100dvh - 120px);
+  overflow: auto;
+}
+.handbook-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--soft-surface);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 8px;
+}
+.handbook-search svg {
+  flex-shrink: 0;
+}
+.handbook-search input {
+  min-width: 0;
+  width: 100%;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  font-size: 12px;
+}
+.handbook-index nav {
+  display: grid;
+  gap: 5px;
+  margin: 16px 0;
+}
+.handbook-index nav a {
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.6;
+  border-radius: 8px;
+}
+.handbook-index nav a:hover {
+  background: var(--pastel-mint);
+}
+.handbook-index > p {
+  color: var(--muted);
+  font-size: 11px;
+  margin: 12px 0;
+}
+.handbook-chapters {
+  min-width: 0;
+  display: grid;
+  gap: 22px;
+}
+.handbook-chapter {
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  scroll-margin-top: 105px;
+}
+.handbook-chapter header {
+  padding: 24px 28px;
+  background: var(--soft-surface);
+  border-bottom: 1px solid var(--border);
+}
+.handbook-chapter header p {
+  color: var(--muted);
+  margin-top: 10px;
+  line-height: 1.7;
+  font-size: 12px;
+}
+.handbook-chapter .learning-prose {
+  padding: 12px 28px 20px;
+}
+.handbook-back {
+  display: block;
+  padding: 16px 28px;
+  border-top: 1px solid var(--border);
+  color: var(--green);
+  font-size: 12px;
+}
+#handbook-top,
+#original-guidance {
+  scroll-margin-top: 105px;
+}
+.workspace-help-link {
+  display: block;
+  padding: 13px 26px;
+  background: var(--pastel-blue);
+  color: var(--green);
+  font-size: 12px;
+  border-bottom: 1px solid var(--border);
+}
+@media (max-width: 1100px) {
+  .handbook-layout {
+    grid-template-columns: 1fr;
+  }
+  .handbook-index {
+    position: static;
+    max-height: none;
+  }
+  .handbook-index nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .handbook-welcome {
+    padding: 20px;
+  }
+  .handbook-welcome > svg {
+    display: none;
+  }
+  .handbook-index nav {
+    grid-template-columns: 1fr;
+  }
+  .handbook-chapter header {
+    padding: 20px;
+  }
+  .handbook-chapter .learning-prose {
+    padding: 10px 20px 20px;
+  }
+  .handbook-chapter h2 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}

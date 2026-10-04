@@ -45,7 +45,14 @@ Checked on 4 October 2026.
 - Eight automated tests, type checking, lint, and the production build passed. The build now includes the icon route (259 prerendered entries).
 - Removed the four saved JPEG previews. Future temporary UI captures belong in the ignored `artifacts/` folder.
 
-## Remaining limits
+## Application handbook — 5 October 2026
+
+- Added nine searchable, fully readable chapters to Plan & guidance, covering navigation, practice folders, coding, results, progress, backups, the codebase, and troubleshooting. Original workbook guidance remains available below the handbook.
+- Added handbook links to the learning library and each task workspace.
+- Browser checks verified a search for SQLite returned the code-running chapter, an unmatched search showed an empty state, and Clear search restored all nine chapters. Chapter links positioned headings below the sticky header.
+- Checked mobile reading at 390px and desktop dark mode without horizontal page overflow or browser console warnings/errors. Type checking, lint, and the production build passed.
+
+## Operational limits
 
 - `npm audit --omit=dev` reports no production dependency vulnerabilities. The full audit currently reports five high-severity entries in the development lint dependency chain (`eslint-config-next` → `@next/eslint-plugin-next` → `fast-glob` → `micromatch` → `braces`). These are related entries for a nested-pattern denial-of-service advisory. No patched `braces` release was available in the registry when checked; do not downgrade Next.js to satisfy the audit's proposed major-version change. Recheck the tooling dependencies when a compatible patch is released.
 - Local progress belongs to the browser origin. Switching hostnames or ports creates a separate store. Clearing storage removes local updates. The original files remain intact.
