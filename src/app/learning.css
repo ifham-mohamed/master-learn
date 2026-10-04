@@ -1,7 +1,7 @@
 .learning-workspace {
   border: 1px solid var(--border);
   border-radius: 15px;
-  background: #fff;
+  background: var(--surface);
   margin: 0 0 30px;
   overflow: hidden;
   min-width: 0;
@@ -18,7 +18,7 @@
 }
 .learning-heading p {
   font-size: 12px;
-  color: #6b7c72;
+  color: var(--muted);
   margin-top: 8px;
 }
 .learning-actions {
@@ -32,7 +32,7 @@
   align-items: center;
   gap: 6px;
   font-size: 10px;
-  color: #537b60;
+  color: var(--muted);
 }
 .file-sync > span {
   width: 5px;
@@ -41,17 +41,17 @@
   background: #73a887;
 }
 .file-sync-error {
-  color: #a57044;
+  color: var(--green);
 }
 .workspace-path {
   display: flex;
   align-items: center;
   gap: 9px;
   padding: 12px 26px;
-  border-top: 1px solid #edf1ed;
-  background: #fafcf9;
+  border-top: 1px solid var(--border);
+  background: var(--soft-surface);
   font-size: 11px;
-  color: #687e6b;
+  color: var(--muted);
 }
 .workspace-path code {
   overflow-wrap: anywhere;
@@ -65,7 +65,7 @@
   flex-shrink: 0;
 }
 .workspace-path button:hover {
-  background: #eaf2e8;
+  background: var(--pastel-mint);
 }
 .workspace-path > span {
   font-size: 10px;
@@ -84,31 +84,32 @@
   gap: 8px;
   padding: 16px 13px;
   font-size: 12px;
-  color: #788776;
+  color: var(--muted);
   border-bottom: 2px solid transparent;
   white-space: nowrap;
 }
 .learning-tabs > button[aria-selected="true"] {
-  color: #2b7351;
+  color: var(--text);
   border-color: #398263;
-  background: #f7faf5;
+  background: var(--pastel-mint);
 }
 .learning-tabs > button > span {
   font-size: 9px;
-  background: #eef2ec;
+  background: var(--pastel-mint);
   border-radius: 4px;
   padding: 2px 5px;
-  color: #798873;
+  color: var(--muted);
 }
 .learning-content {
   display: grid;
   grid-template-columns: 225px minmax(0, 1fr);
   min-height: 380px;
-  max-height: 760px;
+  /* Let the document define row height so the footer never covers content. */
+  align-items: start;
 }
 .learning-file-list {
   padding: 20px 12px;
-  background: #fafbf8;
+  background: var(--soft-surface);
   border-right: 1px solid var(--border);
   overflow: auto;
   min-width: 0;
@@ -126,7 +127,7 @@
   padding: 11px 10px;
   border-radius: 7px;
   margin-bottom: 4px;
-  color: #667660;
+  color: var(--muted);
 }
 .learning-file-list > button > svg {
   margin-top: 2px;
@@ -140,29 +141,29 @@
 .learning-file-list small {
   display: block;
   font-size: 9px;
-  color: #86927e;
+  color: var(--muted);
   margin-top: 2px;
 }
 .learning-file-list > button.selected {
-  background: #e9f1e6;
-  color: #2e714d;
+  background: var(--pastel-mint);
+  color: var(--text);
   box-shadow: inset 0 0 0 1px #dbe7d5;
 }
 .learning-file-list > button:hover {
-  background: #f0f5ec;
+  background: var(--pastel-mint);
 }
 .file-list-hint {
   font-size: 10px;
   line-height: 1.9;
-  color: #84917b;
-  border-top: 1px solid #e7ede2;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
   margin: 16px 8px 0;
   padding-top: 16px;
 }
 .learning-viewer {
-  overflow: auto;
+  overflow: hidden;
   min-width: 0;
-  background: white;
+  background: var(--surface);
 }
 .document-toolbar {
   display: flex;
@@ -171,7 +172,7 @@
   gap: 14px;
   padding: 16px 24px;
   border-bottom: 1px solid var(--border);
-  background: #fff;
+  background: var(--surface);
   position: sticky;
   top: 0;
   z-index: 1;
@@ -184,7 +185,7 @@
 .document-toolbar span {
   display: block;
   font-size: 10px;
-  color: #819076;
+  color: var(--muted);
   margin-top: 5px;
 }
 .document-actions {
@@ -200,21 +201,21 @@
   justify-content: center;
   padding: 7px;
   font-size: 10px;
-  color: #698263;
-  border: 1px solid #e5ecdf;
+  color: var(--muted);
+  border: 1px solid var(--border);
   border-radius: 5px;
-  background: #fcfdfb;
+  background: var(--soft-surface);
 }
 .learning-prose {
   padding: 25px 30px 35px;
-  color: #4d6254;
+  color: var(--muted);
   font-size: 14px;
   line-height: 1.85;
   overflow-wrap: anywhere;
 }
 .learning-prose h1 {
   font-size: 25px;
-  color: #294637;
+  color: var(--text);
   margin: 0 0 20px;
   line-height: 1.5;
 }
@@ -240,7 +241,7 @@
   padding: 3px 0;
 }
 .learning-prose a {
-  color: #286c50;
+  color: var(--text);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -251,23 +252,23 @@
 .learning-prose blockquote {
   margin: 20px 0;
   padding: 3px 18px;
-  background: #f2f6ed;
+  background: var(--pastel-mint);
   border-left: 3px solid #9cb98e;
-  color: #64745a;
+  color: var(--muted);
 }
 .learning-prose code {
   font:
     12px/1.7 Consolas,
     monospace;
-  background: #edf2e9;
+  background: var(--pastel-mint);
   padding: 2px 5px;
   border-radius: 4px;
 }
 .learning-prose pre {
   padding: 17px;
-  background: #f1f5ee;
+  background: var(--pastel-mint);
   overflow: auto;
-  border: 1px solid #e0e9da;
+  border: 1px solid var(--border);
   border-radius: 8px;
 }
 .learning-prose pre code {
@@ -286,12 +287,12 @@
 .learning-prose th,
 .learning-prose td {
   padding: 9px 12px;
-  border: 1px solid #e0e8da;
+  border: 1px solid var(--border);
   text-align: left;
   min-width: 80px;
 }
 .learning-prose th {
-  background: #f3f7f0;
+  background: var(--pastel-mint);
 }
 .learning-prose img {
   max-width: 100%;
@@ -317,13 +318,13 @@
   width: 100%;
   min-height: 480px;
   border: 0;
-  background: white;
+  background: var(--surface);
 }
 .learning-image {
   padding: 22px;
   display: grid;
   place-items: center;
-  background: #f8faf5;
+  background: var(--pastel-mint);
 }
 .learning-image img {
   max-width: 100%;
@@ -338,48 +339,48 @@
   padding: 16px 24px;
   font-size: 11px;
   line-height: 1.8;
-  background: #f7faf4;
+  background: var(--pastel-mint);
   border-top: 1px solid var(--border);
-  color: #708268;
+  color: var(--muted);
 }
 .learning-workflow-note svg {
   margin-top: 3px;
 }
 .content-error {
   padding: 15px 24px;
-  background: #fff2e8;
-  color: #955c35;
+  background: var(--pastel-peach);
+  color: var(--green);
   font-size: 12px;
   line-height: 1.7;
 }
 .content-warning {
   padding: 10px 24px;
   font-size: 11px;
-  color: #8c744e;
-  background: #faf6eb;
+  color: var(--muted);
+  background: var(--pastel-peach);
 }
 .learning-intro {
   display: flex;
   gap: 20px;
   padding: 28px;
-  background: #edf4ed;
-  border: 1px solid #dce8de;
+  background: var(--pastel-mint);
+  border: 1px solid var(--border);
   border-radius: 13px;
   margin-bottom: 25px;
 }
 .learning-intro-icon {
   width: 58px;
   height: 58px;
-  background: #dcead9;
+  background: var(--pastel-mint);
   border-radius: 15px;
   display: grid;
   place-items: center;
-  color: #4c845a;
+  color: var(--muted);
   flex-shrink: 0;
 }
 .learning-intro p {
   font-size: 12px;
-  color: #667c63;
+  color: var(--muted);
   margin-top: 10px;
   max-width: 780px;
 }
@@ -388,7 +389,7 @@
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: #327653;
+  color: var(--green);
   margin-top: 15px;
   font-weight: 600;
 }
@@ -401,13 +402,13 @@
   padding: 23px;
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: white;
+  background: var(--surface);
   transition:
     border-color 0.15s,
     transform 0.15s;
 }
 .learning-task-card:hover {
-  border-color: #a9c6b0;
+  border-color: var(--border);
   transform: translateY(-2px);
 }
 .learning-task-meta {
@@ -416,7 +417,7 @@
   justify-content: space-between;
   font-size: 9px;
   letter-spacing: 0.8px;
-  color: #74876f;
+  color: var(--muted);
   margin-bottom: 15px;
 }
 .learning-task-card h3 {
@@ -425,12 +426,12 @@
 }
 .learning-task-card p {
   font-size: 11px;
-  color: #7a8b72;
+  color: var(--muted);
   margin: 9px 0 15px;
 }
 .learning-task-card code {
   font-size: 10px;
-  color: #75926d;
+  color: var(--muted);
   overflow-wrap: anywhere;
   display: block;
 }
@@ -440,7 +441,7 @@
   gap: 7px;
   align-items: center;
   font-size: 10px;
-  color: #7d9073;
+  color: var(--muted);
   padding-top: 15px;
   margin-top: 17px;
 }
@@ -508,7 +509,7 @@
     display: none;
   }
   .learning-viewer {
-    max-height: 650px;
+    max-height: none;
   }
   .document-toolbar {
     padding: 14px 17px;

@@ -28,6 +28,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { categories, slug, isComplete } from "@/lib/tracker";
 import { useTracker } from "./tracker-provider";
 import { Tooltip } from "./tooltip";
+import { ThemeToggle } from "./theme-toggle";
 import {
   expandedServerSnapshot,
   getMobileSnapshot,
@@ -296,6 +297,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <strong>{pageTitle}</strong>
           </div>
           <div className="topbar-right">
+            <ThemeToggle />
             <span className="snapshot-pill">
               <span />
               {localCount ? "Local progress" : "Workbook snapshot"}

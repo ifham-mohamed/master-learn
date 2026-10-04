@@ -4,6 +4,7 @@ import { TrackerProvider } from "@/components/tracker-provider";
 import "./globals.css";
 import "./navigation.css";
 import "./learning.css";
+import "./theme.css";
 export const metadata: Metadata = {
   title: {
     default: "Learnspace — Your engineering journey",
@@ -20,6 +21,13 @@ export default function RootLayout({
     // data-redeviation-bs-uid). Tolerate root-only differences; descendants
     // retain React's hydration checks.
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('learnspace-theme');document.documentElement.dataset.theme=t==='dark'||t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}`,
+          }}
+        />
+      </head>
       <body>
         <TrackerProvider>
           <Shell>{children}</Shell>

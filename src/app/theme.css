@@ -1,0 +1,183 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --text: #263e3b;
+  --muted: #5f746e;
+  --border: #dce6e3;
+  --green: #29765b;
+  --green-light: #e6f3eb;
+  --pastel-mint: #eaf5ee;
+  --pastel-blue: #eaf1fa;
+  --pastel-lavender: #f0ecf8;
+  --pastel-peach: #fbefe5;
+  --soft-surface: #f5f8f6;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #141e24;
+  --surface: #1d2a31;
+  --text: #e3eee9;
+  --muted: #b1c4be;
+  --border: #3b4e54;
+  --green: #a4d9be;
+  --green-light: #293f37;
+  --pastel-mint: #293f37;
+  --pastel-blue: #2b3a50;
+  --pastel-lavender: #3a344c;
+  --pastel-peach: #463a31;
+  --soft-surface: #233239;
+}
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--pastel-lavender);
+  color: var(--text);
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+.topbar {
+  background: var(--surface);
+}
+.brand-icon,
+.button.primary {
+  background: #29765b;
+  color: #fff;
+}
+:root[data-theme="dark"] .sidebar-toggle {
+  color: var(--text);
+}
+.theme-toggle:hover {
+  transform: rotate(-12deg);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  z-index: 1;
+}
+.learning-workflow-note {
+  position: relative;
+  isolation: isolate;
+}
+.learning-workflow-note svg,
+.learning-file-list svg {
+  flex-shrink: 0;
+}
+.document-toolbar > div:first-child {
+  min-width: 0;
+}
+.learning-actions,
+.document-toolbar {
+  flex-wrap: wrap;
+}
+.learning-prose {
+  max-width: 100%;
+}
+.learning-source {
+  max-width: 100%;
+}
+.learning-file-list {
+  max-height: 70vh;
+}
+.learning-tabs {
+  scrollbar-width: thin;
+}
+.learning-tabs > button {
+  min-height: 44px;
+}
+.learning-heading > div {
+  min-width: 0;
+}
+.topbar-right {
+  flex-shrink: 0;
+}
+.learning-intro {
+  background: var(--pastel-blue);
+}
+.learning-task-card:nth-child(3n + 2) {
+  border-top: 3px solid var(--pastel-lavender);
+}
+.learning-task-card:nth-child(3n + 1) {
+  border-top: 3px solid var(--pastel-mint);
+}
+.learning-task-card:nth-child(3n) {
+  border-top: 3px solid var(--pastel-peach);
+}
+@media (max-width: 760px) {
+  .learning-file-list {
+    max-height: 190px;
+  }
+  .document-toolbar {
+    position: static;
+  }
+  .learning-heading,
+  .learning-prose {
+    padding: 20px 16px;
+  }
+  .learning-actions {
+    gap: 12px;
+  }
+  .document-actions button,
+  .document-actions a {
+    min-height: 38px;
+    min-width: 38px;
+  }
+  .learning-source {
+    padding: 20px 16px;
+  }
+  .learning-tabs {
+    padding: 0 6px;
+  }
+  .topbar {
+    gap: 8px;
+  }
+  .topbar-right {
+    gap: 8px;
+  }
+  .breadcrumb {
+    min-width: 0;
+  }
+  .breadcrumb strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 380px) {
+  .topbar {
+    padding-inline: 12px;
+  }
+  .edit-toggle {
+    font-size: 10px;
+    padding-inline: 8px;
+  }
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+}
+:root[data-theme="dark"] .learning-file-list > button.selected {
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+html {
+  scrollbar-color: #849c92 var(--bg);
+}

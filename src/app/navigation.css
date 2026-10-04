@@ -44,13 +44,13 @@
   width: 30px;
   height: 34px;
   border-radius: 7px;
-  color: #71867a;
+  color: var(--muted);
   border: 1px solid transparent;
 }
 .sidebar-toggle:hover {
-  background: #edf4ef;
-  color: #296449;
-  border-color: #dce8df;
+  background: var(--pastel-mint);
+  color: var(--text);
+  border-color: var(--border);
 }
 .tooltip-anchor {
   display: block;
@@ -121,8 +121,8 @@
   gap: 10px;
 }
 .focus-link.active {
-  background: #f0f5f1;
-  color: #2e6b4c;
+  background: var(--pastel-mint);
+  color: var(--text);
   font-weight: 600;
 }
 .focus-icon {
@@ -225,7 +225,7 @@
     width: 36px;
     height: 38px;
     border-radius: 11px;
-    background: var(--green);
+    background: #29765b;
     color: #fff;
     border-color: var(--green);
   }
@@ -285,10 +285,10 @@
     margin: 5px 0 18px;
     min-height: 36px;
     border-radius: 8px;
-    color: #698170;
+    color: var(--muted);
   }
   .sidebar-collapsed .all-tracks:hover {
-    background: #eef4ee;
+    background: var(--pastel-mint);
   }
   .sidebar-collapsed .profile {
     justify-content: center;
@@ -318,17 +318,17 @@
     width: 36px;
     height: 36px;
     border-radius: 8px;
-    color: #647b6c;
+    color: var(--muted);
   }
   .mobile-close:hover {
-    background: #eef4ee;
+    background: var(--pastel-mint);
   }
   .mobile-menu {
     width: 36px;
     height: 36px;
-    border: 1px solid #e2ebe4;
+    border: 1px solid var(--border);
     border-radius: 8px;
-    background: #fafcf9;
+    background: var(--soft-surface);
     margin-right: 5px;
   }
   .nav-link {
