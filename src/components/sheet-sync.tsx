@@ -1,42 +1,33 @@
 "use client";
 
-import Script from "next/script";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTracker } from "./tracker-provider";
-import {
-  planSheetChanges,
-  readMasterPlan,
-  sheetFields,
-  sheetsRequest,
-  spreadsheetId,
-  type SheetChange,
-} from "@/lib/sheet-sync";
+import { sheetFields, spreadsheetId, type SheetChange } from "@/lib/sheet-sync";
 
-type TokenResponse = { access_token?: string; error?: string; scope?: string };
-declare global {
-  interface Window {
-    google?: {
-      accounts: {
-        oauth2: {
-          initTokenClient(config: {
-            client_id: string;
-            scope: string;
-            callback: (response: TokenResponse) => void;
-            error_callback: () => void;
-          }): { requestAccessToken(): void };
-          revoke(token: string, callback: () => void): void;
-        };
-      };
-    };
-  }
+type Connection = {
+  configured: boolean;
+  connected: boolean;
+  missing: string[];
+  origin: string;
+  redirectUri: string;
+  expires: number | null;
+};
+async function api(action: string, body?: unknown) {
+  const response = await fetch(`/api/google/${action}`, {
+    method: body ? "POST" : "GET",
+    cache: "no-store",
+    headers: body ? { "Content-Type": "application/json" } : {},
+    ...(body ? { body: JSON.stringify(body) } : {}),
+  });
+  const data = await response.json();
+  if (!response.ok)
+    throw new Error(data.error || "Could not complete the Google request.");
+  return data;
 }
-const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || "";
-const scope = "https://www.googleapis.com/auth/spreadsheets";
 export function SheetSync() {
   const { localProgress } = useTracker();
-  const [ready, setReady] = useState(false);
-  const [token, setToken] = useState("");
+  const [connection, setConnection] = useState<Connection | null>(null);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
@@ -48,36 +39,60 @@ export function SheetSync() {
   const local = JSON.stringify(localProgress);
   const current = review?.local === local;
   const conflicts = review?.changes.some((change) => change.conflict);
-  function connect() {
-    setError("");
-    setMessage("");
-    setReview(null);
-    window.google?.accounts.oauth2
-      .initTokenClient({
-        client_id: clientId,
-        scope,
-        callback: (response) => {
+  const token = connection?.connected;
+  const clientId = connection?.configured;
+  useEffect(() => {
+    let active = true;
+    api("status")
+      .then((data) => {
+        if (active) {
+          setConnection(data);
           if (
-            !response.access_token ||
-            response.error ||
-            !response.scope?.split(" ").includes(scope)
-          ) {
+            new URLSearchParams(window.location.search).get("connection") ===
+            "failed"
+          )
             setError(
-              "Google access was not granted. Sign in and allow Sheets access to continue.",
+              "Google connection was not completed. Check the client secret, callback URL and consent, then try again.",
             );
-            return;
-          }
-          setToken(response.access_token);
-          setMessage(
-            "Connected for this session. Review changes before syncing.",
-          );
-        },
-        error_callback: () =>
-          setError(
-            "Google sign-in was closed or blocked. Allow the popup and try again.",
-          ),
+        }
       })
-      .requestAccessToken();
+      .catch((failure) => {
+        if (active) setError(failure.message);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
+  async function connect() {
+    setBusy(true);
+    setError("");
+    try {
+      const data = await api("connect", {});
+      window.location.assign(data.url);
+    } catch (failure) {
+      setError(
+        failure instanceof Error ? failure.message : "Could not connect.",
+      );
+      setBusy(false);
+    }
+  }
+  async function disconnect() {
+    setBusy(true);
+    setError("");
+    try {
+      const data = await api("disconnect", {});
+      setConnection((previous) =>
+        previous ? { ...previous, connected: false } : previous,
+      );
+      setReview(null);
+      setMessage(data.message);
+    } catch (failure) {
+      setError(
+        failure instanceof Error ? failure.message : "Could not disconnect.",
+      );
+    } finally {
+      setBusy(false);
+    }
   }
   async function preview() {
     setBusy(true);
@@ -86,21 +101,17 @@ export function SheetSync() {
     setReview(null);
     setAcceptConflicts(false);
     try {
-      const changes = planSheetChanges(
-        await readMasterPlan(token),
-        JSON.parse(local),
-      );
-      setReview({ changes, local });
-      if (!changes.length)
-        setMessage(
-          "No pending differences in your locally edited fields. The app does not import unrelated spreadsheet edits.",
-        );
+      const data = await api("review", { local: JSON.parse(local) });
+      setReview({ changes: data.changes, local });
+      if (!data.changes.length)
+        setMessage("No pending differences in your locally edited fields.");
     } catch (failure) {
       setError(
-        failure instanceof Error
-          ? failure.message
-          : "Could not review changes.",
+        failure instanceof Error ? failure.message : "Could not review.",
       );
+      api("status")
+        .then(setConnection)
+        .catch(() => {});
     } finally {
       setBusy(false);
     }
@@ -117,59 +128,24 @@ export function SheetSync() {
     setError("");
     setMessage("");
     try {
-      const latest = planSheetChanges(
-        await readMasterPlan(token),
-        JSON.parse(local),
-      );
-      if (JSON.stringify(latest) !== JSON.stringify(review.changes)) {
-        setReview(null);
-        throw new Error(
-          "The spreadsheet changed after your review. Review again before syncing.",
-        );
-      }
-      await sheetsRequest(token, "values:batchUpdate", {
-        valueInputOption: "RAW",
-        data: latest.map((change) => ({
-          range: change.range,
-          values: [[change.after]],
-        })),
+      const data = await api("sync", {
+        local: JSON.parse(local),
+        acceptConflicts,
       });
-      const remaining = planSheetChanges(
-        await readMasterPlan(token),
-        JSON.parse(local),
-      );
-      setReview(null);
-      if (remaining.length)
-        throw new Error(
-          "The write was sent, but verification found differences. Review again before retrying.",
-        );
-      setMessage(
-        `Verified ${latest.length} updated cells in Master Plan. Google Sheets recalculates its linked formulas. Local progress remains saved on this device.`,
-      );
+      setMessage(data.message);
     } catch (failure) {
-      setReview(null);
       setError(
         failure instanceof Error
           ? failure.message
-          : "Sync could not be verified. Review again before retrying.",
+          : "Could not sync. Review again before retrying.",
       );
     } finally {
+      setReview(null);
       setBusy(false);
     }
   }
   return (
     <>
-      {clientId && (
-        <Script
-          src="https://accounts.google.com/gsi/client"
-          onReady={() => setReady(true)}
-          onError={() =>
-            setError(
-              "Google sign-in could not load. Check your connection or browser blocking settings.",
-            )
-          }
-        />
-      )}
       <div className="page-heading">
         <div>
           <div className="eyebrow">REVIEW · SYNC · VERIFY</div>
@@ -183,10 +159,11 @@ export function SheetSync() {
       <section className="panel detail-panel">
         <h2>1. Connect to Google Sheets</h2>
         <p>
-          No database or service-account key is needed. Access is held in memory
-          for this session; reconnect after a reload. Google requests permission
-          to access spreadsheets, while this app targets only your linked Final
-          Tracker workbook.
+          Your Google connection survives refreshes and browser restarts for up
+          to 30 days. Tokens are encrypted on this server and renewed
+          automatically; this browser keeps only an HttpOnly session identifier.
+          Google expiry or revoked permission may require reconnection. No
+          database is needed.
         </p>
         <p>
           <a
@@ -198,16 +175,30 @@ export function SheetSync() {
             Open Final Tracker · Master Plan ↗
           </a>
         </p>
-        {!clientId ? (
+        {connection?.connected && (
+          <p role="status" className="inline-notice">
+            Connected securely. Your connection survives refreshes.{" "}
+            {connection.expires
+              ? `Session ends ${new Date(connection.expires).toLocaleDateString()}.`
+              : ""}
+          </p>
+        )}
+        {connection && !connection.configured && (
+          <p>Still needed: {connection.missing.join(", ")}</p>
+        )}
+        {!connection ? (
+          <p role="status">Checking your saved Google connection...</p>
+        ) : !clientId ? (
           <div className="inline-notice">
             One-time setup is needed before sign-in. Follow the instructions
-            below, add your OAuth client ID, then rebuild/restart Learnspace.
+            below, add the server credentials and register the callback URL,
+            then restart Learnspace.
           </div>
         ) : (
           <div className="sync-actions">
             <button
               className="button secondary"
-              disabled={!ready || busy}
+              disabled={busy || !connection}
               onClick={connect}
             >
               {token ? "Reconnect Google account" : "Sign in with Google"}
@@ -216,12 +207,7 @@ export function SheetSync() {
               <button
                 className="button secondary"
                 disabled={busy}
-                onClick={() => {
-                  window.google?.accounts.oauth2.revoke(token, () => {});
-                  setToken("");
-                  setReview(null);
-                  setMessage("Disconnected. Local progress has been kept.");
-                }}
+                onClick={disconnect}
               >
                 Disconnect Google
               </button>
@@ -326,7 +312,7 @@ export function SheetSync() {
         )}
       </section>
       <details className="panel detail-panel" open={!clientId}>
-        <summary>One-time free setup · no database</summary>
+        <summary>Google connection setup · no database</summary>
         <div className="learning-prose">
           <ol>
             <li>
@@ -346,19 +332,25 @@ export function SheetSync() {
               user.
             </li>
             <li>
-              Create an OAuth client with application type Web application. Add
-              the exact JavaScript origins you use, such as{" "}
-              <code>http://localhost:3000</code> and{" "}
-              <code>http://localhost:3100</code>. Use the same hostname
-              consistently because local progress belongs to that origin. Google
-              may reject raw IP origins; localhost is the simplest local setup.
+              Keep your existing Web application OAuth client. Under Authorized
+              redirect URIs add the exact callback shown here:{" "}
+              <code>
+                {connection?.redirectUri ||
+                  "http://localhost:3100/api/google/callback"}
+              </code>
+              . Use this same origin when opening the app.
             </li>
             <li>
-              In the project root, create <code>.env.local</code> and set{" "}
+              In <code>.env.local</code> (or your hosting environment settings),
+              keep your existing client ID and add{" "}
+              <code>GOOGLE_CLIENT_SECRET</code> (server-only),{" "}
+              <code>GOOGLE_SESSION_KEY</code> (64 random hex characters), and{" "}
               <code>
-                NEXT_PUBLIC_GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
+                APP_ORIGIN={connection?.origin || "http://localhost:3100"}
               </code>
-              . This is a public client identifier; do not add a client secret.
+              . Never use NEXT_PUBLIC for a secret. See{" "}
+              <code>docs/GOOGLE-SESSION-SETUP.md</code> for instructions. For
+              hosting from GitHub, follow <code>docs/DEPLOYMENT.md</code>.
             </li>
             <li>
               Restart development, or rebuild and restart production. Open this
@@ -374,11 +366,11 @@ export function SheetSync() {
           </p>
           <p>
             <a
-              href="https://developers.google.com/identity/oauth2/web/guides/use-token-model"
+              href="https://developers.google.com/identity/protocols/oauth2/web-server"
               target="_blank"
               rel="noreferrer"
             >
-              Google token setup documentation
+              Google server-side setup documentation
             </a>{" "}
             ·{" "}
             <a

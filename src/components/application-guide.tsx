@@ -185,7 +185,7 @@ Use **Export local progress** at the top of this page to download a JSON backup.
 
 The original workbook is never rewritten by the app. Practice-bank counts and schedule settings remain imported snapshots. If you host the app elsewhere, its learning files are readable by people who can access that server; keep private credentials out of these files.
 
-**Optional Google Sheets connection:** Open [Google Sheets sync](/sync) to configure free Google sign-in without a database. After saving progress locally, choose Review changes, inspect the exact Master Plan fields, then click Sync to Google Sheets. This explicitly updates the linked online spreadsheet; the original local workbook stays unchanged. Only locally changed progress fields are proposed, not curriculum definitions or formulas. The setup page explains the required OAuth client ID.
+**Optional Google Sheets connection:** Open [Google Sheets sync](/sync) to configure free Google sign-in without a database. After saving progress locally, choose Review changes, inspect the exact Master Plan fields, then click Sync to Google Sheets. This explicitly updates the linked online spreadsheet; the original local workbook stays unchanged. Only locally changed progress fields are proposed, not curriculum definitions or formulas. The setup page explains the client ID, server-only secret, encryption key, and callback URL. Once connected, refreshing keeps your encrypted connection for up to 30 days; Google may require reconnection sooner. Tokens stay on the server. Review and sync remain manual.
 `,
   },
   {

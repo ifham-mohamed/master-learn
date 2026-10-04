@@ -6,4 +6,5 @@ out/
 !.env.example
 __pycache__/
 artifacts/
+.local/
 *.log
