@@ -537,6 +537,12 @@ export function Workspace({
         <div className="result-count" aria-live="polite">
           {filteredTasks.length} matching tasks
         </div>
+        <div className="inline-notice">
+          <Link href="/sync">
+            Review local progress and sync the editable Master Plan fields to
+            Google Sheets →
+          </Link>
+        </div>
         <section className="panel">
           <TaskList items={filteredTasks} />
         </section>
@@ -878,9 +884,10 @@ export function Workspace({
         <ShieldCheck size={19} />
         <span>
           Browse by default. Turn on <strong>Edit progress</strong> to record
-          task progress on this device. Changes stay in this browser and do not
-          modify your original files. Practice-bank counts and schedule settings
-          remain source snapshots.
+          task progress on this device. Changes stay in this browser until you
+          explicitly review and sync to Google Sheets; your local source files
+          stay unchanged. Practice-bank counts and schedule settings remain
+          source snapshots.
         </span>
       </div>
       <div className="guide-groups">

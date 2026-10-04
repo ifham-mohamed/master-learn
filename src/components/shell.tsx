@@ -48,6 +48,7 @@ const navigation = [
   ["/projects", "Projects", FolderKanban],
   ["/resources", "Resource library", LibraryBig],
   ["/guide", "Plan & guidance", BookOpen],
+  ["/sync", "Google Sheets sync", ArrowUpRight],
 ] as const;
 
 export function Shell({ children }: { children: React.ReactNode }) {

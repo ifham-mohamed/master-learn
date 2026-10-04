@@ -19,7 +19,7 @@ import {
   type Task,
 } from "@/lib/tracker";
 import { statuses, type Progress } from "@/lib/progress";
-import { LearningWorkspace } from './learning-workspace';
+import { LearningWorkspace } from "./learning-workspace";
 
 export function TaskDetail({ id }: { id: string }) {
   const { tasks, editing, setEditing } = useTracker();
@@ -62,7 +62,7 @@ export function TaskDetail({ id }: { id: string }) {
           </div>
         </div>
       </div>
-      <LearningWorkspace key={id} taskId={id}/>
+      <LearningWorkspace key={id} taskId={id} />
       <div className="detail-layout">
         <div>
           <section className="panel detail-panel">
@@ -78,6 +78,9 @@ export function TaskDetail({ id }: { id: string }) {
           </section>
           <section className="panel detail-panel">
             <h2>Evidence & reflection</h2>
+            <Link className="back-link" href="/sync">
+              Review & sync saved progress to Google Sheets →
+            </Link>
             <p className="preserve-lines">
               {task.evidence || "No evidence recorded yet."}
             </p>

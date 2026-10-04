@@ -19,6 +19,7 @@ type Context = {
   save: (id: string, value: Progress) => boolean;
   error: string;
   localCount: number;
+  localProgress: Record<string, Progress>;
   exportProgress: () => void;
 };
 const TrackerContext = createContext<Context | null>(null);
@@ -127,6 +128,7 @@ export function TrackerProvider({ children }: { children: React.ReactNode }) {
         save,
         error,
         localCount: Object.keys(overrides).length,
+        localProgress: overrides,
         exportProgress,
       }}
     >

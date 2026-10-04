@@ -126,3 +126,19 @@ Fonts are bundled locally. The app does not need a database, credentials, or thi
 ## Hydration and browser extensions
 
 The reported `data-redeviation-bs-uid` attribute is absent from the app source and appears to be inserted by a browser extension before React loads. The root `<html>` uses React's `suppressHydrationWarning` to tolerate root-level attribute differences only. Descendant hydration checks remain enabled. This does not remove the extension or fix unrelated hydration problems; if other warnings appear, compare a browser session with extensions disabled and inspect the named component. See [React's hydration documentation](https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors).
+
+## Google Sheets progress sync
+
+Open **Google Sheets sync** from the sidebar, Master Plan, or a task's evidence panel. This optional connection uses Google sign-in and the Sheets API without a database or service-account key. Standard API use has no additional charge, subject to [Google's quotas](https://developers.google.com/workspace/sheets/api/limits).
+
+1. Create/select a Google Cloud project and enable the Sheets API.
+2. Configure Google Auth Platform branding/audience; add your account as a test user in Testing mode.
+3. Create a Web application OAuth client and register your exact JavaScript origins, such as `http://localhost:3000` and `http://localhost:3100`. Follow [Google's token-model setup](https://developers.google.com/identity/oauth2/web/guides/use-token-model).
+4. Copy `.env.example` to `.env.local`, set `NEXT_PUBLIC_GOOGLE_CLIENT_ID` to the public client ID, and restart development or rebuild/restart production. No client secret is used.
+5. Save task progress locally, sign in on `/sync`, choose **Review changes**, inspect every proposed cell, then click **Sync to Google Sheets**. Conflicts require acknowledgement in the review UI.
+
+The live workbook mapping was checked on 5 October 2026: G Status, H Evidence, I Next action, M Actual hours, N Confidence, R Completed on, Z Technical score, AA Communication score, AB Mock result. Rows are found by task ID. J/S/AD/AE formulas and other fields remain untouched. Dates are numeric spreadsheet dates. RAW input stores text literally, including a leading equals sign.
+
+Only locally changed fields relative to the imported curriculum are proposed. This is not two-way synchronization: unrelated sheet edits are not imported, and resetting a field to its imported value does not propose a change. Avoid concurrent sheet editing: the sheet is rechecked before the write, but those are separate requests. Writes are followed by verification. Tokens stay in memory until reload or disconnect; disconnect revokes the grant. Local progress remains saved after syncing. Google requests spreadsheet access; application requests target only the linked Final Tracker workbook.
+
+No OAuth client is bundled. Actual sign-in and live writes require your configured client and consent. Keep using the same origin: localhost and 127.0.0.1 have separate browser progress stores.

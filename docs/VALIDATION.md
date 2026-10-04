@@ -60,3 +60,11 @@ Checked on 4 October 2026.
 - Practice records, estimates, capacity, start date, and weekly reflections are browsable source data. Only task progress fields are editable in the website.
 - The automated tests do not establish actual interview readiness, independently verify the learner's recorded evidence, or audit the generated spreadsheet chart libraries.
 - This is a local application preview; no public deployment or repository commit was performed.
+
+## Handbook controls and optional Sheets sync — 5 October 2026
+
+- Active chapter links follow click, hash navigation, and document scrolling using aria-current; open disclosure arrows rotate and support keyboard toggling. Browser checks confirmed chapter 3 selection and open/close arrow behavior.
+- Inspected the user's live Final Tracker XLSX export without modifying it. Mapped nine progress inputs in Master Plan; formula columns are excluded.
+- Added Google OAuth token-based manual review/sync UI, before/after cell changes, explicit conflict acknowledgement, pre-write recheck, and post-write verification. No database, client secret, or service-account credentials are used.
+- Twelve tests passed, including row-ID lookup, header/duplicate/formula rejection, conflict detection, untouched remote field preservation, already-synced values, and numeric completion dates. Type checking, lint, and production build passed.
+- Live OAuth and writes are not verified: no Google OAuth client ID is configured. The UI explains setup and disables review until connected. No cells in the real spreadsheet were changed.
