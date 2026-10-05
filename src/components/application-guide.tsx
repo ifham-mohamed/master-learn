@@ -18,7 +18,7 @@ const chapters = [
 3. In **Your task workspace**, copy the folder path. Open that folder inside your project editor. The path is relative to the repository root, for example \`learning/cs-and-sql/CS12/\`.
 4. Start with **Theory**, then write a prediction in **Notes**. Create and run a small experiment in **Code**.
 5. Save the actual output and your explanation in **Results**. Return to the app: changes appear within five seconds while the task is visible. Use **Refresh files** if needed.
-6. Turn on **Edit progress** to record your evidence, time, confidence, and next action. Mark Done only when the task outcome is demonstrated.
+6. Choose **Start task** when you begin, and **Pause timer** for breaks. **Complete task & add evidence** saves time and opens your completion form. Add evidence, confidence, and next action, then save. Mark Done only when the task outcome is demonstrated.
 
 **Try it first:** [Open the complete CS12 JOINs example](/tasks/CS12). Its sample results demonstrate the workflow; they do not mean you have completed the task.
 `,
@@ -184,7 +184,15 @@ Use a useful evidence reference such as \`learning/cs-and-sql/CS12/results/evide
 
 Use **Export local progress** at the top of this page to download a JSON backup. Backup import is not implemented. Clearing browser storage removes progress. Switching between \`localhost\`, \`127.0.0.1\`, or ports such as 3000 and 3100 creates a separate browser store, so keep using one address for daily work.
 
-The original workbook is never rewritten by the app. Practice-bank counts and schedule settings remain imported snapshots. If you host the app elsewhere, its learning files are readable by people who can access that server; keep private credentials out of these files.
+**Your schedule:** The plan starts **5 October 2026**. Week 1 is **5–11 October**; week 24 ends **21 March 2027**. Task deadlines follow their end week. Overview shows deadlines, today's study time, and the next unblocked task ordered by deadline and priority. Check prerequisites before starting. Dates use Sri Lanka time.
+
+**Track your time:** Start task changes its status to In progress. Only one task can have a running or paused timer. The estimate counts down against total Actual hours, including previous entries, then shows overtime without stopping. Refreshing or closing the browser keeps the timer running: pause for breaks. Pause saves a segment; Resume starts another; Stop & save time releases the timer for another task. Changing status away from In progress also stops and saves the timer.
+
+**Finish or correct:** Complete task & add evidence stops/saves time and prepares the completion form; you still need evidence and Save progress. To correct forgotten breaks or add offline hours, stop the timer and open Session history & time corrections. Enter the corrected total and a reason. Actual hours update automatically; original session history remains visible. Today's time counts recorded sessions, while corrections change task totals. Exports include sessions and correction reasons.
+
+**Sync saved time:** Pause or stop before reviewing Google Sheets changes. Only saved Actual hours are sent to Master Plan; running time and session-history details are not synced. Timers are local to this browser and origin, not shared between devices.
+
+The original workbook is never rewritten by the app. Practice-bank counts remain imported snapshots. The new app start date does not change the Google spreadsheet's start-date setting or formulas; update that setting in Sheets separately if you want its schedule aligned. If you host the app elsewhere, its learning files are readable by people who can access that server; keep private credentials out of these files.
 
 **Optional Google Sheets connection:** Open [Google Sheets sync](/sync) to configure free Google sign-in without a database. After saving progress locally, choose Review changes, inspect the exact Master Plan fields, then click Sync to Google Sheets. This explicitly updates the linked online spreadsheet; the original local workbook stays unchanged. Only locally changed progress fields are proposed, not curriculum definitions or formulas. The setup page explains the client ID, server-only secret, encryption key, and callback URL. Once connected, refreshing keeps your encrypted connection for up to 30 days; Google may require reconnection sooner. Tokens stay on the server. Review and sync remain manual.
 `,

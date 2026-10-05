@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ActiveStudyBar } from "./study-timer";
 import {
   ArrowUpRight,
   BookOpen,
@@ -320,6 +321,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </div>
         )}
         <main id="main-content" tabIndex={-1}>
+          <ActiveStudyBar />
           {children}
         </main>
         <footer className="footer">

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, Check, Circle, Clock3 } from "lucide-react";
-import { type Task } from "@/lib/tracker";
+import { formatDate, type Task } from "@/lib/tracker";
 
 export function Status({ value }: { value: string }) {
   return (
@@ -46,6 +46,7 @@ export function TaskList({
               <span>{task.category}</span>
               <span>·</span>
               <span>{task.id}</span>
+              <span>· Due {formatDate(task.dueDate)}</span>
               {!compact && (
                 <>
                   <span>·</span>

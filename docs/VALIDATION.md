@@ -100,3 +100,11 @@ This supersedes the Render deployment plan above. The Render Blueprint and hoste
 - Remembered only a non-secret previous-connection flag in browser storage. Returning users see Reconnect Google, with an empty prompt to avoid forcing Google's default account chooser. A separate account-switch action explicitly requests the chooser. Reconnection is user-triggered and never writes spreadsheet data.
 - Seventeen automated tests, lint, and type checking passed. The added test checks connection retention across view unsubscription, expiry rejection, clearing, and an empty new runtime. Live Google popup behavior was not exercised; Google can still require interaction.
 - Full-refresh login persistence remains unavailable in the selected in-memory Pages design. No token persistence or automatic refresh token flow was added. Documentation describes this limitation explicitly.
+
+## Study schedule and timers — 5 October 2026
+
+- App schedule now starts 5 October 2026, with week 1 ending 11 October and week 24 ending 21 March 2027. Original archived data and historical completion dates are preserved.
+- Twenty-one tests pass, including timer persistence calculations, pause/resume accounting, duplicate prevention for stopped segments, invalid storage, and Sri Lanka midnight boundaries. Lint and TypeScript checks pass.
+- Static export contains 260 pages and passes the Pages link/asset checker. Browser preview verified start, refresh persistence, pause, resume, overtime, completion-form handoff, and time correction with a recorded reason. Preview test sessions were not synced to Google Sheets.
+- A test timer persisted across the browser restart during this work. Its hours were corrected to zero in the isolated localhost:3200 preview; original test sessions remain in its audit history. Production-site browser progress was not changed.
+- Dashboard displays start/end dates, deadlines and next tasks. README and in-app handbook explain saved versus running time, local-only history, corrections and manual sync. Live Google writes and cross-device synchronization were not tested or added.

@@ -33,6 +33,21 @@ Use the panel button beside the Learnspace logo to collapse the desktop navigati
 
 Browsing is the default. **Edit progress** enables task-only editing: status, evidence, next action, hours, confidence, completion date, and mock scores/results. Updates are stored in this browser under `learnspace-progress-v1`, without accounts or a cloud service. Editing is switched off on reload. Progress and filters persist. **Export local progress** downloads a JSON backup; automatic backup restoration is not implemented. Clearing browser storage removes local updates. The original workbook is never rewritten.
 
+## Schedule and task timers
+
+The application plan starts **5 October 2026**. Week 1 runs **5–11 October**, and the 24-week plan ends **21 March 2027**. Planned task starts use their start week; deadlines use the last day of their end week. The original workbook, imported JSON, and historical completion dates remain unchanged. The app schedule is set in `src/lib/study.ts`; changing it does not update the Google spreadsheet's start-date setting or formulas.
+
+1. Open a task and choose **Start task**. Its status becomes In progress. Only one task can hold the timer at a time, including while paused.
+2. **Pause timer** saves the elapsed segment into Actual hours. **Resume task** starts another segment. **Stop & save time** releases the timer so you can start another task.
+3. The estimate counts down against total actual time, including previously recorded hours. Reaching zero displays an overtime notice and keeps recording. Refreshing, closing a tab, and closing the browser do not stop the timer: pause before breaks.
+4. Choose **Complete task & add evidence** to stop/save time and open the completion form. Add evidence and a completion date, then **Save progress**. Mocks still require their scores and result. Completion is never inferred from elapsed time.
+5. For a missed pause or offline study, stop the timer, expand **Session history & time corrections**, enter the corrected total Actual hours, and give a reason. The correction is recorded alongside the original sessions.
+6. Pause or stop before **Review changes → Sync to Google Sheets**. Saved Actual hours use the existing Master Plan column M mapping; a running segment is not synced until saved. Session history and correction reasons remain local and are included in JSON exports.
+
+Overview shows plan dates, today's recorded study time, overdue/due-today counts, and upcoming tasks. Next task skips blocked/completed tasks and the active timer, then sorts by deadline and priority. Check prerequisites yourself before starting. Day boundaries and completion defaults use Sri Lanka time (`Asia/Colombo`). Today's study time reflects session timestamps; manual corrections change task totals but do not rewrite session history.
+
+Timers and progress share one browser-storage record. Tabs on the same origin coordinate writes to avoid counting a session twice. Use a current browser over HTTPS or localhost. Existing browser progress is retained; different browsers/devices/origins have separate timers. Export regularly; clearing site data removes this history, and automatic backup import is not available.
+
 ## Learn through your own files
 
 Open **Learning workspace** in the sidebar, filter by category or week, and choose a task. Every task has five tabs: Theory, Notes, Code, Results, and Resources. Edit the corresponding files in your editor; the open task checks for changes every five seconds while the page is visible, and when you return to it. **Refresh files** also reloads the selected document. Added, changed, and removed files appear without rebuilding the app.

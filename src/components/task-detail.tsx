@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { TaskTimer } from "./study-timer";
+import { planDate, studyDate } from "@/lib/study";
 import {
   ArrowLeft,
   CalendarDays,
@@ -23,6 +25,7 @@ import { LearningWorkspace } from "./learning-workspace";
 
 export function TaskDetail({ id }: { id: string }) {
   const { tasks, editing, setEditing } = useTracker();
+  const [completionRequest, setCompletionRequest] = useState(0);
   const task = tasks.find((t) => t.id === id)!;
   const prerequisites = task.prerequisites.match(/[A-Z]+\d+/g) || [];
   const reviewDue = task.completedOn
@@ -62,6 +65,13 @@ export function TaskDetail({ id }: { id: string }) {
           </div>
         </div>
       </div>
+      <TaskTimer
+        task={task}
+        onComplete={() => {
+          setEditing(true);
+          setCompletionRequest((value) => value + 1);
+        }}
+      />
       <LearningWorkspace key={id} taskId={id} />
       <div className="detail-layout">
         <div>
@@ -123,8 +133,10 @@ export function TaskDetail({ id }: { id: string }) {
               <dd>{task.workType}</dd>
               <dt>Due date</dt>
               <dd>{formatDate(task.dueDate)}</dd>
+              <dt>Planned start</dt>
+              <dd>{formatDate(planDate((task.startWeek - 1) * 7))}</dd>
               <dt>Actual time</dt>
-              <dd>{task.actual} hours</dd>
+              <dd>{Number(task.actual).toFixed(3)} hours saved</dd>
               <dt>Confidence</dt>
               <dd>{task.confidence} / 5</dd>
               <dt>Completed on</dt>
@@ -169,7 +181,11 @@ export function TaskDetail({ id }: { id: string }) {
             )}
           </section>
           {editing ? (
-            <ProgressForm key={task.id} task={task} />
+            <ProgressForm
+              key={task.id}
+              task={task}
+              completionRequest={completionRequest}
+            />
           ) : (
             <section className="edit-invitation">
               <h3>Ready to record your progress?</h3>
@@ -191,9 +207,17 @@ export function TaskDetail({ id }: { id: string }) {
   );
 }
 
-function ProgressForm({ task }: { task: Task }) {
+function ProgressForm({
+  task,
+  completionRequest,
+}: {
+  task: Task;
+  completionRequest: number;
+}) {
   const { save } = useTracker();
   const [message, setMessage] = useState("");
+  const evidenceRef = useRef<HTMLTextAreaElement>(null);
+  const [statusEdited, setStatusEdited] = useState(false);
   const [form, setForm] = useState<Progress>({
     status: task.status,
     evidence: task.evidence,
@@ -210,19 +234,39 @@ function ProgressForm({ task }: { task: Task }) {
     setMessage("");
   };
   const isMock = task.workType === "Mock";
+  useEffect(() => {
+    if (!completionRequest) return;
+    // Apply the explicit Complete task action while retaining evidence already typed.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setForm((previous) => ({
+      ...previous,
+      status: "Done",
+      completedOn: previous.completedOn || studyDate(Date.now()),
+    }));
+    setStatusEdited(true);
+    evidenceRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+    evidenceRef.current?.focus({ preventScroll: true });
+  }, [completionRequest]);
   return (
     <form
       className="panel progress-form"
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
-        if (form.status === "Done" && !isComplete({ ...task, ...form })) {
+        const value = {
+          ...form,
+          status: statusEdited ? form.status : task.status,
+        };
+        if (value.status === "Done" && !isComplete({ ...task, ...value })) {
           setMessage(
             "Add evidence, a completion date, and any required mock results before marking Done.",
           );
           return;
         }
         setMessage(
-          save(task.id, form)
+          (await save(task.id, { ...value, actual: Number(task.actual) }))
             ? "Progress saved on this device."
             : "Progress could not be saved. Check the storage message above.",
         );
@@ -233,8 +277,11 @@ function ProgressForm({ task }: { task: Task }) {
       <label>
         Status
         <select
-          value={form.status}
-          onChange={(e) => patch({ status: e.target.value })}
+          value={statusEdited ? form.status : task.status}
+          onChange={(e) => {
+            setStatusEdited(true);
+            patch({ status: e.target.value });
+          }}
         >
           {statuses.map((s) => (
             <option key={s}>{s}</option>
@@ -244,6 +291,7 @@ function ProgressForm({ task }: { task: Task }) {
       <label>
         Evidence / result
         <textarea
+          ref={evidenceRef}
           value={form.evidence}
           required={form.status === "Done"}
           rows={4}
@@ -265,11 +313,14 @@ function ProgressForm({ task }: { task: Task }) {
           <input
             type="number"
             min="0"
-            step="0.25"
-            required
-            value={form.actual}
-            onChange={(e) => patch({ actual: Number(e.target.value) })}
+            step="any"
+            readOnly
+            value={task.actual}
           />
+          <small>
+            Calculated from saved time. Use Session history & time corrections
+            above to adjust.
+          </small>
         </label>
         <label>
           Confidence (0–5)

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ApplicationGuide } from "./application-guide";
+import { StudyDashboard } from "./study-timer";
 import { useState } from "react";
 import {
   ArrowDownToLine,
@@ -189,6 +190,7 @@ export function Workspace({
         >
           {weekControl}
         </Heading>
+        <StudyDashboard />
         <section className="journey-banner">
           <div className="journey-content">
             <span className="banner-tag">
