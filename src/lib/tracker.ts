@@ -1,10 +1,22 @@
 import raw from "../data/tracker.json";
+import { PLAN_START, planDate } from "./study";
 
 type RawTask = (typeof raw.tasks)[number];
 export type Task = { [K in keyof RawTask]: RawTask[K] };
 export type Practice = (typeof raw.practice)[number];
-export const tracker = raw;
-export const tasks: Task[] = raw.tasks;
+export const tasks: Task[] = raw.tasks.map((task) => ({
+  ...task,
+  dueDate: planDate(task.endWeek * 7 - 1),
+}));
+export const tracker = {
+  ...raw,
+  settings: { ...raw.settings, startDate: PLAN_START },
+  tasks,
+  weeks: raw.weeks.map((week) => ({
+    ...week,
+    starts: planDate((week.week - 1) * 7),
+  })),
+};
 export const categories = [...new Set(tasks.map((t) => t.category))];
 export const sources = raw.guide.filter((r) => r.type === "Source");
 export const slug = (name: string) =>
