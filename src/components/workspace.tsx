@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ApplicationGuide } from "./application-guide";
+import dynamic from "next/dynamic";
+import { addDays } from "@/lib/planner";
+const ApplicationGuide = dynamic(()=>import("./application-guide").then(m=>m.ApplicationGuide),{loading:()=> <p>Opening handbook…</p>});
 import { StudyDashboard } from "./study-timer";
 import { useState } from "react";
 import {
@@ -122,14 +124,14 @@ export function Workspace({
   view: string;
   category?: string;
 }) {
-  const { tasks, preferences, setPreferences, exportProgress, localCount } =
+  const { tasks, preferences, setPreferences, exportProgress, localCount,planner } =
     useTracker();
   const [resourceSearch, setResourceSearch] = useState("");
   const [resourceFilter, setResourceFilter] = useState("all");
   const [practiceSearch, setPracticeSearch] = useState("");
   const [practiceType, setPracticeType] = useState("");
   const { week, query, category: filterCategory, status } = preferences;
-  const current = tracker.weeks.find((w) => w.week === week)!;
+  const current = {...tracker.weeks.find((w) => w.week === week)!,starts:addDays(planner.schedule.start,(week-1)*7),capacity:planner.schedule.capacity};
   const weekTasks = tasks.filter((t) => t.startWeek === week);
   const weekComplete = weekTasks.filter(isComplete).length;
   const core = tasks.filter((t) => t.scope === "Core");
@@ -876,7 +878,7 @@ export function Workspace({
           </p>
           <p>
             Start date:{" "}
-            <strong>{formatDate(tracker.settings.startDate)}</strong> · Review
+            <strong>{formatDate(planner.schedule.start)}</strong> · Review
             interval: <strong>{tracker.settings.reviewInterval} days</strong> ·{" "}
             <strong>{localCount}</strong> local task updates
           </p>

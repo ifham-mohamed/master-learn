@@ -20,6 +20,10 @@ const chapters = [
 5. Save the actual output and your explanation in **Results**. Return to the app: changes appear within five seconds while the task is visible. Use **Refresh files** if needed.
 6. Choose **Start task** when you begin, and **Pause timer** for breaks. **Complete task & add evidence** saves time and opens your completion form. Add evidence, confidence, and next action, then save. Mark Done only when the task outcome is demonstrated.
 
+**On mobile:** Use Install Learnspace above the page, or Safari → Share → Add to Home Screen on iPhone/iPad. Download a task for offline use below its quick journal. Reconnect for Google sync. App updates clear downloaded lessons; local progress remains. Export backups regularly.
+
+**Daily tools:** Today recommends ready tasks; Reviews tracks weekly learning and spaced recall. Use each task's quick journal to capture questions and export Markdown. Optional Focus mode prompts you to pause for a break while the app is open; the task timer keeps counting until paused.
+
 **Try it first:** [Open the complete CS12 JOINs example](/tasks/CS12). Its sample results demonstrate the workflow; they do not mean you have completed the task.
 `,
   },
@@ -31,6 +35,10 @@ const chapters = [
 | Page | Use it for |
 | --- | --- |
 | Overview | See your selected week, recorded progress, workload, and focus areas. |
+| Today | Resume your timer, check available hours and start tasks with completed prerequisites. |
+| Reviews | Compare weekly estimates and sessions; record revisions due 1, 3, 7 and 14 days after completion. |
+| Search content | Find words inside theory, notes, code, results and resources. |
+| Settings & backups | Install the app, preview schedule changes, export and restore reviewed backups. |
 | Weekly journey | Choose one of the 24 weeks and open its tasks. |
 | Learning workspace | Find your task folders by topic, task ID, category, or week. |
 | Master plan | Search the curriculum and filter tasks by category and status. |
@@ -182,9 +190,9 @@ A task counts as complete only with **Done status, evidence, and a completion da
 
 Use a useful evidence reference such as \`learning/cs-and-sql/CS12/results/evidence.md — five queries checked; NULL handling explained\`. Recording this reference does not independently verify the file's claims.
 
-Use **Export local progress** at the top of this page to download a JSON backup. Backup import is not implemented. Clearing browser storage removes progress. Switching between \`localhost\`, \`127.0.0.1\`, or ports such as 3000 and 3100 creates a separate browser store, so keep using one address for daily work.
+Use **Export local progress** at the top of this page to download a JSON backup. Open **Settings & backups** to validate a backup and preview Merge or Replace. Export your current data first; a pre-restore recovery copy is retained locally. Imported active timers are stopped. Clearing browser storage removes progress. Switching between \`localhost\`, \`127.0.0.1\`, or ports such as 3000 and 3100 creates a separate browser store, so keep using one address for daily work.
 
-**Your schedule:** The plan starts **5 October 2026**. Week 1 is **5–11 October**; week 24 ends **21 March 2027**. Task deadlines follow their end week. Overview shows deadlines, today's study time, and the next unblocked task ordered by deadline and priority. Check prerequisites before starting. Dates use Sri Lanka time.
+**Your schedule:** Settings & backups lets you preview a different start date, capacity and study days. By default, the plan starts **5 October 2026**. Week 1 is **5–11 October**; week 24 ends **21 March 2027**. Task deadlines follow their end week. Overview shows deadlines, today's study time, and the next unblocked task ordered by deadline and priority. Check prerequisites before starting. Dates use Sri Lanka time.
 
 **Track your time:** Start task changes its status to In progress. Only one task can have a running or paused timer. The estimate counts down against total Actual hours, including previous entries, then shows overtime without stopping. Refreshing or closing the browser keeps the timer running: pause for breaks. Pause saves a segment; Resume starts another; Stop & save time releases the timer for another task. Changing status away from In progress also stops and saves the timer.
 

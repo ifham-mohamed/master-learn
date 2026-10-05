@@ -2,7 +2,9 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { TaskTimer } from "./study-timer";
-import { planDate, studyDate } from "@/lib/study";
+import { studyDate } from "@/lib/study";
+import { taskDates } from '@/lib/planner';
+import { TaskJournal } from './planning-tools';
 import {
   ArrowLeft,
   CalendarDays,
@@ -24,7 +26,7 @@ import { statuses, type Progress } from "@/lib/progress";
 import { LearningWorkspace } from "./learning-workspace";
 
 export function TaskDetail({ id }: { id: string }) {
-  const { tasks, editing, setEditing } = useTracker();
+  const { tasks, editing, setEditing,planner } = useTracker();
   const [completionRequest, setCompletionRequest] = useState(0);
   const task = tasks.find((t) => t.id === id)!;
   const prerequisites = task.prerequisites.match(/[A-Z]+\d+/g) || [];
@@ -73,6 +75,7 @@ export function TaskDetail({ id }: { id: string }) {
         }}
       />
       <LearningWorkspace key={id} taskId={id} />
+      <TaskJournal key={`journal-${id}`} id={id}/>
       <div className="detail-layout">
         <div>
           <section className="panel detail-panel">
@@ -134,7 +137,7 @@ export function TaskDetail({ id }: { id: string }) {
               <dt>Due date</dt>
               <dd>{formatDate(task.dueDate)}</dd>
               <dt>Planned start</dt>
-              <dd>{formatDate(planDate((task.startWeek - 1) * 7))}</dd>
+              <dd>{formatDate(taskDates(task,planner.schedule).start)}</dd>
               <dt>Actual time</dt>
               <dd>{Number(task.actual).toFixed(3)} hours saved</dd>
               <dt>Confidence</dt>
@@ -171,7 +174,7 @@ export function TaskDetail({ id }: { id: string }) {
                   const prereq = tasks.find((t) => t.id === ref);
                   return prereq ? (
                     <Link key={ref} href={`/tasks/${ref}`}>
-                      {ref} · {prereq.title}
+                      {isComplete(prereq)?'✓ Complete':'○ Needed'} · {ref} · {prereq.title}
                     </Link>
                   ) : (
                     <span key={ref}>{ref} · original reference</span>

@@ -10,6 +10,7 @@ import { staticFilePath } from "../src/lib/deployment";
 
 export async function exportLearning(destination: string) {
   let count = 0;
+  const search: {id:string;title:string;path:string;section:string;text:string}[]=[];
   for (const task of tasks) {
     const manifest = await getLearningManifest(task.id);
     manifest.files = manifest.files.filter((file) => {
@@ -40,6 +41,7 @@ export async function exportLearning(destination: string) {
               }
             : await readLearningDocument(task.id, file.path);
         await writeFile(document, JSON.stringify(data));
+        if('content' in data) search.push({id:task.id,title:task.title,path:file.path,section:file.section,text:data.content});
       }
       count++;
     }
@@ -51,4 +53,5 @@ export async function exportLearning(destination: string) {
   console.log(
     `Published ${count} learning files across ${tasks.length} tasks.`,
   );
+  await writeFile(path.join(destination,'search-index.json'),JSON.stringify(search));
 }

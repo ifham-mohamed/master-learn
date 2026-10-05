@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SyncSummary } from "./sync-summary";
 import { useEffect, useState } from "react";
 import { useTracker } from "./tracker-provider";
 import { sheetFields, spreadsheetId, type SheetChange } from "@/lib/sheet-sync";
@@ -26,7 +27,7 @@ async function api(action: string, body?: unknown) {
   return data;
 }
 export function SheetSync() {
-  const { localProgress } = useTracker();
+  const { localProgress,recordSync } = useTracker();
   const [connection, setConnection] = useState<Connection | null>(null);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
@@ -103,6 +104,7 @@ export function SheetSync() {
     try {
       const data = await api("review", { local: JSON.parse(local) });
       setReview({ changes: data.changes, local });
+      if (!data.changes.length) await recordSync(JSON.parse(local));
       if (!data.changes.length)
         setMessage("No pending differences in your locally edited fields.");
     } catch (failure) {
@@ -132,6 +134,7 @@ export function SheetSync() {
         local: JSON.parse(local),
         acceptConflicts,
       });
+      await recordSync(JSON.parse(local));
       setMessage(data.message);
     } catch (failure) {
       setError(
@@ -146,6 +149,7 @@ export function SheetSync() {
   }
   return (
     <>
+      <SyncSummary />
       <div className="page-heading">
         <div>
           <div className="eyebrow">REVIEW · SYNC · VERIFY</div>

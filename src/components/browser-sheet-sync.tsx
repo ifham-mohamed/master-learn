@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { SyncSummary } from './sync-summary';
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import {
@@ -67,7 +68,7 @@ function subscribeHistory(listener: () => void) {
   };
 }
 export function BrowserSheetSync() {
-  const { localProgress } = useTracker();
+  const { localProgress,recordSync } = useTracker();
   const [ready, setReady] = useState(false);
   const connection = useSyncExternalStore(
     connectionStore.subscribe,
@@ -160,6 +161,7 @@ export function BrowserSheetSync() {
         JSON.parse(local),
       );
       setReview({ changes, local, expires: Date.now() + 600000 });
+      if (!changes.length) await recordSync(JSON.parse(local));
       if (!changes.length)
         setMessage(
           "No pending differences in your locally edited fields. The app does not import unrelated spreadsheet edits.",
@@ -216,9 +218,8 @@ export function BrowserSheetSync() {
         throw new Error(
           "The write was sent, but verification found differences. Review again before retrying.",
         );
-      setMessage(
-        `Verified ${latest.length} updated cells in Master Plan. Google Sheets recalculates its linked formulas. Local progress remains saved on this device.`,
-      );
+      await recordSync(JSON.parse(local));
+      setMessage(`Verified ${latest.length} updated cells in Master Plan. Google Sheets recalculates its linked formulas. Local progress remains saved on this device.`);
     } catch (failure) {
       setReview(null);
       setError(
@@ -232,6 +233,7 @@ export function BrowserSheetSync() {
   }
   return (
     <>
+      <SyncSummary />
       {clientId && (
         <Script
           src="https://accounts.google.com/gsi/client"

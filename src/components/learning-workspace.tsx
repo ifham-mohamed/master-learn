@@ -46,7 +46,7 @@ const icons = {
   resources: Link2,
 };
 async function readJson<T>(url: string, signal?: AbortSignal): Promise<T> {
-  const response = await fetch(url, { cache: "no-store", signal });
+  const response = await fetch(url, { cache: isGitHubPages ? "default" : "no-store", signal });
   const data = await response.json();
   if (!response.ok || data.error)
     throw new Error(data.error || "Could not load the learning content.");
@@ -72,6 +72,9 @@ export function LearningWorkspace({ taskId }: { taskId: string }) {
           previous?.revision === data.revision ? previous : data,
         );
         setError("");
+        const requested=new URLSearchParams(window.location.search).get('file');
+        const match=data.files.find(f=>f.path===requested);
+        if(match){setSection(match.section);setSelectedPath(match.path);}
       } catch (failure) {
         if (!signal?.aborted)
           setError(

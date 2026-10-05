@@ -1,32 +1,22 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { useTracker } from "./tracker-provider";
-import { formatDate, isComplete, tracker, type Task } from "@/lib/tracker";
+import { formatDate, isComplete, type Task } from "@/lib/tracker";
 import {
   clockText,
   elapsedMs,
-  planDate,
   studyDate,
   todayStudyMs,
   STUDY_TIME_ZONE,
 } from "@/lib/study";
 
+import { subscribeClock, clockSnapshot, serverClock } from "@/lib/study-clock";
+import { taskDates, addDays, readyTasks } from "@/lib/planner";
 export function useStudyClock() {
-  const [now, setNow] = useState(0);
-  useEffect(() => {
-    const refresh = () => setNow(Date.now());
-    const first = setTimeout(refresh, 0);
-    const interval = setInterval(refresh, 1000);
-    window.addEventListener("focus", refresh);
-    return () => {
-      clearTimeout(first);
-      clearInterval(interval);
-      window.removeEventListener("focus", refresh);
-    };
-  }, []);
-  return now;
+  return useSyncExternalStore(subscribeClock, clockSnapshot, serverClock);
 }
+
 function dateTime(value: number) {
   return new Intl.DateTimeFormat("en-GB", {
     timeZone: STUDY_TIME_ZONE,
@@ -41,8 +31,15 @@ export function TaskTimer({
   task: Task;
   onComplete: () => void;
 }) {
-  const { study, timerAction, correctHours, loaded, setEditing, error } =
-    useTracker();
+  const {
+    study,
+    timerAction,
+    correctHours,
+    loaded,
+    setEditing,
+    error,
+    planner,
+  } = useTracker();
   const now = useStudyClock();
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
@@ -105,7 +102,7 @@ export function TaskTimer({
         <div>
           <span>Planned start → due</span>
           <b>
-            {formatDate(planDate((task.startWeek - 1) * 7))}
+            {formatDate(taskDates(task, planner.schedule).start)}
             <br />
             {formatDate(task.dueDate)}
           </b>
@@ -117,6 +114,7 @@ export function TaskTimer({
           when you take a break.
         </p>
       )}
+      <FocusPrompt running={running} elapsed={live} />
       <div className="study-actions">
         {!running && (
           <button
@@ -284,28 +282,24 @@ export function ActiveStudyBar() {
   );
 }
 export function StudyDashboard() {
-  const { tasks, study } = useTracker();
+  const { tasks, study, planner } = useTracker();
   const now = useStudyClock();
-  const today = now ? studyDate(now) : tracker.settings.startDate;
+  const today = now ? studyDate(now) : planner.schedule.start;
   const unfinished = tasks.filter((t) => !isComplete(t));
   const overdue = unfinished.filter((t) => t.dueDate < today);
-  const ordered = unfinished
-    .filter((t) => t.status !== "Blocked" && t.id !== study.active?.taskId)
-    .sort(
-      (a, b) =>
-        a.dueDate.localeCompare(b.dueDate) ||
-        a.priority.localeCompare(b.priority) ||
-        a.startWeek - b.startWeek ||
-        a.id.localeCompare(b.id, undefined, { numeric: true }),
-    );
+  const ordered = readyTasks(tasks).filter(
+    (t) => t.id !== study.active?.taskId,
+  );
   const next = ordered[0];
   return (
     <section className="study-dashboard" aria-label="Your study schedule">
       <div className="panel study-card">
         <span>Plan starts</span>
-        <strong>{formatDate(tracker.settings.startDate)}</strong>
-        <p>24 weeks · ends {formatDate(planDate(167))}</p>
-        <small>Week 1: 5–11 October · Sri Lanka time</small>
+        <strong>{formatDate(planner.schedule.start)}</strong>
+        <p>
+          24 weeks · ends {formatDate(addDays(planner.schedule.start, 167))}
+        </p>
+        <small>Study days and capacity in Settings · Sri Lanka time</small>
       </div>
       <div className="panel study-card">
         <span>Today’s study time</span>
@@ -338,7 +332,7 @@ export function StudyDashboard() {
               h estimated
             </p>
             <small>
-              Overdue first, then nearest deadline and priority. Check
+              Ready prerequisites, then nearest deadline and priority. Check
               prerequisites before starting.
             </small>
           </>
@@ -358,5 +352,67 @@ export function StudyDashboard() {
         ))}
       </div>
     </section>
+  );
+}
+
+function FocusPrompt({
+  running,
+  elapsed,
+}: {
+  running: boolean;
+  elapsed: number;
+}) {
+  const { planner } = useTracker();
+  const now = useStudyClock();
+  const [enabled, setEnabled] = useState(false);
+  const [breakUntil, setBreakUntil] = useState(0);
+  return (
+    <div className="focus-notice">
+      <label>
+        <input
+          type="checkbox"
+          checked={enabled}
+          onChange={(e) => setEnabled(e.target.checked)}
+        />{" "}
+        Focus mode · {planner.schedule.focus} minutes /{" "}
+        {planner.schedule.breakMinutes} minute break
+      </label>
+      {running && elapsed >= 2 * 3600000 && (
+        <p role="status">
+          Your timer has run for over two hours. Check whether you forgot to
+          pause.
+        </p>
+      )}
+      {enabled && running && (
+        <p role="status">
+          {elapsed >= planner.schedule.focus * 60000
+            ? "Focus session reached. Pause the task timer before taking a break."
+            : `Focus time remaining: ${clockText(planner.schedule.focus * 60000 - elapsed)}`}
+        </p>
+      )}
+      {enabled && !running && (
+        <>
+          <button
+            className="button secondary"
+            onClick={() =>
+              setBreakUntil(Date.now() + planner.schedule.breakMinutes * 60000)
+            }
+          >
+            Start break
+          </button>
+          {breakUntil > 0 && (
+            <p role="status">
+              {now >= breakUntil
+                ? "Break finished. Resume your task when ready."
+                : `Break remaining: ${clockText(breakUntil - now)}`}
+            </p>
+          )}
+        </>
+      )}
+      <small>
+        Prompts appear while the app is open. Break countdown resets on reload;
+        recorded task time does not.
+      </small>
+    </div>
   );
 }

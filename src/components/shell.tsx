@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ActiveStudyBar } from "./study-timer";
+import { InstallApp } from './pwa-controls';
 import {
   ArrowUpRight,
   BookOpen,
@@ -41,6 +42,10 @@ import {
 
 const navigation = [
   ["/", "Overview", LayoutDashboard],
+  ['/today','Today',Sparkles],
+  ['/reviews','Reviews',CalendarDays],
+  ['/search','Search content',LibraryBig],
+  ['/settings','Settings & backups',FolderKanban],
   ["/weeks", "Weekly journey", CalendarDays],
   ["/learning", "Learning workspace", FolderOpen],
   ["/plan", "Master plan", ListTodo],
@@ -322,6 +327,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         )}
         <main id="main-content" tabIndex={-1}>
           <ActiveStudyBar />
+          <InstallApp />
           {children}
         </main>
         <footer className="footer">

@@ -10,6 +10,7 @@ import {
 import path from "node:path";
 import { spawn } from "node:child_process";
 import { exportLearning } from "./export-learning";
+import { exportPwa } from './pwa-export';
 
 async function main() {
   const root = process.cwd();
@@ -82,6 +83,7 @@ async function main() {
     throw new Error("Unsafe build output path.");
   await rm(out, { recursive: true, force: true });
   await rename(path.join(staging, "out"), out);
+  await exportPwa(out,basePath);
   await rm(staging, { recursive: true, force: true });
   console.log(`GitHub Pages output: ${out} (base path ${basePath || "/"}).`);
 }
