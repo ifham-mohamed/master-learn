@@ -192,3 +192,9 @@ Google access now survives client-side navigation between app pages until its to
 ### Performance choices
 
 The handbook is loaded separately, content search is fetched only on its page (also downloaded by the offline shell), static learning requests use browser caching, and task data is memoized. All visible timer displays share one clock; hidden pages stop rendering clock ticks and catch up from timestamps on return. Service-worker caches are versioned, with an explicit update action. These changes reduce repeated work; actual load speed still depends on device and connection. No production speed percentage is claimed.
+
+## Markdown curriculum for AI coding tools
+
+Start with [sources/markdown/README.md](sources/markdown/README.md). This generated knowledge base converts all 16 original HTML sheets into complete readable snapshots, with 236 canonical task files, 74 practice records, 34 resource records, category indexes, and 24 weekly plans. Give your AI tool the relevant task file and its linked resources as context, then save your actual learning work in `learning/`.
+
+Regenerate and validate with `python scripts/export-html-markdown.py` (Python standard library; no installation required). Generated Markdown is overwritten, so keep personal changes in the learning workspace. Exported dates and progress are historical source values; this does not import browser progress or current Google Sheets edits, and source URLs are preserved rather than newly verified.

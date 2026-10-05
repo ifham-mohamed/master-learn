@@ -1,0 +1,48 @@
+# Mock interviews
+
+[Full category export](../sheets/mock-interviews.md) · [Master plan](../plans/master-plan.md)
+
+- [M01 — Java Big-O/arrays/OOP + verbal reasoning](../tasks/mock-interviews/M01.md) · weeks 1–1 · Core · 1.00 h
+- [M02 — HashMap/two pointers + Java collections](../tasks/mock-interviews/M02.md) · weeks 2–2 · Core · 1.00 h
+- [M03 — Sliding window/prefix + generics + SQL](../tasks/mock-interviews/M03.md) · weeks 3–3 · Core · 1.00 h
+- [M04 — Binary search/stack + event loop + CS basics](../tasks/mock-interviews/M04.md) · weeks 4–4 · Core · 1.00 h
+- [M05 — Spring DI/Boot + linked list/tree](../tasks/mock-interviews/M05.md) · weeks 5–5 · Core · 1.00 h
+- [M06 — Spring MVC + React/Next + trees/BST](../tasks/mock-interviews/M06.md) · weeks 6–6 · Core · 1.00 h
+- [M07 — Validation/REST + heap/intervals + SQL](../tasks/mock-interviews/M07.md) · weeks 7–7 · Core · 1.00 h
+- [M08 — JPA entity/repository + TS tooling in existing repo](../tasks/mock-interviews/M08.md) · weeks 8–8 · Core · 1.00 h
+- [M09 — N+1 query diagnosis and fix](../tasks/mock-interviews/M09.md) · weeks 9–9 · Core · 1.00 h
+- [M10 — Vitest/API client failure states](../tasks/mock-interviews/M10.md) · weeks 9–9 · Core · 1.00 h
+- [M11 — Double booking / transactions / isolation](../tasks/mock-interviews/M11.md) · weeks 10–10 · Core · 1.00 h
+- [M12 — Race-condition reproduction and safe fix](../tasks/mock-interviews/M12.md) · weeks 10–10 · Core · 1.00 h
+- [M13 — Spring Security authn/authz + 401/403](../tasks/mock-interviews/M13.md) · weeks 11–11 · Core · 1.00 h
+- [M14 — Find tenant/auth/validation flaw](../tasks/mock-interviews/M14.md) · weeks 11–11 · Core · 1.00 h
+- [M15 — Test strategy: unit/integration/E2E](../tasks/mock-interviews/M15.md) · weeks 12–12 · Core · 1.00 h
+- [M16 — Spring DTO and TS client contract](../tasks/mock-interviews/M16.md) · weeks 12–12 · Core · 1.00 h
+- [M17 — JUnit/MockMvc + failing test repair](../tasks/mock-interviews/M17.md) · weeks 13–13 · Core · 1.00 h
+- [M18 — Correctness/security/performance/test gaps](../tasks/mock-interviews/M18.md) · weeks 13–13 · Core · 1.00 h
+- [M19 — Testcontainers/Docker/CI explanation](../tasks/mock-interviews/M19.md) · weeks 14–14 · Core · 1.00 h
+- [M20 — 1D dynamic programming](../tasks/mock-interviews/M20.md) · weeks 14–14 · Core · 1.00 h
+- [M21 — N+1/index/cache/observability investigation](../tasks/mock-interviews/M21.md) · weeks 15–15 · Core · 1.00 h
+- [M22 — 2D dynamic programming](../tasks/mock-interviews/M22.md) · weeks 15–15 · Core · 1.00 h
+- [M23 — Bounded bug/feature with diff/tests/security review](../tasks/mock-interviews/M23.md) · weeks 16–16 · Core · 1.00 h
+- [M24 — Scaling/load balancing/replication/rate limiting](../tasks/mock-interviews/M24.md) · weeks 16–16 · Core · 1.00 h
+- [M25 — Capstone requirements/API/data model](../tasks/mock-interviews/M25.md) · weeks 17–17 · Core · 1.00 h
+- [M26 — Java mixed DSA under time](../tasks/mock-interviews/M26.md) · weeks 17–17 · Core · 1.00 h
+- [M27 — Implement scoped Spring + TS feature](../tasks/mock-interviews/M27.md) · weeks 18–18 · Core · 1.00 h
+- [M28 — Trace UI to API to DB failure](../tasks/mock-interviews/M28.md) · weeks 18–18 · Core · 1.00 h
+- [M29 — Queues/retries/idempotency/offline sync](../tasks/mock-interviews/M29.md) · weeks 19–19 · Core · 1.00 h
+- [M30 — Reject/fix an almost-right generated change](../tasks/mock-interviews/M30.md) · weeks 19–19 · Core · 1.00 h
+- [M31 — Architecture/trade-offs/security/testing/story](../tasks/mock-interviews/M31.md) · weeks 20–20 · Core · 1.00 h
+- [M32 — Logs/metrics/query/app failure investigation](../tasks/mock-interviews/M32.md) · weeks 20–20 · Core · 1.00 h
+- [M33 — Company-style timed Java DSA](../tasks/mock-interviews/M33.md) · weeks 21–21 · Core · 1.00 h
+- [M34 — DBMS/OS/networking/SQL rapid interview](../tasks/mock-interviews/M34.md) · weeks 21–21 · Core · 1.00 h
+- [M35 — STAR + project ownership/trade-offs](../tasks/mock-interviews/M35.md) · weeks 21–21 · Core · 1.00 h
+- [M36 — Timed AI-assisted repo task](../tasks/mock-interviews/M36.md) · weeks 22–22 · Core · 1.00 h
+- [M37 — Unfamiliar repo bug fix](../tasks/mock-interviews/M37.md) · weeks 22–22 · Core · 1.00 h
+- [M38 — Booking/commerce timed design](../tasks/mock-interviews/M38.md) · weeks 22–22 · Core · 1.00 h
+- [M39 — Spring/JPA/security/testing deep dive](../tasks/mock-interviews/M39.md) · weeks 23–23 · Core · 1.00 h
+- [M40 — TS runtime/types/React/Next deep dive](../tasks/mock-interviews/M40.md) · weeks 23–23 · Core · 1.00 h
+- [M41 — Browser to Spring to DB + behavioral](../tasks/mock-interviews/M41.md) · weeks 23–23 · Core · 1.00 h
+- [M42 — Coding + CS + project](../tasks/mock-interviews/M42.md) · weeks 24–24 · Core · 1.00 h
+- [M43 — Repo task + verification](../tasks/mock-interviews/M43.md) · weeks 24–24 · Core · 1.00 h
+- [M44 — System design + trade-offs + STAR](../tasks/mock-interviews/M44.md) · weeks 24–24 · Core · 1.00 h
