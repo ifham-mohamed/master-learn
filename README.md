@@ -195,6 +195,6 @@ The handbook is loaded separately, content search is fetched only on its page (a
 
 ## Markdown curriculum for AI coding tools
 
-Start with [sources/markdown/README.md](sources/markdown/README.md). This generated knowledge base converts all 16 original HTML sheets into complete readable snapshots, with 236 canonical task files, 74 practice records, 34 resource records, category indexes, and 24 weekly plans. Give your AI tool the relevant task file and its linked resources as context, then save your actual learning work in `learning/`.
+Start with [sources/markdown/categories/README.md](sources/markdown/categories/README.md). This folder contains one consolidated document per original HTML sheet: 11 category documents with full task records and inline resource details, plus Master Plan, Weekly Review, Practice Bank, Guide & Sources, and Dashboard. Each task is a section in its category document, not a separate file.
 
-Regenerate and validate with `python scripts/export-html-markdown.py` (Python standard library; no installation required). Generated Markdown is overwritten, so keep personal changes in the learning workspace. Exported dates and progress are historical source values; this does not import browser progress or current Google Sheets edits, and source URLs are preserved rather than newly verified.
+Give your AI tool the relevant category document and task ID as context. Keep your actual notes, code, and results in `learning/`. Regenerate and validate with `python scripts/export-html-markdown.py` (Python standard library; no installation required). Generated documents are overwritten. Dates, progress, and resource verification labels are preserved historical source values, not current browser or Google Sheets state.
