@@ -1,5 +1,17 @@
 "use client";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useMemo } from "react";
+import {
+  emptyPlanner,
+  parsePlanner,
+  parseBackup,
+  mergeBackup,
+  taskDates,
+  validSchedule,
+  type Planner,
+  type Schedule,
+  type Backup,
+  type Journal,
+} from "@/lib/planner";
 import { tasks as originalTasks, isComplete, type Task } from "@/lib/tracker";
 import { validateProgress, type Progress } from "@/lib/progress";
 import {
@@ -21,8 +33,15 @@ type Saved = {
   tasks: Record<string, Progress>;
   preferences: Preferences;
   study: StudyState;
+  planner: Planner;
 };
 type Context = {
+  planner: Planner;
+  updateSchedule: (value: Schedule) => Promise<boolean>;
+  addJournal: (value: Omit<Journal, "id">) => Promise<boolean>;
+  recordReview: (key: string, date: string) => Promise<boolean>;
+  recordSync: (value: Record<string, Progress>) => Promise<boolean>;
+  restoreBackup: (text: string, mode: "merge" | "replace") => Promise<boolean>;
   tasks: Task[];
   editing: boolean;
   setEditing: (value: boolean) => void;
@@ -49,6 +68,7 @@ const initial = (): Saved => ({
   tasks: {},
   preferences: defaults,
   study: emptyStudy(),
+  planner: emptyPlanner(),
 });
 export function progressOf(task: Task): Progress {
   return {
@@ -89,6 +109,7 @@ function readSaved(): Saved {
       status: typeof p.status === "string" ? p.status : "",
     },
     study: stored.study || emptyStudy(),
+    planner: parsePlanner(stored.planner),
   };
 }
 export function TrackerProvider({ children }: { children: React.ReactNode }) {
@@ -234,10 +255,70 @@ export function TrackerProvider({ children }: { children: React.ReactNode }) {
       setError("Could not export saved progress.");
     }
   }
+  const visibleTasks = useMemo(
+    () =>
+      originalTasks.map((t) => ({
+        ...t,
+        ...data.tasks[t.id],
+        dueDate: taskDates(t, data.planner.schedule).due,
+      })),
+    [data.tasks, data.planner.schedule],
+  );
   return (
     <TrackerContext.Provider
       value={{
-        tasks: originalTasks.map((t) => ({ ...t, ...data.tasks[t.id] })),
+        tasks: visibleTasks,
+        planner: data.planner,
+        updateSchedule: (value) =>
+          change((next) => {
+            if (!validSchedule(value))
+              throw new Error("Check the schedule values.");
+            next.planner.schedule = value;
+          }),
+        addJournal: (value) =>
+          change((next) => {
+            const planner = {
+              ...next.planner,
+              journal: [
+                ...next.planner.journal,
+                { ...value, id: crypto.randomUUID() },
+              ],
+            };
+            next.planner = parsePlanner(planner);
+          }),
+        recordReview: (key, date) =>
+          change((next) => {
+            next.planner = parsePlanner({
+              ...next.planner,
+              reviews: { ...next.planner.reviews, [key]: date },
+            });
+          }),
+        recordSync: (value) =>
+          change((next) => {
+            next.planner.synced = value;
+            next.planner.syncedAt = new Date().toISOString();
+          }),
+        restoreBackup: (text, mode) =>
+          change((next) => {
+            if (next.study.active)
+              throw new Error("Stop your timer before restoring a backup.");
+            const incoming = parseBackup(text);
+            // Restoring never restarts an old timer or counts time since its export.
+            incoming.study.active = null;
+            const result =
+              mode === "merge"
+                ? mergeBackup(next as Backup, incoming)
+                : incoming;
+            localStorage.setItem(
+              "learnspace-before-restore",
+              JSON.stringify(next),
+            );
+            next.tasks = result.tasks;
+            next.study = result.study;
+            next.planner = result.planner;
+            next.planner.synced = {};
+            next.planner.syncedAt = "";
+          }),
         editing,
         setEditing,
         preferences: data.preferences,
