@@ -31,11 +31,11 @@ Use the panel button beside the Learnspace logo to collapse the desktop navigati
 - **Resource library** keeps original notes separate from newly added official learning guides. HTTP availability was checked on 4 October 2026; this does not verify all inherited claims.
 - **Plan & guidance** preserves the original workflow notes, strategy, gap review, and interview checklist.
 
-Browsing is the default. **Edit progress** enables task-only editing: status, evidence, next action, hours, confidence, completion date, and mock scores/results. Updates are stored in this browser under `learnspace-progress-v1`, without accounts or a cloud service. Editing is switched off on reload. Progress and filters persist. **Export local progress** downloads a JSON backup; automatic backup restoration is not implemented. Clearing browser storage removes local updates. The original workbook is never rewritten.
+Browsing is the default. **Edit progress** enables task-only editing: status, evidence, next action, hours, confidence, completion date, and mock scores/results. Updates are stored in this browser under `learnspace-progress-v1`, without accounts or a cloud service. Editing is switched off on reload. Progress and filters persist. **Export local progress** downloads a JSON backup; reviewed backup import is available in Settings & backups. Clearing browser storage removes local updates. The original workbook is never rewritten.
 
 ## Schedule and task timers
 
-The application plan starts **5 October 2026**. Week 1 runs **5–11 October**, and the 24-week plan ends **21 March 2027**. Planned task starts use their start week; deadlines use the last day of their end week. The original workbook, imported JSON, and historical completion dates remain unchanged. The app schedule is set in `src/lib/study.ts`; changing it does not update the Google spreadsheet's start-date setting or formulas.
+The application plan starts **5 October 2026**. Week 1 runs **5–11 October**, and the 24-week plan ends **21 March 2027**. Planned task starts use their start week; deadlines use the last day of their end week. The original workbook, imported JSON, and historical completion dates remain unchanged. The default schedule is set in `src/lib/study.ts`; change your personal start date, capacity and study days in Settings & backups. Saving it does not update the Google spreadsheet's start-date setting or formulas.
 
 1. Open a task and choose **Start task**. Its status becomes In progress. Only one task can hold the timer at a time, including while paused.
 2. **Pause timer** saves the elapsed segment into Actual hours. **Resume task** starts another segment. **Stop & save time** releases the timer so you can start another task.
@@ -46,7 +46,7 @@ The application plan starts **5 October 2026**. Week 1 runs **5–11 October**, 
 
 Overview shows plan dates, today's recorded study time, overdue/due-today counts, and upcoming tasks. Next task skips blocked/completed tasks and the active timer, then sorts by deadline and priority. Check prerequisites yourself before starting. Day boundaries and completion defaults use Sri Lanka time (`Asia/Colombo`). Today's study time reflects session timestamps; manual corrections change task totals but do not rewrite session history.
 
-Timers and progress share one browser-storage record. Tabs on the same origin coordinate writes to avoid counting a session twice. Use a current browser over HTTPS or localhost. Existing browser progress is retained; different browsers/devices/origins have separate timers. Export regularly; clearing site data removes this history, and automatic backup import is not available.
+Timers and progress share one browser-storage record. Tabs on the same origin coordinate writes to avoid counting a session twice. Use a current browser over HTTPS or localhost. Existing browser progress is retained; different browsers/devices/origins have separate timers. Export regularly; clearing site data removes this history, and use Settings & backups to restore an exported JSON file.
 
 ## Learn through your own files
 
@@ -167,3 +167,28 @@ On Pages, Google sync uses a temporary browser token and reconnects after reload
 ### Reconnecting Google on Pages
 
 Google access now survives client-side navigation between app pages until its token expires. A full browser refresh still clears the in-memory token. The site remembers only a non-secret previously-connected marker and offers **Reconnect Google**, using Google's prompt option to avoid forcing account selection again. Google may still require account selection or consent. **Use another Google account** explicitly opens the account chooser. No access token or refresh token is stored in localStorage, sessionStorage, or the repository. Reconnection never writes spreadsheet cells; review and sync remain separate actions.
+
+
+## Installed app and daily learning tools
+
+- **Install Learnspace:** use the button above page content or in Settings. On supported Android/desktop browsers it opens the install prompt; iPhone/iPad users get Safari → Share → Add to Home Screen instructions. Published GitHub Pages builds include the manifest, PNG icons and service worker. No app store account or additional hosting is needed.
+- **Offline tasks:** open a task and use Download task for offline use below its journal. The app caches its page, documents and attachments (50 MB per-task limit), plus the core app shell. A first successful online visit is required. Undownloaded pages show an offline fallback. Google sign-in and sync require internet. Browser storage eviction can remove downloads. An activated app update clears task downloads to avoid mixing versions; re-download them. Local progress is retained.
+- **Today:** resume a task, see available hours from weekly capacity and selected days, and start a task whose referenced prerequisites are complete. Written prerequisites still need your judgment. This is an advisory daily budget; the app does not automatically move tasks between weeks.
+- **Reviews:** compare allocated estimates, saved session hours, completed tasks, blockers and low-confidence topics for any week. Complete spaced reviews at 1, 3, 7 and 14 days after the task completion date. Historical completion dates are retained.
+- **Quick journal:** add notes, questions, mistakes or reflections inside a task. Export Markdown to your task's notes folder. Browser journals are separate from the on-disk files and are included in full backups.
+- **Focus mode:** enable it on a task timer. Set focus/break lengths in Settings. Prompts appear while the app is open; the task keeps counting until explicitly paused. The break countdown is temporary and resets on reload. A two-hour running reminder helps catch missed pauses. No background push-notification service is used.
+- **Search content:** searches deployed theory, notes, code, results and resources and opens the matching file. Text files over 1 MB, images and PDFs are excluded from indexing. Local Node mode reads current learning files on opening Search; Pages updates the index on deployment. Search displays up to 50 matches and filters by section.
+- **Sync status:** shows task records changed since the last verified sync and its timestamp. This is a local estimate; Review changes fetches exact Google cell differences and conflicts. No tokens are included in backups. Phone/computer progress is not automatically synchronized; transfer a backup when changing devices.
+- **Schedule preview:** change start date, weekly hours and study days, then preview all changed deadlines before saving. Week assignments stay fixed; task starts/deadlines fall on selected days within their assigned weeks. Google schedule settings and formulas are not edited.
+
+### Restore without losing track of your work
+
+1. Stop any active or paused timer and export the current backup.
+2. Settings & backups → Choose backup JSON. Review task, session and journal counts.
+3. **Merge** keeps existing local task records and their time history, imports tasks with no local override, and merges unique journal/review entries. It keeps your current schedule. It never adds overlapping Actual hours together.
+4. **Replace** uses backup task records, sessions, journals, reviews and schedule. Filters stay on this device. Imported active timers are stopped, and unsaved time since an export is not added.
+5. Confirm the review and restore. A pre-restore recovery copy is saved locally; Download pre-restore recovery copy lets you restore it through the same workflow. Keep external exports because clearing browser storage also removes this recovery copy.
+
+### Performance choices
+
+The handbook is loaded separately, content search is fetched only on its page (also downloaded by the offline shell), static learning requests use browser caching, and task data is memoized. All visible timer displays share one clock; hidden pages stop rendering clock ticks and catch up from timestamps on return. Service-worker caches are versioned, with an explicit update action. These changes reduce repeated work; actual load speed still depends on device and connection. No production speed percentage is claimed.
