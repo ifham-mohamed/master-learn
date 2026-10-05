@@ -1,5 +1,16 @@
 "use client";
 import Link from "next/link";
+import {
+  Sparkles,
+  CalendarDays,
+  Clock3,
+  ListChecks,
+  RotateCcw,
+  ShieldCheck,
+  Download,
+  SlidersHorizontal,
+} from "lucide-react";
+import { ToolsHeading, ToolHeading } from "./tools-heading";
 import { useState } from "react";
 import { useTracker } from "./tracker-provider";
 import { useStudyClock } from "./study-timer";
@@ -46,11 +57,17 @@ export function TodayView() {
     : 0;
   return (
     <div className="tools-page">
-      <h1>Today’s learning</h1>
-      <p>{formatDate(today)} · Choose one achievable step.</p>
+      <ToolsHeading
+        eyebrow="A LITTLE PROGRESS, EVERY DAY"
+        title="Today’s learning"
+        description={`${formatDate(today)} · Choose one achievable step.`}
+      />
       <div className="tools-grid">
-        <section className="panel tool-card">
-          <h2>{active ? "Continue your task" : "Ready to begin"}</h2>
+        <section className="panel tool-card tool-feature tool-mint">
+          <ToolHeading
+            icon={Sparkles}
+            title={active ? "Continue your task" : "Ready to begin"}
+          />
           {active ? (
             <>
               <Link href={`/tasks/${active.id}`}>
@@ -81,9 +98,11 @@ export function TodayView() {
           )}
           <p role="status">{message}</p>
         </section>
-        <section className="panel tool-card">
-          <h2>Available study time</h2>
-          <strong>{available.toFixed(1)} h today</strong>
+        <section className="panel tool-card tool-feature tool-blue">
+          <ToolHeading icon={Clock3} title="Available study time" />
+          <div className="tool-big-number">
+            {available.toFixed(1)} <span>hours today</span>
+          </div>
           <p>
             Weekly capacity {planner.schedule.capacity} h across{" "}
             {planner.schedule.days.length} study days. This is a planning guide,
@@ -93,7 +112,11 @@ export function TodayView() {
         </section>
       </div>
       <section className="panel tool-card">
-        <h2>Ready tasks</h2>
+        <ToolHeading
+          icon={ListChecks}
+          title="Ready tasks"
+          detail={`${ready.length} ready`}
+        />
         <p>
           Prerequisite task IDs are complete. Read any additional written
           prerequisites in the task.
@@ -102,11 +125,18 @@ export function TodayView() {
           <div className="tool-row" key={t.id}>
             <div>
               <Link href={`/tasks/${t.id}`}>
-                {t.id} · {t.title}
+                <span className="tool-id">{t.id}</span> {t.title}
               </Link>
-              <p>
-                {t.nextAction || t.doneWhen} · Due {formatDate(t.dueDate)}{" "}
-                {t.dueDate < today ? "· Overdue" : ""}
+              <p>{t.nextAction || t.doneWhen}</p>
+              <p className="tool-metadata">
+                <span
+                  className={
+                    t.dueDate < today ? "tool-badge tool-peach" : "tool-badge"
+                  }
+                >
+                  Due {formatDate(t.dueDate)}
+                  {t.dueDate < today ? " · Overdue" : ""}
+                </span>
               </p>
             </div>
             <button
@@ -129,7 +159,7 @@ export function TodayView() {
         )}
       </section>
       <section className="panel tool-card">
-        <h2>Needs attention</h2>
+        <ToolHeading icon={ShieldCheck} title="Needs attention" />
         {tasks
           .filter(
             (t) =>
@@ -140,7 +170,7 @@ export function TodayView() {
           .map((t) => (
             <p key={t.id}>
               <Link href={`/tasks/${t.id}`}>
-                {t.id} · {t.title}
+                <span className="tool-id">{t.id}</span> {t.title}
               </Link>{" "}
               —{" "}
               {t.status === "Blocked"
@@ -176,10 +206,14 @@ export function ReviewView() {
   );
   return (
     <div className="tools-page">
-      <h1>Review & reflect</h1>
+      <ToolsHeading
+        eyebrow="MAKE YOUR LEARNING STICK"
+        title="Review & reflect"
+        description="Look back on your week, revisit ideas, and build lasting understanding."
+      />
       <section className="panel tool-card">
-        <h2>Weekly review</h2>
-        <label>
+        <ToolHeading icon={CalendarDays} title="Weekly review" />
+        <label className="tool-week-picker">
           Week{" "}
           <select
             value={week}
@@ -187,7 +221,7 @@ export function ReviewView() {
           >
             {Array.from({ length: 24 }, (_, i) => (
               <option key={i} value={i + 1}>
-                {i + 1}
+                Week {String(i + 1).padStart(2, "0")}
               </option>
             ))}
           </select>
@@ -195,7 +229,7 @@ export function ReviewView() {
         <p>
           {formatDate(start)} – {formatDate(end)}
         </p>
-        <div className="tools-grid">
+        <div className="tool-metrics">
           <p>
             <strong>
               {planned
@@ -242,21 +276,27 @@ export function ReviewView() {
           manual corrections and running time. Estimates for multi-week tasks
           are spread evenly.
         </p>
-        <h3>Topics to revisit</h3>
-        {planned
-          .filter((t) => Number(t.confidence) < 3)
-          .slice(0, 6)
-          .map((t) => (
-            <p key={t.id}>
-              <Link href={`/tasks/${t.id}`}>
-                {t.id} · {t.title}
-              </Link>{" "}
-              — confidence {t.confidence}/5
-            </p>
-          ))}
+        <h3 className="tool-subheading">Topics to revisit</h3>
+        <div className="tool-revisit">
+          {planned
+            .filter((t) => Number(t.confidence) < 3)
+            .slice(0, 6)
+            .map((t) => (
+              <p key={t.id}>
+                <Link href={`/tasks/${t.id}`}>
+                  <span className="tool-id">{t.id}</span> {t.title}
+                </Link>{" "}
+                <span className="tool-badge">Confidence {t.confidence}/5</span>
+              </p>
+            ))}
+        </div>
       </section>
       <section className="panel tool-card">
-        <h2>Revision queue</h2>
+        <ToolHeading
+          icon={RotateCcw}
+          title="Revision queue"
+          detail={`${queue.length} pending`}
+        />
         <p>
           Review after 1, 3, 7, and 14 days from completion. Open the task,
           recall the concept without notes, then record the review.
@@ -410,13 +450,21 @@ export function SettingsView() {
   });
   return (
     <div className="tools-page">
-      <h1>Settings & backups</h1>
+      <ToolsHeading
+        eyebrow="YOUR WORKSPACE, YOUR RHYTHM"
+        title="Settings & backups"
+        description="Set a sustainable pace and keep your learning progress close."
+      />
       <section className="panel tool-card">
-        <h2>Install & offline access</h2>
+        <ToolHeading
+          icon={Download}
+          title="Install & offline access"
+          detail="Learn anywhere"
+        />
         <InstallApp expanded />
       </section>
       <section className="panel tool-card">
-        <h2>Your schedule</h2>
+        <ToolHeading icon={SlidersHorizontal} title="Your schedule" />
         <p>
           Changes affect app dates only. Update your spreadsheet’s schedule
           separately. Capacity does not automatically redistribute tasks.
@@ -548,7 +596,11 @@ export function SettingsView() {
         )}
       </section>
       <section className="panel tool-card">
-        <h2>Backup & restore</h2>
+        <ToolHeading
+          icon={ShieldCheck}
+          title="Backup & restore"
+          detail="Stored on this device"
+        />
         <button className="button secondary" onClick={exportProgress}>
           Export complete backup
         </button>
