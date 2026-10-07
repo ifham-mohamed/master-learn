@@ -1,0 +1,535 @@
+{
+  "title": "Learnspace design direction",
+  "question": "Your workflows and features are settled. Choose the visual direction for the replacement design.",
+  "buildPath": {
+    "value": "code",
+    "toggle": true
+  },
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "steer": true,
+  "canon": true,
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Course catalog",
+      "thesis": "Ink-blue navigation and warm reading surfaces keep tasks, schedules, and evidence clearly separated.",
+      "palette": [
+        "#182d43",
+        "#f5f3ed",
+        "#ffffff",
+        "#276454"
+      ],
+      "materials": [
+        "Flat surfaces",
+        "Precise type",
+        "Ruled task lists"
+      ],
+      "viewport": "Grouped sidebar, current task with timer, upcoming deadlines, and a compact next-task list.",
+      "risk": "The quiet hierarchy needs strong task content rather than decorative artwork.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Grouped navigation",
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 10,
+            "accent": true
+          },
+          {
+            "label": "Current task and timer",
+            "x": 2,
+            "y": 0,
+            "w": 7,
+            "h": 4
+          },
+          {
+            "label": "Upcoming deadlines",
+            "x": 9,
+            "y": 0,
+            "w": 3,
+            "h": 10
+          },
+          {
+            "label": "Next tasks and curriculum",
+            "x": 2,
+            "y": 4,
+            "w": 7,
+            "h": 6
+          }
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/assigned.png",
+      "kicker": "THE ROLL",
+      "raised": [
+        {
+          "from": "Botanical folio",
+          "raise": "Keep the same alignment when moving from theory to results."
+        },
+        {
+          "from": "Bitmap specimen",
+          "raise": "Use stronger size and weight hierarchy without novelty fonts."
+        },
+        {
+          "from": "Character catalog",
+          "raise": "Make task identities easy to scan and recognize."
+        },
+        {
+          "from": "Factory catalog",
+          "raise": "Remove repeated labels and ornamental containers."
+        },
+        {
+          "from": "Emission rail",
+          "raise": "Pair every state color with an explicit text label."
+        }
+      ]
+    },
+    {
+      "id": "pick",
+      "label": "Engineering handbook",
+      "thesis": "Green navigation, clean document surfaces, and direct task instructions.",
+      "palette": [
+        "#174b40",
+        "#f5f7f4",
+        "#ffffff",
+        "#315873"
+      ],
+      "materials": [
+        "Flat surfaces",
+        "Precise type",
+        "Ruled task lists"
+      ],
+      "viewport": "Grouped sidebar, current task with timer, upcoming deadlines, and a compact next-task list.",
+      "risk": "Effective and familiar, but closer to the existing app.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Grouped navigation",
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 10,
+            "accent": true
+          },
+          {
+            "label": "Current task and timer",
+            "x": 2,
+            "y": 0,
+            "w": 7,
+            "h": 4
+          },
+          {
+            "label": "Upcoming deadlines",
+            "x": 9,
+            "y": 0,
+            "w": 3,
+            "h": 10
+          },
+          {
+            "label": "Next tasks and curriculum",
+            "x": 2,
+            "y": 4,
+            "w": 7,
+            "h": 6
+          }
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/pick.png",
+      "kicker": "IMPECCABLE\u2019S PICK"
+    },
+    {
+      "id": "transit",
+      "label": "Curriculum wayfinding",
+      "thesis": "Midnight-blue shell with consistent category colors and clearly marked task dependencies.",
+      "palette": [
+        "#142b45",
+        "#f6f8fb",
+        "#19645c",
+        "#a85b18"
+      ],
+      "materials": [
+        "Flat surfaces",
+        "Precise type",
+        "Ruled task lists"
+      ],
+      "viewport": "Grouped sidebar, current task with timer, upcoming deadlines, and a compact next-task list.",
+      "risk": "Too many category colors could compete with status colors.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Grouped navigation",
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 10,
+            "accent": true
+          },
+          {
+            "label": "Current task and timer",
+            "x": 2,
+            "y": 0,
+            "w": 7,
+            "h": 4
+          },
+          {
+            "label": "Upcoming deadlines",
+            "x": 9,
+            "y": 0,
+            "w": 3,
+            "h": 10
+          },
+          {
+            "label": "Next tasks and curriculum",
+            "x": 2,
+            "y": 4,
+            "w": 7,
+            "h": 6
+          }
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/transit.png",
+      "verdict": "competitive",
+      "case": "Strong orientation and dependency cues; less natural for long-form learning.",
+      "lineage": "Metropolitan transit wayfinding"
+    },
+    {
+      "id": "botanical",
+      "label": "Botanical folio",
+      "thesis": "Its visual character adds more interpretation than this daily learning workflow needs.",
+      "palette": [
+        "#f4eedf",
+        "#33533e"
+      ],
+      "materials": [
+        "Flat surfaces",
+        "Precise type",
+        "Ruled task lists"
+      ],
+      "viewport": "Grouped sidebar, current task with timer, upcoming deadlines, and a compact next-task list.",
+      "risk": "Would distract from reading or task completion.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Grouped navigation",
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 10,
+            "accent": true
+          },
+          {
+            "label": "Current task and timer",
+            "x": 2,
+            "y": 0,
+            "w": 7,
+            "h": 4
+          },
+          {
+            "label": "Upcoming deadlines",
+            "x": 9,
+            "y": 0,
+            "w": 3,
+            "h": 10
+          },
+          {
+            "label": "Next tasks and curriculum",
+            "x": 2,
+            "y": 4,
+            "w": 7,
+            "h": 6
+          }
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/botanical.png",
+      "verdict": "declined",
+      "case": "Lower audience fit and task clarity than the course catalog.",
+      "kept": "Consistent alignment between learning stages."
+    },
+    {
+      "id": "bitmap",
+      "label": "Bitmap specimen",
+      "thesis": "Its visual character adds more interpretation than this daily learning workflow needs.",
+      "palette": [
+        "#151515",
+        "#f7f6ef"
+      ],
+      "materials": [
+        "Flat surfaces",
+        "Precise type",
+        "Ruled task lists"
+      ],
+      "viewport": "Grouped sidebar, current task with timer, upcoming deadlines, and a compact next-task list.",
+      "risk": "Would distract from reading or task completion.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Grouped navigation",
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 10,
+            "accent": true
+          },
+          {
+            "label": "Current task and timer",
+            "x": 2,
+            "y": 0,
+            "w": 7,
+            "h": 4
+          },
+          {
+            "label": "Upcoming deadlines",
+            "x": 9,
+            "y": 0,
+            "w": 3,
+            "h": 10
+          },
+          {
+            "label": "Next tasks and curriculum",
+            "x": 2,
+            "y": 4,
+            "w": 7,
+            "h": 6
+          }
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/bitmap.png",
+      "verdict": "declined",
+      "case": "Lower audience fit and task clarity than the course catalog.",
+      "kept": "Decisive typographic hierarchy."
+    },
+    {
+      "id": "character",
+      "label": "Character catalog",
+      "thesis": "Its visual character adds more interpretation than this daily learning workflow needs.",
+      "palette": [
+        "#e9dce8",
+        "#384438"
+      ],
+      "materials": [
+        "Flat surfaces",
+        "Precise type",
+        "Ruled task lists"
+      ],
+      "viewport": "Grouped sidebar, current task with timer, upcoming deadlines, and a compact next-task list.",
+      "risk": "Would distract from reading or task completion.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Grouped navigation",
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 10,
+            "accent": true
+          },
+          {
+            "label": "Current task and timer",
+            "x": 2,
+            "y": 0,
+            "w": 7,
+            "h": 4
+          },
+          {
+            "label": "Upcoming deadlines",
+            "x": 9,
+            "y": 0,
+            "w": 3,
+            "h": 10
+          },
+          {
+            "label": "Next tasks and curriculum",
+            "x": 2,
+            "y": 4,
+            "w": 7,
+            "h": 6
+          }
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/character.png",
+      "verdict": "declined",
+      "case": "Lower audience fit and task clarity than the course catalog.",
+      "kept": "Recognizable task identities."
+    },
+    {
+      "id": "factory",
+      "label": "Factory catalog",
+      "thesis": "Its visual character adds more interpretation than this daily learning workflow needs.",
+      "palette": [
+        "#14191e",
+        "#fafafa"
+      ],
+      "materials": [
+        "Flat surfaces",
+        "Precise type",
+        "Ruled task lists"
+      ],
+      "viewport": "Grouped sidebar, current task with timer, upcoming deadlines, and a compact next-task list.",
+      "risk": "Would distract from reading or task completion.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Grouped navigation",
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 10,
+            "accent": true
+          },
+          {
+            "label": "Current task and timer",
+            "x": 2,
+            "y": 0,
+            "w": 7,
+            "h": 4
+          },
+          {
+            "label": "Upcoming deadlines",
+            "x": 9,
+            "y": 0,
+            "w": 3,
+            "h": 10
+          },
+          {
+            "label": "Next tasks and curriculum",
+            "x": 2,
+            "y": 4,
+            "w": 7,
+            "h": 6
+          }
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/factory.png",
+      "verdict": "declined",
+      "case": "Lower audience fit and task clarity than the course catalog.",
+      "kept": "Remove redundant labels."
+    },
+    {
+      "id": "emission",
+      "label": "Emission rail",
+      "thesis": "Its visual character adds more interpretation than this daily learning workflow needs.",
+      "palette": [
+        "#24272a",
+        "#f3eccc"
+      ],
+      "materials": [
+        "Flat surfaces",
+        "Precise type",
+        "Ruled task lists"
+      ],
+      "viewport": "Grouped sidebar, current task with timer, upcoming deadlines, and a compact next-task list.",
+      "risk": "Would distract from reading or task completion.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Grouped navigation",
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 10,
+            "accent": true
+          },
+          {
+            "label": "Current task and timer",
+            "x": 2,
+            "y": 0,
+            "w": 7,
+            "h": 4
+          },
+          {
+            "label": "Upcoming deadlines",
+            "x": 9,
+            "y": 0,
+            "w": 3,
+            "h": 10
+          },
+          {
+            "label": "Next tasks and curriculum",
+            "x": 2,
+            "y": 4,
+            "w": 7,
+            "h": 6
+          }
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/emission.png",
+      "verdict": "declined",
+      "case": "Lower audience fit and task clarity than the course catalog.",
+      "kept": "Explicit state labels."
+    }
+  ],
+  "canonCard": {
+    "id": "standard",
+    "label": "Conventional productivity app",
+    "thesis": "Familiar neutral sidebar, standard tables, and conventional panels.",
+    "palette": [
+      "#ffffff",
+      "#f3f4f6",
+      "#2563eb"
+    ],
+    "materials": [
+      "Flat surfaces",
+      "Precise type",
+      "Ruled task lists"
+    ],
+    "viewport": "Grouped sidebar, current task with timer, upcoming deadlines, and a compact next-task list.",
+    "risk": "Useful but visually similar to many other productivity apps.",
+    "wireframe": {
+      "cols": 12,
+      "rows": 10,
+      "regions": [
+        {
+          "label": "Grouped navigation",
+          "x": 0,
+          "y": 0,
+          "w": 2,
+          "h": 10,
+          "accent": true
+        },
+        {
+          "label": "Current task and timer",
+          "x": 2,
+          "y": 0,
+          "w": 7,
+          "h": 4
+        },
+        {
+          "label": "Upcoming deadlines",
+          "x": 9,
+          "y": 0,
+          "w": 3,
+          "h": 10
+        },
+        {
+          "label": "Next tasks and curriculum",
+          "x": 2,
+          "y": 4,
+          "w": 7,
+          "h": 6
+        }
+      ]
+    },
+    "comp": ".impeccable/mocks/decision/standard.png"
+  }
+}
