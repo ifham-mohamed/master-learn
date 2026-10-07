@@ -10,7 +10,13 @@ type InstallEvent = Event & {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: string }>;
 };
-export function InstallApp({ expanded = false }: { expanded?: boolean }) {
+export function InstallApp({
+  expanded = false,
+  statusOnly = false,
+}: {
+  expanded?: boolean;
+  statusOnly?: boolean;
+}) {
   const [prompt, setPrompt] = useState<InstallEvent | null>(null),
     [installed, setInstalled] = useState(false),
     [help, setHelp] = useState(false),
@@ -94,12 +100,13 @@ export function InstallApp({ expanded = false }: { expanded?: boolean }) {
         GitHub Pages app. Use the Pages preview to test them locally.
       </p>
     ) : null;
+  if (statusOnly && !offline && !update && !message) return null;
   return (
     <div className="install-controls">
       {offline && (
         <span role="status">Offline · local progress still saves</span>
       )}
-      {!installed && (
+      {!installed && !statusOnly && (
         <button
           className="button secondary"
           onClick={async () => {

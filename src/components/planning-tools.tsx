@@ -58,7 +58,6 @@ export function TodayView() {
   return (
     <div className="tools-page">
       <ToolsHeading
-        eyebrow="A LITTLE PROGRESS, EVERY DAY"
         title="Today’s learning"
         description={`${formatDate(today)} · Choose one achievable step.`}
       />
@@ -207,7 +206,6 @@ export function ReviewView() {
   return (
     <div className="tools-page">
       <ToolsHeading
-        eyebrow="MAKE YOUR LEARNING STICK"
         title="Review & reflect"
         description="Look back on your week, revisit ideas, and build lasting understanding."
       />
@@ -451,7 +449,6 @@ export function SettingsView() {
   return (
     <div className="tools-page">
       <ToolsHeading
-        eyebrow="YOUR WORKSPACE, YOUR RHYTHM"
         title="Settings & backups"
         description="Set a sustainable pace and keep your learning progress close."
       />

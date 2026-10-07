@@ -8,3 +8,7 @@ __pycache__/
 artifacts/
 .local/
 *.log
+
+.impeccable/questions/
+.impeccable/review/
+.impeccable/mocks/

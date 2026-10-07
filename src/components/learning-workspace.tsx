@@ -141,7 +141,6 @@ export function LearningWorkspace({ taskId }: { taskId: string }) {
       </Link>
       <div className="learning-heading">
         <div>
-          <div className="eyebrow">LEARN · EXPERIMENT · DOCUMENT</div>
           <h2>Your task workspace</h2>
           <p>
             Your files, connected to your learning. Save in your editor and read

@@ -51,7 +51,6 @@ export function ContentSearch() {
   return (
     <div className="tools-page">
       <ToolsHeading
-        eyebrow="YOUR PERSONAL KNOWLEDGE LIBRARY"
         title="Search your learning content"
         description="Find the idea, experiment, or note you want to return to."
       />

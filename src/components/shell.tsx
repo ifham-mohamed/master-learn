@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ActiveStudyBar } from "./study-timer";
-import { InstallApp } from './pwa-controls';
+import { InstallApp } from "./pwa-controls";
 import {
   ArrowUpRight,
   BookOpen,
@@ -11,9 +11,6 @@ import {
   CalendarDays,
   ChevronRight,
   Code2,
-  Coffee,
-  Braces,
-  Network,
   Compass,
   FolderKanban,
   GraduationCap,
@@ -23,11 +20,13 @@ import {
   Menu,
   PanelLeftClose,
   PanelLeftOpen,
-  Sparkles,
+  Play,
+  Settings2,
+  Search,
   X,
 } from "lucide-react";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { categories, slug, isComplete } from "@/lib/tracker";
+import { isComplete } from "@/lib/tracker";
 import { useTracker } from "./tracker-provider";
 import { Tooltip } from "./tooltip";
 import { ThemeToggle } from "./theme-toggle";
@@ -42,18 +41,18 @@ import {
 
 const navigation = [
   ["/", "Overview", LayoutDashboard],
-  ['/today','Today',Sparkles],
-  ['/reviews','Reviews',CalendarDays],
-  ['/search','Search content',LibraryBig],
-  ['/settings','Settings & backups',FolderKanban],
-  ["/weeks", "Weekly journey", CalendarDays],
+  ["/today", "Today", Play],
+  ["/reviews", "Reviews", CalendarDays],
+  ["/search", "Search content", Search],
+  ["/settings", "Settings & backups", Settings2],
+  ["/weeks", "Weekly plan", CalendarDays],
   ["/learning", "Learning workspace", FolderOpen],
   ["/plan", "Master plan", ListTodo],
   ["/tracks", "Learning tracks", Compass],
   ["/practice", "Practice bank", Code2],
   ["/projects", "Projects", FolderKanban],
   ["/resources", "Resource library", LibraryBig],
-  ["/guide", "Plan & guidance", BookOpen],
+  ["/guide", "Handbook", BookOpen],
   ["/sync", "Google Sheets sync", ArrowUpRight],
 ] as const;
 
@@ -146,7 +145,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
               </span>
               <span className="brand-text">
                 learnspace
-                <span className="brand-subtitle">LEARNING WORKSPACE</span>
+                <span className="brand-subtitle">Software engineering</span>
               </span>
             </Link>
           </Tooltip>
@@ -182,100 +181,63 @@ export function Shell({ children }: { children: React.ReactNode }) {
         >
           <X size={20} />
         </button>
-        <div className="workspace-label">PERSONAL WORKSPACE</div>
-        <nav aria-label="Workspace">
-          {navigation.map(([url, label, Icon]) => {
-            const active =
-              pathname === url ||
-              (url === "/tracks" && pathname.startsWith("/tracks/")) ||
-              (url === "/plan" && pathname.startsWith("/tasks/"));
-            return (
-              <Tooltip key={url} label={label} enabled={compact}>
-                <Link
-                  href={url}
-                  aria-label={label}
-                  onClick={() => setOpen(false)}
-                  aria-current={
-                    active
-                      ? pathname === url
-                        ? "page"
-                        : "location"
-                      : undefined
-                  }
-                  className={`nav-link ${active ? "active" : ""}`}
-                >
-                  <Icon size={18} />
-                  <span className="nav-label">{label}</span>
-                  {url === "/weeks" && <span className="nav-count">24</span>}
-                </Link>
-              </Tooltip>
-            );
-          })}
-        </nav>
-        <div className="sidebar-rule" />
-        <div className="workspace-label">YOUR FOCUS AREAS</div>
-        <nav aria-label="Focus areas">
-          {(
-            [
-              ["Java & Spring", Coffee],
-              ["TypeScript & UI", Braces],
-              ["DSA", Code2],
-              ["System design", Network],
-            ] as const
-          ).map(([name, Icon], i) => (
-            <Tooltip key={name} label={name} enabled={compact}>
-              <Link
-                href={`/tracks/${slug(name)}`}
-                aria-label={name}
-                aria-current={
-                  pathname === `/tracks/${slug(name)}` ? "page" : undefined
-                }
-                className={`focus-link ${pathname === `/tracks/${slug(name)}` ? "active" : ""}`}
-                onClick={() => setOpen(false)}
-              >
-                <span className={`focus-icon color-${i}`}>
-                  <Icon size={17} />
-                </span>
-                <span className="nav-label">{name}</span>
-              </Link>
-            </Tooltip>
-          ))}
-        </nav>
-        <Tooltip
-          label={`All ${categories.length} learning tracks`}
-          enabled={compact}
-        >
-          <Link
-            href="/tracks"
-            aria-label={`All ${categories.length} learning tracks`}
-            className="all-tracks"
-            onClick={() => setOpen(false)}
-          >
-            <span className="nav-label">
-              All {categories.length} learning tracks
-            </span>{" "}
-            <ChevronRight size={16} />
-          </Link>
-        </Tooltip>
-        <div className="sidebar-bottom">
-          <div className="small-label">
-            <Sparkles size={14} /> ONE STEP AT A TIME
+        {[
+          {
+            label: "Daily work",
+            routes: ["/", "/today", "/weeks", "/reviews"],
+          },
+          {
+            label: "Curriculum",
+            routes: [
+              "/learning",
+              "/plan",
+              "/tracks",
+              "/practice",
+              "/projects",
+              "/resources",
+              "/search",
+            ],
+          },
+          { label: "Workspace", routes: ["/guide", "/sync", "/settings"] },
+        ].map((group) => (
+          <div className="navigation-group" key={group.label}>
+            <div className="workspace-label">{group.label}</div>
+            <nav aria-label={group.label}>
+              {group.routes.map((route) => {
+                const [url, label, Icon] = navigation.find(
+                  (item) => item[0] === route,
+                )!;
+                const active =
+                  pathname === url ||
+                  (url === "/tracks" && pathname.startsWith("/tracks/")) ||
+                  (url === "/plan" && pathname.startsWith("/tasks/"));
+                return (
+                  <Tooltip key={url} label={label} enabled={compact}>
+                    <Link
+                      href={url}
+                      aria-label={label}
+                      onClick={() => setOpen(false)}
+                      aria-current={
+                        active
+                          ? pathname === url
+                            ? "page"
+                            : "location"
+                          : undefined
+                      }
+                      className={`nav-link ${active ? "active" : ""}`}
+                    >
+                      <Icon size={18} aria-hidden="true" />
+                      <span className="nav-label">{label}</span>
+                    </Link>
+                  </Tooltip>
+                );
+              })}
+            </nav>
           </div>
-          <p>
-            Small, consistent steps.
-            <br />
-            Stronger engineering skills.
-          </p>
-          <Link href="/guide" onClick={() => setOpen(false)}>
-            Explore your plan <ArrowUpRight size={15} />
-          </Link>
-        </div>
-        <div className="profile">
-          <span className="avatar">SE</span>
-          <span className="profile-text">
-            Software engineer<small>Personal learning workspace</small>
-          </span>
-          <span className="online-dot" />
+        ))}
+        <div className="sidebar-context">
+          <BookOpen size={16} aria-hidden="true" />
+          <span className="nav-label">24-week learning plan</span>
         </div>
       </aside>
       {open && mobile && (
@@ -327,12 +289,12 @@ export function Shell({ children }: { children: React.ReactNode }) {
         )}
         <main id="main-content" tabIndex={-1}>
           <ActiveStudyBar />
-          <InstallApp />
+          <InstallApp statusOnly />
           {children}
         </main>
         <footer className="footer">
-          <span>Made for the long game.</span>
-          <span>Java + TypeScript · 24 weeks · One focused journey</span>
+          <span>Learnspace · Software engineering</span>
+          <span>Progress is saved on this device</span>
         </footer>
       </div>
     </div>

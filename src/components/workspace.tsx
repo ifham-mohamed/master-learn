@@ -3,27 +3,23 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { addDays } from "@/lib/planner";
-const ApplicationGuide = dynamic(()=>import("./application-guide").then(m=>m.ApplicationGuide),{loading:()=> <p>Opening handbook…</p>});
-import { StudyDashboard } from "./study-timer";
+const ApplicationGuide = dynamic(
+  () => import("./application-guide").then((m) => m.ApplicationGuide),
+  { loading: () => <p>Opening handbook…</p> },
+);
+import { LearningOverview } from "./learning-overview";
 import { useState } from "react";
 import {
   ArrowDownToLine,
   ArrowRight,
   ArrowUpRight,
   BookOpen,
-  Braces,
   CalendarDays,
-  CheckCircle2,
   ChevronLeft,
   ChevronRight,
   Clock3,
-  Code2,
-  Coffee,
-  Database,
   ExternalLink,
-  Flag,
   Layers3,
-  Lightbulb,
   Search,
   ShieldCheck,
   Target,
@@ -59,9 +55,7 @@ const trackOrder = [
   "Review",
   "Career",
 ];
-const trackIcons = [Coffee, Braces, Database, Code2, Layers3, Lightbulb];
 function Heading({
-  label,
   title,
   description,
   children,
@@ -74,7 +68,6 @@ function Heading({
   return (
     <div className="page-heading">
       <div>
-        <div className="eyebrow">{label}</div>
         <h1>{title}</h1>
         <p>{description}</p>
       </div>
@@ -82,26 +75,12 @@ function Heading({
     </div>
   );
 }
-function TrackCard({
-  category,
-  tasks,
-  index,
-}: {
-  category: string;
-  tasks: Task[];
-  index: number;
-}) {
+function TrackCard({ category, tasks }: { category: string; tasks: Task[] }) {
   const items = tasks.filter((t) => t.category === category);
   const complete = items.filter(isComplete).length;
-  const Icon = trackIcons[index % trackIcons.length];
   return (
     <Link href={`/tracks/${slug(category)}`} className="track-card">
-      <div className="track-card-top">
-        <span className={`track-icon color-${index % 6}`}>
-          <Icon size={21} />
-        </span>
-        <ArrowUpRight size={17} />
-      </div>
+      <ArrowUpRight size={17} />
       <h3>{category}</h3>
       <p>{trackDescriptions[category]}</p>
       <div className="track-card-bottom">
@@ -109,9 +88,6 @@ function TrackCard({
         <span>
           {complete}/{items.length} complete
         </span>
-      </div>
-      <div className="progress-bar">
-        <span style={{ width: `${(complete / items.length) * 100}%` }} />
       </div>
     </Link>
   );
@@ -124,19 +100,26 @@ export function Workspace({
   view: string;
   category?: string;
 }) {
-  const { tasks, preferences, setPreferences, exportProgress, localCount,planner } =
-    useTracker();
+  const {
+    tasks,
+    preferences,
+    setPreferences,
+    exportProgress,
+    localCount,
+    planner,
+  } = useTracker();
   const [resourceSearch, setResourceSearch] = useState("");
   const [resourceFilter, setResourceFilter] = useState("all");
   const [practiceSearch, setPracticeSearch] = useState("");
   const [practiceType, setPracticeType] = useState("");
   const { week, query, category: filterCategory, status } = preferences;
-  const current = {...tracker.weeks.find((w) => w.week === week)!,starts:addDays(planner.schedule.start,(week-1)*7),capacity:planner.schedule.capacity};
+  const current = {
+    ...tracker.weeks.find((w) => w.week === week)!,
+    starts: addDays(planner.schedule.start, (week - 1) * 7),
+    capacity: planner.schedule.capacity,
+  };
   const weekTasks = tasks.filter((t) => t.startWeek === week);
   const weekComplete = weekTasks.filter(isComplete).length;
-  const core = tasks.filter((t) => t.scope === "Core");
-  const completedCore = core.filter(isComplete).length;
-  const actual = tasks.reduce((sum, t) => sum + Number(t.actual || 0), 0);
   const coreHours = weekTasks
     .filter((t) => t.scope === "Core")
     .reduce((s, t) => s + Number(t.estimate), 0);
@@ -182,198 +165,7 @@ export function Workspace({
         .includes(query.toLowerCase()),
   );
 
-  if (view === "overview")
-    return (
-      <>
-        <Heading
-          label="YOUR LEARNING WORKSPACE"
-          title="A little progress, every day."
-          description="Build the skills. Put them into practice. Make the next step count."
-        >
-          {weekControl}
-        </Heading>
-        <StudyDashboard />
-        <section className="journey-banner">
-          <div className="journey-content">
-            <span className="banner-tag">
-              <span /> YOUR 24-WEEK ROADMAP
-            </span>
-            <h2>
-              From foundations
-              <br />
-              to interview confidence.
-            </h2>
-            <p>
-              Java + TypeScript. One connected learning journey,
-              <br className="desktop-break" /> with real projects and evidence
-              at every step.
-            </p>
-            <Link className="button primary" href="/weeks">
-              Explore your weekly journey <ArrowRight size={16} />
-            </Link>
-          </div>
-          <div
-            className="journey-map"
-            aria-label="Roadmap from foundations to interview practice"
-          >
-            <div className="map-orbit orbit-one" />
-            <div className="map-orbit orbit-two" />
-            <div className="map-line" />
-            <div className="map-node node-one">
-              <span>
-                <Braces size={22} />
-              </span>
-              <strong>01</strong>
-              <small>Foundations</small>
-            </div>
-            <div className="map-node node-two">
-              <span>
-                <Layers3 size={23} />
-              </span>
-              <strong>02</strong>
-              <small>Build & connect</small>
-            </div>
-            <div className="map-node node-three">
-              <span>
-                <Flag size={22} />
-              </span>
-              <strong>03</strong>
-              <small>Practice & refine</small>
-            </div>
-            <span className="map-caption">LEARN → BUILD → EXPLAIN</span>
-          </div>
-        </section>
-        <div className="stat-grid">
-          <Stat
-            label="CORE TASKS COMPLETE"
-            value={`${completedCore} / ${core.length}`}
-            detail={`${Math.round((completedCore / core.length) * 100)}% of your core plan`}
-            icon={<CheckCircle2 size={18} />}
-            color="green"
-          />
-          <Stat
-            label="LEARNING TRACKS"
-            value="11"
-            detail="Connected skills, one direction"
-            icon={<Layers3 size={18} />}
-            color="blue"
-          />
-          <Stat
-            label="HOURS RECORDED"
-            value={`${actual.toFixed(1)}`}
-            detail="Time invested in your journey"
-            icon={<Clock3 size={18} />}
-            color="orange"
-          />
-          <Stat
-            label="PRACTICE TARGET"
-            value="145"
-            detail="Distinct DSA problems · 24 weeks"
-            icon={<Target size={18} />}
-            color="purple"
-          />
-        </div>
-        <div className="overview-columns">
-          <section className="panel focus-panel">
-            <div className="section-heading">
-              <div>
-                <div className="eyebrow">KEEP YOUR MOMENTUM</div>
-                <h2>Your week {week} focus</h2>
-              </div>
-              <Link href="/weeks">
-                View week <ArrowRight size={15} />
-              </Link>
-            </div>
-            <div className="focus-description">
-              <span className="phase-pill">{current.phase}</span>
-              <span>{formatDate(current.starts)}</span>
-            </div>
-            <p className="weekly-focus-text">{current.focus}</p>
-            <TaskList
-              compact
-              items={[
-                ...weekTasks.filter((t) => t.status === "In progress"),
-                ...weekTasks.filter(
-                  (t) => !["Done", "In progress"].includes(t.status),
-                ),
-              ].slice(0, 4)}
-            />
-            <div className="panel-foot">
-              <span>
-                <CheckCircle2 size={14} />
-                {weekComplete} of {weekTasks.length} tasks complete this week
-              </span>
-              <Link href="/weeks">
-                See all tasks <ArrowRight size={14} />
-              </Link>
-            </div>
-          </section>
-          <aside className="right-column">
-            <section className="panel workload-panel">
-              <div className="section-heading">
-                <h2>Make room to learn</h2>
-                <Clock3 size={18} />
-              </div>
-              <p>Your week {week} workload</p>
-              <div className="hours-display">
-                <strong>
-                  {coreHours}
-                  <small>h</small>
-                </strong>
-                <span>/ {current.capacity}h capacity</span>
-              </div>
-              <div className="capacity-meter">
-                <span
-                  style={{
-                    width: `${Math.min((coreHours / current.capacity) * 100, 100)}%`,
-                  }}
-                />
-              </div>
-              <div
-                className={`workload-note ${coreHours > current.capacity ? "overloaded" : ""}`}
-              >
-                <span className="dot" />
-                {coreHours > current.capacity
-                  ? `${Number((coreHours - current.capacity).toFixed(2))}h above your planned capacity`
-                  : `${Number((current.capacity - coreHours).toFixed(2))}h available in your plan`}
-              </div>
-              <p className="small-copy">
-                {coreHours > current.capacity
-                  ? "Give the essentials room. Move extra work into a lighter week in your source plan."
-                  : "Leave room for practice, reflection, and a little curiosity."}
-              </p>
-            </section>
-            <Link href="/guide" className="note-card">
-              <span className="note-icon">
-                <Lightbulb size={20} />
-              </span>
-              <h3>Build proof, not just progress.</h3>
-              <p>
-                A small project, a clear explanation, a test that passes. That’s
-                how learning becomes a skill.
-              </p>
-              <span>
-                How this plan works <ArrowUpRight size={15} />
-              </span>
-            </Link>
-          </aside>
-        </div>
-        <div className="section-heading outside">
-          <div>
-            <div className="eyebrow">A CONNECTED SKILL SET</div>
-            <h2>Your learning tracks</h2>
-          </div>
-          <Link href="/tracks">
-            Explore all tracks <ArrowRight size={15} />
-          </Link>
-        </div>
-        <div className="track-grid overview-tracks">
-          {trackOrder.slice(0, 4).map((name, i) => (
-            <TrackCard key={name} category={name} tasks={tasks} index={i} />
-          ))}
-        </div>
-      </>
-    );
+  if (view === "overview") return <LearningOverview />;
 
   if (view === "weeks")
     return (
@@ -403,7 +195,7 @@ export function Workspace({
         </div>
         <section className="week-feature">
           <div>
-            <span className="eyebrow">
+            <span className="context-label">
               WEEK {week} · {formatDate(current.starts)}
             </span>
             <h2>{current.phase}</h2>
@@ -471,8 +263,8 @@ export function Workspace({
           description="Eleven areas of focus. One complete engineering skill set."
         />
         <div className="track-grid">
-          {trackOrder.map((name, i) => (
-            <TrackCard key={name} category={name} tasks={tasks} index={i} />
+          {trackOrder.map((name) => (
+            <TrackCard key={name} category={name} tasks={tasks} />
           ))}
         </div>
       </>
@@ -703,7 +495,7 @@ export function Workspace({
                     <Layers3 size={22} />
                   </span>
                   <span>
-                    <span className="eyebrow">{p.relatedIds}</span>
+                    <span className="context-label">{p.relatedIds}</span>
                     <h3>{p.title}</h3>
                   </span>
                   <ChevronRight size={18} />
@@ -877,9 +669,9 @@ export function Workspace({
             and a result. A completed mock can still have a failed result.
           </p>
           <p>
-            Start date:{" "}
-            <strong>{formatDate(planner.schedule.start)}</strong> · Review
-            interval: <strong>{tracker.settings.reviewInterval} days</strong> ·{" "}
+            Start date: <strong>{formatDate(planner.schedule.start)}</strong> ·
+            Review interval:{" "}
+            <strong>{tracker.settings.reviewInterval} days</strong> ·{" "}
             <strong>{localCount}</strong> local task updates
           </p>
         </div>
@@ -929,30 +721,5 @@ export function Workspace({
         )}
       </div>
     </>
-  );
-}
-
-function Stat({
-  label,
-  value,
-  detail,
-  icon,
-  color,
-}: {
-  label: string;
-  value: string;
-  detail: string;
-  icon: React.ReactNode;
-  color: string;
-}) {
-  return (
-    <section className="stat">
-      <div>
-        <span className="small-label">{label}</span>
-        <span className={`stat-icon ${color}`}>{icon}</span>
-      </div>
-      <strong>{value}</strong>
-      <p>{detail}</p>
-    </section>
   );
 }

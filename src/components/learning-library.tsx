@@ -21,7 +21,6 @@ export function LearningLibrary() {
     <>
       <div className="page-heading">
         <div>
-          <div className="eyebrow">YOUR PERSONAL KNOWLEDGE BASE</div>
           <h1>Learn it. Build it. Keep the proof.</h1>
           <p>
             One folder for each task. Theory, notes, code, results, and

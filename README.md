@@ -198,3 +198,11 @@ The handbook is loaded separately, content search is fetched only on its page (a
 Start with [sources/markdown/categories/README.md](sources/markdown/categories/README.md). This folder contains one consolidated document per original HTML sheet: 11 category documents with full task records and inline resource details, plus Master Plan, Weekly Review, Practice Bank, Guide & Sources, and Dashboard. Each task is a section in its category document, not a separate file.
 
 Give your AI tool the relevant category document and task ID as context. Keep your actual notes, code, and results in `learning/`. Regenerate and validate with `python scripts/export-html-markdown.py` (Python standard library; no installation required). Generated documents are overwritten. Dates, progress, and resource verification labels are preserved historical source values, not current browser or Google Sheets state.
+
+## Course catalog interface
+
+The overview puts the current or next ready task beside your study schedule, followed by ready tasks, deadlines, and curriculum links. Start, resume, or pause the task from this page; open its workspace to read documents and record evidence.
+
+Navigation is grouped into **Daily work**, **Curriculum**, and **Workspace**. Collapse the desktop sidebar using its top control; the mobile menu opens a drawer that closes with Escape and returns keyboard focus to its trigger. Installation is available in **Settings & backups**. Offline and update notices still appear throughout the app.
+
+The interface uses ink-blue navigation, neutral reading surfaces, green actions, and matching light/dark themes. See [DESIGN.md](DESIGN.md) for the implemented design tokens and [PRODUCT.md](PRODUCT.md) for product constraints. Progress, Google Sheets synchronization, timers, backups, and GitHub Pages deployment retain their existing workflows.

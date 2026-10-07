@@ -69,7 +69,6 @@ export function TaskTimer({
     <section className="panel study-timer" aria-label="Task timer">
       <div className="study-timer-top">
         <div>
-          <div className="eyebrow">FOCUS ON ONE TASK</div>
           <h2>
             {running
               ? "Session in progress"

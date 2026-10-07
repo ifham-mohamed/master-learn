@@ -7,10 +7,21 @@ import "./learning.css";
 import "./theme.css";
 import "./handbook.css";
 import "./study.css";
-import './tools.css';
-import { assetUrl,isGitHubPages } from '@/lib/deployment';
+import "./tools.css";
+import "./catalog.css";
+import { assetUrl, isGitHubPages } from "@/lib/deployment";
 export const metadata: Metadata = {
-  ...(isGitHubPages ? {manifest:assetUrl('/manifest.webmanifest'),appleWebApp:{capable:true,title:'Learnspace',statusBarStyle:'default' as const},icons:{apple:assetUrl('/icons/icon-192.png')}} : {}),
+  ...(isGitHubPages
+    ? {
+        manifest: assetUrl("/manifest.webmanifest"),
+        appleWebApp: {
+          capable: true,
+          title: "Learnspace",
+          statusBarStyle: "default" as const,
+        },
+        icons: { apple: assetUrl("/icons/icon-192.png") },
+      }
+    : {}),
   title: {
     default: "Learnspace — Your engineering journey",
     template: "%s | Learnspace",

@@ -247,7 +247,6 @@ export function BrowserSheetSync() {
       )}
       <div className="page-heading">
         <div>
-          <div className="eyebrow">REVIEW · SYNC · VERIFY</div>
           <h1>Connect your learning progress</h1>
           <p>
             Review the exact Master Plan cells before sending changes to your

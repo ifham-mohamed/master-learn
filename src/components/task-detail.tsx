@@ -46,7 +46,7 @@ export function TaskDetail({ id }: { id: string }) {
       </Link>
       <div className="page-heading detail-heading">
         <div>
-          <div className="eyebrow">
+          <div className="context-label">
             {task.id} · {task.category} · {task.section}
           </div>
           <h1>{task.title}</h1>

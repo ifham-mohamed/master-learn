@@ -122,3 +122,14 @@ This supersedes the Render deployment plan above. The Render Blueprint and hoste
 Today, Reviews, Search, and Settings share section icons, compact metadata, rounded cards, and the existing mint, blue, lavender, and peach theme tokens. Search results now separate task titles, file paths, section badges, and highlighted matching excerpts. Mobile layouts stack forms and result cards; weekly metrics use a two-column grid. Keyboard focus remains visible and hover transitions respect reduced-motion preferences.
 
 Validation: TypeScript and ESLint passed. GitHub Pages production export generated 265 pages, with static asset/link checks passing. Browser checks covered desktop Today/Reviews/Search, all four pages at 390px without horizontal overflow, dark mobile Settings, week selection, search matching, and schedule preview without saving changes.
+
+## Course catalog redesign — 7 October 2026
+
+- TypeScript and ESLint passed.
+- All 26 existing automated tests passed.
+- Production Pages export generated 265 pages; the Pages validator confirmed local links/assets and absence of server/environment files.
+- Browser checks at 1440 px desktop and 390 px mobile: overview, task CS12, Today, Reviews, Search, Settings, Handbook, and Tracks had no document-level horizontal overflow.
+- Confirmed desktop sidebar collapse/expand, light/dark switching, and mobile drawer Escape dismissal with focus returned to the menu trigger.
+- Browser error log was empty during checked navigation. Google authentication and remote writes were not exercised in this visual redesign.
+- Review captures are local artifacts under `.impeccable/review/` and excluded from Git.
+- Independent Impeccable finish review requested two corrections: single-column ready tasks and ruled learning-track records. Both were fixed, recaptured on desktop/mobile, and scored resolved with a ship verdict. No production deployment was performed.
