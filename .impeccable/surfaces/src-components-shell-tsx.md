@@ -13,7 +13,7 @@ Mode: Operate; Read for learning documents and guidance.
 
 THESIS: Course catalog makes daily study, curriculum exploration, and review distinct jobs. Remove the promotional roadmap hero and decorative metric-card composition.
 
-OWN-WORLD: Ink-blue navigation, warm off-white ground, white reading surfaces, forest-green actions, and explicit semantic states. One self-hosted sans family, disciplined spacing, compact ruled lists, and conventional controls.
+OWN-WORLD: Ink-blue navigation, warm off-white ground, white reading surfaces, academic-blue actions, and explicit semantic states. One self-hosted sans family, disciplined spacing, compact ruled lists, and conventional controls.
 
 STORY: The learner sees the current or next ready task, its outcome and deadline, then starts or resumes work. Visitors can browse the complete curriculum. Secondary information expands in place.
 

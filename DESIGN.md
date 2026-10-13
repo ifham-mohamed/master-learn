@@ -2,9 +2,9 @@
 name: Learnspace
 description: A course catalog for focused software engineering study.
 colors:
-  forest: "#24634f"
-  forest-hover: "#1b503f"
-  forest-soft: "#e7f0eb"
+  academic: "#315b7c"
+  academic-hover: "#244660"
+  academic-soft: "#eaf0f5"
   ink-blue: "#182d43"
   nav-text: "#dce6ef"
   nav-muted: "#b0c1d1"
@@ -23,14 +23,14 @@ colors:
   warning: "#87520f"
   danger: "#a23a31"
   nav-focus: "#e5c887"
-  field-focus: "#80a98c"
+  field-focus: "#315b7c"
   dark-paper: "#141e28"
   dark-surface: "#1c2935"
   dark-text: "#e8edf0"
   dark-muted: "#b6c2cd"
   dark-border: "#3c4a57"
-  dark-forest: "#a7d9c0"
-  dark-forest-soft: "#263e37"
+  dark-academic: "#aac6e0"
+  dark-academic-soft: "#293b4e"
   dark-blue: "#aac6e0"
   dark-blue-soft: "#293b4e"
   dark-lavender-soft: "#353445"
@@ -93,13 +93,13 @@ spacing:
   section: "36px"
 components:
   button-primary:
-    backgroundColor: "{colors.forest}"
+    backgroundColor: "{colors.academic}"
     textColor: "{colors.surface}"
     rounded: "{rounded.button}"
     typography: "{typography.button}"
     padding: "10px 16px"
   button-primary-hover:
-    backgroundColor: "{colors.forest-hover}"
+    backgroundColor: "{colors.academic-hover}"
   button-secondary:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.text}"
@@ -116,8 +116,8 @@ components:
     rounded: "{rounded.nav}"
     padding: "10px 12px"
   status-done:
-    backgroundColor: "{colors.forest-soft}"
-    textColor: "{colors.forest}"
+    backgroundColor: "{colors.academic-soft}"
+    textColor: "{colors.academic}"
     rounded: "{rounded.status}"
   current-task:
     backgroundColor: "{colors.surface}"
@@ -136,7 +136,7 @@ components:
 
 **Creative North Star: "Course catalog"**
 
-Learnspace uses an orderly academic catalog to support sustained study. Ink-blue navigation anchors warm paper and white work surfaces; restrained forest-green actions make the next step clear. The character is practical, calm, and readable.
+Learnspace uses an orderly academic catalog to support sustained study. Ink-blue navigation anchors warm paper and white work surfaces; restrained academic-blue actions make the next step clear. The character is practical, calm, and readable.
 
 Aligned records, visible rules, and conventional controls carry the interface. Task identity, outcome, schedule, and evidence remain recognizable across browsing and working. Motion stays subtle during work; switching themes provides the expressive exception with a reduced-motion fallback.
 
@@ -148,10 +148,10 @@ Aligned records, visible rules, and conventional controls carry the interface. T
 
 ## Colors
 
-Forest green identifies actions and completion; ink blue anchors navigation while neutral paper separates the application ground from working surfaces.
+Academic blue identifies actions and completion; ink blue anchors navigation while neutral paper separates the application ground from working surfaces.
 
 ### Primary
-- **Forest:** primary action fills and light-theme emphasis. Forest Hover darkens the action on hover; Forest Soft holds completion states.
+- **Academic Blue:** primary action fills and light-theme emphasis. Academic Blue Hover darkens the action on hover; Academic Blue Soft holds completion states.
 
 ### Secondary
 - **Ink Blue:** persistent navigation ground. Navigation Text and Navigation Muted separate destinations from group labels; Navigation Selected and Navigation Hover identify state.
@@ -162,7 +162,7 @@ Forest green identifies actions and completion; ink blue anchors navigation whil
 - **Slate Text**, **Muted Slate**, and **Rule Gray:** primary text, supporting text, and boundaries.
 - **Amber** and **Danger:** blocked or overloaded work and overdue or overtime information. State labels remain visible alongside color.
 
-Dark-prefixed tokens record the implemented dark theme. The runtime swaps semantic custom properties; navigation muted and selected values stay shared. Primary filled actions retain the light-theme Forest fill and white text in both themes. Lavender Soft remains available to inherited secondary surfaces.
+Dark-prefixed tokens record the implemented dark theme. The runtime swaps semantic custom properties; navigation muted and selected values stay shared. Primary filled actions retain the light-theme Academic Blue fill and white text in both themes. Lavender Soft remains available to inherited secondary surfaces.
 
 **The Semantic State Rule.** Pair state color with a readable state label; color alone does not carry task status.
 
@@ -182,7 +182,7 @@ At 760px and below, navigation becomes a 270px drawer, the main padding becomes 
 
 ## Elevation & Depth
 
-Primary panels and catalog records are flat, without card shadows or hover lift. Tonal surfaces and one-pixel borders establish structure. Existing overlays retain functional elevation: navigation tooltip uses `0 5px 18px #122f2924`, and the mobile drawer uses `8px 0 35px #173c271c`. The topbar is opaque and has no backdrop blur; the mobile scrim retains its blur.
+Primary panels and catalog records are flat, without card shadows or hover lift. Tonal surfaces and one-pixel borders establish structure. Existing overlays retain functional elevation: navigation tooltip uses `0 5px 18px #12212f24`, and the mobile drawer uses `8px 0 35px #172b3c1c`. The topbar is opaque and has no backdrop blur; the mobile scrim retains its blur.
 
 **The Flat Work Surface Rule.** Keep study panels and catalog records grounded; reserve shadow for overlays.
 
@@ -193,16 +193,16 @@ Panels use softly rounded corners, with tighter corners on buttons, navigation, 
 ## Components
 
 ### Buttons
-Conventional and compact. Primary and secondary actions have a minimum height of 42px. Primary keeps a Forest fill, white text, and matching border; hover darkens the fill. Secondary uses Surface with a Border stroke and Text, moving to Soft Surface and a Muted border on hover. Disabled controls have 0.55 opacity. Focus uses a 2px Forest outline offset by 3px.
+Conventional and compact. Primary and secondary actions have a minimum height of 42px. Primary keeps a Academic Blue fill, white text, and matching border; hover darkens the fill. Secondary uses Surface with a Border stroke and Text, moving to Soft Surface and a Muted border on hover. Disabled controls have 0.55 opacity. Focus uses a 2px Academic Blue outline offset by 3px.
 
 ### Chips
-Status tags use small rounded corners and 11px text. Neutral means not started; Academic Blue means in progress; Forest means done; Amber means blocked. Preserve the text label in compact and mobile rows.
+Status tags use small rounded corners and 11px text. Neutral means not started; Academic Blue means in progress; Academic Blue means done; Amber means blocked. Preserve the text label in compact and mobile rows.
 
 ### Cards / Containers
 Current-task and reading panels use Surface, a one-pixel Border stroke, and Panel corners. The current task has Panel padding, reducing to 20px on mobile. Search results and track browsing use ruled records rather than freestanding tiles. Ready-task rows form one vertical reading path.
 
 ### Inputs / Fields
-Search fields use Surface and a one-pixel Border stroke with Field corners. Their inner input is transparent; placeholders use Muted. The search wrapper retains the inherited Field Focus outline, 2px with a 2px offset. General keyboard focus uses Forest. On mobile, form text grows to 16px.
+Search fields use Surface and a one-pixel Border stroke with Field corners. Their inner input is transparent; placeholders use Muted. The search wrapper retains the inherited Field Focus outline, 2px with a 2px offset. General keyboard focus uses Academic Blue. On mobile, form text grows to 16px.
 
 ### Navigation
 Group destinations by daily work, curriculum, and settings. Expanded destinations use 13px text and a 40px minimum height. The selected destination has a solid Navigation Selected background, white text, and 650 weight. Hover uses Navigation Hover; keyboard focus uses Navigation Focus. Collapsed navigation supplies labels through tooltips; mobile uses a dismissible drawer.

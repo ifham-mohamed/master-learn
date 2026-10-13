@@ -3,7 +3,7 @@
   padding-top: 25px;
   overscroll-behavior: contain;
   scrollbar-width: thin;
-  scrollbar-color: #d8e3db transparent;
+  scrollbar-color: #d8dee3 transparent;
 }
 .sidebar-heading {
   position: relative;
@@ -62,11 +62,11 @@
   transform: translateY(-50%);
   max-width: 208px;
   padding: 9px 12px;
-  background: #263f34;
+  background: #26333f;
   color: #fff;
-  border: 1px solid #375447;
+  border: 1px solid #374654;
   border-radius: 8px;
-  box-shadow: 0 5px 18px #122f2924;
+  box-shadow: 0 5px 18px #12212f24;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.5;
@@ -80,10 +80,10 @@
   top: calc(50% - 4px);
   width: 8px;
   height: 8px;
-  background: #263f34;
+  background: #26333f;
   transform: rotate(45deg);
-  border-left: 1px solid #375447;
-  border-bottom: 1px solid #375447;
+  border-left: 1px solid #374654;
+  border-bottom: 1px solid #374654;
 }
 @keyframes tooltip-appear {
   from {
@@ -104,7 +104,7 @@
   white-space: nowrap;
 }
 .nav-link.active {
-  box-shadow: inset 0 0 0 1px #dce9df;
+  box-shadow: inset 0 0 0 1px #dce3e9;
 }
 .nav-link.active::before {
   content: "";
@@ -114,7 +114,7 @@
   bottom: 13px;
   width: 3px;
   border-radius: 0 3px 3px 0;
-  background: #438567;
+  background: #436685;
 }
 .focus-link {
   min-height: 40px;
@@ -151,7 +151,7 @@
 }
 .sidebar nav a:focus-visible,
 .sidebar-toggle:focus-visible {
-  outline: 2px solid #438567;
+  outline: 2px solid #436685;
   outline-offset: 2px;
 }
 
@@ -225,12 +225,12 @@
     width: 36px;
     height: 38px;
     border-radius: 11px;
-    background: #29765b;
+    background: #295276;
     color: #fff;
-    border-color: var(--green);
+    border-color: var(--accent);
   }
   .sidebar-collapsed .sidebar-toggle:hover {
-    background: #205f47;
+    background: #20425f;
   }
   .sidebar-collapsed .sidebar-toggle:focus-visible {
     outline-offset: 4px;
@@ -303,7 +303,7 @@
   .sidebar {
     width: min(292px, calc(100vw - 48px));
     padding: 26px 20px 0;
-    box-shadow: 8px 0 35px #173c271c;
+    box-shadow: 8px 0 35px #172b3c1c;
   }
   .sidebar-heading {
     margin-bottom: 28px;

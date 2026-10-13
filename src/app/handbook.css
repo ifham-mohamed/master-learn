@@ -42,7 +42,7 @@
   margin-top: 6px;
 }
 .sync-table strong {
-  color: var(--green);
+  color: var(--accent);
 }
 .sync-consent {
   display: flex;
@@ -69,7 +69,7 @@
 }
 .handbook-welcome > svg {
   flex-shrink: 0;
-  color: var(--green);
+  color: var(--accent);
 }
 .handbook-welcome p {
   margin: 12px 0 18px;
@@ -130,9 +130,9 @@
 }
 .handbook-index nav a[aria-current="location"] {
   background: var(--pastel-mint);
-  color: var(--green);
+  color: var(--accent);
   font-weight: 700;
-  box-shadow: inset 3px 0 0 var(--green);
+  box-shadow: inset 3px 0 0 var(--accent);
 }
 .guide-section summary > svg {
   flex-shrink: 0;
@@ -145,7 +145,7 @@
   background: var(--soft-surface);
 }
 .guide-section summary:focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--accent);
   outline-offset: -3px;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -189,7 +189,7 @@
   display: block;
   padding: 16px 28px;
   border-top: 1px solid var(--border);
-  color: var(--green);
+  color: var(--accent);
   font-size: 12px;
 }
 #handbook-top,
@@ -200,7 +200,7 @@
   display: block;
   padding: 13px 26px;
   background: var(--pastel-blue);
-  color: var(--green);
+  color: var(--accent);
   font-size: 12px;
   border-bottom: 1px solid var(--border);
 }

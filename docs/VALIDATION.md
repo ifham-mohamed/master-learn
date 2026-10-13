@@ -133,3 +133,11 @@ Validation: TypeScript and ESLint passed. GitHub Pages production export generat
 - Browser error log was empty during checked navigation. Google authentication and remote writes were not exercised in this visual redesign.
 - Review captures are local artifacts under `.impeccable/review/` and excluded from Git.
 - Independent Impeccable finish review requested two corrections: single-column ready tasks and ruled learning-track records. Both were fixed, recaptured on desktop/mobile, and scored resolved with a ship verdict. No production deployment was performed.
+
+## Blue theme — 13 October 2026
+
+- Replaced green brand accents throughout shared and inherited styles with the catalog blue palette; renamed the shared action tokens to accent and accent-soft.
+- Updated favicon, 192/512 install icons, manifest theme/background colors, and design documentation.
+- Production build and Pages validation passed for 265 pages; ESLint passed.
+- Browser confirmation: light desktop at 1440px and dark mobile at 390px had no horizontal overflow. Primary white-on-blue action contrast measured 7.20:1; dark accent on its soft surface measured 6.48:1.
+- Impeccable detector reported advisory typography differences already present in the recorded design system; typography was outside this color update.

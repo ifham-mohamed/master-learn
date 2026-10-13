@@ -2,27 +2,27 @@
   color-scheme: light;
   --bg: #f5f7fa;
   --surface: #ffffff;
-  --text: #263e3b;
-  --muted: #5f746e;
-  --border: #dce6e3;
-  --green: #29765b;
-  --green-light: #e6f3eb;
-  --pastel-mint: #eaf5ee;
+  --text: #26333e;
+  --muted: #5f6a74;
+  --border: #dce1e6;
+  --accent: #295276;
+  --accent-soft: #e6edf3;
+  --pastel-mint: #eaf0f5;
   --pastel-blue: #eaf1fa;
   --pastel-lavender: #f0ecf8;
   --pastel-peach: #fbefe5;
-  --soft-surface: #f5f8f6;
+  --soft-surface: #f5f7f8;
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #141e24;
   --surface: #1d2a31;
-  --text: #e3eee9;
-  --muted: #b1c4be;
+  --text: #e3e9ee;
+  --muted: #b1bbc4;
   --border: #3b4e54;
-  --green: #a4d9be;
-  --green-light: #293f37;
-  --pastel-mint: #293f37;
+  --accent: #a4c0d9;
+  --accent-soft: #29353f;
+  --pastel-mint: #29353f;
   --pastel-blue: #2b3a50;
   --pastel-lavender: #3a344c;
   --pastel-peach: #463a31;
@@ -47,7 +47,7 @@
 }
 .brand-icon,
 .button.primary {
-  background: #29765b;
+  background: #295276;
   color: #fff;
 }
 :root[data-theme="dark"] .sidebar-toggle {
@@ -57,7 +57,7 @@
   transform: rotate(-12deg);
 }
 .theme-toggle:focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 ::view-transition-old(root),
@@ -179,5 +179,5 @@
   box-shadow: inset 0 0 0 1px var(--border);
 }
 html {
-  scrollbar-color: #849c92 var(--bg);
+  scrollbar-color: #84919c var(--bg);
 }

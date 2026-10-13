@@ -5,10 +5,10 @@
   --text: #253345;
   --muted: #586574;
   --border: #d9ddde;
-  --green: #24634f;
-  --green-light: #e7f0eb;
+  --accent: #315b7c;
+  --accent-soft: #eaf0f5;
   --blue: #315b7c;
-  --pastel-mint: #e7f0eb;
+  --pastel-mint: #eaf0f5;
   --pastel-blue: #eaf0f5;
   --pastel-lavender: #efedf2;
   --pastel-peach: #f5eee2;
@@ -28,10 +28,10 @@
   --text: #e8edf0;
   --muted: #b6c2cd;
   --border: #3c4a57;
-  --green: #a7d9c0;
-  --green-light: #263e37;
+  --accent: #aac6e0;
+  --accent-soft: #293b4e;
   --blue: #aac6e0;
-  --pastel-mint: #263e37;
+  --pastel-mint: #293b4e;
   --pastel-blue: #293b4e;
   --pastel-lavender: #353445;
   --pastel-peach: #42382c;
@@ -76,7 +76,7 @@ p {
   line-height: 1.7;
 }
 ::selection {
-  background: var(--green-light);
+  background: var(--accent-soft);
   color: var(--text);
 }
 html {
@@ -84,7 +84,7 @@ html {
 }
 input,
 textarea {
-  caret-color: var(--green);
+  caret-color: var(--accent);
 }
 input::placeholder,
 textarea::placeholder {
@@ -95,7 +95,7 @@ a {
   text-underline-offset: 4px;
 }
 :where(a, button, input, select, textarea, summary):focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 :where(time, dd, .task-time, .study-metrics, .stat, .tool-metrics) {
@@ -225,7 +225,7 @@ a {
 }
 .theme-toggle:hover {
   transform: none;
-  background: var(--green-light);
+  background: var(--accent-soft);
 }
 .edit-toggle {
   border-radius: 7px;
@@ -264,12 +264,12 @@ main {
   font-weight: 600;
 }
 .button.primary {
-  background: #24634f;
+  background: #315b7c;
   color: #fff;
-  border: 1px solid #24634f;
+  border: 1px solid #315b7c;
 }
 .button.primary:hover {
-  background: #1b503f;
+  background: #244660;
 }
 .button.secondary {
   background: var(--surface);
@@ -416,7 +416,7 @@ button:disabled,
 .resource-icon,
 .note-icon {
   background: transparent;
-  color: var(--green);
+  color: var(--accent);
   border-radius: 0;
 }
 .track-card-top {
@@ -434,7 +434,7 @@ button:disabled,
   background: var(--border);
 }
 .progress-bar > span {
-  background: var(--green);
+  background: var(--accent);
 }
 .week-feature,
 .learning-intro,
@@ -453,7 +453,7 @@ button:disabled,
   border-radius: 7px;
 }
 .week-strip button.selected {
-  background: #24634f;
+  background: #315b7c;
   color: #fff;
 }
 .task-row {
@@ -484,8 +484,8 @@ button:disabled,
   color: var(--blue);
 }
 .status.done {
-  background: var(--green-light);
-  color: var(--green);
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 .status.blocked {
   background: var(--pastel-peach);
@@ -609,7 +609,7 @@ button:disabled,
 }
 .catalog-task-meta > span:first-child {
   font-weight: 700;
-  color: var(--green);
+  color: var(--accent);
 }
 .catalog-current h3 {
   font-size: 23px;
@@ -650,7 +650,7 @@ button:disabled,
 .catalog-feedback {
   margin-top: 14px;
   font-size: 13px;
-  color: var(--green);
+  color: var(--accent);
 }
 .catalog-schedule {
   padding: 12px 0;
@@ -675,7 +675,7 @@ button:disabled,
 .catalog-schedule > a,
 .catalog-deadlines > a {
   font-size: 13px;
-  color: var(--green);
+  color: var(--accent);
 }
 .catalog-schedule > p {
   margin-top: 16px;

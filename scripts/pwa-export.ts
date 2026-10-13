@@ -53,8 +53,8 @@ try{const response=await fetch(request);return response;}catch{const saved=(awai
       start_url: base + "/today/",
       scope: base + "/",
       display: "standalone",
-      background_color: "#f5f8f7",
-      theme_color: "#27775f",
+      background_color: "#f4f3ef",
+      theme_color: "#182d43",
       icons: [192, 512].map((size) => ({
         src: base + `/icons/icon-${size}.png`,
         sizes: `${size}x${size}`,

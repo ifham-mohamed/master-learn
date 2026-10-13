@@ -1,6 +1,6 @@
 # Learnspace
 
-A Next.js learning workspace built from the supplied **Final Tracker** workbook and HTML exports. Explore the 24-week journey, 236 tasks, 11 learning tracks, 74 practice entries, five project profiles, and 38 resources in a light green-and-blue interface.
+A Next.js learning workspace built from the supplied **Final Tracker** workbook and HTML exports. Explore the 24-week journey, 236 tasks, 11 learning tracks, 74 practice entries, five project profiles, and 38 resources in a coordinated blue interface with light and dark themes.
 
 ## Run locally
 
@@ -205,4 +205,4 @@ The overview puts the current or next ready task beside your study schedule, fol
 
 Navigation is grouped into **Daily work**, **Curriculum**, and **Workspace**. Collapse the desktop sidebar using its top control; the mobile menu opens a drawer that closes with Escape and returns keyboard focus to its trigger. Installation is available in **Settings & backups**. Offline and update notices still appear throughout the app.
 
-The interface uses ink-blue navigation, neutral reading surfaces, green actions, and matching light/dark themes. See [DESIGN.md](DESIGN.md) for the implemented design tokens and [PRODUCT.md](PRODUCT.md) for product constraints. Progress, Google Sheets synchronization, timers, backups, and GitHub Pages deployment retain their existing workflows.
+The interface uses ink-blue navigation, neutral reading surfaces, blue actions, and matching light/dark themes. See [DESIGN.md](DESIGN.md) for the implemented design tokens and [PRODUCT.md](PRODUCT.md) for product constraints. Progress, Google Sheets synchronization, timers, backups, and GitHub Pages deployment retain their existing workflows.

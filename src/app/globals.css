@@ -8,13 +8,13 @@
 @import "@fontsource/manrope/800.css";
 
 :root {
-  --bg: #f8faf9;
+  --bg: #f8f9fa;
   --surface: #fff;
-  --text: #203430;
-  --muted: #72817c;
-  --border: #e5ebe8;
-  --green: #29765b;
-  --green-light: #eaf3ed;
+  --text: #202b34;
+  --muted: #727a81;
+  --border: #e5e8eb;
+  --accent: #295276;
+  --accent-soft: #eaeff3;
   --blue: #597eaa;
   --radius: 13px;
   --sidebar: 244px;
@@ -107,7 +107,7 @@ textarea {
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
 ::selection {
@@ -124,7 +124,7 @@ button {
   z-index: 100;
   background: var(--surface);
   padding: 15px;
-  border: 2px solid var(--green);
+  border: 2px solid var(--accent);
 }
 .skip-link:focus {
   top: 12px;
@@ -156,7 +156,7 @@ button {
   height: 39px;
   display: grid;
   place-items: center;
-  background: var(--green);
+  background: var(--accent);
   border-radius: 11px;
   color: white;
 }
@@ -192,10 +192,10 @@ button {
 .nav-link:hover,
 .focus-link:hover {
   background: var(--soft-surface);
-  color: var(--green);
+  color: var(--accent);
 }
 .nav-link.active {
-  background: var(--green-light);
+  background: var(--accent-soft);
   color: var(--text);
   font-weight: 700;
 }
@@ -223,7 +223,7 @@ button {
   height: 7px;
   width: 7px;
   display: inline-block;
-  background: var(--green);
+  background: var(--accent);
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -240,8 +240,8 @@ button {
   --track-bg: #f0edf7;
 }
 .color-3 {
-  --track: #4c9380;
-  --track-bg: #e9f4ef;
+  --track: #4c7293;
+  --track-bg: #e9eff4;
 }
 .color-4 {
   --track: #b98249;
@@ -326,7 +326,7 @@ button {
   font-size: 9px;
 }
 .online-dot {
-  background: #6ea783;
+  background: #6e8ca7;
   height: 6px;
   width: 6px;
   border-radius: 50%;
@@ -371,7 +371,7 @@ button {
 .snapshot-pill > span {
   width: 5px;
   height: 5px;
-  background: #82a88b;
+  background: #8296a8;
   border-radius: 50%;
 }
 .topbar-progress {
@@ -386,8 +386,8 @@ button {
   background: var(--soft-surface);
 }
 .edit-toggle.enabled {
-  color: var(--green);
-  background: var(--green-light);
+  color: var(--accent);
+  background: var(--accent-soft);
   border-color: var(--border);
 }
 main {
@@ -471,7 +471,7 @@ main {
   height: 5px;
   width: 5px;
   border-radius: 50%;
-  background: #80a97a;
+  background: #7a93a9;
 }
 .journey-content h2 {
   font-size: 30px;
@@ -500,13 +500,13 @@ main {
   min-height: 38px;
 }
 .button.primary {
-  background: var(--green);
+  background: var(--accent);
   color: #fff;
-  border: 1px solid var(--green);
-  box-shadow: 0 2px 3px #24543d10;
+  border: 1px solid var(--accent);
+  box-shadow: 0 2px 3px #243e5410;
 }
 .button.primary:hover {
-  background: #205e47;
+  background: #20415e;
 }
 .button.secondary {
   background: var(--surface);
@@ -517,7 +517,7 @@ main {
   position: relative;
   min-height: 263px;
   overflow: hidden;
-  background-image: radial-gradient(#9db69a55 0.8px, transparent 0.8px);
+  background-image: radial-gradient(#9aa9b655 0.8px, transparent 0.8px);
   background-size: 18px 18px;
   mask-image: linear-gradient(to right, transparent, #000 15%);
 }
@@ -542,7 +542,7 @@ main {
   right: 9%;
   top: 43%;
   height: 60px;
-  border-top: 2px dashed #a8c09d;
+  border-top: 2px dashed #9db0c0;
   transform: rotate(-19deg);
 }
 .map-node {
@@ -562,7 +562,7 @@ main {
   border-radius: 15px;
   display: grid;
   place-items: center;
-  box-shadow: 0 5px 15px #4e694c09;
+  box-shadow: 0 5px 15px #4c5b6909;
 }
 .map-node strong {
   font-size: 9px;
@@ -579,9 +579,9 @@ main {
   top: 48%;
 }
 .node-one > span {
-  background: #347558;
+  background: #345775;
   color: #fff;
-  border-color: #347558;
+  border-color: #345775;
 }
 .node-two {
   left: 40%;
@@ -632,7 +632,7 @@ main {
   color: var(--muted);
 }
 .stat-icon.orange {
-  color: var(--green);
+  color: var(--accent);
 }
 .stat-icon.purple {
   color: var(--muted);
@@ -776,7 +776,7 @@ main {
 .status > span {
   height: 4px;
   width: 4px;
-  background: #a7b1a9;
+  background: #a7acb1;
   border-radius: 50%;
 }
 .status.done {
@@ -784,18 +784,18 @@ main {
   color: var(--muted);
 }
 .status.done > span {
-  background: #78a784;
+  background: #7891a7;
 }
 .status.progress {
   background: var(--pastel-peach);
-  color: var(--green);
+  color: var(--accent);
 }
 .status.progress > span {
   background: #bda16c;
 }
 .status.blocked {
   background: var(--pastel-peach);
-  color: var(--green);
+  color: var(--accent);
 }
 .task-arrow {
   color: var(--muted);
@@ -894,7 +894,7 @@ main {
   color: var(--muted);
 }
 .workload-note.overloaded {
-  color: var(--green);
+  color: var(--accent);
 }
 .workload-note.overloaded .dot {
   background: #c0a263;
@@ -1000,7 +1000,7 @@ main {
 .progress-bar > span {
   display: block;
   height: 100%;
-  background: #80a789;
+  background: #8095a7;
   border-radius: 4px;
 }
 .footer {
@@ -1040,9 +1040,9 @@ main {
   margin-bottom: 4px;
 }
 .week-strip button.selected {
-  background: #2f7759;
+  background: #2f5577;
   color: white;
-  border-color: #2f7759;
+  border-color: #2f5577;
 }
 .week-dot {
   height: 4px;
@@ -1110,7 +1110,7 @@ main {
 }
 .inline-notice.amber {
   background: var(--pastel-peach);
-  color: var(--green);
+  color: var(--accent);
   border-color: var(--border);
 }
 .reflection {
@@ -1127,7 +1127,7 @@ main {
   align-items: center;
   gap: 8px;
   font-size: 11px;
-  color: var(--green);
+  color: var(--accent);
   margin-top: 17px;
 }
 .count-chip {
@@ -1168,7 +1168,7 @@ main {
   background: transparent;
 }
 .search-field:focus-within {
-  outline: 2px solid #80a98c;
+  outline: 2px solid #315b7c;
   outline-offset: 2px;
 }
 .search-field input::placeholder {
@@ -1351,7 +1351,7 @@ main {
 .link-health > span {
   height: 4px;
   width: 4px;
-  background: #9bb794;
+  background: #94a7b7;
   border-radius: 50%;
 }
 .resource-card h3 {
@@ -1654,7 +1654,7 @@ dd {
 .storage-error {
   padding: 14px 38px;
   background: var(--pastel-peach);
-  color: var(--green);
+  color: var(--accent);
   font-size: 12px;
 }
 .icon-button {
@@ -1879,7 +1879,7 @@ dd {
     display: block;
     position: fixed;
     inset: 0;
-    background: #1b2d2355;
+    background: #1b252d55;
     z-index: 25;
   }
   .topbar {
@@ -2230,7 +2230,7 @@ dd {
   color: var(--muted);
 }
 .status.progress {
-  color: var(--green);
+  color: var(--accent);
 }
 .status.done {
   color: var(--muted);
