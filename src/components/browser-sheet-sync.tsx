@@ -273,7 +273,7 @@ export function BrowserSheetSync() {
         <p>
           <a
             className="back-link"
-            href={`https://docs.google.com/spreadsheets/d/${spreadsheetId}/edit#gid=803047853`}
+            href={`https://docs.google.com/spreadsheets/d/${spreadsheetId}/edit`}
             target="_blank"
             rel="noreferrer"
           >
