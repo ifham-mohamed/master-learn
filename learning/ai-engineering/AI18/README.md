@@ -2,10 +2,26 @@
 
 # AI18 — Confirm round policy and rehearse AI-free fallback
 
-AI Engineering · Week 1 · Core
+Week 1 · Core · Warehouse checkpoint B01
 
-Read the [practice brief](notes/00-warehouse-practice.md), then write one entry in your [learning log](notes/journal.md).
 
-Use the other files when needed. [Concepts](theory/concepts.md) · [Code guide](code/README.md) · [Evidence](results/evidence.md) · [References](resources/links.md)
+## Review and learn
 
-[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/ai-engineering.md#ai18)
+Tool restrictions, AI-free fallback and independent verification.
+
+## Do the work
+
+Use the official docs, compiler, debugger and tests during a timed Java or SQL attempt.
+
+## Pass check
+
+Record what you solved unaided and one fallback technique you can repeat.
+
+
+
+
+## Record one entry
+
+Use your [learning log](notes/journal.md) for what you learned, what you tried and observed, and your next step. Put shared project code in `projects/warehouse-dispatch/`. Create `code/` for an isolated experiment or `results/` for a separate output file only when you have something to keep.
+
+[Project requirements](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/ai-engineering.md#ai18)

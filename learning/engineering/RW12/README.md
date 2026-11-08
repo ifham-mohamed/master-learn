@@ -2,10 +2,26 @@
 
 # RW12 — Feature in existing repo
 
-Engineering · Week 18 · Core
+Week 18 · Core · Warehouse checkpoint B18
 
-Read the [practice brief](notes/00-warehouse-practice.md), then write one entry in your [learning log](notes/journal.md).
 
-Use the other files when needed. [Concepts](theory/concepts.md) · [Code guide](code/README.md) · [Evidence](results/evidence.md) · [References](resources/links.md)
+## Review and learn
 
-[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/engineering.md#rw12)
+Working in an existing repo, incremental design and compatibility.
+
+## Do the work
+
+Add one small shipment exception feature through the existing test and review flow.
+
+## Pass check
+
+Demonstrate the new behavior and a previously working behavior that still passes.
+
+
+
+
+## Record one entry
+
+Use your [learning log](notes/journal.md) for what you learned, what you tried and observed, and your next step. Put shared project code in `projects/warehouse-dispatch/`. Create `code/` for an isolated experiment or `results/` for a separate output file only when you have something to keep.
+
+[Project requirements](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/engineering.md#rw12)

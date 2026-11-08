@@ -2,10 +2,32 @@
 
 # JA12 — Optional
 
-Java & Spring · Week 4 · Core
+Week 4 · Core · Warehouse checkpoint B04
 
-Read the [practice brief](notes/00-warehouse-practice.md), then write one entry in your [learning log](notes/journal.md).
+Before you begin, complete G02.
 
-Use the other files when needed. [Concepts](theory/concepts.md) · [Code guide](code/README.md) · [Evidence](results/evidence.md) · [References](resources/links.md)
 
-[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/java-and-spring.md#ja12)
+## Review and learn
+
+Optional for absence and explicit behavior at boundaries.
+
+## Do the work
+
+Return Optional from shipment lookup and handle the missing case where the caller can decide what to do.
+
+## Pass check
+
+Found and missing lookups are tested. Explain where a domain error belongs.
+
+## References
+
+- [Java language guides](https://dev.java/learn/language/)
+
+
+
+
+## Record one entry
+
+Use your [learning log](notes/journal.md) for what you learned, what you tried and observed, and your next step. Put shared project code in `projects/warehouse-dispatch/`. Create `code/` for an isolated experiment or `results/` for a separate output file only when you have something to keep.
+
+[Project requirements](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/java-and-spring.md#ja12)

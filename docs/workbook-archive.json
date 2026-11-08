@@ -379041,7 +379041,7 @@
         ""
       ],
       [
-        "Write and test your own code. Record status, evidence and hours in Master Plan using the same task ID.",
+        "Open the task README.md for instructions and notes/journal.md for your work. Record status, evidence and hours in Master Plan.",
         "",
         "",
         "",
@@ -379086,24 +379086,6 @@
         "Record tool versions, exact commands and real exit results."
       ],
       [
-        "AI18",
-        1,
-        "Core",
-        "Confirm round policy and rehearse AI-free fallback",
-        "Tool restrictions, AI-free fallback and independent verification.",
-        "Use the official docs, compiler, debugger and tests during a timed Java or SQL attempt.",
-        "Record what you solved unaided and one fallback technique you can repeat."
-      ],
-      [
-        "CS12",
-        1,
-        "Core",
-        "JOINs",
-        "INNER JOIN, LEFT JOIN, join keys, and filters in ON versus WHERE.",
-        "Query warehouses with assigned shipments, including a warehouse with none. Adapt the existing fixture and rerun on PostgreSQL when available.",
-        "Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse."
-      ],
-      [
         "JA05",
         1,
         "Core",
@@ -379120,6 +379102,24 @@
         "Encapsulation, constructors, composition, interfaces, and when inheritance helps.",
         "Separate the menu from Shipment and ShipmentService. Model allowed transitions and add an in-memory collection when a second shipment is needed.",
         "The terminal still works. Tests reject duplicate references and illegal transitions. Explain why you used composition."
+      ],
+      [
+        "AI18",
+        1,
+        "Core",
+        "Confirm round policy and rehearse AI-free fallback",
+        "Tool restrictions, AI-free fallback and independent verification.",
+        "Use the official docs, compiler, debugger and tests during a timed Java or SQL attempt.",
+        "Record what you solved unaided and one fallback technique you can repeat."
+      ],
+      [
+        "CS12",
+        1,
+        "Core",
+        "JOINs",
+        "INNER JOIN, LEFT JOIN, join keys, and filters in ON versus WHERE.",
+        "Query warehouses with assigned shipments, including a warehouse with none. Adapt the existing fixture and rerun on PostgreSQL when available.",
+        "Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse."
       ],
       [
         "TS05",
@@ -379158,10 +379158,19 @@
         "The diff explains one change and the branch can be built after checkout."
       ],
       [
+        "RW20",
+        1,
+        "Core",
+        "Think-aloud communication",
+        "Think aloud, state assumptions and explain a failure.",
+        "Explain your CLI flow while trying an invalid quantity and an unknown reference.",
+        "A listener can reconstruct the expected behavior and the reason for your next step."
+      ],
+      [
         "B01",
         1,
         "Core",
-        "Set up Java/TS repo; Java domain kata; convert a small JS module to strict TS",
+        "Run the first shipment CLI",
         "Terminal I/O, methods, OOP basics, Git and strict TypeScript.",
         "Deliver a runnable Java create/find CLI and a strict TypeScript shipment display helper. Use one shipment and split the code once the flow runs.",
         "A clean folder can build and run it. Save valid and invalid terminal runs, the TypeScript check, and one design decision."
@@ -379174,15 +379183,6 @@
         "Practice arrays and hash maps. State the invariant and time and space costs before coding.",
         "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
         "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
-      ],
-      [
-        "RW20",
-        1,
-        "Core",
-        "Think-aloud communication",
-        "Think aloud, state assumptions and explain a failure.",
-        "Explain your CLI flow while trying an invalid quantity and an unknown reference.",
-        "A listener can reconstruct the expected behavior and the reason for your next step."
       ],
       [
         "M01",
@@ -379251,7 +379251,7 @@
         "B02",
         2,
         "Core",
-        "Immutable Java value objects + typed TS API-state exercise",
+        "Model shipments and client states",
         "Immutable identities, collections, composition and UI state unions.",
         "Support multiple shipment references and basic status rules. Model loading, empty, success and error states with fixtures.",
         "Duplicate identity and invalid transitions are rejected. Each typed UI state renders."
@@ -379359,7 +379359,7 @@
         "B03",
         3,
         "Core",
-        "Generic Java service + typed DTO transformations",
+        "Refine lookup and mapping",
         "Generics, lookup boundaries, mapping and exceptions.",
         "Refine the Java lookup service and map shipment summaries to typed display objects.",
         "Tests cover known and unknown references, invalid input and mapping correctness."
@@ -379467,7 +379467,7 @@
         "B04",
         4,
         "Core",
-        "Java aggregation kata + 10 JS async-order drills",
+        "Summarize shipments and trace async work",
         "Aggregation, memory behavior and JavaScript async ordering.",
         "Report shipment totals by destination and work through the async-order drills using shipment data.",
         "Compare totals with a fixture and explain the observed execution order."
@@ -379581,24 +379581,6 @@
         "The same component renders multiple statuses from typed props."
       ],
       [
-        "B05",
-        5,
-        "Core",
-        "Create Spring Boot service skeleton + typed Next/React client shell",
-        "Spring Boot, dependency injection, service boundaries and React components.",
-        "Start Spring around the existing Java service. Build a React shipment list with fixture data.",
-        "Document one successful smoke request and show the React list with two fixture states."
-      ],
-      [
-        "DS05",
-        5,
-        "Core",
-        "Solve 7 new DSA problems and revisit errors",
-        "Practice linked lists and trees. State the invariant and time and space costs before coding.",
-        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
-      ],
-      [
         "RW05",
         5,
         "Core",
@@ -379624,6 +379606,24 @@
         "Entities, relationships, lifecycle states and ownership.",
         "Model a warehouse, SKU, balance, shipment, shipment lines, reservation and event history.",
         "Walk through create, reserve, cancel and dispatch and reconcile both quantities and transitions."
+      ],
+      [
+        "B05",
+        5,
+        "Core",
+        "Start Spring Boot and the React client",
+        "Spring Boot, dependency injection, service boundaries and React components.",
+        "Start Spring around the existing Java service. Build a React shipment list with fixture data.",
+        "Document one successful smoke request and show the React list with two fixture states."
+      ],
+      [
+        "DS05",
+        5,
+        "Core",
+        "Solve 7 new DSA problems and revisit errors",
+        "Practice linked lists and trees. State the invariant and time and space costs before coding.",
+        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
       ],
       [
         "M05",
@@ -379701,7 +379701,7 @@
         "B06",
         6,
         "Core",
-        "Controller/service/DTO flow + typed React form and route",
+        "Build shipment endpoints and routes",
         "Controller/service/DTO flow, forms and routing.",
         "Add shipment create and detail API operations. Build typed React form and detail routes.",
         "Create and read from a terminal HTTP client and navigate the form by keyboard."
@@ -379719,8 +379719,8 @@
         "M06",
         6,
         "Core",
-        "Spring MVC + React/Next + trees/BST",
-        "Recall Spring MVC + React/Next + trees/BST and the assumptions that affect your answer.",
+        "Spring MVC, React routes and binary search trees",
+        "Recall Spring MVC, React routes and binary search trees and the assumptions that affect your answer.",
         "Attempt the original timed prompt unaided. Use an actual B06 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
         "Record time, result, both scores, one specific improvement, and an unaided retry."
       ],
@@ -379779,15 +379779,6 @@
         "Loading, success, conflict and network failure are visible and independently tested."
       ],
       [
-        "B07",
-        7,
-        "Core",
-        "Validated booking/order endpoint + Zod client contract",
-        "REST contracts, input validation, response parsing and failure states.",
-        "Connect React to Spring for shipment create and lookup. Surface duplicate and validation failures.",
-        "Verify success, invalid input, conflict, malformed response, loading and failure states."
-      ],
-      [
         "G05",
         7,
         "Core",
@@ -379795,6 +379786,15 @@
         "NULL handling, duplicate-sensitive joins, and window ordering.",
         "Create a shipment event fixture with duplicates, missing assignments and tied times. Test the report against it.",
         "Save expected and actual rows with explicit tie-breaking and NULL behavior."
+      ],
+      [
+        "B07",
+        7,
+        "Core",
+        "Connect React to the validated shipment API",
+        "REST contracts, input validation, response parsing and failure states.",
+        "Connect React to Spring for shipment create and lookup. Surface duplicate and validation failures.",
+        "Verify success, invalid input, conflict, malformed response, loading and failure states."
       ],
       [
         "DS07",
@@ -379872,7 +379872,7 @@
         "B08",
         8,
         "Core",
-        "Persist customer/order model + clean frontend build/typecheck pipeline",
+        "Persist shipments and receive stock in PostgreSQL",
         "PostgreSQL schema, constraints, migrations and frontend build checks.",
         "Persist warehouses, SKUs, stock, shipments and lines. Implement stock receipt with a positive quantity and a unique receipt reference.",
         "Migrations work on new and populated data. Receipt increases on-hand stock once, a duplicate is rejected, and data survives restart."
@@ -379932,10 +379932,19 @@
         "Tests exercise status handling and fail when the error path is removed."
       ],
       [
+        "RW06",
+        9,
+        "Core",
+        "Reproduce, diagnose and repair a defect with regression tests",
+        "Reproduction, debugging, minimal fixes and regression tests.",
+        "Reproduce a shipment list or input failure, write the smallest failing case, and fix it yourself.",
+        "Save the failing case, root cause, passing test and scope of the change."
+      ],
+      [
         "B09",
         9,
         "Core",
-        "Profile/fix an N+1 query + Vitest service/client tests",
+        "Measure and fix shipment-list queries",
         "Query count, pagination, testing and fair measurement.",
         "Reproduce and fix an N+1 shipment list query. Add a frontend or service regression test.",
         "Save before and after counts on identical data and verify page correctness."
@@ -379948,15 +379957,6 @@
         "Practice topological ordering. State the invariant and time and space costs before coding.",
         "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
         "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
-      ],
-      [
-        "RW06",
-        9,
-        "Core",
-        "Reproduce, diagnose and repair a defect with regression tests",
-        "Reproduction, debugging, minimal fixes and regression tests.",
-        "Reproduce a shipment list or input failure, write the smallest failing case, and fix it yourself.",
-        "Save the failing case, root cause, passing test and scope of the change."
       ],
       [
         "M09",
@@ -380034,7 +380034,7 @@
         "B10",
         10,
         "Core",
-        "Double-booking race lab using transaction/constraint/locking",
+        "Reserve and release stock safely under contention",
         "Inventory balance, atomic transactions, row contention and rollback.",
         "Reserve all shipment lines together. Add a cancel action that releases a reservation once. Run two concurrent requests for the last unit.",
         "One request succeeds and one conflicts. Partial failure rolls back and available stock never becomes negative."
@@ -380052,8 +380052,8 @@
         "M11",
         10,
         "Core",
-        "Double booking / transactions / isolation",
-        "Recall Double booking / transactions / isolation and the assumptions that affect your answer.",
+        "Last-unit reservation, transactions and isolation",
+        "Recall Last-unit reservation, transactions and isolation and the assumptions that affect your answer.",
         "Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
         "Record time, result, both scores, one specific improvement, and an unaided retry."
       ],
@@ -380124,7 +380124,7 @@
         "B11",
         11,
         "Core",
-        "RBAC + ownership/tenant checks + security regression tests",
+        "Secure the warehouse workflow",
         "Session login, CSRF, role checks and tenant isolation.",
         "Secure shipment reads and writes with Spring Security. Add login, logout and UI states for denied and expired access.",
         "Verify allowed access, wrong role, another tenant, missing CSRF and logout with tests."
@@ -380196,7 +380196,7 @@
         "B12",
         12,
         "Core",
-        "End-to-end Spring API to TypeScript client flow with component/E2E tests",
+        "Receive, pick and dispatch from React",
         "Picking, dispatch, state transitions and browser integration.",
         "Add pick confirmation and dispatch for fully reserved stock. In React, receive stock and show available, reserved and on-hand quantities.",
         "Keyboard and browser tests cover receiving stock through dispatch. Dispatch deducts stock once and out-of-order actions fail."
@@ -380241,7 +380241,7 @@
         "PF02",
         12,
         "Optional",
-        "Booking / Appointment Concurrency Lab",
+        "Warehouse reservation concurrency lab",
         "Optional concurrency comparison and invariant testing.",
         "Package the last-unit race as a small standalone experiment. Compare it with a dock-slot overlap example if useful.",
         "Show the race and safe outcome on repeat runs."
@@ -380274,10 +380274,19 @@
         "The test suite checks response contracts and actual side effects, including a denied write."
       ],
       [
+        "RW10",
+        13,
+        "Core",
+        "Code review",
+        "Review for correctness, security, performance and test coverage.",
+        "Review a small reservation or React change line by line before merging.",
+        "Write one concrete review finding tied to a reproducible case or explain why it passes."
+      ],
+      [
         "B13",
         13,
         "Core",
-        "Service/controller test suite + failing-test and PR-review drills",
+        "Strengthen the regression suite",
         "Unit tests, controller tests, regression diagnosis and review.",
         "Exercise rollback and invalid transitions with tests. Review and repair a deliberately broken reservation change.",
         "Show failing-then-passing output and one review finding verified independently."
@@ -380290,15 +380299,6 @@
         "Practice mixed review. State the invariant and time and space costs before coding.",
         "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
         "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
-      ],
-      [
-        "RW10",
-        13,
-        "Core",
-        "Code review",
-        "Review for correctness, security, performance and test coverage.",
-        "Review a small reservation or React change line by line before merging.",
-        "Write one concrete review finding tied to a reproducible case or explain why it passes."
       ],
       [
         "M17",
@@ -380364,24 +380364,6 @@
         "CI blocks the broken revision and publishes a successful verification result."
       ],
       [
-        "B14",
-        14,
-        "Core",
-        "Postgres Testcontainers + Docker Compose + CI quality gates",
-        "PostgreSQL integration tests, Docker Compose and CI.",
-        "Run real-database migration and concurrency tests. Add a repeatable local stack and CI gates.",
-        "A clean run starts the stack and passes the tests twice with isolated test data."
-      ],
-      [
-        "DS14",
-        14,
-        "Core",
-        "Solve 6 new DSA problems and revisit errors",
-        "Practice one-dimensional dynamic programming. State the invariant and time and space costs before coding.",
-        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
-      ],
-      [
         "RW11",
         14,
         "Core",
@@ -380398,6 +380380,24 @@
         "Queues, delivery semantics, outbox and bounded retries.",
         "Simulate a delayed dispatch notification with a stub worker and a duplicate delivery.",
         "The subscriber handles a replay safely and you can explain recovery after a failed send."
+      ],
+      [
+        "B14",
+        14,
+        "Core",
+        "Run PostgreSQL integration tests and CI",
+        "PostgreSQL integration tests, Docker Compose and CI.",
+        "Run real-database migration and concurrency tests. Add a repeatable local stack and CI gates.",
+        "A clean run starts the stack and passes the tests twice with isolated test data."
+      ],
+      [
+        "DS14",
+        14,
+        "Core",
+        "Solve 6 new DSA problems and revisit errors",
+        "Practice one-dimensional dynamic programming. State the invariant and time and space costs before coding.",
+        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
       ],
       [
         "M19",
@@ -380436,24 +380436,6 @@
         "Find the request by ID. Logs expose useful context without credentials or private payloads."
       ],
       [
-        "B15",
-        15,
-        "Core",
-        "Add logs/metrics/cache; investigate query or rendering bottleneck",
-        "Observability, cache freshness, performance baselines and measurements.",
-        "Trace a failed request and measure a slow shipment list or query before choosing a fix.",
-        "Save an anonymized trace and comparable measurements with one explained trade-off."
-      ],
-      [
-        "DS15",
-        15,
-        "Core",
-        "Solve 6 new DSA problems and revisit errors",
-        "Practice two-dimensional dynamic programming. State the invariant and time and space costs before coding.",
-        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
-      ],
-      [
         "RW16",
         15,
         "Core",
@@ -380479,6 +380461,24 @@
         "Query filtering, indexes, search relevance and pagination.",
         "Implement or prototype search by shipment reference and filter by warehouse and status.",
         "Results match fixture cases, tenant scope and stable pagination."
+      ],
+      [
+        "B15",
+        15,
+        "Core",
+        "Measure performance and trace failures",
+        "Observability, cache freshness, performance baselines and measurements.",
+        "Trace a failed request and measure a slow shipment list or query before choosing a fix.",
+        "Save an anonymized trace and comparable measurements with one explained trade-off."
+      ],
+      [
+        "DS15",
+        15,
+        "Core",
+        "Solve 6 new DSA problems and revisit errors",
+        "Practice two-dimensional dynamic programming. State the invariant and time and space costs before coding.",
+        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
       ],
       [
         "M21",
@@ -380571,24 +380571,6 @@
         "Explain configuration, backups and how you would diagnose a failed health check."
       ],
       [
-        "B16",
-        16,
-        "Core",
-        "Deployable dual-stack architecture + 2 timed agentic repo tickets",
-        "Staging configuration, safe rollout, rate limiting and repository fluency.",
-        "Package a staging build, rate-limit login and general API traffic separately, and complete two timed repo tickets manually.",
-        "Save smoke results, isolated client quotas, 429 recovery, and proof for both fixes."
-      ],
-      [
-        "DS16",
-        16,
-        "Core",
-        "Solve 6 new DSA problems and revisit errors",
-        "Practice timed pattern selection. State the invariant and time and space costs before coding.",
-        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
-      ],
-      [
         "G08",
         16,
         "Core",
@@ -380634,6 +380616,24 @@
         "Trace stale availability and show how reservation avoids a stale read."
       ],
       [
+        "B16",
+        16,
+        "Core",
+        "Stage a release and test rate limits",
+        "Staging configuration, safe rollout, rate limiting and repository fluency.",
+        "Package a staging build, rate-limit login and general API traffic separately, and complete two timed repo tickets manually.",
+        "Save smoke results, isolated client quotas, 429 recovery, and proof for both fixes."
+      ],
+      [
+        "DS16",
+        16,
+        "Core",
+        "Solve 6 new DSA problems and revisit errors",
+        "Practice timed pattern selection. State the invariant and time and space costs before coding.",
+        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
         "M23",
         16,
         "Core",
@@ -380664,7 +380664,7 @@
         "B17",
         17,
         "Core",
-        "Design Spring Boot + Next.js commerce/booking capstone; define APIs/schema/acceptance tests",
+        "Design delivery and dispatch exceptions",
         "Requirements, event history, exception policy and API compatibility.",
         "Design a dispatch exception and delivery confirmation workflow with state rules and event fields.",
         "Write API examples, expected data changes and failure tests before implementation."
@@ -380715,10 +380715,19 @@
         "A documented contract test covers valid, malformed and earlier response shapes as applicable."
       ],
       [
+        "RW12",
+        18,
+        "Core",
+        "Feature in existing repo",
+        "Working in an existing repo, incremental design and compatibility.",
+        "Add one small shipment exception feature through the existing test and review flow.",
+        "Demonstrate the new behavior and a previously working behavior that still passes."
+      ],
+      [
         "B18",
         18,
         "Core",
-        "Implement core Spring endpoints + TypeScript client + integration tests",
+        "Build the delivery and exception workflow",
         "Vertical feature delivery, contract tests and domain events.",
         "Implement the approved exception and delivery flow across React, Spring and PostgreSQL.",
         "Verify authorized actions, invalid transitions, ordered event history and accessible feedback."
@@ -380731,15 +380740,6 @@
         "Practice graph and tree review. State the invariant and time and space costs before coding.",
         "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
         "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
-      ],
-      [
-        "RW12",
-        18,
-        "Core",
-        "Feature in existing repo",
-        "Working in an existing repo, incremental design and compatibility.",
-        "Add one small shipment exception feature through the existing test and review flow.",
-        "Demonstrate the new behavior and a previously working behavior that still passes."
       ],
       [
         "M27",
@@ -380778,24 +380778,6 @@
         "Show what happens when a query lacks supporting evidence or matches conflicting rules."
       ],
       [
-        "B19",
-        19,
-        "Core",
-        "Add idempotency/concurrency protection, retry/queue/cache/offline design evidence",
-        "Idempotency, request identity, retry, and consistency under partial failure.",
-        "Make dispatch confirmation safe to retry. Compare bounded retry, outbox and offline failure options in small labs.",
-        "Identical replay has one effect, conflicting payload reuse is rejected and simulated failure recovers."
-      ],
-      [
-        "DS19",
-        19,
-        "Core",
-        "Solve 5 new DSA problems and revisit errors",
-        "Practice mixed recall. State the invariant and time and space costs before coding.",
-        "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
-      ],
-      [
         "RW14",
         19,
         "Core",
@@ -380812,6 +380794,24 @@
         "Offline work, conflict detection, versions and replay.",
         "Design an offline pick draft and simulate a conflict on reconnect.",
         "Show the conflict outcome and explain which operations require authoritative online stock checks."
+      ],
+      [
+        "B19",
+        19,
+        "Core",
+        "Make dispatch safe to retry",
+        "Idempotency, request identity, retry, and consistency under partial failure.",
+        "Make dispatch confirmation safe to retry. Compare bounded retry, outbox and offline failure options in small labs.",
+        "Identical replay has one effect, conflicting payload reuse is rejected and simulated failure recovers."
+      ],
+      [
+        "DS19",
+        19,
+        "Core",
+        "Solve 5 new DSA problems and revisit errors",
+        "Practice mixed recall. State the invariant and time and space costs before coding.",
+        "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
       ],
       [
         "M29",
@@ -380841,6 +380841,33 @@
         "Record the run, one skill you can repeat, and the next gap you will address."
       ],
       [
+        "JA35",
+        20,
+        "Core",
+        "Project deep dive",
+        "Domain rules, trade-offs, failure diagnosis and maintainability.",
+        "Trace reserve and dispatch from request to committed data. Explain one rejected design with evidence.",
+        "Demonstrate the workflow from a clean start and answer a change request without notes."
+      ],
+      [
+        "TS31",
+        20,
+        "Core",
+        "Project deep dive",
+        "Client state, contracts, accessibility and performance trade-offs.",
+        "Demonstrate the React dispatch workflow and trace one client error to its cause.",
+        "Explain a design decision with a test or measurement and repeat a small change independently."
+      ],
+      [
+        "B20",
+        20,
+        "Core",
+        "Release, restore and verify the system",
+        "Deployment hardening, recovery, reliability targets and project explanation.",
+        "Release to staging, run the agreed smoke and load checks, then rehearse rollback and database restore.",
+        "Show a clean release, restored data, security results and a reviewer-ready walkthrough."
+      ],
+      [
         "BE76",
         20,
         "Core",
@@ -380857,15 +380884,6 @@
         "Trade-off communication, constraints and alternatives.",
         "Explain one choice such as locks versus conditional updates, or session versus bearer authentication.",
         "State the chosen approach, the cost accepted and a condition that would change your choice."
-      ],
-      [
-        "B20",
-        20,
-        "Core",
-        "Docker/CI/observability/security hardening + architecture one-pager + STAR/deep-dive stories",
-        "Deployment hardening, recovery, reliability targets and project explanation.",
-        "Release to staging, run the agreed smoke and load checks, then rehearse rollback and database restore.",
-        "Show a clean release, restored data, security results and a reviewer-ready walkthrough."
       ],
       [
         "DS20",
@@ -380895,15 +380913,6 @@
         "Record time, result, both scores, one specific improvement, and an unaided retry."
       ],
       [
-        "JA35",
-        20,
-        "Core",
-        "Project deep dive",
-        "Domain rules, trade-offs, failure diagnosis and maintainability.",
-        "Trace reserve and dispatch from request to committed data. Explain one rejected design with evidence.",
-        "Demonstrate the workflow from a clean start and answer a change request without notes."
-      ],
-      [
         "G09",
         20,
         "Core",
@@ -380916,7 +380925,7 @@
         "PF01",
         20,
         "Core",
-        "Project ONE - multi-tenant commerce/POS",
+        "Compare Project ONE experience with Warehouse Dispatch",
         "Project ownership, tenancy and transferable lessons.",
         "Record your real contribution to Project ONE and compare one inventory or tenancy decision with the capstone.",
         "Separate each project's evidence and explain one relevant difference with examples."
@@ -380925,7 +380934,7 @@
         "PF04",
         20,
         "Optional",
-        "Spring Boot Commerce / Booking Backend",
+        "Spring Boot and PostgreSQL backend showcase",
         "Backend project demonstration, PostgreSQL and security.",
         "Prepare a Spring Boot showcase of migration, reservation and permission enforcement.",
         "Provide a repeatable demo with one success and one business conflict."
@@ -380934,7 +380943,7 @@
         "PF05",
         20,
         "Optional",
-        "TypeScript / Next.js Client for Spring API",
+        "React dispatch client showcase",
         "React project demonstration, typed contracts and accessibility.",
         "Prepare a React showcase of the signed-in dispatch flow and error handling.",
         "Show direct navigation, keyboard access, and one recoverable API error."
@@ -380949,19 +380958,10 @@
         "Record the run, one skill you can repeat, and the next gap you will address."
       ],
       [
-        "TS31",
-        20,
-        "Core",
-        "Project deep dive",
-        "Client state, contracts, accessibility and performance trade-offs.",
-        "Demonstrate the React dispatch workflow and trace one client error to its cause.",
-        "Explain a design decision with a test or measurement and repeat a small change independently."
-      ],
-      [
         "B21",
         21,
         "Core",
-        "Timed Java coding, SQL and debugging rounds; repair top 3 gaps",
+        "Practice timed Java, SQL and debugging",
         "Timed Java, SQL and debugging with independent recall.",
         "Run three timed exercises drawn from your CLI, stock reports and dispatch failures. Repair the three most consequential gaps.",
         "Save original attempts, fixes and unaided retests."
@@ -381024,7 +381024,7 @@
         "B22",
         22,
         "Core",
-        "Timed unfamiliar-repo bug/feature task in both AI-free and AI-assisted modes",
+        "Fix a task in an unfamiliar repository",
         "Unfamiliar repository reading and verification.",
         "Handle a timed bug or feature ticket in a clean branch. Use a supplied failing scenario as the comparison exercise.",
         "Save the reproduction, smallest fix, independent test and what you learned."
@@ -381042,8 +381042,8 @@
         "M36",
         22,
         "Core",
-        "Timed AI-assisted repo task",
-        "Recall Timed AI-assisted repo task and the assumptions that affect your answer.",
+        "Timed independent repository verification",
+        "Recall Timed independent repository verification and the assumptions that affect your answer.",
         "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
         "Record time, result, both scores, one specific improvement, and an unaided retry."
       ],
@@ -381060,8 +381060,8 @@
         "M38",
         22,
         "Core",
-        "Booking/commerce timed design",
-        "Recall Booking/commerce timed design and the assumptions that affect your answer.",
+        "Timed warehouse workflow design",
+        "Recall Timed warehouse workflow design and the assumptions that affect your answer.",
         "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
         "Record time, result, both scores, one specific improvement, and an unaided retry."
       ],
@@ -381069,7 +381069,7 @@
         "PF03",
         22,
         "Optional",
-        "AI-Assisted Repo Debugging Lab",
+        "Independent repository debugging lab",
         "Optional repository debugging and verification.",
         "Use a prepared flawed patch in a small existing repo and investigate it manually.",
         "Record the root cause, independent fix and a regression test you wrote."
@@ -381087,7 +381087,7 @@
         "B23",
         23,
         "Core",
-        "Spring technical drill + TS/React drill + project deep-dive rehearsal",
+        "Rehearse the engineering walkthrough",
         "Backend, frontend and architecture explanation under time.",
         "Rehearse Java/Spring and React questions against your own changes. Trace a request end to end.",
         "Record a timed explanation, the gap it exposed and an improved unaided retry."
@@ -381114,8 +381114,8 @@
         "M40",
         23,
         "Core",
-        "TS runtime/types/React/Next deep dive",
-        "Recall TS runtime/types/React/Next deep dive and the assumptions that affect your answer.",
+        "TypeScript runtime, types and React client design",
+        "Recall TypeScript runtime, types and React client design and the assumptions that affect your answer.",
         "Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
         "Record time, result, both scores, one specific improvement, and an unaided retry."
       ],
@@ -381141,7 +381141,7 @@
         "B24",
         24,
         "Core",
-        "Two full simulations, final question-bank pass, resume/project evidence cleanup",
+        "Run final simulations and package the demo",
         "Full interview simulation, retrieval practice and portfolio evidence.",
         "Complete two simulations and curate the most relevant project runs, commits and decisions.",
         "Record scores, follow-up tasks and a clean-clone demo another person can reproduce."
@@ -381190,6 +381190,96 @@
         "Recall the week 24 concept and explain the trade-off from B24.",
         "Rerun one check from B24, revisit one mistake and compare actual time with your study plan.",
         "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Advanced architecture labs",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "After",
+        "",
+        "",
+        "Lab",
+        "Related tasks",
+        "Do the work",
+        "Pass check"
+      ],
+      [
+        "B14",
+        "",
+        "",
+        "1. Establish service boundaries",
+        "SD05, SD07, JA17, JA25, RW11, B14",
+        "Draw Inventory, Dispatch and Tracking boundaries inside the Spring application. Give each module a clear owner and public interface. Keep reservation, stock mutation and dispatch confirmation within the same transaction. Write an architecture decision record explaining what would justify extracting a service.",
+        "A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split."
+      ],
+      [
+        "B19",
+        "",
+        "",
+        "2. Publish dispatch events through RabbitMQ",
+        "SD13, JA25, RW14, B19, M29",
+        "Record a versioned DispatchConfirmed event in a PostgreSQL outbox in the same transaction as dispatch. Publish through RabbitMQ and wait for broker confirmation. The consumer commits a deduplicated result before acknowledging. Cap retries, route failed messages to a dead-letter queue, and retain an event archive for rebuilding projections. Compare a RabbitMQ work queue with a retained Kafka log, using partition keys and consumer offsets to reason about ordering and replay.",
+        "Roll back a dispatch, stop the broker after commit, interrupt the publisher before marking a send, and replay a poison message. Show zero events for the rollback, eventual delivery for the committed event and one consumer effect under redelivery."
+      ],
+      [
+        "B20",
+        "",
+        "",
+        "3. Extract a Tracking microservice",
+        "SD07, SD13, SD17, TS29, B18, B20, M31",
+        "After the broker lab, extract the read-oriented tracking projection. Give it its own PostgreSQL database and schema migrations, API and release. Update it from versioned events without reading the dispatch tables. Document eventual consistency, projection rebuild, stale-state UX, and service authentication. Model compensation for a hypothetical cross-service reservation as a separate design exercise.",
+        "Take Tracking down while dispatch continues. Restart it and rebuild a clean projection from the retained event archive. Reconcile results. Run API contract tests, deploy Tracking independently, and rehearse routing traffic back to the original tracking view."
+      ],
+      [
+        "B20",
+        "",
+        "",
+        "4. Release a Tracking micro-frontend",
+        "TS17, TS19, TS20, TS24, TS25, TS28, FE35, PF05",
+        "After the Tracking service lab, separate the read-only Tracking routes into an independently built React frontend. Compose at the route boundary. Define shared navigation, session behavior, accessibility and API contracts. Compare this with keeping feature modules in one React build.",
+        "Deploy and roll back the Tracking frontend without rebuilding Dispatch. Verify keyboard navigation, direct URLs, sign-out, API failure fallback, and bundle size before and after the split."
+      ],
+      [
+        "B20",
+        "",
+        "",
+        "5. Prove the distributed system can recover",
+        "JA32, EN28, G08, RW16, SD10, SD14, SD16, SD17, SD21, G09",
+        "Set a workload and targets for latency, errors and projection lag. Trace request and event IDs across components. Exercise rate limits, stale reads, backlog pressure, restore, and rollback. Compare container deployments and orchestration using the needs you measured.",
+        "Save p95 latency, error rate, oldest queued event, recovery time and restored-data checks. Test a failed release and write a runbook another person can follow."
+      ],
+      [
+        "B10",
+        "",
+        "",
+        "6. Measure algorithms against warehouse workloads",
+        "JA08, CS09, DS01, DS07, DS08, DS09, DS10, SD12, RW16",
+        "Compare reference lookup with a map and a database index. Use a heap for a prioritization experiment, intervals for dock scheduling, and a graph for warehouse route planning or dependencies. State complexity and compare representative workloads. Keep stock correctness in the transactional database.",
+        "Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises."
       ]
     ],
     "formulas": {}

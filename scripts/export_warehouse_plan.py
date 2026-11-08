@@ -9,7 +9,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'sources/warehouse-dispatch'
 DATA = ROOT / 'src/data/warehouse-path.json'
-BRIEF_NAME = '00-warehouse-practice.md'
 PHASES = [
     (1, 4, 'Terminal and domain', 'Create, find and summarize shipments in the terminal.'),
     (5, 7, 'Spring and React', 'Create and find shipments in the browser through a tested HTTP API.'),
@@ -46,6 +45,13 @@ ACTIVE_TITLES = {
     'M38': 'Timed warehouse workflow design', 'M40': 'TypeScript runtime, types and React client design',
 }
 MANAGED = '<!-- Managed by export_warehouse_plan.py -->'
+
+TRACK_READING = {
+    'Java & Spring': ('Java language guides', 'https://dev.java/learn/language/'),
+    'TypeScript & UI': ('TypeScript Handbook', 'https://www.typescriptlang.org/docs/handbook/intro.html'),
+    'CS & SQL': ('PostgreSQL tutorial', 'https://www.postgresql.org/docs/current/tutorial.html'),
+    'DSA': ('MIT Introduction to Algorithms', 'https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/'),
+}
 
 
 def slug(category):
@@ -122,7 +128,7 @@ def main(check):
     records = {}
     markdown = [
         '# Warehouse Dispatch learning plan',
-        'Start with the [project requirements](../../projects/warehouse-dispatch/README.md) and [JA05](../../learning/java-and-spring/JA05/notes/00-warehouse-practice.md). Study for five hours per selected day. Write and verify the project code yourself.',
+        'Start with the [project requirements](../../projects/warehouse-dispatch/README.md) and [JA05](../../learning/java-and-spring/JA05/README.md). Study for five hours per selected day. Write and verify the project code yourself.',
         '[Offline HTML](index.html) · [Excel tracker](../Final%20Tracker.xlsx) · [Original curriculum](../markdown/categories/README.md)',
     ]
     weeks = {}
@@ -141,7 +147,7 @@ def main(check):
                                 checkpoint=checkpoint, focus=focus, build=build, verify=verify,
                                 requires=requires, labs=[lab['id'] for lab in linked_labs])
         folder = f'learning/{slug(category)}/{task_id}'
-        path = f'{folder}/notes/{BRIEF_NAME}'
+        path = f'{folder}/README.md'
         weeks.setdefault(week, []).append((task_id, records[task_id], path))
         lab_notes = ''
         if linked_labs:
@@ -149,7 +155,28 @@ def main(check):
                 f'- {lab["title"]} · after {lab["after"]}. {lab["verify"]}' for lab in linked_labs
             ) + '\n'
         before = '\nBefore you begin, complete ' + ', '.join(requires) + '.\n' if requires else ''
-        publish(ROOT / path, f'''# {task_id} — {title}
+        reading = TRACK_READING.get(category)
+        if category == 'Java & Spring' and 17 <= int(task_id[2:]) <= 35:
+            reading = ('Spring guides by topic', 'https://spring.io/guides')
+        elif category == 'TypeScript & UI' and week >= 5:
+            reading = ('Thinking in React', 'https://react.dev/learn/thinking-in-react')
+        elif task_id in ('EN26', 'RW05', 'RW10'):
+            reading = ('Pro Git', 'https://git-scm.com/book/en/v2')
+        refs = ([reading] if reading else []) + [
+            (ref['label'], ref['url']) for lab in linked_labs for ref in lab['references']
+        ]
+        reference_notes = '\n'.join(f'- [{label}]({url})' for label, url in dict.fromkeys(refs))
+        reading_notes = f'\n## References\n\n{reference_notes}\n' if reference_notes and task_id != 'JA05' else ''
+        coaching = (SOURCE / 'ja05-coaching.md').read_text(encoding='utf-8').strip() if task_id == 'JA05' else ''
+        worked_example = '''
+## Earlier SQL worked example
+
+For a separate SQLite demonstration, see the [JOIN walkthrough](theory/01-worked-example.md), [run instructions](code/01-run-example.md), and [recorded example results](results/evidence.md). Write your own PostgreSQL warehouse queries for the current task.
+''' if task_id == 'CS12' else ''
+        mock_notes = ' In Learnspace, record technical and communication scores and the mock result.' if task['workType'] == 'Mock' else ''
+        publish(ROOT / path, f'''{MANAGED}
+
+# {task_id} — {title}
 
 Week {week} · {scope} · Warehouse checkpoint {checkpoint}
 {before}
@@ -165,8 +192,15 @@ Week {week} · {scope} · Warehouse checkpoint {checkpoint}
 ## Pass check
 
 {verify}
+{reading_notes}{worked_example}
 {lab_notes}
-Write the work yourself. Add one entry in the [learning log](journal.md) or use the Learning log form in Learnspace. Write what you learned, what you tried and observed, and your next step. Link output from `results/` when it needs a separate file.
+{coaching}
+
+## Record one entry
+
+Use your [learning log](notes/journal.md) for what you learned, what you tried and observed, and your next step.{mock_notes} Put shared project code in `projects/warehouse-dispatch/`. Create `code/` for an isolated experiment or `results/` for a separate output file only when you have something to keep.
+
+[Project requirements](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/{slug(category)}.md#{task_id.lower()})
 ''')
         journal = ROOT / folder / 'notes/journal.md'
         # Migrate only the original empty template. The log belongs to the learner.
@@ -189,64 +223,6 @@ Add one short entry per session. Date each entry and repeat the three prompts be
 
 ## Next step
 ''')
-        starter_readme = 'These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.'
-        readme = ROOT / folder / 'README.md'
-        old_readme = readme.read_text(encoding='utf-8') if readme.exists() else ''
-        # Preserve customized task READMEs such as the existing CS12 demonstration.
-        readme_starter = '\n## Work here\n\n- [Theory](theory/concepts.md)'
-        readme_marker = starter_readme if readme_starter in old_readme else MANAGED
-        refresh_scaffold(readme, readme_marker, f'''# {task_id} — {title}
-
-{category} · Week {week} · {scope}
-
-Read the [practice brief](notes/{BRIEF_NAME}), then write one entry in your [learning log](notes/journal.md).
-
-Use the other files when needed. [Concepts](theory/concepts.md) · [Code guide](code/README.md) · [Evidence](results/evidence.md) · [References](resources/links.md)
-
-[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/{slug(category)}.md#{task_id.lower()})
-''')
-        refresh_scaffold(ROOT / folder / 'code/README.md',
-                         'Place source files or a small project here. Nested folders are supported.', f'''# {task_id} — Build and run
-
-{build}
-
-Work in `projects/warehouse-dispatch/` for a shared feature. Use this task folder for isolated experiments. For design, review, and interview tasks, save the artifact in Notes or Results.
-
-Record the working directory, tool version, command or scenario, and test input. Keep your own code and checks here or in the shared project.
-
-## Check your work
-
-{verify}
-
-[Practice brief](../notes/{BRIEF_NAME}) · [Results](../results/evidence.md)
-''')
-        refresh_scaffold(ROOT / folder / 'theory/concepts.md',
-                         '> Starter template. Replace these prompts with your own explanation.', f'''# {task_id} — Concepts to review
-
-{focus}
-
-Explain one idea from memory. Predict a case where the implementation could fail, then check that prediction against your run or design.
-
-[Practice brief](../notes/{BRIEF_NAME}) · [References](../resources/links.md)
-''')
-        mock = '\nRecord technical and communication scores (0–5) and the mock result.\n' if task['workType'] == 'Mock' else ''
-        refresh_scaffold(ROOT / folder / 'results/evidence.md',
-                         '> Starter template. No result has been recorded in this file.', f'''# {task_id} — Evidence
-
-## Pass check
-
-{verify}
-
-## My result
-
-- What I ran or demonstrated
-- What actually happened
-- What I will do next
-- Commit or artifact, if available
-{mock}
-[Practice brief](../notes/{BRIEF_NAME})
-''')
-
 
     reinforcement = {'DSA', 'Review', 'Career', 'Mock interviews'}
     checkpoints = []

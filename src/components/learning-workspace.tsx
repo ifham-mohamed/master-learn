@@ -23,6 +23,7 @@ import {
 import {
   contentSections,
   learningLogPath,
+  taskGuidePath,
   learningFileUrl,
   learningManifestUrl,
   resolveLearningLink,
@@ -34,7 +35,7 @@ import {
 
 const labels: Record<ContentSection, string> = {
   theory: "Theory",
-  notes: "Notes",
+  notes: "Guide & log",
   code: "Code",
   results: "Results",
   resources: "Resources",
@@ -48,7 +49,7 @@ const icons = {
 };
 function displayFileName(file: LearningFile) {
   if (file.path === learningLogPath) return "Learning log";
-  if (file.path === "notes/00-warehouse-practice.md") return "Practice brief";
+  if (file.path === taskGuidePath) return "Task guide";
   return file.path.split("/").slice(1).join("/");
 }
 async function readJson<T>(url: string, signal?: AbortSignal): Promise<T> {
@@ -82,7 +83,8 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
         setError("");
         const requested = new URLSearchParams(window.location.search).get("file");
         if (requested !== lastRequested.current) {
-          const match = data.files.find((file) => file.path === requested);
+          const match = data.files.find((file) => file.path === requested) ??
+            (requested === "notes/00-warehouse-practice.md" ? data.files.find((file) => file.path === taskGuidePath) : undefined);
           if (match) {
             setSection(match.section);
             setSelectedPath(match.path);
@@ -124,6 +126,7 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
     };
   }, [refresh]);
   const files = manifest?.files.filter((f) => f.section === section) || [];
+  const visibleSections = contentSections.filter((name) => name === "notes" || name === section || manifest?.files.some((file) => file.section === name));
   const selected = files.find((f) => f.path === selectedPath) || files[0];
   function openFile(filePath: string) {
     const file = manifest?.files.find((f) => f.path === filePath);
@@ -152,7 +155,7 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
       ref={filesDisclosure}
       aria-label="Task learning workspace"
     >
-      <summary className="learning-files-summary">Task files <span>Learning log, code, results, and references</span></summary>
+      <summary className="learning-files-summary">Task files <span>Read the guide and any files you’ve saved</span></summary>
       <div id="learning-files">
       <Link className="workspace-help-link" href="/guide">
         New here? Read the learning & coding guide →
@@ -204,12 +207,12 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
           <span role="status">{copied ? "Copied" : ""}</span>
         </div>
       )}
-      <div
+      {visibleSections.length > 1 && <div
         className="learning-tabs"
         role="tablist"
         aria-label="Learning content sections"
       >
-        {contentSections.map((s) => {
+        {visibleSections.map((s) => {
           const Icon = icons[s];
           return (
             <button
@@ -229,16 +232,16 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
                 )
                   return;
                 event.preventDefault();
-                const index = contentSections.indexOf(s);
+                const index = visibleSections.indexOf(s);
                 const next =
                   event.key === "Home"
                     ? 0
                     : event.key === "End"
-                      ? 4
-                      : (index + (event.key === "ArrowRight" ? 1 : 4)) % 5;
-                setSection(contentSections[next]);
+                      ? visibleSections.length - 1
+                      : (index + (event.key === "ArrowRight" ? 1 : visibleSections.length - 1)) % visibleSections.length;
+                setSection(visibleSections[next]);
                 document
-                  .getElementById(`learning-tab-${contentSections[next]}`)
+                  .getElementById(`learning-tab-${visibleSections[next]}`)
                   ?.focus();
               }}
             >
@@ -250,7 +253,7 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
             </button>
           );
         })}
-      </div>
+      </div>}
       {error && (
         <div className="content-error" role="alert">
           {error} {manifest && "Showing the last available file list."}
@@ -265,7 +268,8 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
         className="learning-content"
         id="learning-content-panel"
         role="tabpanel"
-        aria-labelledby={`learning-tab-${section}`}
+        aria-labelledby={visibleSections.length > 1 ? `learning-tab-${section}` : undefined}
+        aria-label={visibleSections.length === 1 ? "Task guide and learning log" : undefined}
       >
         <nav
           className="learning-file-list"
@@ -300,8 +304,7 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
             </button>
           ))}
           <div className="file-list-hint">
-            Add files inside <code>{section}/</code>.<br />
-            Nested folders work too.
+            Add optional code or result files when you have something to keep.
           </div>
         </nav>
         <div className="learning-viewer">

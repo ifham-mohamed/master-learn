@@ -1,31 +1,35 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # CS12 — JOINs
 
-CS & SQL · week 1–1 · Core · Learn
+Week 1 · Core · Warehouse checkpoint B01
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/CS12)
 
-Start with the [current Warehouse Dispatch practice brief](notes/00-warehouse-practice.md). Use the example below to recall JOIN behavior before writing the warehouse queries yourself.
+## Review and learn
 
-## Original SQL task outcome
+INNER JOIN, LEFT JOIN, join keys, and filters in ON versus WHERE.
 
-INNER/LEFT and multi-table reasoning
-JOINs, GROUP BY, HAVING, subqueries, CTEs, CASE, aggregates
+## Do the work
 
-## Original practice prompt
+Query warehouses with assigned shipments, including a warehouse with none. Adapt the existing fixture and rerun on PostgreSQL when available.
 
-Interview: Return customers with/without orders
+## Pass check
 
-## Work here
+Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse.
 
-Complete example: [JOIN walkthrough](theory/01-worked-example.md), [run instructions](code/01-run-example.md), and [executed results](results/evidence.md). The example is separate from your personal task completion.
+## References
 
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
+- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
 
-Prerequisites: None specified.
-Original workbook: Master Plan row 9.
+## Earlier SQL worked example
 
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+For a separate SQLite demonstration, see the [JOIN walkthrough](theory/01-worked-example.md), [run instructions](code/01-run-example.md), and [recorded example results](results/evidence.md). Write your own PostgreSQL warehouse queries for the current task.
+
+
+
+
+## Record one entry
+
+Use your [learning log](notes/journal.md) for what you learned, what you tried and observed, and your next step. Put shared project code in `projects/warehouse-dispatch/`. Create `code/` for an isolated experiment or `results/` for a separate output file only when you have something to keep.
+
+[Project requirements](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/cs-and-sql.md#cs12)

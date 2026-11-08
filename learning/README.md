@@ -2,7 +2,7 @@
 
 Edit these files in your editor. Open the matching task in Learnspace to read them; the viewer checks for saved changes every five seconds while visible.
 
-Start with [JA05 — the first warehouse terminal task](java-and-spring/JA05/notes/00-warehouse-practice.md) and the [project requirements](../projects/warehouse-dispatch/README.md). Every task has a `notes/00-warehouse-practice.md` brief. Continue [CS12 — warehouse JOINs](cs-and-sql/CS12/notes/00-warehouse-practice.md) alongside the Java work.
+Start with [JA05 — the first warehouse terminal task](java-and-spring/JA05/README.md) and the [project requirements](../projects/warehouse-dispatch/README.md). Every task starts with two files, `README.md` for the guide and `notes/journal.md` for your work. Continue [CS12 — warehouse JOINs](cs-and-sql/CS12/README.md) alongside Java when useful.
 
 ## Keep one log per task
 

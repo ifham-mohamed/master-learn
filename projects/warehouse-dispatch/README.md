@@ -4,12 +4,12 @@ Build this project yourself in small, runnable steps. Use official documentation
 
 ## Start with one terminal workflow
 
-1. Open [JA05](../../learning/java-and-spring/JA05/notes/00-warehouse-practice.md). Check `java -version` and `javac -version`, then create your first source file here. Compile it with `javac` and run the class containing `main` with `java`.
+1. Open [JA05](../../learning/java-and-spring/JA05/README.md). Check `java -version` and `javac -version`, then create your first source file here. Compile it with `javac` and run the class containing `main` with `java`.
 2. Ask for a shipment reference, destination, SKU and quantity. Try `SHP-001`, Colombo, `BOX-42`, and `3`. Save the record in memory and find it again by reference within the same run.
 3. Try a blank reference, `abc`, `0`, a duplicate reference, and a lookup for an unknown reference. Decide how the terminal helps the operator recover from each case. Save what you observed.
-4. In [JA06](../../learning/java-and-spring/JA06/notes/00-warehouse-practice.md), move the rules into your own shipment model and service. Keep the input menu working. In [B01](../../learning/projects/B01/notes/00-warehouse-practice.md), add the typed shipment display helper and document the clean run.
+4. In [JA06](../../learning/java-and-spring/JA06/README.md), move the rules into your own shipment model and service. Keep the input menu working. In [B01](../../learning/projects/B01/README.md), add the typed shipment display helper and document the clean run.
 
-The [HTML learning plan](../../sources/warehouse-dispatch/index.html) and [Markdown task index](../../sources/warehouse-dispatch/README.md) show each later step. Continue [CS12](../../learning/cs-and-sql/CS12/notes/00-warehouse-practice.md) alongside the CLI if you want to alternate Java and SQL.
+The [HTML learning plan](../../sources/warehouse-dispatch/index.html) and [Markdown task index](../../sources/warehouse-dispatch/README.md) show each later step. Continue [CS12](../../learning/cs-and-sql/CS12/README.md) alongside the CLI if you want to alternate Java and SQL.
 
 In Learnspace, open **Projects → Build order** for each checkpoint’s preparation tasks, pass check, and follow-up practice. Use the [architecture lab briefs](../../sources/warehouse-dispatch/architecture.md) for modular boundaries, RabbitMQ, the Tracking microservice, a separate React release, distributed recovery, and algorithm measurement. The core build and each lab require your own tests and observed results.
 

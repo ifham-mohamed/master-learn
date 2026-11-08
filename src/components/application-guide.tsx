@@ -66,23 +66,16 @@ learning/
   cs-and-sql/
     CS12/
       README.md
-      theory/concepts.md
-      notes/00-warehouse-practice.md
       notes/journal.md
-      code/
-      results/evidence.md
-      resources/links.md
 \`\`\`
 
 | Section | What you should save |
 | --- | --- |
-| Theory | Definitions, explanations in your own words, assumptions, diagrams, and examples. |
-| Notes | Predictions, questions, mistakes, debugging steps, and reflections. |
-| Code | Source files, small experiments, tests, and instructions to run your work. |
-| Results | Actual output, screenshots, test reports, conclusions, and links to running projects. |
-| Resources | Useful links, why they helped, and commands/ports for separately running projects. |
+| README.md | Read the task order, concepts, exercise, checks, and references. |
+| notes/journal.md | Add one short entry per session. |
+| Optional code/ or results/ | Create these when you have an isolated experiment or a result file to keep. |
 
-Use \`notes/journal.md\` as your single session log. Edit it in your editor or export entries from the browser and append them to the file. In Learnspace, open **Task files** to read it. Use the other folders for code, output, and references when needed.
+Use \`notes/journal.md\` as your single session log. Edit it in your editor or export entries from the browser and append them to the file. Open **Task files → Guide & log** to read the guide or log. Additional file sections appear as you add files.
 
 Edit the existing templates or add new files. Templates are prompts, not complete lessons. Run \`npm run learning:init\` from the repository root to recreate missing templates; existing files are never overwritten. Use the folder paths shown in the app and keep task IDs stable. A new arbitrary folder is not a new curriculum task.
 `,

@@ -58,22 +58,17 @@ Timers and progress share one browser-storage record. Tabs on the same origin co
 
 ## Learn through your own files
 
-Open **Learning workspace** in the sidebar, filter by category or week, and choose a task. Every task has five tabs: Theory, Notes, Code, Results, and Resources. Edit the corresponding files in your editor; the open task checks for changes every five seconds while the page is visible, and when you return to it. **Refresh files** also reloads the selected document. Added, changed, and removed files appear without rebuilding the app.
+Open **Learning workspace** in the sidebar, filter by category or week, and choose a task. **Task files → Guide & log** shows the two essential files. Other sections appear when you add actual files. The local viewer checks for changes every five seconds while the task is visible. **Refresh files** also reloads the selected document.
 
 ```text
 learning/
   cs-and-sql/
     CS12/
-      README.md                  Task outcome and original context
-      theory/concepts.md         Understand and explain the concepts
-      notes/00-warehouse-practice.md  Current practice brief
-      notes/journal.md               Your dated learning log
-      code/                      Source files and experiments
-      results/evidence.md        Commands, actual output, and conclusions
-      resources/links.md         Original references and further reading
+      README.md           Concepts, instructions, checks, and references
+      notes/journal.md    Your dated learning log
 ```
 
-This structure is scaffolded for all 236 tasks across 11 categories. Templates contain task-specific outcomes and category-specific questions; they are starting points, not completed lessons. Run `npm run learning:init` to create missing templates after an import. It never overwrites existing files. Folder names follow category slugs and stable workbook task IDs; arbitrary new task IDs must first be added to the curriculum.
+All 236 tasks have this structure. Use `npm run learning:init` with Python 3 to regenerate guides and initialize missing journals after an import. Existing journal entries are preserved. Folder names use the category and stable workbook task ID.
 
 1. Read the practice brief, then explain the concept in your own words.
 2. Write your prediction or approach in Notes.
@@ -94,7 +89,7 @@ This structure is scaffolded for all 236 tasks across 11 categories. Templates c
 
 Relative Markdown links such as `[Results](../results/evidence.md)` open the matching file in this task. Local Markdown image paths work too; save assets in one of the five sections. Remote images, embedded raw HTML in Markdown, executable MDX, SVG, and unsupported file formats are not rendered. Nested folders are supported. JSX is displayed as source: start your separate React/Next.js project on another port and put its URL in a results document.
 
-**Start with [JA05](learning/java-and-spring/JA05/notes/00-warehouse-practice.md).** The earlier [CS12 SQLite example](learning/cs-and-sql/CS12/theory/01-worked-example.md) remains a reference for JOINs. Use the current CS12 brief for your warehouse query and save your own results separately.
+**Start with [JA05](learning/java-and-spring/JA05/README.md).** The earlier [CS12 SQLite example](learning/cs-and-sql/CS12/theory/01-worked-example.md) remains a reference for JOINs. Use the current CS12 guide for your warehouse query and save your own results separately.
 
 The content endpoint is read-only and restricted to known task folders. Hidden files, symbolic links/junctions, dependencies, build output, and virtual environments are excluded. Preview limits are 1 MB for text, 20 MB for downloads, 500 files per task, and eight levels of nested folders. Keep credentials out of learning files. Files are visible to anyone who can access the app; the default local server binds to this computer. Deployment requires a Node.js server and the `learning/` directory on disk; a static export cannot provide this feature. Browser progress and project files are separate stores: back up both.
 
@@ -138,7 +133,7 @@ python scripts/check_resources.py
 
 Importing reads every worksheet, keeps all original fields, extracts the master data, records every source file's SHA-256 hash, and reconciles the category export task IDs with the master plan. Rebuild the website after importing. The HTML exports are preserved snapshots and are not regenerated. Browser progress stays attached to task IDs; retain stable IDs when revising the workbook.
 
-Update `sources/warehouse-dispatch/task-briefs.txt` for changes to the project practice instructions. Run `python scripts/export_warehouse_plan.py` to update the site data, HTML, Markdown index, and generated `notes/00-warehouse-practice.md` files. Use `--check` to verify those views. Personal notes and results belong in separate files. Keep the workbook's **Warehouse Learning** view aligned when revising the briefs.
+Update `sources/warehouse-dispatch/task-briefs.txt` for changes to the practice instructions. Run `python scripts/export_warehouse_plan.py` to update the site data, HTML, Markdown index, and generated task guides. Use `--check` to verify those views. Keep personal notes in the journal and larger outputs in optional files. Keep the workbook's **Warehouse Learning** view aligned when revising the briefs.
 
 ## Quality checks
 

@@ -2,10 +2,26 @@
 
 # M14 — Find tenant/auth/validation flaw
 
-Mock interviews · Week 11 · Core
+Week 11 · Core · Warehouse checkpoint B11
 
-Read the [practice brief](notes/00-warehouse-practice.md), then write one entry in your [learning log](notes/journal.md).
 
-Use the other files when needed. [Concepts](theory/concepts.md) · [Code guide](code/README.md) · [Evidence](results/evidence.md) · [References](resources/links.md)
+## Review and learn
 
-[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/mock-interviews.md#m14)
+Recall Find tenant/auth/validation flaw and the assumptions that affect your answer.
+
+## Do the work
+
+Attempt the original timed prompt unaided. Use an actual B11 artifact if it illustrates the topic, or a self-contained fixture when it does not.
+
+## Pass check
+
+Record time, result, both scores, one specific improvement, and an unaided retry.
+
+
+
+
+## Record one entry
+
+Use your [learning log](notes/journal.md) for what you learned, what you tried and observed, and your next step. In Learnspace, record technical and communication scores and the mock result. Put shared project code in `projects/warehouse-dispatch/`. Create `code/` for an isolated experiment or `results/` for a separate output file only when you have something to keep.
+
+[Project requirements](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/mock-interviews.md#m14)

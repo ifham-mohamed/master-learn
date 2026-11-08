@@ -11,6 +11,17 @@ import {
 } from "../src/lib/learning-files";
 import { learningLogEntry, resolveLearningLink } from "../src/lib/learning-types";
 
+test("a task guide and log are served without exposing other root files", async () => {
+  const manifest = await getLearningManifest("JA05");
+  assert.deepEqual(manifest.files.filter(({ path }) => ["README.md", "notes/journal.md"].includes(path)).map(({ path, section }) => [path, section]), [
+    ["README.md", "notes"], ["notes/journal.md", "notes"],
+  ]);
+  const guide = await readLearningDocument("JA05", "README.md");
+  assert.match(guide.content, /Build it in small steps/);
+  assert.equal(resolveLearningLink("README.md", "notes/journal.md"), "notes/journal.md");
+  await assert.rejects(resolveLearningFile("JA05", "package.json"), /Unsupported/);
+});
+
 test("learning logs omit empty prompts and keep observed results readable", () => {
   assert.equal(learningLogEntry(" ", "\n", ""), "");
   assert.equal(learningLogEntry("  A map looks up by key. ", "", "Test a missing key."),

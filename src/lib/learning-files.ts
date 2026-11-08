@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { tasks, slug } from "./tracker";
 import {
   contentSections,
+  taskGuidePath,
   type ContentKind,
   type ContentSection,
   type LearningFile,
@@ -133,11 +134,11 @@ export async function resolveLearningFile(
   )
     throw new LearningError("Invalid file path.");
   const pieces = relative.split("/");
-  if (
+  if (relative !== taskGuidePath && (
     !contentSections.includes(pieces[0] as ContentSection) ||
     pieces.length < 2 ||
     !contentKind(pieces[pieces.length - 1])
-  )
+  ))
     throw new LearningError("Unsupported learning file.", 404);
   const folder = await rootFor(id, root);
   let candidate = folder;
@@ -167,7 +168,7 @@ function fileInfo(
   return {
     path: relative,
     name: path.posix.basename(relative),
-    section: relative.split("/")[0] as ContentSection,
+    section: relative === taskGuidePath ? "notes" : relative.split("/")[0] as ContentSection,
     kind: contentKind(relative)!,
     bytes: size,
     modified: modified.toISOString(),
@@ -181,6 +182,13 @@ export async function getLearningManifest(
   const folder = await rootFor(id, root);
   const files: LearningFile[] = [];
   const warnings: string[] = [];
+  try {
+    const guide = await lstat(path.join(folder, taskGuidePath));
+    if (guide.isFile()) files.push(fileInfo(taskGuidePath, guide.size, guide.mtime));
+    else if (guide.isSymbolicLink()) warnings.push(`Skipped linked file: ${taskGuidePath}`);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+  }
   async function walk(directory: string, relative: string, depth: number) {
     if (depth > MAX_DEPTH) {
       warnings.push(`Skipped deeply nested folder: ${relative}`);

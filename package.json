@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "tsx --test tests/*.test.ts",
-    "learning:init": "tsx scripts/init-learning.ts"
+    "learning:init": "python scripts/export_warehouse_plan.py"
   },
   "dependencies": {
     "@fontsource/dm-sans": "^5.3.0",

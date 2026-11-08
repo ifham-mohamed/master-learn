@@ -24,7 +24,7 @@ import {
 } from "@/lib/tracker";
 import { statuses, type Progress } from "@/lib/progress";
 import { LearningWorkspace } from "./learning-workspace";
-import { learningLogPath } from "@/lib/learning-types";
+import { taskGuidePath } from "@/lib/learning-types";
 import { checkpointHref, warehouseBrief, warehouseLabs, warehouseTitle } from "@/lib/warehouse";
 
 type ProgressRequest = { complete: boolean; evidence?: string };
@@ -100,6 +100,7 @@ export function TaskDetail({ id }: { id: string }) {
           </p>}
           <div className="warehouse-actions">
             <a className="button primary" href="#learning-journal">Write a learning log</a>
+            <a className="button secondary" href="#learning-files">Open task guide</a>
             <button className="button secondary" onClick={() => {
               setEditing(true);
               setProgressRequest({ complete: false });
@@ -111,7 +112,7 @@ export function TaskDetail({ id }: { id: string }) {
         setEditing(true);
         setProgressRequest({ complete: false, evidence });
       }} />
-      <LearningWorkspace key={id} taskId={id} initialFile={learningLogPath} />
+      <LearningWorkspace key={id} taskId={id} initialFile={taskGuidePath} />
       <div className="detail-layout">
         <div>
           <section className="panel detail-panel">
