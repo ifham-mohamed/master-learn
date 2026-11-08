@@ -1,34 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # RW06 — Reproduce, diagnose and repair a defect with regression tests
 
-Engineering · week 9–9 · Core · Practice
+Engineering · Week 9 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/RW06)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-Can reproduce before changing code
-Hypothesis to isolate to prove
-Correctness + regression protection
-Meaningful coverage
-Reproduce, logs, hypothesis, isolate, fix, verify
-
-## Practice prompt
-
-Given a failing behavior, create minimal reproducible case
-Practice mode: AI-free Yes, AI-assisted Yes
-Find root cause from stack trace + logs
-Fix implementation without weakening the test
-Add normal, boundary, invalid and failure tests
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: None specified.
-Original workbook: Master Plan row 104.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/engineering.md#rw06)

@@ -1,6 +1,9 @@
-# B21 — Timed Java coding, SQL and debugging rounds; repair top 3 gaps
+# B21 — Practice timed Java, SQL and debugging
 
 Week 21 · Core · Warehouse checkpoint B21
+
+Before you begin, complete B20.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Run three timed exercises drawn from your CLI, stock reports and dispatch failur
 
 Save original attempts, fixes and unaided retests.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

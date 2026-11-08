@@ -7,6 +7,7 @@ import {
   resolveLearningFile,
 } from "../src/lib/learning-files";
 import { staticFilePath } from "../src/lib/deployment";
+import { warehouseTitle } from "../src/lib/warehouse";
 
 export async function exportLearning(destination: string) {
   let count = 0;
@@ -41,7 +42,7 @@ export async function exportLearning(destination: string) {
               }
             : await readLearningDocument(task.id, file.path);
         await writeFile(document, JSON.stringify(data));
-        if('content' in data) search.push({id:task.id,title:task.title,path:file.path,section:file.section,text:data.content});
+        if('content' in data) search.push({id:task.id,title:warehouseTitle(task),path:file.path,section:file.section,text:data.content});
       }
       count++;
     }

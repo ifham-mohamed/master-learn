@@ -2,6 +2,7 @@
 
 Week 1 · Core · Warehouse checkpoint B01
 
+
 ## Review and learn
 
 Baseline, realistic capacity, and the difference between recognition and recall.
@@ -14,4 +15,4 @@ Record what you can already do in Java, TypeScript and SQL without help. Plan fi
 
 Save one real attempt per skill and a study plan with a next gap.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

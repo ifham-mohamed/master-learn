@@ -1,6 +1,9 @@
-# B16 — Deployable dual-stack architecture + 2 timed agentic repo tickets
+# B16 — Stage a release and test rate limits
 
 Week 16 · Core · Warehouse checkpoint B16
+
+Before you begin, complete B15.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Package a staging build, rate-limit login and general API traffic separately, an
 
 Save smoke results, isolated client quotas, 429 recovery, and proof for both fixes.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

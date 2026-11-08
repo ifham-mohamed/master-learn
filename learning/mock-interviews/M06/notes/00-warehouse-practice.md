@@ -1,10 +1,11 @@
-# M06 — Spring MVC + React/Next + trees/BST
+# M06 — Spring MVC, React routes and binary search trees
 
 Week 6 · Core · Warehouse checkpoint B06
 
+
 ## Review and learn
 
-Recall Spring MVC + React/Next + trees/BST and the assumptions that affect your answer.
+Recall Spring MVC, React routes and binary search trees and the assumptions that affect your answer.
 
 ## Do the work
 
@@ -14,4 +15,4 @@ Attempt the original timed prompt unaided. Use an actual B06 artifact if it illu
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

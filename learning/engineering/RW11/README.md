@@ -1,28 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # RW11 — Refactoring
 
-Engineering · week 14–14 · Core · Practice
+Engineering · Week 14 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/RW11)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-Small safe steps; tests stay green
-Names, cohesion, duplication, interfaces, incremental refactors
-
-## Practice prompt
-
-Improve design while preserving behavior
-Practice mode: AI-free Yes, AI-assisted Yes
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: None specified.
-Original workbook: Master Plan row 152.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/engineering.md#rw11)

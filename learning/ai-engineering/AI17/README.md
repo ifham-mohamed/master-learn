@@ -1,28 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # AI17 — Secrets/privacy
 
-AI Engineering · week 11–11 · Core · Learn
+AI Engineering · Week 11 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/AI17)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-Do not expose sensitive secrets/data without authorization
-Env vars, secret managers, rotation, least privilege
-
-## Practice prompt
-
-Identify sensitive context boundaries
-Failure to test: Data leakage
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: None specified.
-Original workbook: Master Plan row 118.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/ai-engineering.md#ai17)

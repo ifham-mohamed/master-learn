@@ -1,6 +1,9 @@
-# PF02 — Booking / Appointment Concurrency Lab
+# PF02 — Warehouse reservation concurrency lab
 
 Week 12 · Optional · Warehouse checkpoint B12
+
+Before you begin, complete B12.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Package the last-unit race as a small standalone experiment. Compare it with a d
 
 Show the race and safe outcome on repeat runs.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

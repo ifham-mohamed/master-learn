@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -53,10 +53,11 @@ async function readJson<T>(url: string, signal?: AbortSignal): Promise<T> {
   return data;
 }
 
-export function LearningWorkspace({ taskId }: { taskId: string }) {
+export function LearningWorkspace({ taskId, initialFile }: { taskId: string; initialFile?: string }) {
   const [manifest, setManifest] = useState<LearningManifest | null>(null);
-  const [section, setSection] = useState<ContentSection>("theory");
-  const [selectedPath, setSelectedPath] = useState("");
+  const [section, setSection] = useState<ContentSection>(initialFile ? "notes" : "theory");
+  const [selectedPath, setSelectedPath] = useState(initialFile ?? "");
+  const lastRequested = useRef<string | null | undefined>(undefined);
   const [error, setError] = useState("");
   const [refreshing, setRefreshing] = useState(false);
   const [refreshVersion, setRefreshVersion] = useState(0);
@@ -72,9 +73,15 @@ export function LearningWorkspace({ taskId }: { taskId: string }) {
           previous?.revision === data.revision ? previous : data,
         );
         setError("");
-        const requested=new URLSearchParams(window.location.search).get('file');
-        const match=data.files.find(f=>f.path===requested);
-        if(match){setSection(match.section);setSelectedPath(match.path);}
+        const requested = new URLSearchParams(window.location.search).get("file");
+        if (requested !== lastRequested.current) {
+          const match = data.files.find((file) => file.path === requested);
+          if (match) {
+            setSection(match.section);
+            setSelectedPath(match.path);
+          }
+          lastRequested.current = requested;
+        }
       } catch (failure) {
         if (!signal?.aborted)
           setError(

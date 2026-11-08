@@ -1,6 +1,9 @@
-# B15 — Add logs/metrics/cache; investigate query or rendering bottleneck
+# B15 — Measure performance and trace failures
 
 Week 15 · Core · Warehouse checkpoint B15
+
+Before you begin, complete B14.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Trace a failed request and measure a slow shipment list or query before choosing
 
 Save an anonymized trace and comparable measurements with one explained trade-off.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

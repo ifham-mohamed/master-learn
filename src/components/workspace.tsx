@@ -42,6 +42,7 @@ import checks from "@/data/resource-checks.json";
 import { useTracker } from "./tracker-provider";
 import { TaskList } from "./task-list";
 import { ResourceLinks } from "./resource-links";
+import { checkpointHref, warehouseBrief, warehouseCheckpoints, warehousePhase, warehouseSearch, warehouseTitle } from "@/lib/warehouse";
 
 const trackOrder = [
   "Java & Spring",
@@ -119,7 +120,11 @@ export function Workspace({
     starts: addDays(planner.schedule.start, (week - 1) * 7),
     capacity: planner.schedule.capacity,
   };
-  const weekTasks = tasks.filter((t) => t.startWeek === week);
+  const checkpoint = `B${String(week).padStart(2, "0")}`;
+  const weekOrder = warehouseCheckpoints[week - 1];
+  const orderedIds = [...weekOrder.prepare, weekOrder.id, ...weekOrder.reflect];
+  const weekTasks = orderedIds.map((id) => tasks.find((task) => task.id === id)!);
+  const weekBrief = warehouseBrief(checkpoint);
   const weekComplete = weekTasks.filter(isComplete).length;
   const coreHours = weekTasks
     .filter((t) => t.scope === "Core")
@@ -161,9 +166,7 @@ export function Workspace({
       (!category || t.category === category) &&
       (category || !filterCategory || t.category === filterCategory) &&
       (!status || t.status === status) &&
-      `${t.title} ${t.id} ${t.category} ${t.doneWhen} ${t.section}`
-        .toLowerCase()
-        .includes(query.toLowerCase()),
+      warehouseSearch(t, query),
   );
 
   if (view === "overview") return <LearningOverview />;
@@ -174,7 +177,7 @@ export function Workspace({
         <Heading
           label="ONE WEEK AT A TIME"
           title="Your weekly journey"
-          description="A practical path from fundamentals to projects and interview practice."
+          description="Follow the Warehouse Dispatch build, its supporting tasks, and your review for the selected week."
         >
           {weekControl}
         </Heading>
@@ -199,8 +202,10 @@ export function Workspace({
             <span className="context-label">
               WEEK {week} · {formatDate(current.starts)}
             </span>
-            <h2>{current.phase}</h2>
-            <p>{current.focus}</p>
+            <p>{warehousePhase(week)?.title}</p>
+            <h2>{weekBrief?.title}</h2>
+            <p>{weekBrief?.build}</p>
+            <Link href={checkpointHref(checkpoint)}>Open {checkpoint} and its task order <ArrowRight size={15} /></Link>
           </div>
           <div className="week-feature-stats">
             <span>
@@ -239,17 +244,10 @@ export function Workspace({
           <TaskList items={weekTasks} />
         </section>
         <section className="panel reflection">
-          <h2>Weekly reflection</h2>
-          <p>
-            <strong>Review outcome:</strong>{" "}
-            {current.outcome || "No reflection recorded in the workbook."}
-          </p>
-          <p>
-            <strong>Next-week adjustment:</strong>{" "}
-            {current.adjustment || "No adjustment recorded."}
-          </p>
-          <Link href="/tracks/review">
-            Browse review tasks <ArrowRight size={15} />
+          <h2>Review the checkpoint</h2>
+          <p>Rerun one check, record what you can repeat unaided, and choose one gap for next week.</p>
+          <Link href={`/tasks/RV${String(week).padStart(2, "0")}`}>
+            Open week {week} review <ArrowRight size={15} />
           </Link>
         </section>
       </>
@@ -261,7 +259,7 @@ export function Workspace({
         <Heading
           label="YOUR CONNECTED CURRICULUM"
           title="Explore your learning tracks"
-          description="Eleven areas of focus. One complete engineering skill set."
+          description="Eleven tracks contribute to the Warehouse Dispatch build, reviews and interview practice."
         />
         <div className="track-grid">
           {trackOrder.map((name) => (
@@ -280,7 +278,7 @@ export function Workspace({
           description={
             category
               ? trackDescriptions[category]
-              : "Every task, deliverable, and milestone, connected to its original context."
+              : "Search the Warehouse Dispatch tasks by skill, task ID, or architecture topic."
           }
         >
           <span className="count-chip">
@@ -290,6 +288,7 @@ export function Workspace({
             tasks
           </span>
         </Heading>
+        <p><Link href="/projects#build-roadmap">See where these tasks fit in the project build order <ArrowRight size={15} /></Link></p>
         <div className="filter-bar">
           <label className="search-field">
             <Search size={18} />
@@ -369,6 +368,7 @@ export function Workspace({
             practice, not new problems.
           </span>
         </div>
+        <p><Link href="/projects#algorithm-tradeoffs">Apply DSA to warehouse workloads</Link> · <Link href="/tracks/dsa">Open weekly DSA tasks</Link></p>
         <div className="filter-bar">
           <label className="search-field">
             <Search size={18} />
@@ -472,11 +472,11 @@ export function Workspace({
         <Heading
           label="SELF-CODING CAPSTONE"
           title="Warehouse Dispatch"
-          description="Start with one terminal shipment. Grow it into a stock reservation and dispatch application with Spring Boot, PostgreSQL and React."
+          description="From a terminal shipment to a secure, deployable warehouse application. Follow the build order and prove each step with your own tests."
         />
         <WarehousePath tasks={tasks} />
         <details className="panel tool-card">
-          <summary>Original project profiles</summary>
+          <summary>Archived workbook project profiles</summary>
           <div className="project-profiles">
           {tracker.guide
             .filter((g) => g.type === "Project profile")
@@ -484,7 +484,6 @@ export function Workspace({
               <details
                 key={p.relatedIds}
                 className="project-profile"
-                open={i === 0}
               >
                 <summary>
                   <span className={`track-icon color-${i}`}>
@@ -504,13 +503,6 @@ export function Workspace({
             ))}
           </div>
         </details>
-        <section className="panel">
-          <div className="section-heading">
-            <h2>Your project deliverables</h2>
-            <span className="muted">30 tasks</span>
-          </div>
-          <TaskList items={tasks.filter((t) => t.category === "Projects")} />
-        </section>
       </>
     );
 
@@ -545,6 +537,7 @@ export function Workspace({
           title="Good sources. Deeper understanding."
           description="Your 34 original references, plus four official guides for hands-on learning."
         />
+        <p><Link href="/projects#architecture-labs">Architecture references are linked from each advanced lab</Link></p>
         <div className="inline-notice">
           <ShieldCheck size={20} />
           <span>
@@ -608,7 +601,7 @@ export function Workspace({
                     <summary>{related.length} linked tasks</summary>
                     {related.map((t) => (
                       <Link href={`/tasks/${t.id}`} key={t.id}>
-                        {t.id} · {t.title}
+                        {t.id} · {warehouseTitle(t)}
                       </Link>
                     ))}
                   </details>
@@ -683,7 +676,9 @@ export function Workspace({
           source snapshots.
         </span>
       </div>
-      <div className="guide-groups">
+      <details className="panel tool-card">
+        <summary>Archived workbook guidance</summary>
+        <div className="guide-groups">
         {["How to use", "Gap review", "Strategy", "Project interview"].map(
           (type) => (
             <section key={type} className="panel guide-section">
@@ -716,7 +711,8 @@ export function Workspace({
             </section>
           ),
         )}
-      </div>
+        </div>
+      </details>
     </>
   );
 }

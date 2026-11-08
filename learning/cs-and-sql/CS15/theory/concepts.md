@@ -1,32 +1,9 @@
-# Process vs thread — theory
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. Replace these prompts with your own explanation.
+# CS15 — Concepts to review
 
-## Learning goal
+Processes, threads and shared versus isolated memory.
 
-Address space, scheduling, shared state
-Process/thread, memory, scheduling, file/system basics
+Explain one idea from memory. Predict a case where the implementation could fail, then check that prediction against your run or design.
 
-## Concepts to explain
-
-Define the system/data concept, show a small example, and test a boundary case such as NULL, duplicates, concurrency, or failure.
-
-- What problem does this solve?
-- How does it work in your own words?
-- What assumptions does it rely on?
-
-## Small example
-
-Add an example and explain each step. Link to a file in ../code/ when useful.
-
-## Edge cases and trade-offs
-
-Record a counterexample, common mistake, and a trade-off.
-
-## Check your understanding
-
-Interview: Process vs thread?
-
-## References
-
-See [task resources](../resources/links.md).
+[Practice brief](../notes/00-warehouse-practice.md) · [References](../resources/links.md)

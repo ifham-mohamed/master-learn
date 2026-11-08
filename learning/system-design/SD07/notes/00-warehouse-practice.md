@@ -2,6 +2,7 @@
 
 Week 5 · Core · Warehouse checkpoint B05
 
+
 ## Review and learn
 
 Entities, relationships, lifecycle states and ownership.
@@ -14,4 +15,9 @@ Model a warehouse, SKU, balance, shipment, shipment lines, reservation and event
 
 Walk through create, reserve, cancel and dispatch and reconcile both quantities and transitions.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+## Further architecture practice
+
+- 1. Establish service boundaries · after B14. A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split.
+- 3. Extract a Tracking microservice · after B20. Take Tracking down while dispatch continues. Restart it and rebuild a clean projection from the retained event archive. Reconcile results. Run API contract tests, deploy Tracking independently, and rehearse routing traffic back to the original tracking view.
+
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

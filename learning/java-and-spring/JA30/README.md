@@ -1,34 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # JA30 — Spring integration
 
-Java & Spring · week 13–13 · Core · Learn
+Java & Spring · Week 13 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/JA30)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-TestContext, MockMvc, transactional tests
-context tests, controller tests, transactions, failure paths
-DB/API integration, fixtures, failure behavior
-MockMvc/TestContext, transactions, API/DB failure paths
-
-## Practice prompt
-
-controller + DB tests
-Interview: unit vs slice vs full integration?
-Test REST auth/validation/rollback
-Integration suite
-Interview-ready testing
-API integration suite
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: G02.
-Original workbook: Master Plan row 139.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/java-and-spring.md#ja30)

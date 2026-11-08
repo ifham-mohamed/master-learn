@@ -1,32 +1,15 @@
-# B14 — Postgres Testcontainers + Docker Compose + CI quality gates
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 14–14 · Core · Build
+# B14 — Run PostgreSQL integration tests and CI
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B14)
+Projects · Week 14 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: Concurrency/transaction revision
-Design: Queues + idempotent consumers
-AI practice: AI-assisted build/infra task with reproducibility checks
-Postgres Testcontainers + Docker Compose + CI quality gates
-Queues - Email/payment webhook processing
-Reliability - Unreliable payment provider
-Reproduce build/infra changes from clean environment
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B13.
-Original workbook: Master Plan row 150.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b14)

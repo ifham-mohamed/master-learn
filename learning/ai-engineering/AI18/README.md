@@ -1,34 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # AI18 — Confirm round policy and rehearse AI-free fallback
 
-AI Engineering · week 1–1 · Core · Learn
+AI Engineering · Week 1 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/AI18)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-Confirm exact permitted tools and boundaries
-Code/debug/explain with no assistant
-Implement and explain independently
-Solve/debug/explain without AI when required
-
-## Practice prompt
-
-Transparent AI-assisted session
-Failure to test: Policy violation
-60-min unaided mock
-Failure to test: Dependency on tools
-Redo representative task without any assistant
-Practice mode: AI-free Yes, AI-assisted No
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: None specified.
-Original workbook: Master Plan row 8.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/ai-engineering.md#ai18)

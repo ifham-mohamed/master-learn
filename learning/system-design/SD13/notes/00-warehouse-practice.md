@@ -2,6 +2,7 @@
 
 Week 14 · Core · Warehouse checkpoint B14
 
+
 ## Review and learn
 
 Queues, delivery semantics, outbox and bounded retries.
@@ -14,4 +15,9 @@ Simulate a delayed dispatch notification with a stub worker and a duplicate deli
 
 The subscriber handles a replay safely and you can explain recovery after a failed send.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+## Further architecture practice
+
+- 2. Publish dispatch events through RabbitMQ · after B19. Roll back a dispatch, stop the broker after commit, interrupt the publisher before marking a send, and replay a poison message. Show zero events for the rollback, eventual delivery for the committed event and one consumer effect under redelivery.
+- 3. Extract a Tracking microservice · after B20. Take Tracking down while dispatch continues. Restart it and rebuild a clean projection from the retained event archive. Reconcile results. Run API contract tests, deploy Tracking independently, and rehearse routing traffic back to the original tracking view.
+
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

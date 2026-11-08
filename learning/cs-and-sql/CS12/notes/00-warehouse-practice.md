@@ -2,6 +2,7 @@
 
 Week 1 · Core · Warehouse checkpoint B01
 
+
 ## Review and learn
 
 INNER JOIN, LEFT JOIN, join keys, and filters in ON versus WHERE.
@@ -14,4 +15,4 @@ Query warehouses with assigned shipments, including a warehouse with none. Adapt
 
 Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

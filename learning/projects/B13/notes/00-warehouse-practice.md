@@ -1,6 +1,9 @@
-# B13 — Service/controller test suite + failing-test and PR-review drills
+# B13 — Strengthen the regression suite
 
 Week 13 · Core · Warehouse checkpoint B13
+
+Before you begin, complete B12.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Exercise rollback and invalid transitions with tests. Review and repair a delibe
 
 Show failing-then-passing output and one review finding verified independently.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

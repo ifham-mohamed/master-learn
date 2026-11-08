@@ -1,18 +1,15 @@
-# CS12 experiments
+<!-- Managed by export_warehouse_plan.py -->
 
-Place source files or a small project here. Nested folders are supported. Learnspace displays the source; run programs in your editor or terminal.
+# CS12 — Build and run
 
-## Deliverable
+Query warehouses with assigned shipments, including a warehouse with none. Adapt the existing fixture and rerun on PostgreSQL when available.
 
-INNER/LEFT and multi-table reasoning
-JOINs, GROUP BY, HAVING, subqueries, CTEs, CASE, aggregates
+Work in `projects/warehouse-dispatch/` for a shared feature. Use this task folder for isolated experiments. For design, review, and interview tasks, save the artifact in Notes or Results.
 
-## Run instructions
+Record the working directory, tool version, command or scenario, and test input. Keep your own code and checks here or in the shared project.
 
-Record prerequisites, exact versions, setup commands, and a repeatable command.
+## Check your work
 
-## Checks
+Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse.
 
-Describe a normal case, edge case, and failure case. Save real output in ../results/.
-
-For a web project, record its separately running URL in [resources](../resources/links.md). Generated folders such as node_modules, .next, dist, build, and .venv are excluded from the viewer.
+[Practice brief](../notes/00-warehouse-practice.md) · [Results](../results/evidence.md)

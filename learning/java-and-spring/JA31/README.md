@@ -1,33 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # JA31 — Testcontainers
 
-Java & Spring · week 14–14 · Core · Learn
+Java & Spring · Week 14 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/JA31)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-real dependency containers, reproducible DB integration
-real PostgreSQL/Redis integration tests in containers
-Run PostgreSQL/Redis dependencies for realistic integration tests
-
-## Practice prompt
-
-Postgres container tests
-Interview: why not H2 for every integration test?
-Prove transaction/locking behavior against real DB
-Postgres Testcontainers suite
-Strong production signal
-Test against real Postgres container
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: G02.
-Original workbook: Master Plan row 146.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/java-and-spring.md#ja31)

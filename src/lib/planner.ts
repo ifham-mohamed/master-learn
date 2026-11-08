@@ -6,7 +6,7 @@ import {
 } from "./study";
 import { tasks, type Task, isComplete } from "./tracker";
 import { validateProgress, type Progress } from "./progress";
-import { warehouseHoursPerDay } from "./warehouse";
+import { warehouseBrief, warehouseHoursPerDay } from "./warehouse";
 
 export type Schedule = {
   start: string;
@@ -98,8 +98,13 @@ export function taskDates(task: Task, schedule: Schedule) {
   }
   return { start, due };
 }
+export function taskPrerequisites(task: Task) {
+  const inherited = task.prerequisites.match(/[A-Z]+\d+/g) || [];
+  return [...new Set([...inherited, ...(warehouseBrief(task.id)?.requires ?? [])])];
+}
+
 export function missingPrerequisites(task: Task, all: Task[]) {
-  return [...new Set(task.prerequisites.match(/[A-Z]+\d+/g) || [])].filter(
+  return taskPrerequisites(task).filter(
     (id) => !all.some((t) => t.id === id && isComplete(t)),
   );
 }

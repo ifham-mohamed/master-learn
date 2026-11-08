@@ -1,6 +1,9 @@
-# PF05 — TypeScript / Next.js Client for Spring API
+# PF05 — React dispatch client showcase
 
 Week 20 · Optional · Warehouse checkpoint B20
+
+Before you begin, complete B20.
+
 
 ## Review and learn
 
@@ -14,4 +17,8 @@ Prepare a React showcase of the signed-in dispatch flow and error handling.
 
 Show direct navigation, keyboard access, and one recoverable API error.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+## Further architecture practice
+
+- 4. Release a Tracking micro-frontend · after B20. Deploy and roll back the Tracking frontend without rebuilding Dispatch. Verify keyboard navigation, direct URLs, sign-out, API failure fallback, and bundle size before and after the split.
+
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

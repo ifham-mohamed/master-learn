@@ -2,6 +2,7 @@
 
 Week 5 · Core · Warehouse checkpoint B05
 
+
 ## Review and learn
 
 TCP, UDP and what a delivery guarantee means.
@@ -14,4 +15,4 @@ Trace the TCP connection for a local API request. Explain where an unreliable da
 
 Identify the observed connection and explain why a successful connection is separate from a committed reservation.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

@@ -1,10 +1,11 @@
-# M40 — TS runtime/types/React/Next deep dive
+# M40 — TypeScript runtime, types and React client design
 
 Week 23 · Core · Warehouse checkpoint B23
 
+
 ## Review and learn
 
-Recall TS runtime/types/React/Next deep dive and the assumptions that affect your answer.
+Recall TypeScript runtime, types and React client design and the assumptions that affect your answer.
 
 ## Do the work
 
@@ -14,4 +15,4 @@ Attempt the original timed prompt unaided. Use an actual B23 artifact if it illu
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

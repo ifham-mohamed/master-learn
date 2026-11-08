@@ -2,6 +2,7 @@
 
 Week 5 · Core · Warehouse checkpoint B05
 
+
 ## Review and learn
 
 Semantic HTML, labels, CSS layout and responsive behavior.
@@ -14,4 +15,4 @@ Build the shipment entry form and list using semantic controls and narrow-screen
 
 Labels and errors are associated correctly and the page works on a narrow screen.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

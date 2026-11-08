@@ -2,6 +2,7 @@
 
 Week 10 · Core · Warehouse checkpoint B10
 
+
 ## Review and learn
 
 Row locks, deadlocks and consistent lock order.
@@ -14,4 +15,4 @@ Reserve multiple SKU rows from two transactions in opposite orders, then repeat 
 
 Record the deadlock or timeout, then show the corrected test and rollback behavior.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

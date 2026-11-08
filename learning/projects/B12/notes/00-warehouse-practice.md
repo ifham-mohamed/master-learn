@@ -1,6 +1,9 @@
-# B12 — End-to-end Spring API to TypeScript client flow with component/E2E tests
+# B12 — Receive, pick and dispatch from React
 
 Week 12 · Core · Warehouse checkpoint B12
+
+Before you begin, complete B11.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Add pick confirmation and dispatch for fully reserved stock. In React, receive s
 
 Keyboard and browser tests cover receiving stock through dispatch. Dispatch deducts stock once and out-of-order actions fail.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

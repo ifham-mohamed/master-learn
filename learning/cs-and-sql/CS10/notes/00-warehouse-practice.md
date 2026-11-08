@@ -2,6 +2,7 @@
 
 Week 10 · Core · Warehouse checkpoint B10
 
+
 ## Review and learn
 
 Isolation levels, concurrent sessions and lost updates.
@@ -14,4 +15,4 @@ Use two PostgreSQL connections to observe a conflicting reservation or a changed
 
 Record transaction order, observed values, and the fix or retry requirement.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

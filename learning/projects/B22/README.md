@@ -1,31 +1,15 @@
-# B22 — Timed unfamiliar-repo bug/feature task in both AI-free and AI-assisted modes
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 22–22 · Core · Build
+# B22 — Fix a task in an unfamiliar repository
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B22)
+Projects · Week 22 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: Weak-area revision
-Design: Timed booking/commerce design
-AI practice: Policy-aware AI-assisted mock + AI-free fallback
-Timed unfamiliar-repo bug/feature task in both AI-free and AI-assisted modes
-Timed system-design practice #6: use capstone/booking/commerce prompt
-Allowed AI - Transparent AI-assisted session
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B21.
-Original workbook: Master Plan row 223.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b22)

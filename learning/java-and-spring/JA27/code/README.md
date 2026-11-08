@@ -1,20 +1,15 @@
-# JA27 experiments
+<!-- Managed by export_warehouse_plan.py -->
 
-Place source files or a small project here. Nested folders are supported. Learnspace displays the source; run programs in your editor or terminal.
+# JA27 — Build and run
 
-## Deliverable
+Implement a Spring Security browser session for seeded demo users. Practice OIDC and external bearer-token validation in separate comparisons.
 
-security architecture, password auth, JWT/OAuth2 concepts
-authentication, authorization, filter chain concept, method security, OAuth2/JWT
-Sessions/JWT/OIDC concepts and security boundaries
-authentication vs authorization, filter chain, request/method security, JWT/OAuth2 concepts
+Work in `projects/warehouse-dispatch/` for a shared feature. Use this task folder for isolated experiments. For design, review, and interview tasks, save the artifact in Notes or Results.
 
-## Run instructions
+Record the working directory, tool version, command or scenario, and test input. Keep your own code and checks here or in the shared project.
 
-Record prerequisites, exact versions, setup commands, and a repeatable command.
+## Check your work
 
-## Checks
+Correct credentials establish a session. Invalid login, missing CSRF and requests after logout are denied.
 
-Describe a normal case, edge case, and failure case. Save real output in ../results/.
-
-For a web project, record its separately running URL in [resources](../resources/links.md). Generated folders such as node_modules, .next, dist, build, and .venv are excluded from the viewer.
+[Practice brief](../notes/00-warehouse-practice.md) · [Results](../results/evidence.md)

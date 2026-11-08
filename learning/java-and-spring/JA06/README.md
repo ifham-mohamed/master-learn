@@ -1,34 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # JA06 — OOP
 
-Java & Spring · week 1–2 · Core · Learn
+Java & Spring · Week 1 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/JA06)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-encapsulation, abstraction, inheritance, polymorphism, composition
-Explain each and when composition is preferable
-Apply principles without overengineering
-Encapsulation, composition, interfaces, SOLID trade-offs
-Model domains with classes/interfaces; composition, immutability, dependency boundaries
-
-## Practice prompt
-
-model order/payment domain
-Interview: composition vs inheritance?
-Interview: Composition vs inheritance?
-Interview: Which SOLID principle is violated here?
-Refactor a service using composition
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: G02.
-Original workbook: Master Plan row 11.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/java-and-spring.md#ja06)

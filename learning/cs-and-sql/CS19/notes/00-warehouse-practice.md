@@ -2,6 +2,7 @@
 
 Week 5 · Core · Warehouse checkpoint B05
 
+
 ## Review and learn
 
 DNS names, resolution and environments.
@@ -14,4 +15,4 @@ Resolve the staging hostname or inspect Compose service-name resolution from the
 
 Save the lookup result and distinguish DNS failure from a server response.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

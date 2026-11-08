@@ -1,6 +1,9 @@
-# B11 — RBAC + ownership/tenant checks + security regression tests
+# B11 — Secure the warehouse workflow
 
 Week 11 · Core · Warehouse checkpoint B11
+
+Before you begin, complete B10.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Secure shipment reads and writes with Spring Security. Add login, logout and UI 
 
 Verify allowed access, wrong role, another tenant, missing CSRF and logout with tests.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

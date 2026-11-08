@@ -1,34 +1,15 @@
-# B05 — Create Spring Boot service skeleton + typed Next/React client shell
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 5–5 · Core · Build
+# B05 — Start Spring Boot and the React client
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B05)
+Projects · Week 5 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: TCP/UDP + HTTP request lifecycle
-Design: Requirements + API + data model
-AI practice: AI-assisted orientation only; verify generated setup
-Create Spring Boot service skeleton + typed Next/React client shell
-Requirements - Clarify a booking service
-API design - Order API
-Data model - POS order + inventory
-Tokens/context - Estimate context needed for repo task
-Model limitations - Find unsupported claim/code assumption
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B04.
-Original workbook: Master Plan row 63.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b05)

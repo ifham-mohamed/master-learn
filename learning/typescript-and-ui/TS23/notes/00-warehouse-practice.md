@@ -2,6 +2,9 @@
 
 Week 9 · Core · Warehouse checkpoint B09
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Test runner, fixtures, mocks and deterministic async tests.
@@ -14,4 +17,4 @@ Test the shipment formatter and API adapter with success and failure fixtures.
 
 Tests exercise status handling and fail when the error path is removed.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

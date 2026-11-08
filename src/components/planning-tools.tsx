@@ -27,7 +27,7 @@ import {
 import { studyDate, todayStudyMs } from "@/lib/study";
 import { InstallApp, OfflineTask } from "./pwa-controls";
 import { WarehouseNext } from "./warehouse-path";
-import { warehouseBrief, warehouseHoursPerDay } from "@/lib/warehouse";
+import { warehouseBrief, warehouseHoursPerDay, warehouseTitle } from "@/lib/warehouse";
 
 export function downloadText(
   name: string,
@@ -72,10 +72,10 @@ export function TodayView() {
           {active ? (
             <>
               <Link href={`/tasks/${active.id}`}>
-                {active.id} · {active.title}
+                {active.id} · {warehouseTitle(active)}
               </Link>
               <p>
-                {active.nextAction ||
+                {active.nextAction || warehouseBrief(active.id)?.build ||
                   "Open your task and continue your experiment."}
               </p>
               <button
@@ -124,7 +124,7 @@ export function TodayView() {
           <div className="tool-row" key={t.id}>
             <div>
               <Link href={`/tasks/${t.id}`}>
-                <span className="tool-id">{t.id}</span> {t.title}
+                <span className="tool-id">{t.id}</span> {warehouseTitle(t)}
               </Link>
               <p>{t.nextAction || warehouseBrief(t.id)?.build || t.doneWhen}</p>
               <p className="tool-metadata">
@@ -169,7 +169,7 @@ export function TodayView() {
           .map((t) => (
             <p key={t.id}>
               <Link href={`/tasks/${t.id}`}>
-                <span className="tool-id">{t.id}</span> {t.title}
+                <span className="tool-id">{t.id}</span> {warehouseTitle(t)}
               </Link>{" "}
               —{" "}
               {t.status === "Blocked"
@@ -282,7 +282,7 @@ export function ReviewView() {
             .map((t) => (
               <p key={t.id}>
                 <Link href={`/tasks/${t.id}`}>
-                  <span className="tool-id">{t.id}</span> {t.title}
+                  <span className="tool-id">{t.id}</span> {warehouseTitle(t)}
                 </Link>{" "}
                 <span className="tool-badge">Confidence {t.confidence}/5</span>
               </p>
@@ -304,7 +304,7 @@ export function ReviewView() {
           <div className="tool-row" key={r.key}>
             <div>
               <Link href={`/tasks/${r.task.id}`}>
-                {r.task.id} · {r.task.title}
+                {r.task.id} · {warehouseTitle(r.task)}
               </Link>
               <p>
                 Day {r.days} review · {formatDate(r.due)} ·{" "}

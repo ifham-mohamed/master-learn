@@ -1,34 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # TS28 — Browser/web security
 
-TypeScript & UI · week 11–11 · Core · Learn
+TypeScript & UI · Week 11 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/TS28)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-XSS, CSRF, CORS, token storage, secrets
-Explain browser security boundaries and mitigations
-SQLi, XSS, CSRF, CORS, secrets, rate limiting
-SQLi, XSS, CSRF, SSRF concept, auth mistakes
-
-## Practice prompt
-
-security review UI/API flow
-Interview: where should tokens live?
-Interview: CORS vs CSRF?
-Review insecure endpoint/UI flow
-Security checklist
-Shared
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: G02.
-Original workbook: Master Plan row 122.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/typescript-and-ui.md#ts28)

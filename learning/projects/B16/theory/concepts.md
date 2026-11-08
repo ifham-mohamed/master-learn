@@ -1,44 +1,9 @@
-# Deployable dual-stack architecture + 2 timed agentic repo tickets — theory
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. Replace these prompts with your own explanation.
+# B16 — Concepts to review
 
-## Learning goal
+Staging configuration, safe rollout, rate limiting and repository fluency.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+Explain one idea from memory. Predict a case where the implementation could fail, then check that prediction against your run or design.
 
-## Concepts to explain
-
-Explain the user problem, your contribution, architecture decisions, implementation, test evidence, and trade-offs.
-
-- What problem does this solve?
-- How does it work in your own words?
-- What assumptions does it rely on?
-
-## Small example
-
-Add an example and explain each step. Link to a file in ../code/ when useful.
-
-## Edge cases and trade-offs
-
-Record a counterexample, common mistake, and a trade-off.
-
-## Check your understanding
-
-CS/SQL: Weak CS/SQL repair
-Design: Load balancing + replication + rate limiting + object storage
-AI practice: Agentic coding: context to plan to diff to tests to security review
-Deployable dual-stack architecture + 2 timed agentic repo tickets
-Rate limiting - Public API protection
-File/object storage - Product images
-Load balancing - Scale API horizontally
-Replication - Read-heavy catalogue
-Tool calling - Agent can read but not mutate unsafe resources
-Agent loop - Give bounded repo ticket
-Context engineering - Improve agent output without overprompting
-Generated-code review - Review AI PR line-by-line
-Test-driven validation - Write regression before acceptance
-Diff discipline - Reduce an over-broad AI change
-
-## References
-
-See [task resources](../resources/links.md).
+[Practice brief](../notes/00-warehouse-practice.md) · [References](../resources/links.md)

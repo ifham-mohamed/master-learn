@@ -1,6 +1,9 @@
-# B03 — Generic Java service + typed DTO transformations
+# B03 — Refine lookup and mapping
 
 Week 3 · Core · Warehouse checkpoint B03
+
+Before you begin, complete B02.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Refine the Java lookup service and map shipment summaries to typed display objec
 
 Tests cover known and unknown references, invalid input and mapping correctness.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

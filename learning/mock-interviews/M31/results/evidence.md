@@ -1,34 +1,18 @@
-# M31 results and evidence
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. No result has been recorded in this file.
+# M31 — Evidence
 
-## What I ran or demonstrated
+## Pass check
 
-Command, environment, input, and date:
+Record time, result, both scores, one specific improvement, and an unaided retry.
 
-## Expected result
+## My result
 
-Describe what would demonstrate the task outcome.
+- What I ran or demonstrated
+- What actually happened
+- What I will do next
+- Commit or artifact, if available
 
-## Actual result
+Record technical and communication scores (0–5) and the mock result.
 
-Paste actual output or add screenshots/logs next to this document. Link local files with Markdown.
-
-## Conclusion
-
-What passed? What remains unverified?
-
-## Task acceptance criteria
-
-Complete the timed round. Record technical and communication scores, result, evidence, and one correction before the next mock.
-
-## Mock evaluation
-
-- Technical score (0–5):
-- Communication score (0–5):
-- Result:
-- One correction for the next mock:
-
-## Related work
-
-[Theory](../theory/concepts.md) · [Notes](../notes/journal.md) · [Code](../code/README.md)
+[Practice brief](../notes/00-warehouse-practice.md)

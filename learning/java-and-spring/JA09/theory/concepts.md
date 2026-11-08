@@ -1,32 +1,9 @@
-# Generics — theory
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. Replace these prompts with your own explanation.
+# JA09 — Concepts to review
 
-## Learning goal
+Generic type parameters, bounds and compile-time guarantees.
 
-type parameters, bounds, invariance, wildcards basics
+Explain one idea from memory. Predict a case where the implementation could fail, then check that prediction against your run or design.
 
-## Concepts to explain
-
-Explain the Java or Spring concept, the object lifecycle, and one failure case. Record the JDK/framework versions you actually use.
-
-- What problem does this solve?
-- How does it work in your own words?
-- What assumptions does it rely on?
-
-## Small example
-
-Add an example and explain each step. Link to a file in ../code/ when useful.
-
-## Edge cases and trade-offs
-
-Record a counterexample, common mistake, and a trade-off.
-
-## Check your understanding
-
-generic repository/filter exercise
-Interview: ? extends vs ? super?
-
-## References
-
-See [task resources](../resources/links.md).
+[Practice brief](../notes/00-warehouse-practice.md) · [References](../resources/links.md)

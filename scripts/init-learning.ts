@@ -1,13 +1,22 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import {
-  tasks,
+  tasks as sourceTasks,
   categories,
   sources,
   slug,
   trackDescriptions,
 } from "../src/lib/tracker";
 import additions from "../src/data/additional-resources.json";
+import { warehouseBrief } from "../src/lib/warehouse";
+
+const tasks = sourceTasks.map((task) => {
+  const brief = warehouseBrief(task.id);
+  return brief ? {
+    ...task, title: brief.title, doneWhen: brief.verify, prompt: brief.build,
+    aiMode: "Write and verify your own code",
+  } : task;
+});
 
 const root = path.join(process.cwd(), "learning");
 let created = 0;

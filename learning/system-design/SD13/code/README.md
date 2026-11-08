@@ -1,22 +1,15 @@
-# SD13 experiments
+<!-- Managed by export_warehouse_plan.py -->
 
-Place source files or a small project here. Nested folders are supported. Learnspace displays the source; run programs in your editor or terminal.
+# SD13 — Build and run
 
-## Deliverable
+Simulate a delayed dispatch notification with a stub worker and a duplicate delivery.
 
-async jobs, retries, idempotent consumers
-timeouts, retry, circuit breaker concept
-Signatures, retries, idempotency, ordering
-Retries, dead-letter, at-least-once, idempotent consumers
-When/why to decouple, retries, idempotency
-Timeouts, retries, circuit-breaker concept, graceful degradation
+Work in `projects/warehouse-dispatch/` for a shared feature. Use this task folder for isolated experiments. For design, review, and interview tasks, save the artifact in Notes or Results.
 
-## Run instructions
+Record the working directory, tool version, command or scenario, and test input. Keep your own code and checks here or in the shared project.
 
-Record prerequisites, exact versions, setup commands, and a repeatable command.
+## Check your work
 
-## Checks
+The subscriber handles a replay safely and you can explain recovery after a failed send.
 
-Describe a normal case, edge case, and failure case. Save real output in ../results/.
-
-For a web project, record its separately running URL in [resources](../resources/links.md). Generated folders such as node_modules, .next, dist, build, and .venv are excluded from the viewer.
+[Practice brief](../notes/00-warehouse-practice.md) · [Results](../results/evidence.md)

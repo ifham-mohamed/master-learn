@@ -13,6 +13,7 @@ import {
 
 import { subscribeClock, clockSnapshot, serverClock } from "@/lib/study-clock";
 import { taskDates, addDays, readyTasks } from "@/lib/planner";
+import { warehouseTitle } from "@/lib/warehouse";
 export function useStudyClock() {
   return useSyncExternalStore(subscribeClock, clockSnapshot, serverClock);
 }
@@ -260,7 +261,7 @@ export function ActiveStudyBar() {
     <div className="study-active-bar">
       <Link href={`/tasks/${task.id}`}>
         {study.active.startedAt === null ? "Paused" : "Running"} · {task.id} ·{" "}
-        {task.title}
+        {warehouseTitle(task)}
       </Link>
       <strong>{clockText(now ? elapsedMs(study.active, now) : 0)}</strong>
       <button
@@ -344,7 +345,7 @@ export function StudyDashboard() {
         {ordered.slice(0, 4).map((task) => (
           <Link key={task.id} href={`/tasks/${task.id}`}>
             <span>
-              {task.id} · {task.title}
+              {task.id} · {warehouseTitle(task)}
             </span>
             <b>{formatDate(task.dueDate)}</b>
           </Link>

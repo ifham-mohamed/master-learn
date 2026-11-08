@@ -1,27 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # CS15 — Process vs thread
 
-CS & SQL · week 4–4 · Core · Learn
+CS & SQL · Week 4 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/CS15)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-Address space, scheduling, shared state
-Process/thread, memory, scheduling, file/system basics
-
-## Practice prompt
-
-Interview: Process vs thread?
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: None specified.
-Original workbook: Master Plan row 42.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/cs-and-sql.md#cs15)

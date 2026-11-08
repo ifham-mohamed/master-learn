@@ -2,6 +2,9 @@
 
 Week 4 · Core · Warehouse checkpoint B04
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Records for immutable data and sealed types for a closed set of cases.
@@ -14,4 +17,4 @@ Model a shipment summary as a record. Try a closed result type for accepted and 
 
 Map the result cases explicitly and explain which object must still manage mutable state.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

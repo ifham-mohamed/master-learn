@@ -1,39 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # AI09 — Bounded agents, tool calls and context
 
-AI Engineering · week 16–16 · Optional · Learn
+AI Engineering · Week 16 · Optional
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/AI09)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-Schema, permissions, tool-result loop
-Plan/act/observe, stop conditions
-Repo map, acceptance criteria, constraints
-Clear plan, controlled scope
-Task, constraints, examples, context boundaries
-Define tools, permissions, validation, error loops
-Plan/act/observe, tool use, boundaries, human review
-
-## Practice prompt
-
-Agent can read but not mutate unsafe resources
-Failure to test: Over-privileged tools
-Give bounded repo ticket
-Failure to test: Infinite/unsafe loops
-Improve agent output without overprompting
-Failure to test: Ambiguous scope
-Give agent bounded ticket with context + acceptance criteria
-Practice mode: AI-free No, AI-assisted Yes
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: None specified.
-Original workbook: Master Plan row 166.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/ai-engineering.md#ai09)

@@ -11,20 +11,20 @@ const chapters = [
   {
     id: "start",
     title: "1. Start your first learning session",
-    summary: "Choose a task, open its folder, and make one small experiment.",
+    summary: "Start the shipment CLI and save the evidence for one behavior.",
     body: `
-1. Open **Weekly journey** and choose your current week. Use **Master plan** for task search and status filters, or **Learning tracks** to focus on a category.
-2. Open a task. Read **What good looks like**, its practice prompt, and prerequisites before starting.
-3. In **Your task workspace**, copy the folder path. Open that folder inside your project editor. The path is relative to the repository root, for example \`learning/cs-and-sql/CS12/\`.
-4. Start with **Theory**, then write a prediction in **Notes**. Create and run a small experiment in **Code**.
-5. Save the actual output and your explanation in **Results**. Return to the app: changes appear within five seconds while the task is visible. Use **Refresh files** if needed.
+1. Open [Today](/today) for the next ready step or [Projects](/projects#build-roadmap) for the ordered Warehouse Dispatch checkpoints.
+2. Open [JA05](/tasks/JA05) for the first terminal exercise. Read **Review and learn**, **Do the work**, and **Pass check** in **Your practice**. Check the prerequisites on the task page.
+3. Create your own first Java file in \`projects/warehouse-dispatch/\`. Use the task workspace for isolated experiments, notes and results.
+4. Recall the concepts, predict one failure, and write the smallest working behavior yourself. Run the normal and invalid-input cases before moving on.
+5. Use **Record result** to save the command and observed result, or keep output under **Results**. Use **Quick note** to capture a question or next action.
 6. Choose **Start task** when you begin, and **Pause timer** for breaks. **Complete task & add evidence** saves time and opens your completion form. Add evidence, confidence, and next action, then save. Mark Done only when the task outcome is demonstrated.
 
 **On mobile:** Use Install Learnspace above the page, or Safari → Share → Add to Home Screen on iPhone/iPad. Download a task for offline use below its quick journal. Reconnect for Google sync. App updates clear downloaded lessons; local progress remains. Export backups regularly.
 
 **Daily tools:** Today recommends ready tasks; Reviews tracks weekly learning and spaced recall. Use each task's quick journal to capture questions and export Markdown. Optional Focus mode prompts you to pause for a break while the app is open; the task timer keeps counting until paused.
 
-**Try it first:** [Open the complete CS12 JOINs example](/tasks/CS12). Its sample results demonstrate the workflow; they do not mean you have completed the task.
+**Alongside Java:** [CS12](/tasks/CS12) has a warehouse JOIN exercise and an archived SQLite worked example. Record your own results separately.
 `,
   },
   {
@@ -44,9 +44,9 @@ const chapters = [
 | Master plan | Search the curriculum and filter tasks by category and status. |
 | Learning tracks | Work through related tasks within a subject. |
 | Practice bank | Read the imported practice patterns and questions. Counts are workbook snapshots. |
-| Projects | Understand the project profiles and connected capstone. |
+| Projects | Read warehouse requirements, open ordered checkpoints and find advanced architecture labs. |
 | Resource library | Open original references and additional official guides. Availability checks do not verify every source claim. |
-| Plan & guidance | Read this application handbook and the original workbook advice below it. |
+| Handbook | Read the current workflow. Expand the archived workbook guidance for source context. |
 
 Collapse the sidebar using its panel button. In compact mode, hover over the graduation logo or focus it with Tab to reveal the expand button. Navigation icons show tooltips. On mobile, open the menu; Escape or the backdrop closes it.
 
@@ -67,6 +67,7 @@ learning/
     CS12/
       README.md
       theory/concepts.md
+      notes/00-warehouse-practice.md
       notes/journal.md
       code/
       results/evidence.md
@@ -92,7 +93,7 @@ Edit the existing templates or add new files. Templates are prompts, not complet
     summary:
       "Move from understanding to evidence, with a useful record of each attempt.",
     body: `
-**Before coding:** Write the problem, inputs, expected output, constraints, and your approach. Explain the concept without copying a tutorial. If a task has an AI-free practice mode, attempt it independently first and follow the task's policy.
+**Before coding:** Recall the concept and write the expected behavior, constraints, and approach. Use documentation and write the implementation and checks yourself.
 
 **While coding:** Work in small steps. Save the command needed to run your example. Test a normal case and at least one meaningful boundary or failure case. When something fails, write what you expected, what actually happened, and what you changed.
 
@@ -137,13 +138,7 @@ This uses Python's standard-library SQLite support and an in-memory database. It
 
 For another language, install its required runtime and use that project's run instructions. Record the working directory as well as the command. Save terminal output into a text or Markdown result file yourself.
 
-For a React/Next.js exercise, keep a separate project, for example \`learning/typescript-and-ui/TS05/code/demo/\`. Open a terminal **inside that project's folder** and run its own install/start commands. Use a different port from Learnspace. If the practice project is a Next.js app with a standard dev script, an example is:
-
-\`\`\`sh
-npm run dev -- --port 3200
-\`\`\`
-
-Then put a link such as \`[Open my practice app](http://127.0.0.1:3200)\` in Results, along with how to start it. The link works only while that project is running. The included \`CustomerOrders.jsx\` is an illustrative component to copy into a separate React app, not a standalone runnable project.
+The warehouse project starts as plain Java. Add Spring Boot, PostgreSQL and the React client at their checkpoints. Run each from its own project directory and record the command you actually used. Run React on a different port from Learnspace. The CS12 JSX file belongs to the archived SQL demonstration.
 
 The learning folder is excluded from Learnspace's TypeScript and lint checks. Run tests and checks for each practice project separately. Dependency and build folders such as \`node_modules\`, \`.next\`, and \`dist\` are omitted from the viewer.
 `,
@@ -316,8 +311,8 @@ export function ApplicationGuide() {
             handbook explains the application; the original curriculum guidance
             follows below.
           </p>
-          <Link className="button secondary" href="/tasks/CS12">
-            Try the worked example <ArrowRight size={15} />
+          <Link className="button secondary" href="/projects#build-roadmap">
+            Open the warehouse build order <ArrowRight size={15} />
           </Link>
         </div>
       </div>

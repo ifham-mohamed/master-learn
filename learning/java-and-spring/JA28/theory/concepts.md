@@ -1,39 +1,9 @@
-# Authorization — theory
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. Replace these prompts with your own explanation.
+# JA28 — Concepts to review
 
-## Learning goal
+Roles, tenant ownership, warehouse scope and deny-by-default rules.
 
-request rules, method security, ownership/tenant checks
-Exploit path + mitigation + tests
-authn/authz, tenant isolation, secrets
-Ownership, roles/permissions, tenant boundaries
+Explain one idea from memory. Predict a case where the implementation could fail, then check that prediction against your run or design.
 
-## Concepts to explain
-
-Explain the Java or Spring concept, the object lifecycle, and one failure case. Record the JDK/framework versions you actually use.
-
-- What problem does this solve?
-- How does it work in your own words?
-- What assumptions does it rely on?
-
-## Small example
-
-Add an example and explain each step. Link to a file in ../code/ when useful.
-
-## Edge cases and trade-offs
-
-Record a counterexample, common mistake, and a trade-off.
-
-## Check your understanding
-
-RBAC + ownership tests
-Interview: 401 vs 403? broken object auth?
-Find auth/authorization/validation flaw
-Practice mode: AI-free Yes, AI-assisted Yes
-Design: Multi-tenant merchant portal
-Trade-off: least privilege vs usability
-
-## References
-
-See [task resources](../resources/links.md).
+[Practice brief](../notes/00-warehouse-practice.md) · [References](../resources/links.md)

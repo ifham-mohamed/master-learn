@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { TaskTimer } from "./study-timer";
 import { studyDate } from "@/lib/study";
-import { taskDates } from '@/lib/planner';
+import { taskDates, taskPrerequisites } from '@/lib/planner';
 import { TaskJournal } from './planning-tools';
 import {
   ArrowLeft,
@@ -24,14 +24,14 @@ import {
 } from "@/lib/tracker";
 import { statuses, type Progress } from "@/lib/progress";
 import { LearningWorkspace } from "./learning-workspace";
-import { warehouseBrief } from "@/lib/warehouse";
+import { checkpointHref, warehouseBrief, warehouseLabs, warehouseTitle } from "@/lib/warehouse";
 
 export function TaskDetail({ id }: { id: string }) {
   const { tasks, editing, setEditing,planner } = useTracker();
   const [progressRequest, setProgressRequest] = useState<{ complete: boolean } | null>(null);
   const task = tasks.find((t) => t.id === id)!;
   const brief = warehouseBrief(id);
-  const prerequisites = task.prerequisites.match(/[A-Z]+\d+/g) || [];
+  const prerequisites = taskPrerequisites(task);
   const reviewDue = task.completedOn
     ? new Date(
         Date.parse(`${task.completedOn}T00:00:00Z`) +
@@ -51,7 +51,7 @@ export function TaskDetail({ id }: { id: string }) {
           <div className="context-label">
             {task.id} · {task.category} · {task.section}
           </div>
-          <h1>{task.title}</h1>
+          <h1>{warehouseTitle(task)}</h1>
           <div className="detail-pills">
             <Status value={task.status} />
             <span className="phase-pill">
@@ -80,7 +80,7 @@ export function TaskDetail({ id }: { id: string }) {
         <section className="panel tool-card warehouse-brief" aria-labelledby="warehouse-practice">
           <div className="section-heading">
             <h2 id="warehouse-practice">Your practice</h2>
-            <Link href="/projects">Warehouse Dispatch path →</Link>
+            <Link href={checkpointHref(brief.checkpoint)}>Open {brief.checkpoint} in the build order →</Link>
           </div>
           <dl>
             <div><dt>Review and learn</dt><dd>{brief.focus}</dd></div>
@@ -88,6 +88,12 @@ export function TaskDetail({ id }: { id: string }) {
             <div><dt>Pass check</dt><dd>{brief.verify}</dd></div>
           </dl>
           <p>Write and test the code yourself. Save what you ran, what happened, and what comes next.</p>
+          {brief.labs.length > 0 && <p className="warehouse-link-list">
+            <strong>Further practice</strong>
+            {warehouseLabs.filter((lab) => brief.labs.includes(lab.id)).map((lab) => (
+              <Link key={lab.id} href={`/projects#${lab.id}`}>{lab.title.replace(/^\d+\. /, "")}</Link>
+            ))}
+          </p>}
           <div className="warehouse-actions">
             <button className="button primary" onClick={() => {
               setEditing(true);
@@ -97,13 +103,14 @@ export function TaskDetail({ id }: { id: string }) {
           </div>
         </section>
       )}
-      <LearningWorkspace key={id} taskId={id} />
+      <LearningWorkspace key={id} taskId={id} initialFile={brief ? "notes/00-warehouse-practice.md" : undefined} />
       <TaskJournal key={`journal-${id}`} id={id}/>
       <div className="detail-layout">
         <div>
           <section className="panel detail-panel">
             <details open={!brief}>
               <summary>Original task guidance</summary>
+              {warehouseTitle(task) !== task.title && <p><strong>{task.title}</strong></p>}
               <p className="preserve-lines">{task.doneWhen}</p>
               {task.prompt && <p className="preserve-lines">{task.prompt}</p>}
             </details>
@@ -194,7 +201,7 @@ export function TaskDetail({ id }: { id: string }) {
                   const prereq = tasks.find((t) => t.id === ref);
                   return prereq ? (
                     <Link key={ref} href={`/tasks/${ref}`}>
-                      {isComplete(prereq)?'✓ Complete':'○ Needed'} · {ref} · {prereq.title}
+                      {isComplete(prereq)?'✓ Complete':'○ Needed'} · {ref} · {warehouseTitle(prereq)}
                     </Link>
                   ) : (
                     <span key={ref}>{ref} · original reference</span>

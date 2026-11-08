@@ -1,38 +1,9 @@
-# Syntax + object model — theory
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. Replace these prompts with your own explanation.
+# JA05 — Concepts to review
 
-## Learning goal
+String and int, Scanner line input, parsing, conditionals, loops, methods, primitives and references.
 
-types, references, methods, packages, access modifiers
-OOP, collections, generics, exceptions, streams, records, sealed classes
-Write clean Java; primitives/references, methods, packages, exceptions
+Explain one idea from memory. Predict a case where the implementation could fail, then check that prediction against your run or design.
 
-## Concepts to explain
-
-Explain the Java or Spring concept, the object lifecycle, and one failure case. Record the JDK/framework versions you actually use.
-
-- What problem does this solve?
-- How does it work in your own words?
-- What assumptions does it rely on?
-
-## Small example
-
-Add an example and explain each step. Link to a file in ../code/ when useful.
-
-## Edge cases and trade-offs
-
-Record a counterexample, common mistake, and a trade-off.
-
-## Check your understanding
-
-20 small Java drills
-Interview: primitive vs reference? pass-by-value?
-Implement a domain service and explain object/model choices
-Build Java kata + service layer
-Primary backend language
-Complete 20 Java coding drills
-
-## References
-
-See [task resources](../resources/links.md).
+[Practice brief](../notes/00-warehouse-practice.md) · [References](../resources/links.md)

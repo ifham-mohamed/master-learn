@@ -1,33 +1,15 @@
-# PF01 — Project ONE - multi-tenant commerce/POS
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 20–20 · Core · Review
+# PF01 — Compare Project ONE experience with Warehouse Dispatch
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/PF01)
+Projects · Week 20 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Evidence: Record unit/integration/e2e examples
-Security: Tenant isolation + authz
-Reliability: Outbox/retry/offline/idempotency examples
-Write a 2-minute story and a project deep dive with your own contribution, defect, trade-off and measured result.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-Source status: Existing exposure
-Contribution: Define your exact contribution
-Bug: Document one real defect/root cause
-Trade-off: Explain one decision: transaction/idempotency/offline/auth
-Prepare architecture one-pager + 3 STAR stories
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B20.
-Original workbook: Master Plan row 211.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#pf01)

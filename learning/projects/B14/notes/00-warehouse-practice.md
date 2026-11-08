@@ -1,6 +1,9 @@
-# B14 — Postgres Testcontainers + Docker Compose + CI quality gates
+# B14 — Run PostgreSQL integration tests and CI
 
 Week 14 · Core · Warehouse checkpoint B14
+
+Before you begin, complete B13.
+
 
 ## Review and learn
 
@@ -14,4 +17,8 @@ Run real-database migration and concurrency tests. Add a repeatable local stack 
 
 A clean run starts the stack and passes the tests twice with isolated test data.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+## Further architecture practice
+
+- 1. Establish service boundaries · after B14. A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split.
+
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

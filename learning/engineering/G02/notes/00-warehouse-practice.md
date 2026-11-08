@@ -2,6 +2,7 @@
 
 Week 1 · Core · Warehouse checkpoint B01
 
+
 ## Review and learn
 
 JDK, Java compiler, Maven, Node, npm and reproducible builds.
@@ -14,4 +15,4 @@ Verify both toolchains. Compile a tiny Java file and run the smallest TypeScript
 
 Record tool versions, exact commands and real exit results.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

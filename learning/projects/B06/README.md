@@ -1,31 +1,15 @@
-# B06 — Controller/service/DTO flow + typed React form and route
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 6–6 · Core · Build
+# B06 — Build shipment endpoints and routes
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B06)
+Projects · Week 6 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: HTTPS/TLS + browser/server request flow
-Design: Pagination + API error model
-AI practice: Small AI-assisted task with compile/typecheck review
-Controller/service/DTO flow + typed React form and route
-API errors + pagination mini-design
-Small assisted task: compile/typecheck and explain every change
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B05.
-Original workbook: Master Plan row 76.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b06)

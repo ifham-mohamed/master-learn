@@ -2,6 +2,9 @@
 
 Week 14 · Core · Warehouse checkpoint B14
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Testcontainers, real PostgreSQL and isolation between test runs.
@@ -14,4 +17,4 @@ Run migrations and reservation integration tests against a disposable PostgreSQL
 
 A clean run passes twice with independent data. Preserve the concurrency test result.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

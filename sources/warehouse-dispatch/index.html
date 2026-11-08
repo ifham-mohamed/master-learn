@@ -17,18 +17,18 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>G02</strong> Run both toolchains and a first test from a clean clone <small>Core</small></summary>
 <dl id="G02"><dt>Review and learn</dt><dd>JDK, Java compiler, Maven, Node, npm and reproducible builds.</dd><dt>Do the work</dt><dd>Verify both toolchains. Compile a tiny Java file and run the smallest TypeScript check from a clean folder.</dd><dt>Pass check</dt><dd>Record tool versions, exact commands and real exit results.</dd></dl>
 <a href="../../learning/engineering/G02/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>AI18</strong> Confirm round policy and rehearse AI-free fallback <small>Core</small></summary>
-<dl id="AI18"><dt>Review and learn</dt><dd>Tool restrictions, AI-free fallback and independent verification.</dd><dt>Do the work</dt><dd>Use the official docs, compiler, debugger and tests during a timed Java or SQL attempt.</dd><dt>Pass check</dt><dd>Record what you solved unaided and one fallback technique you can repeat.</dd></dl>
-<a href="../../learning/ai-engineering/AI18/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>CS12</strong> JOINs <small>Core</small></summary>
-<dl id="CS12"><dt>Review and learn</dt><dd>INNER JOIN, LEFT JOIN, join keys, and filters in ON versus WHERE.</dd><dt>Do the work</dt><dd>Query warehouses with assigned shipments, including a warehouse with none. Adapt the existing fixture and rerun on PostgreSQL when available.</dd><dt>Pass check</dt><dd>Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse.</dd></dl>
-<a href="../../learning/cs-and-sql/CS12/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>JA05</strong> Syntax + object model <small>Core</small></summary>
 <dl id="JA05"><dt>Review and learn</dt><dd>String and int, Scanner line input, parsing, conditionals, loops, methods, primitives and references.</dd><dt>Do the work</dt><dd>Write a terminal menu to create and find one shipment. Ask for reference, destination, SKU and quantity. Work through the source drills as small input and method variations.</dd><dt>Pass check</dt><dd>A valid create and lookup work. Blank input and non-numeric or nonpositive quantities recover without a crash. Explain pass-by-value using your own code.</dd></dl>
 <a href="../../learning/java-and-spring/JA05/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>JA06</strong> OOP <small>Core</small></summary>
 <dl id="JA06"><dt>Review and learn</dt><dd>Encapsulation, constructors, composition, interfaces, and when inheritance helps.</dd><dt>Do the work</dt><dd>Separate the menu from Shipment and ShipmentService. Model allowed transitions and add an in-memory collection when a second shipment is needed.</dd><dt>Pass check</dt><dd>The terminal still works. Tests reject duplicate references and illegal transitions. Explain why you used composition.</dd></dl>
 <a href="../../learning/java-and-spring/JA06/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>AI18</strong> Confirm round policy and rehearse AI-free fallback <small>Core</small></summary>
+<dl id="AI18"><dt>Review and learn</dt><dd>Tool restrictions, AI-free fallback and independent verification.</dd><dt>Do the work</dt><dd>Use the official docs, compiler, debugger and tests during a timed Java or SQL attempt.</dd><dt>Pass check</dt><dd>Record what you solved unaided and one fallback technique you can repeat.</dd></dl>
+<a href="../../learning/ai-engineering/AI18/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>CS12</strong> JOINs <small>Core</small></summary>
+<dl id="CS12"><dt>Review and learn</dt><dd>INNER JOIN, LEFT JOIN, join keys, and filters in ON versus WHERE.</dd><dt>Do the work</dt><dd>Query warehouses with assigned shipments, including a warehouse with none. Adapt the existing fixture and rerun on PostgreSQL when available.</dd><dt>Pass check</dt><dd>Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse.</dd></dl>
+<a href="../../learning/cs-and-sql/CS12/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>TS05</strong> Scopes / closures <small>Core</small></summary>
 <dl id="TS05"><dt>Review and learn</dt><dd>Lexical scope, closures and captured state.</dd><dt>Do the work</dt><dd>Write a shipment display helper with a configurable label. Trace two functions created with different options.</dd><dt>Pass check</dt><dd>Each function keeps its own options. Explain one stale closure risk in React.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS05/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -41,15 +41,15 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>EN26</strong> Git <small>Core</small></summary>
 <dl id="EN26"><dt>Review and learn</dt><dd>Git status, small commits, diff review and safe undo.</dd><dt>Do the work</dt><dd>Commit the first working CLI in a small branch. Rehearse undo on an isolated practice change.</dd><dt>Pass check</dt><dd>The diff explains one change and the branch can be built after checkout.</dd></dl>
 <a href="../../learning/engineering/EN26/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B01</strong> Set up Java/TS repo; Java domain kata; convert a small JS module to strict TS <small>Core</small></summary>
+<details><summary><strong>RW20</strong> Think-aloud communication <small>Core</small></summary>
+<dl id="RW20"><dt>Review and learn</dt><dd>Think aloud, state assumptions and explain a failure.</dd><dt>Do the work</dt><dd>Explain your CLI flow while trying an invalid quantity and an unknown reference.</dd><dt>Pass check</dt><dd>A listener can reconstruct the expected behavior and the reason for your next step.</dd></dl>
+<a href="../../learning/engineering/RW20/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B01</strong> Run the first shipment CLI <small>Core</small></summary>
 <dl id="B01"><dt>Review and learn</dt><dd>Terminal I/O, methods, OOP basics, Git and strict TypeScript.</dd><dt>Do the work</dt><dd>Deliver a runnable Java create/find CLI and a strict TypeScript shipment display helper. Use one shipment and split the code once the flow runs.</dd><dt>Pass check</dt><dd>A clean folder can build and run it. Save valid and invalid terminal runs, the TypeScript check, and one design decision.</dd></dl>
 <a href="../../learning/projects/B01/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS01</strong> Solve 7 new DSA problems and revisit errors <small>Core</small></summary>
 <dl id="DS01"><dt>Review and learn</dt><dd>Practice arrays and hash maps. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
 <a href="../../learning/dsa/DS01/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>RW20</strong> Think-aloud communication <small>Core</small></summary>
-<dl id="RW20"><dt>Review and learn</dt><dd>Think aloud, state assumptions and explain a failure.</dd><dt>Do the work</dt><dd>Explain your CLI flow while trying an invalid quantity and an unknown reference.</dd><dt>Pass check</dt><dd>A listener can reconstruct the expected behavior and the reason for your next step.</dd></dl>
-<a href="../../learning/engineering/RW20/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M01</strong> Java Big-O/arrays/OOP + verbal reasoning <small>Core</small></summary>
 <dl id="M01"><dt>Review and learn</dt><dd>Recall Java Big-O/arrays/OOP + verbal reasoning and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B01 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M01/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -71,7 +71,7 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>TS09</strong> Union/intersection/narrowing <small>Core</small></summary>
 <dl id="TS09"><dt>Review and learn</dt><dd>Discriminated unions, narrowing and exhaustive cases.</dd><dt>Do the work</dt><dd>Model loading, success, empty and failed shipment states as a union.</dd><dt>Pass check</dt><dd>Each valid state renders and adding a new case forces the missing branch to be handled.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS09/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B02</strong> Immutable Java value objects + typed TS API-state exercise <small>Core</small></summary>
+<details><summary><strong>B02</strong> Model shipments and client states <small>Core</small></summary>
 <dl id="B02"><dt>Review and learn</dt><dd>Immutable identities, collections, composition and UI state unions.</dd><dt>Do the work</dt><dd>Support multiple shipment references and basic status rules. Model loading, empty, success and error states with fixtures.</dd><dt>Pass check</dt><dd>Duplicate identity and invalid transitions are rejected. Each typed UI state renders.</dd></dl>
 <a href="../../learning/projects/B02/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS02</strong> Solve 7 new DSA problems and revisit errors <small>Core</small></summary>
@@ -107,7 +107,7 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>TS12</strong> Interfaces vs type aliases <small>Core</small></summary>
 <dl id="TS12"><dt>Review and learn</dt><dd>Interfaces, aliases and structural typing.</dd><dt>Do the work</dt><dd>Define the shipment DTO shape and a closed union for its status or load state.</dd><dt>Pass check</dt><dd>Explain the type choice and show an incompatible DTO rejected by the checker.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS12/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B03</strong> Generic Java service + typed DTO transformations <small>Core</small></summary>
+<details><summary><strong>B03</strong> Refine lookup and mapping <small>Core</small></summary>
 <dl id="B03"><dt>Review and learn</dt><dd>Generics, lookup boundaries, mapping and exceptions.</dd><dt>Do the work</dt><dd>Refine the Java lookup service and map shipment summaries to typed display objects.</dd><dt>Pass check</dt><dd>Tests cover known and unknown references, invalid input and mapping correctness.</dd></dl>
 <a href="../../learning/projects/B03/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS03</strong> Solve 7 new DSA problems and revisit errors <small>Core</small></summary>
@@ -143,7 +143,7 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>TS15</strong> Async/await + errors <small>Core</small></summary>
 <dl id="TS15"><dt>Review and learn</dt><dd>Async/await, rejected promises and cleanup.</dd><dt>Do the work</dt><dd>Load a shipment through an async adapter. Handle rejection and a slow request that outlives a change of selection.</dd><dt>Pass check</dt><dd>An older response cannot replace the current shipment. Failure remains visible.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS15/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B04</strong> Java aggregation kata + 10 JS async-order drills <small>Core</small></summary>
+<details><summary><strong>B04</strong> Summarize shipments and trace async work <small>Core</small></summary>
 <dl id="B04"><dt>Review and learn</dt><dd>Aggregation, memory behavior and JavaScript async ordering.</dd><dt>Do the work</dt><dd>Report shipment totals by destination and work through the async-order drills using shipment data.</dd><dt>Pass check</dt><dd>Compare totals with a fixture and explain the observed execution order.</dd></dl>
 <a href="../../learning/projects/B04/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS04</strong> Solve 7 new DSA problems and revisit errors <small>Core</small></summary>
@@ -182,12 +182,6 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>TS17</strong> Components / props <small>Core</small></summary>
 <dl id="TS17"><dt>Review and learn</dt><dd>Components, props and single responsibility.</dd><dt>Do the work</dt><dd>Build a small shipment list, status badge and detail view with fixtures.</dd><dt>Pass check</dt><dd>The same component renders multiple statuses from typed props.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS17/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B05</strong> Create Spring Boot service skeleton + typed Next/React client shell <small>Core</small></summary>
-<dl id="B05"><dt>Review and learn</dt><dd>Spring Boot, dependency injection, service boundaries and React components.</dd><dt>Do the work</dt><dd>Start Spring around the existing Java service. Build a React shipment list with fixture data.</dd><dt>Pass check</dt><dd>Document one successful smoke request and show the React list with two fixture states.</dd></dl>
-<a href="../../learning/projects/B05/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>DS05</strong> Solve 7 new DSA problems and revisit errors <small>Core</small></summary>
-<dl id="DS05"><dt>Review and learn</dt><dd>Practice linked lists and trees. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
-<a href="../../learning/dsa/DS05/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>RW05</strong> Unfamiliar codebase orientation <small>Core</small></summary>
 <dl id="RW05"><dt>Review and learn</dt><dd>Repository entry points, data flow and unfamiliar code navigation.</dd><dt>Do the work</dt><dd>Trace startup to shipment lookup in a clean checkout. Draw the route through two actual files.</dd><dt>Pass check</dt><dd>Verify the trace with a run or debugger and identify where a small change belongs.</dd></dl>
 <a href="../../learning/engineering/RW05/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -197,6 +191,12 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>SD07</strong> Data model <small>Core</small></summary>
 <dl id="SD07"><dt>Review and learn</dt><dd>Entities, relationships, lifecycle states and ownership.</dd><dt>Do the work</dt><dd>Model a warehouse, SKU, balance, shipment, shipment lines, reservation and event history.</dd><dt>Pass check</dt><dd>Walk through create, reserve, cancel and dispatch and reconcile both quantities and transitions.</dd></dl>
 <a href="../../learning/system-design/SD07/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B05</strong> Start Spring Boot and the React client <small>Core</small></summary>
+<dl id="B05"><dt>Review and learn</dt><dd>Spring Boot, dependency injection, service boundaries and React components.</dd><dt>Do the work</dt><dd>Start Spring around the existing Java service. Build a React shipment list with fixture data.</dd><dt>Pass check</dt><dd>Document one successful smoke request and show the React list with two fixture states.</dd></dl>
+<a href="../../learning/projects/B05/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>DS05</strong> Solve 7 new DSA problems and revisit errors <small>Core</small></summary>
+<dl id="DS05"><dt>Review and learn</dt><dd>Practice linked lists and trees. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
+<a href="../../learning/dsa/DS05/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M05</strong> Spring DI/Boot + linked list/tree <small>Core</small></summary>
 <dl id="M05"><dt>Review and learn</dt><dd>Recall Spring DI/Boot + linked list/tree and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B05 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M05/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -221,14 +221,14 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>TS20</strong> Routing / boundaries <small>Core</small></summary>
 <dl id="TS20"><dt>Review and learn</dt><dd>React routes, parameters and route-level fallback states.</dd><dt>Do the work</dt><dd>Add list, detail and create routes. Handle an unknown reference and direct navigation.</dd><dt>Pass check</dt><dd>Direct refresh and navigation work. Missing references show a useful fallback.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS20/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B06</strong> Controller/service/DTO flow + typed React form and route <small>Core</small></summary>
+<details><summary><strong>B06</strong> Build shipment endpoints and routes <small>Core</small></summary>
 <dl id="B06"><dt>Review and learn</dt><dd>Controller/service/DTO flow, forms and routing.</dd><dt>Do the work</dt><dd>Add shipment create and detail API operations. Build typed React form and detail routes.</dd><dt>Pass check</dt><dd>Create and read from a terminal HTTP client and navigate the form by keyboard.</dd></dl>
 <a href="../../learning/projects/B06/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS06</strong> Solve 7 new DSA problems and revisit errors <small>Core</small></summary>
 <dl id="DS06"><dt>Review and learn</dt><dd>Practice tree traversal and binary search trees. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
 <a href="../../learning/dsa/DS06/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>M06</strong> Spring MVC + React/Next + trees/BST <small>Core</small></summary>
-<dl id="M06"><dt>Review and learn</dt><dd>Recall Spring MVC + React/Next + trees/BST and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B06 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
+<details><summary><strong>M06</strong> Spring MVC, React routes and binary search trees <small>Core</small></summary>
+<dl id="M06"><dt>Review and learn</dt><dd>Recall Spring MVC, React routes and binary search trees and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B06 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M06/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>RV06</strong> Review evidence, questions and next-week capacity <small>Core</small></summary>
 <dl id="RV06"><dt>Review and learn</dt><dd>Recall the week 6 concept and explain the trade-off from B06.</dd><dt>Do the work</dt><dd>Rerun one check from B06, revisit one mistake and compare actual time with your study plan.</dd><dt>Pass check</dt><dd>Record the run, one skill you can repeat, and the next gap you will address.</dd></dl>
@@ -248,12 +248,12 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>TS21</strong> API integration <small>Core</small></summary>
 <dl id="TS21"><dt>Review and learn</dt><dd>Typed fetch, status handling, loading, and server state.</dd><dt>Do the work</dt><dd>Connect the shipment form and list to Spring. Refresh relevant data after a successful write.</dd><dt>Pass check</dt><dd>Loading, success, conflict and network failure are visible and independently tested.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS21/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B07</strong> Validated booking/order endpoint + Zod client contract <small>Core</small></summary>
-<dl id="B07"><dt>Review and learn</dt><dd>REST contracts, input validation, response parsing and failure states.</dd><dt>Do the work</dt><dd>Connect React to Spring for shipment create and lookup. Surface duplicate and validation failures.</dd><dt>Pass check</dt><dd>Verify success, invalid input, conflict, malformed response, loading and failure states.</dd></dl>
-<a href="../../learning/projects/B07/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>G05</strong> Practice window functions, NULLs and duplicate-sensitive joins <small>Core</small></summary>
 <dl id="G05"><dt>Review and learn</dt><dd>NULL handling, duplicate-sensitive joins, and window ordering.</dd><dt>Do the work</dt><dd>Create a shipment event fixture with duplicates, missing assignments and tied times. Test the report against it.</dd><dt>Pass check</dt><dd>Save expected and actual rows with explicit tie-breaking and NULL behavior.</dd></dl>
 <a href="../../learning/cs-and-sql/G05/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B07</strong> Connect React to the validated shipment API <small>Core</small></summary>
+<dl id="B07"><dt>Review and learn</dt><dd>REST contracts, input validation, response parsing and failure states.</dd><dt>Do the work</dt><dd>Connect React to Spring for shipment create and lookup. Surface duplicate and validation failures.</dd><dt>Pass check</dt><dd>Verify success, invalid input, conflict, malformed response, loading and failure states.</dd></dl>
+<a href="../../learning/projects/B07/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS07</strong> Solve 7 new DSA problems and revisit errors <small>Core</small></summary>
 <dl id="DS07"><dt>Review and learn</dt><dd>Practice heaps and intervals. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
 <a href="../../learning/dsa/DS07/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -278,7 +278,7 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>G06</strong> Create and test a database migration <small>Core</small></summary>
 <dl id="G06"><dt>Review and learn</dt><dd>Versioned migrations, forward compatibility and recovery.</dd><dt>Do the work</dt><dd>Add an additive shipment schema migration. Rehearse both fresh setup and upgrade from a populated fixture.</dd><dt>Pass check</dt><dd>Rows survive upgrade, the new rule holds, and a failed upgrade has a documented recovery.</dd></dl>
 <a href="../../learning/engineering/G06/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B08</strong> Persist customer/order model + clean frontend build/typecheck pipeline <small>Core</small></summary>
+<details><summary><strong>B08</strong> Persist shipments and receive stock in PostgreSQL <small>Core</small></summary>
 <dl id="B08"><dt>Review and learn</dt><dd>PostgreSQL schema, constraints, migrations and frontend build checks.</dd><dt>Do the work</dt><dd>Persist warehouses, SKUs, stock, shipments and lines. Implement stock receipt with a positive quantity and a unique receipt reference.</dd><dt>Pass check</dt><dd>Migrations work on new and populated data. Receipt increases on-hand stock once, a duplicate is rejected, and data survives restart.</dd></dl>
 <a href="../../learning/projects/B08/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS08</strong> Solve 7 new DSA problems and revisit errors <small>Core</small></summary>
@@ -299,15 +299,15 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>TS23</strong> Vitest / Jest concepts <small>Core</small></summary>
 <dl id="TS23"><dt>Review and learn</dt><dd>Test runner, fixtures, mocks and deterministic async tests.</dd><dt>Do the work</dt><dd>Test the shipment formatter and API adapter with success and failure fixtures.</dd><dt>Pass check</dt><dd>Tests exercise status handling and fail when the error path is removed.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS23/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B09</strong> Profile/fix an N+1 query + Vitest service/client tests <small>Core</small></summary>
+<details><summary><strong>RW06</strong> Reproduce, diagnose and repair a defect with regression tests <small>Core</small></summary>
+<dl id="RW06"><dt>Review and learn</dt><dd>Reproduction, debugging, minimal fixes and regression tests.</dd><dt>Do the work</dt><dd>Reproduce a shipment list or input failure, write the smallest failing case, and fix it yourself.</dd><dt>Pass check</dt><dd>Save the failing case, root cause, passing test and scope of the change.</dd></dl>
+<a href="../../learning/engineering/RW06/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B09</strong> Measure and fix shipment-list queries <small>Core</small></summary>
 <dl id="B09"><dt>Review and learn</dt><dd>Query count, pagination, testing and fair measurement.</dd><dt>Do the work</dt><dd>Reproduce and fix an N+1 shipment list query. Add a frontend or service regression test.</dd><dt>Pass check</dt><dd>Save before and after counts on identical data and verify page correctness.</dd></dl>
 <a href="../../learning/projects/B09/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS09</strong> Solve 7 new DSA problems and revisit errors <small>Core</small></summary>
 <dl id="DS09"><dt>Review and learn</dt><dd>Practice topological ordering. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
 <a href="../../learning/dsa/DS09/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>RW06</strong> Reproduce, diagnose and repair a defect with regression tests <small>Core</small></summary>
-<dl id="RW06"><dt>Review and learn</dt><dd>Reproduction, debugging, minimal fixes and regression tests.</dd><dt>Do the work</dt><dd>Reproduce a shipment list or input failure, write the smallest failing case, and fix it yourself.</dd><dt>Pass check</dt><dd>Save the failing case, root cause, passing test and scope of the change.</dd></dl>
-<a href="../../learning/engineering/RW06/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M09</strong> N+1 query diagnosis and fix <small>Core</small></summary>
 <dl id="M09"><dt>Review and learn</dt><dd>Recall N+1 query diagnosis and fix and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B09 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M09/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -332,14 +332,14 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>JA26</strong> Locking / concurrency <small>Core</small></summary>
 <dl id="JA26"><dt>Review and learn</dt><dd>Concurrent updates, lock scope and conditional writes.</dd><dt>Do the work</dt><dd>Reproduce contention for the last unit. Choose row locking or an atomic conditional update and keep lock ordering consistent.</dd><dt>Pass check</dt><dd>Two concurrent requests yield one success, one conflict, and a valid stock balance.</dd></dl>
 <a href="../../learning/java-and-spring/JA26/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B10</strong> Double-booking race lab using transaction/constraint/locking <small>Core</small></summary>
+<details><summary><strong>B10</strong> Reserve and release stock safely under contention <small>Core</small></summary>
 <dl id="B10"><dt>Review and learn</dt><dd>Inventory balance, atomic transactions, row contention and rollback.</dd><dt>Do the work</dt><dd>Reserve all shipment lines together. Add a cancel action that releases a reservation once. Run two concurrent requests for the last unit.</dd><dt>Pass check</dt><dd>One request succeeds and one conflicts. Partial failure rolls back and available stock never becomes negative.</dd></dl>
 <a href="../../learning/projects/B10/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS10</strong> Solve 6 new DSA problems and revisit errors <small>Core</small></summary>
 <dl id="DS10"><dt>Review and learn</dt><dd>Practice graphs and union-find. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
 <a href="../../learning/dsa/DS10/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>M11</strong> Double booking / transactions / isolation <small>Core</small></summary>
-<dl id="M11"><dt>Review and learn</dt><dd>Recall Double booking / transactions / isolation and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
+<details><summary><strong>M11</strong> Last-unit reservation, transactions and isolation <small>Core</small></summary>
+<dl id="M11"><dt>Review and learn</dt><dd>Recall Last-unit reservation, transactions and isolation and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M11/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M12</strong> Race-condition reproduction and safe fix <small>Core</small></summary>
 <dl id="M12"><dt>Review and learn</dt><dd>Recall Race-condition reproduction and safe fix and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
@@ -362,7 +362,7 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>TS28</strong> Browser/web security <small>Core</small></summary>
 <dl id="TS28"><dt>Review and learn</dt><dd>XSS, CSRF, CORS, cookie flags and safe sign-out.</dd><dt>Do the work</dt><dd>Test unsafe-looking text rendering and missing CSRF. Remove private client state when the session ends.</dd><dt>Pass check</dt><dd>Text renders safely, the forged write is denied, and sensitive views clear after logout.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS28/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B11</strong> RBAC + ownership/tenant checks + security regression tests <small>Core</small></summary>
+<details><summary><strong>B11</strong> Secure the warehouse workflow <small>Core</small></summary>
 <dl id="B11"><dt>Review and learn</dt><dd>Session login, CSRF, role checks and tenant isolation.</dd><dt>Do the work</dt><dd>Secure shipment reads and writes with Spring Security. Add login, logout and UI states for denied and expired access.</dd><dt>Pass check</dt><dd>Verify allowed access, wrong role, another tenant, missing CSRF and logout with tests.</dd></dl>
 <a href="../../learning/projects/B11/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS11</strong> Solve 6 new DSA problems and revisit errors <small>Core</small></summary>
@@ -386,7 +386,7 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>TS25</strong> E2E <small>Core</small></summary>
 <dl id="TS25"><dt>Review and learn</dt><dd>End-to-end tests, seeded state and stable locators.</dd><dt>Do the work</dt><dd>Exercise login, shipment create, reserve, pick and dispatch in a real browser.</dd><dt>Pass check</dt><dd>Verify the final state and one rejected action without depending on test order.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS25/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B12</strong> End-to-end Spring API to TypeScript client flow with component/E2E tests <small>Core</small></summary>
+<details><summary><strong>B12</strong> Receive, pick and dispatch from React <small>Core</small></summary>
 <dl id="B12"><dt>Review and learn</dt><dd>Picking, dispatch, state transitions and browser integration.</dd><dt>Do the work</dt><dd>Add pick confirmation and dispatch for fully reserved stock. In React, receive stock and show available, reserved and on-hand quantities.</dd><dt>Pass check</dt><dd>Keyboard and browser tests cover receiving stock through dispatch. Dispatch deducts stock once and out-of-order actions fail.</dd></dl>
 <a href="../../learning/projects/B12/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS12</strong> Solve 6 new DSA problems and revisit errors <small>Core</small></summary>
@@ -401,7 +401,7 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>M16</strong> Spring DTO and TS client contract <small>Core</small></summary>
 <dl id="M16"><dt>Review and learn</dt><dd>Recall Spring DTO and TS client contract and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B12 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M16/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>PF02</strong> Booking / Appointment Concurrency Lab <small>Optional</small></summary>
+<details><summary><strong>PF02</strong> Warehouse reservation concurrency lab <small>Optional</small></summary>
 <dl id="PF02"><dt>Review and learn</dt><dd>Optional concurrency comparison and invariant testing.</dd><dt>Do the work</dt><dd>Package the last-unit race as a small standalone experiment. Compare it with a dock-slot overlap example if useful.</dd><dt>Pass check</dt><dd>Show the race and safe outcome on repeat runs.</dd></dl>
 <a href="../../learning/projects/PF02/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>RV12</strong> Review evidence, questions and next-week capacity <small>Core</small></summary>
@@ -413,15 +413,15 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>JA30</strong> Spring integration <small>Core</small></summary>
 <dl id="JA30"><dt>Review and learn</dt><dd>Controller tests, integration boundaries and realistic fixtures.</dd><dt>Do the work</dt><dd>Test shipment creation, validation and authorization at the API boundary with representative data.</dd><dt>Pass check</dt><dd>The test suite checks response contracts and actual side effects, including a denied write.</dd></dl>
 <a href="../../learning/java-and-spring/JA30/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B13</strong> Service/controller test suite + failing-test and PR-review drills <small>Core</small></summary>
+<details><summary><strong>RW10</strong> Code review <small>Core</small></summary>
+<dl id="RW10"><dt>Review and learn</dt><dd>Review for correctness, security, performance and test coverage.</dd><dt>Do the work</dt><dd>Review a small reservation or React change line by line before merging.</dd><dt>Pass check</dt><dd>Write one concrete review finding tied to a reproducible case or explain why it passes.</dd></dl>
+<a href="../../learning/engineering/RW10/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B13</strong> Strengthen the regression suite <small>Core</small></summary>
 <dl id="B13"><dt>Review and learn</dt><dd>Unit tests, controller tests, regression diagnosis and review.</dd><dt>Do the work</dt><dd>Exercise rollback and invalid transitions with tests. Review and repair a deliberately broken reservation change.</dd><dt>Pass check</dt><dd>Show failing-then-passing output and one review finding verified independently.</dd></dl>
 <a href="../../learning/projects/B13/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS13</strong> Solve 6 new DSA problems and revisit errors <small>Core</small></summary>
 <dl id="DS13"><dt>Review and learn</dt><dd>Practice mixed review. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
 <a href="../../learning/dsa/DS13/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>RW10</strong> Code review <small>Core</small></summary>
-<dl id="RW10"><dt>Review and learn</dt><dd>Review for correctness, security, performance and test coverage.</dd><dt>Do the work</dt><dd>Review a small reservation or React change line by line before merging.</dd><dt>Pass check</dt><dd>Write one concrete review finding tied to a reproducible case or explain why it passes.</dd></dl>
-<a href="../../learning/engineering/RW10/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M17</strong> JUnit/MockMvc + failing test repair <small>Core</small></summary>
 <dl id="M17"><dt>Review and learn</dt><dd>Recall JUnit/MockMvc + failing test repair and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B13 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M17/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -443,18 +443,18 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>EN28</strong> CI/CD <small>Core</small></summary>
 <dl id="EN28"><dt>Review and learn</dt><dd>CI checks, artifacts, deployment stages and reproducibility.</dd><dt>Do the work</dt><dd>Run backend, frontend and integration checks in CI. Fail a practice branch deliberately.</dd><dt>Pass check</dt><dd>CI blocks the broken revision and publishes a successful verification result.</dd></dl>
 <a href="../../learning/engineering/EN28/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B14</strong> Postgres Testcontainers + Docker Compose + CI quality gates <small>Core</small></summary>
-<dl id="B14"><dt>Review and learn</dt><dd>PostgreSQL integration tests, Docker Compose and CI.</dd><dt>Do the work</dt><dd>Run real-database migration and concurrency tests. Add a repeatable local stack and CI gates.</dd><dt>Pass check</dt><dd>A clean run starts the stack and passes the tests twice with isolated test data.</dd></dl>
-<a href="../../learning/projects/B14/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>DS14</strong> Solve 6 new DSA problems and revisit errors <small>Core</small></summary>
-<dl id="DS14"><dt>Review and learn</dt><dd>Practice one-dimensional dynamic programming. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
-<a href="../../learning/dsa/DS14/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>RW11</strong> Refactoring <small>Core</small></summary>
 <dl id="RW11"><dt>Review and learn</dt><dd>Refactoring under tests, behavior preservation and clear boundaries.</dd><dt>Do the work</dt><dd>Remove duplication in a shipment rule or form component after writing characterization tests.</dd><dt>Pass check</dt><dd>The same tests pass before and after and the behavior of a failure case is preserved.</dd></dl>
 <a href="../../learning/engineering/RW11/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>SD13</strong> Queues, retries and service reliability <small>Core</small></summary>
 <dl id="SD13"><dt>Review and learn</dt><dd>Queues, delivery semantics, outbox and bounded retries.</dd><dt>Do the work</dt><dd>Simulate a delayed dispatch notification with a stub worker and a duplicate delivery.</dd><dt>Pass check</dt><dd>The subscriber handles a replay safely and you can explain recovery after a failed send.</dd></dl>
 <a href="../../learning/system-design/SD13/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B14</strong> Run PostgreSQL integration tests and CI <small>Core</small></summary>
+<dl id="B14"><dt>Review and learn</dt><dd>PostgreSQL integration tests, Docker Compose and CI.</dd><dt>Do the work</dt><dd>Run real-database migration and concurrency tests. Add a repeatable local stack and CI gates.</dd><dt>Pass check</dt><dd>A clean run starts the stack and passes the tests twice with isolated test data.</dd></dl>
+<a href="../../learning/projects/B14/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>DS14</strong> Solve 6 new DSA problems and revisit errors <small>Core</small></summary>
+<dl id="DS14"><dt>Review and learn</dt><dd>Practice one-dimensional dynamic programming. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
+<a href="../../learning/dsa/DS14/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M19</strong> Testcontainers/Docker/CI explanation <small>Core</small></summary>
 <dl id="M19"><dt>Review and learn</dt><dd>Recall Testcontainers/Docker/CI explanation and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B14 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M19/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -467,12 +467,6 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <section id="week-15"><h2>Week 15</h2><details><summary><strong>JA32</strong> Actuator / observability <small>Core</small></summary>
 <dl id="JA32"><dt>Review and learn</dt><dd>Health versus readiness, correlation IDs, metrics and safe logging.</dd><dt>Do the work</dt><dd>Add health/readiness checks and trace one failed reservation across HTTP and storage.</dd><dt>Pass check</dt><dd>Find the request by ID. Logs expose useful context without credentials or private payloads.</dd></dl>
 <a href="../../learning/java-and-spring/JA32/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B15</strong> Add logs/metrics/cache; investigate query or rendering bottleneck <small>Core</small></summary>
-<dl id="B15"><dt>Review and learn</dt><dd>Observability, cache freshness, performance baselines and measurements.</dd><dt>Do the work</dt><dd>Trace a failed request and measure a slow shipment list or query before choosing a fix.</dd><dt>Pass check</dt><dd>Save an anonymized trace and comparable measurements with one explained trade-off.</dd></dl>
-<a href="../../learning/projects/B15/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>DS15</strong> Solve 6 new DSA problems and revisit errors <small>Core</small></summary>
-<dl id="DS15"><dt>Review and learn</dt><dd>Practice two-dimensional dynamic programming. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
-<a href="../../learning/dsa/DS15/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>RW16</strong> Performance investigation <small>Core</small></summary>
 <dl id="RW16"><dt>Review and learn</dt><dd>Baseline measurement, representative load and bottleneck isolation.</dd><dt>Do the work</dt><dd>Measure one slow query or render on identical fixtures and isolate its cause.</dd><dt>Pass check</dt><dd>Save the baseline, measurement method and repeatable result after one change.</dd></dl>
 <a href="../../learning/engineering/RW16/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -482,6 +476,12 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>SD12</strong> Search <small>Core</small></summary>
 <dl id="SD12"><dt>Review and learn</dt><dd>Query filtering, indexes, search relevance and pagination.</dd><dt>Do the work</dt><dd>Implement or prototype search by shipment reference and filter by warehouse and status.</dd><dt>Pass check</dt><dd>Results match fixture cases, tenant scope and stable pagination.</dd></dl>
 <a href="../../learning/system-design/SD12/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B15</strong> Measure performance and trace failures <small>Core</small></summary>
+<dl id="B15"><dt>Review and learn</dt><dd>Observability, cache freshness, performance baselines and measurements.</dd><dt>Do the work</dt><dd>Trace a failed request and measure a slow shipment list or query before choosing a fix.</dd><dt>Pass check</dt><dd>Save an anonymized trace and comparable measurements with one explained trade-off.</dd></dl>
+<a href="../../learning/projects/B15/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>DS15</strong> Solve 6 new DSA problems and revisit errors <small>Core</small></summary>
+<dl id="DS15"><dt>Review and learn</dt><dd>Practice two-dimensional dynamic programming. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
+<a href="../../learning/dsa/DS15/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M21</strong> N+1/index/cache/observability investigation <small>Core</small></summary>
 <dl id="M21"><dt>Review and learn</dt><dd>Recall N+1/index/cache/observability investigation and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B15 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M21/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -512,12 +512,6 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>EN30</strong> AWS/Azure/GCP concepts <small>Core</small></summary>
 <dl id="EN30"><dt>Review and learn</dt><dd>Runtime, managed database, DNS, TLS and deployment trade-offs.</dd><dt>Do the work</dt><dd>Draw a staging architecture and map each part to a generic cloud capability.</dd><dt>Pass check</dt><dd>Explain configuration, backups and how you would diagnose a failed health check.</dd></dl>
 <a href="../../learning/engineering/EN30/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B16</strong> Deployable dual-stack architecture + 2 timed agentic repo tickets <small>Core</small></summary>
-<dl id="B16"><dt>Review and learn</dt><dd>Staging configuration, safe rollout, rate limiting and repository fluency.</dd><dt>Do the work</dt><dd>Package a staging build, rate-limit login and general API traffic separately, and complete two timed repo tickets manually.</dd><dt>Pass check</dt><dd>Save smoke results, isolated client quotas, 429 recovery, and proof for both fixes.</dd></dl>
-<a href="../../learning/projects/B16/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>DS16</strong> Solve 6 new DSA problems and revisit errors <small>Core</small></summary>
-<dl id="DS16"><dt>Review and learn</dt><dd>Practice timed pattern selection. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
-<a href="../../learning/dsa/DS16/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>G08</strong> Rehearse deployment failure and recovery <small>Core</small></summary>
 <dl id="G08"><dt>Review and learn</dt><dd>Deployment rollback, database compatibility, smoke checks and restoration.</dd><dt>Do the work</dt><dd>Deploy a deliberately bad change in staging or a local simulation. Restore service and verify old data.</dd><dt>Pass check</dt><dd>Record time to recover, smoke output and the restore or rollback steps.</dd></dl>
 <a href="../../learning/engineering/G08/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -533,6 +527,12 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>SD17</strong> Replication <small>Core</small></summary>
 <dl id="SD17"><dt>Review and learn</dt><dd>Replication, lag, failover and authoritative reads.</dd><dt>Do the work</dt><dd>Model a delayed replica read after a stock change. Decide which screens can accept stale data.</dd><dt>Pass check</dt><dd>Trace stale availability and show how reservation avoids a stale read.</dd></dl>
 <a href="../../learning/system-design/SD17/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B16</strong> Stage a release and test rate limits <small>Core</small></summary>
+<dl id="B16"><dt>Review and learn</dt><dd>Staging configuration, safe rollout, rate limiting and repository fluency.</dd><dt>Do the work</dt><dd>Package a staging build, rate-limit login and general API traffic separately, and complete two timed repo tickets manually.</dd><dt>Pass check</dt><dd>Save smoke results, isolated client quotas, 429 recovery, and proof for both fixes.</dd></dl>
+<a href="../../learning/projects/B16/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>DS16</strong> Solve 6 new DSA problems and revisit errors <small>Core</small></summary>
+<dl id="DS16"><dt>Review and learn</dt><dd>Practice timed pattern selection. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
+<a href="../../learning/dsa/DS16/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M23</strong> Bounded bug/feature with diff/tests/security review <small>Core</small></summary>
 <dl id="M23"><dt>Review and learn</dt><dd>Recall Bounded bug/feature with diff/tests/security review and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B16 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M23/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -542,7 +542,7 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>RV16</strong> Review evidence, questions and next-week capacity <small>Core</small></summary>
 <dl id="RV16"><dt>Review and learn</dt><dd>Recall the week 16 concept and explain the trade-off from B16.</dd><dt>Do the work</dt><dd>Rerun one check from B16, revisit one mistake and compare actual time with your study plan.</dd><dt>Pass check</dt><dd>Record the run, one skill you can repeat, and the next gap you will address.</dd></dl>
 <a href="../../learning/review/RV16/notes/00-warehouse-practice.md">Task notes</a></details></section>
-<section id="week-17"><h2>Week 17</h2><details><summary><strong>B17</strong> Design Spring Boot + Next.js commerce/booking capstone; define APIs/schema/acceptance tests <small>Core</small></summary>
+<section id="week-17"><h2>Week 17</h2><details><summary><strong>B17</strong> Design delivery and dispatch exceptions <small>Core</small></summary>
 <dl id="B17"><dt>Review and learn</dt><dd>Requirements, event history, exception policy and API compatibility.</dd><dt>Do the work</dt><dd>Design a dispatch exception and delivery confirmation workflow with state rules and event fields.</dd><dt>Pass check</dt><dd>Write API examples, expected data changes and failure tests before implementation.</dd></dl>
 <a href="../../learning/projects/B17/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS17</strong> Solve 5 new DSA problems and revisit errors <small>Core</small></summary>
@@ -560,15 +560,15 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <section id="week-18"><h2>Week 18</h2><details><summary><strong>TS29</strong> Spring Boot contract <small>Core</small></summary>
 <dl id="TS29"><dt>Review and learn</dt><dd>DTO compatibility, stable errors and contract testing.</dd><dt>Do the work</dt><dd>Make one backwards-compatible change to the Spring shipment response and exercise the typed client.</dd><dt>Pass check</dt><dd>A documented contract test covers valid, malformed and earlier response shapes as applicable.</dd></dl>
 <a href="../../learning/typescript-and-ui/TS29/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B18</strong> Implement core Spring endpoints + TypeScript client + integration tests <small>Core</small></summary>
+<details><summary><strong>RW12</strong> Feature in existing repo <small>Core</small></summary>
+<dl id="RW12"><dt>Review and learn</dt><dd>Working in an existing repo, incremental design and compatibility.</dd><dt>Do the work</dt><dd>Add one small shipment exception feature through the existing test and review flow.</dd><dt>Pass check</dt><dd>Demonstrate the new behavior and a previously working behavior that still passes.</dd></dl>
+<a href="../../learning/engineering/RW12/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B18</strong> Build the delivery and exception workflow <small>Core</small></summary>
 <dl id="B18"><dt>Review and learn</dt><dd>Vertical feature delivery, contract tests and domain events.</dd><dt>Do the work</dt><dd>Implement the approved exception and delivery flow across React, Spring and PostgreSQL.</dd><dt>Pass check</dt><dd>Verify authorized actions, invalid transitions, ordered event history and accessible feedback.</dd></dl>
 <a href="../../learning/projects/B18/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS18</strong> Solve 5 new DSA problems and revisit errors <small>Core</small></summary>
 <dl id="DS18"><dt>Review and learn</dt><dd>Practice graph and tree review. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
 <a href="../../learning/dsa/DS18/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>RW12</strong> Feature in existing repo <small>Core</small></summary>
-<dl id="RW12"><dt>Review and learn</dt><dd>Working in an existing repo, incremental design and compatibility.</dd><dt>Do the work</dt><dd>Add one small shipment exception feature through the existing test and review flow.</dd><dt>Pass check</dt><dd>Demonstrate the new behavior and a previously working behavior that still passes.</dd></dl>
-<a href="../../learning/engineering/RW12/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M27</strong> Implement scoped Spring + TS feature <small>Core</small></summary>
 <dl id="M27"><dt>Review and learn</dt><dd>Recall Implement scoped Spring + TS feature and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B18 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M27/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -581,18 +581,18 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <section id="week-19"><h2>Week 19</h2><details><summary><strong>AI10</strong> Retrieval, grounding and citations <small>Optional</small></summary>
 <dl id="AI10"><dt>Review and learn</dt><dd>Optional retrieval, source grounding and uncertainty.</dd><dt>Do the work</dt><dd>Manually retrieve the applicable warehouse rule from supplied docs and cite the exact supporting section.</dd><dt>Pass check</dt><dd>Show what happens when a query lacks supporting evidence or matches conflicting rules.</dd></dl>
 <a href="../../learning/ai-engineering/AI10/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B19</strong> Add idempotency/concurrency protection, retry/queue/cache/offline design evidence <small>Core</small></summary>
-<dl id="B19"><dt>Review and learn</dt><dd>Idempotency, request identity, retry, and consistency under partial failure.</dd><dt>Do the work</dt><dd>Make dispatch confirmation safe to retry. Compare bounded retry, outbox and offline failure options in small labs.</dd><dt>Pass check</dt><dd>Identical replay has one effect, conflicting payload reuse is rejected and simulated failure recovers.</dd></dl>
-<a href="../../learning/projects/B19/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>DS19</strong> Solve 5 new DSA problems and revisit errors <small>Core</small></summary>
-<dl id="DS19"><dt>Review and learn</dt><dd>Practice mixed recall. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
-<a href="../../learning/dsa/DS19/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>RW14</strong> API failure handling <small>Core</small></summary>
 <dl id="RW14"><dt>Review and learn</dt><dd>Timeouts, failure classification, bounded retries and user feedback.</dd><dt>Do the work</dt><dd>Simulate a carrier acknowledgement timeout in a fixture and decide when retry is safe.</dd><dt>Pass check</dt><dd>Verify no duplicate dispatch and an understandable retry or failure state.</dd></dl>
 <a href="../../learning/engineering/RW14/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>SD21</strong> Offline sync <small>Core</small></summary>
 <dl id="SD21"><dt>Review and learn</dt><dd>Offline work, conflict detection, versions and replay.</dd><dt>Do the work</dt><dd>Design an offline pick draft and simulate a conflict on reconnect.</dd><dt>Pass check</dt><dd>Show the conflict outcome and explain which operations require authoritative online stock checks.</dd></dl>
 <a href="../../learning/system-design/SD21/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B19</strong> Make dispatch safe to retry <small>Core</small></summary>
+<dl id="B19"><dt>Review and learn</dt><dd>Idempotency, request identity, retry, and consistency under partial failure.</dd><dt>Do the work</dt><dd>Make dispatch confirmation safe to retry. Compare bounded retry, outbox and offline failure options in small labs.</dd><dt>Pass check</dt><dd>Identical replay has one effect, conflicting payload reuse is rejected and simulated failure recovers.</dd></dl>
+<a href="../../learning/projects/B19/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>DS19</strong> Solve 5 new DSA problems and revisit errors <small>Core</small></summary>
+<dl id="DS19"><dt>Review and learn</dt><dd>Practice mixed recall. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
+<a href="../../learning/dsa/DS19/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M29</strong> Queues/retries/idempotency/offline sync <small>Core</small></summary>
 <dl id="M29"><dt>Review and learn</dt><dd>Recall Queues/retries/idempotency/offline sync and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B19 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M29/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -602,15 +602,21 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>RV19</strong> Review evidence, questions and next-week capacity <small>Core</small></summary>
 <dl id="RV19"><dt>Review and learn</dt><dd>Recall the week 19 concept and explain the trade-off from B19.</dd><dt>Do the work</dt><dd>Rerun one check from B19, revisit one mistake and compare actual time with your study plan.</dd><dt>Pass check</dt><dd>Record the run, one skill you can repeat, and the next gap you will address.</dd></dl>
 <a href="../../learning/review/RV19/notes/00-warehouse-practice.md">Task notes</a></details></section>
-<section id="week-20"><h2>Week 20</h2><details><summary><strong>BE76</strong> STAR stories <small>Core</small></summary>
+<section id="week-20"><h2>Week 20</h2><details><summary><strong>JA35</strong> Project deep dive <small>Core</small></summary>
+<dl id="JA35"><dt>Review and learn</dt><dd>Domain rules, trade-offs, failure diagnosis and maintainability.</dd><dt>Do the work</dt><dd>Trace reserve and dispatch from request to committed data. Explain one rejected design with evidence.</dd><dt>Pass check</dt><dd>Demonstrate the workflow from a clean start and answer a change request without notes.</dd></dl>
+<a href="../../learning/java-and-spring/JA35/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>TS31</strong> Project deep dive <small>Core</small></summary>
+<dl id="TS31"><dt>Review and learn</dt><dd>Client state, contracts, accessibility and performance trade-offs.</dd><dt>Do the work</dt><dd>Demonstrate the React dispatch workflow and trace one client error to its cause.</dd><dt>Pass check</dt><dd>Explain a design decision with a test or measurement and repeat a small change independently.</dd></dl>
+<a href="../../learning/typescript-and-ui/TS31/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>B20</strong> Release, restore and verify the system <small>Core</small></summary>
+<dl id="B20"><dt>Review and learn</dt><dd>Deployment hardening, recovery, reliability targets and project explanation.</dd><dt>Do the work</dt><dd>Release to staging, run the agreed smoke and load checks, then rehearse rollback and database restore.</dd><dt>Pass check</dt><dd>Show a clean release, restored data, security results and a reviewer-ready walkthrough.</dd></dl>
+<a href="../../learning/projects/B20/notes/00-warehouse-practice.md">Task notes</a></details>
+<details><summary><strong>BE76</strong> STAR stories <small>Core</small></summary>
 <dl id="BE76"><dt>Review and learn</dt><dd>Situation, task, action and result with evidence.</dd><dt>Do the work</dt><dd>Write a story about a stock reservation bug, design choice or deployment recovery you actually handled.</dd><dt>Pass check</dt><dd>Tell the story within the timebox and identify the exact result you can prove.</dd></dl>
 <a href="../../learning/career/BE76/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>BE79</strong> Trade-off communication <small>Core</small></summary>
 <dl id="BE79"><dt>Review and learn</dt><dd>Trade-off communication, constraints and alternatives.</dd><dt>Do the work</dt><dd>Explain one choice such as locks versus conditional updates, or session versus bearer authentication.</dd><dt>Pass check</dt><dd>State the chosen approach, the cost accepted and a condition that would change your choice.</dd></dl>
 <a href="../../learning/career/BE79/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>B20</strong> Docker/CI/observability/security hardening + architecture one-pager + STAR/deep-dive stories <small>Core</small></summary>
-<dl id="B20"><dt>Review and learn</dt><dd>Deployment hardening, recovery, reliability targets and project explanation.</dd><dt>Do the work</dt><dd>Release to staging, run the agreed smoke and load checks, then rehearse rollback and database restore.</dd><dt>Pass check</dt><dd>Show a clean release, restored data, security results and a reviewer-ready walkthrough.</dd></dl>
-<a href="../../learning/projects/B20/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS20</strong> Solve 5 new DSA problems and revisit errors <small>Core</small></summary>
 <dl id="DS20"><dt>Review and learn</dt><dd>Practice weakest patterns. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
 <a href="../../learning/dsa/DS20/notes/00-warehouse-practice.md">Task notes</a></details>
@@ -620,28 +626,22 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>M32</strong> Logs/metrics/query/app failure investigation <small>Core</small></summary>
 <dl id="M32"><dt>Review and learn</dt><dd>Recall Logs/metrics/query/app failure investigation and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B20 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M32/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>JA35</strong> Project deep dive <small>Core</small></summary>
-<dl id="JA35"><dt>Review and learn</dt><dd>Domain rules, trade-offs, failure diagnosis and maintainability.</dd><dt>Do the work</dt><dd>Trace reserve and dispatch from request to committed data. Explain one rejected design with evidence.</dd><dt>Pass check</dt><dd>Demonstrate the workflow from a clean start and answer a change request without notes.</dd></dl>
-<a href="../../learning/java-and-spring/JA35/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>G09</strong> Measure and explain the capstone result <small>Core</small></summary>
 <dl id="G09"><dt>Review and learn</dt><dd>Success criteria, fair measurement and credible explanations.</dd><dt>Do the work</dt><dd>Measure the capstone against its stated invariants and one performance target.</dd><dt>Pass check</dt><dd>Save real numbers, the workload, a trade-off and any limitation.</dd></dl>
 <a href="../../learning/projects/G09/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>PF01</strong> Project ONE - multi-tenant commerce/POS <small>Core</small></summary>
+<details><summary><strong>PF01</strong> Compare Project ONE experience with Warehouse Dispatch <small>Core</small></summary>
 <dl id="PF01"><dt>Review and learn</dt><dd>Project ownership, tenancy and transferable lessons.</dd><dt>Do the work</dt><dd>Record your real contribution to Project ONE and compare one inventory or tenancy decision with the capstone.</dd><dt>Pass check</dt><dd>Separate each project&#x27;s evidence and explain one relevant difference with examples.</dd></dl>
 <a href="../../learning/projects/PF01/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>PF04</strong> Spring Boot Commerce / Booking Backend <small>Optional</small></summary>
+<details><summary><strong>PF04</strong> Spring Boot and PostgreSQL backend showcase <small>Optional</small></summary>
 <dl id="PF04"><dt>Review and learn</dt><dd>Backend project demonstration, PostgreSQL and security.</dd><dt>Do the work</dt><dd>Prepare a Spring Boot showcase of migration, reservation and permission enforcement.</dd><dt>Pass check</dt><dd>Provide a repeatable demo with one success and one business conflict.</dd></dl>
 <a href="../../learning/projects/PF04/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>PF05</strong> TypeScript / Next.js Client for Spring API <small>Optional</small></summary>
+<details><summary><strong>PF05</strong> React dispatch client showcase <small>Optional</small></summary>
 <dl id="PF05"><dt>Review and learn</dt><dd>React project demonstration, typed contracts and accessibility.</dd><dt>Do the work</dt><dd>Prepare a React showcase of the signed-in dispatch flow and error handling.</dd><dt>Pass check</dt><dd>Show direct navigation, keyboard access, and one recoverable API error.</dd></dl>
 <a href="../../learning/projects/PF05/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>RV20</strong> Review evidence, questions and next-week capacity <small>Core</small></summary>
 <dl id="RV20"><dt>Review and learn</dt><dd>Recall the week 20 concept and explain the trade-off from B20.</dd><dt>Do the work</dt><dd>Rerun one check from B20, revisit one mistake and compare actual time with your study plan.</dd><dt>Pass check</dt><dd>Record the run, one skill you can repeat, and the next gap you will address.</dd></dl>
-<a href="../../learning/review/RV20/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>TS31</strong> Project deep dive <small>Core</small></summary>
-<dl id="TS31"><dt>Review and learn</dt><dd>Client state, contracts, accessibility and performance trade-offs.</dd><dt>Do the work</dt><dd>Demonstrate the React dispatch workflow and trace one client error to its cause.</dd><dt>Pass check</dt><dd>Explain a design decision with a test or measurement and repeat a small change independently.</dd></dl>
-<a href="../../learning/typescript-and-ui/TS31/notes/00-warehouse-practice.md">Task notes</a></details></section>
-<section id="week-21"><h2>Week 21</h2><details><summary><strong>B21</strong> Timed Java coding, SQL and debugging rounds; repair top 3 gaps <small>Core</small></summary>
+<a href="../../learning/review/RV20/notes/00-warehouse-practice.md">Task notes</a></details></section>
+<section id="week-21"><h2>Week 21</h2><details><summary><strong>B21</strong> Practice timed Java, SQL and debugging <small>Core</small></summary>
 <dl id="B21"><dt>Review and learn</dt><dd>Timed Java, SQL and debugging with independent recall.</dd><dt>Do the work</dt><dd>Run three timed exercises drawn from your CLI, stock reports and dispatch failures. Repair the three most consequential gaps.</dd><dt>Pass check</dt><dd>Save original attempts, fixes and unaided retests.</dd></dl>
 <a href="../../learning/projects/B21/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS21</strong> Solve 5 new DSA problems and revisit errors <small>Core</small></summary>
@@ -662,28 +662,28 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>RV21</strong> Review evidence, questions and next-week capacity <small>Core</small></summary>
 <dl id="RV21"><dt>Review and learn</dt><dd>Recall the week 21 concept and explain the trade-off from B21.</dd><dt>Do the work</dt><dd>Rerun one check from B21, revisit one mistake and compare actual time with your study plan.</dd><dt>Pass check</dt><dd>Record the run, one skill you can repeat, and the next gap you will address.</dd></dl>
 <a href="../../learning/review/RV21/notes/00-warehouse-practice.md">Task notes</a></details></section>
-<section id="week-22"><h2>Week 22</h2><details><summary><strong>B22</strong> Timed unfamiliar-repo bug/feature task in both AI-free and AI-assisted modes <small>Core</small></summary>
+<section id="week-22"><h2>Week 22</h2><details><summary><strong>B22</strong> Fix a task in an unfamiliar repository <small>Core</small></summary>
 <dl id="B22"><dt>Review and learn</dt><dd>Unfamiliar repository reading and verification.</dd><dt>Do the work</dt><dd>Handle a timed bug or feature ticket in a clean branch. Use a supplied failing scenario as the comparison exercise.</dd><dt>Pass check</dt><dd>Save the reproduction, smallest fix, independent test and what you learned.</dd></dl>
 <a href="../../learning/projects/B22/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS22</strong> Solve 5 new DSA problems and revisit errors <small>Core</small></summary>
 <dl id="DS22"><dt>Review and learn</dt><dd>Practice previously failed problems. State the invariant and time and space costs before coding.</dd><dt>Do the work</dt><dd>Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.</dd><dt>Pass check</dt><dd>Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.</dd></dl>
 <a href="../../learning/dsa/DS22/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>M36</strong> Timed AI-assisted repo task <small>Core</small></summary>
-<dl id="M36"><dt>Review and learn</dt><dd>Recall Timed AI-assisted repo task and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
+<details><summary><strong>M36</strong> Timed independent repository verification <small>Core</small></summary>
+<dl id="M36"><dt>Review and learn</dt><dd>Recall Timed independent repository verification and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M36/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M37</strong> Unfamiliar repo bug fix <small>Core</small></summary>
 <dl id="M37"><dt>Review and learn</dt><dd>Recall Unfamiliar repo bug fix and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M37/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>M38</strong> Booking/commerce timed design <small>Core</small></summary>
-<dl id="M38"><dt>Review and learn</dt><dd>Recall Booking/commerce timed design and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
+<details><summary><strong>M38</strong> Timed warehouse workflow design <small>Core</small></summary>
+<dl id="M38"><dt>Review and learn</dt><dd>Recall Timed warehouse workflow design and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M38/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>PF03</strong> AI-Assisted Repo Debugging Lab <small>Optional</small></summary>
+<details><summary><strong>PF03</strong> Independent repository debugging lab <small>Optional</small></summary>
 <dl id="PF03"><dt>Review and learn</dt><dd>Optional repository debugging and verification.</dd><dt>Do the work</dt><dd>Use a prepared flawed patch in a small existing repo and investigate it manually.</dd><dt>Pass check</dt><dd>Record the root cause, independent fix and a regression test you wrote.</dd></dl>
 <a href="../../learning/projects/PF03/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>RV22</strong> Review evidence, questions and next-week capacity <small>Core</small></summary>
 <dl id="RV22"><dt>Review and learn</dt><dd>Recall the week 22 concept and explain the trade-off from B22.</dd><dt>Do the work</dt><dd>Rerun one check from B22, revisit one mistake and compare actual time with your study plan.</dd><dt>Pass check</dt><dd>Record the run, one skill you can repeat, and the next gap you will address.</dd></dl>
 <a href="../../learning/review/RV22/notes/00-warehouse-practice.md">Task notes</a></details></section>
-<section id="week-23"><h2>Week 23</h2><details><summary><strong>B23</strong> Spring technical drill + TS/React drill + project deep-dive rehearsal <small>Core</small></summary>
+<section id="week-23"><h2>Week 23</h2><details><summary><strong>B23</strong> Rehearse the engineering walkthrough <small>Core</small></summary>
 <dl id="B23"><dt>Review and learn</dt><dd>Backend, frontend and architecture explanation under time.</dd><dt>Do the work</dt><dd>Rehearse Java/Spring and React questions against your own changes. Trace a request end to end.</dd><dt>Pass check</dt><dd>Record a timed explanation, the gap it exposed and an improved unaided retry.</dd></dl>
 <a href="../../learning/projects/B23/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS23</strong> Solve 5 new DSA problems and revisit errors <small>Core</small></summary>
@@ -692,8 +692,8 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>M39</strong> Spring/JPA/security/testing deep dive <small>Core</small></summary>
 <dl id="M39"><dt>Review and learn</dt><dd>Recall Spring/JPA/security/testing deep dive and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M39/notes/00-warehouse-practice.md">Task notes</a></details>
-<details><summary><strong>M40</strong> TS runtime/types/React/Next deep dive <small>Core</small></summary>
-<dl id="M40"><dt>Review and learn</dt><dd>Recall TS runtime/types/React/Next deep dive and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
+<details><summary><strong>M40</strong> TypeScript runtime, types and React client design <small>Core</small></summary>
+<dl id="M40"><dt>Review and learn</dt><dd>Recall TypeScript runtime, types and React client design and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
 <a href="../../learning/mock-interviews/M40/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>M41</strong> Browser to Spring to DB + behavioral <small>Core</small></summary>
 <dl id="M41"><dt>Review and learn</dt><dd>Recall Browser to Spring to DB + behavioral and the assumptions that affect your answer.</dd><dt>Do the work</dt><dd>Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.</dd><dt>Pass check</dt><dd>Record time, result, both scores, one specific improvement, and an unaided retry.</dd></dl>
@@ -701,7 +701,7 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>RV23</strong> Review evidence, questions and next-week capacity <small>Core</small></summary>
 <dl id="RV23"><dt>Review and learn</dt><dd>Recall the week 23 concept and explain the trade-off from B23.</dd><dt>Do the work</dt><dd>Rerun one check from B23, revisit one mistake and compare actual time with your study plan.</dd><dt>Pass check</dt><dd>Record the run, one skill you can repeat, and the next gap you will address.</dd></dl>
 <a href="../../learning/review/RV23/notes/00-warehouse-practice.md">Task notes</a></details></section>
-<section id="week-24"><h2>Week 24</h2><details><summary><strong>B24</strong> Two full simulations, final question-bank pass, resume/project evidence cleanup <small>Core</small></summary>
+<section id="week-24"><h2>Week 24</h2><details><summary><strong>B24</strong> Run final simulations and package the demo <small>Core</small></summary>
 <dl id="B24"><dt>Review and learn</dt><dd>Full interview simulation, retrieval practice and portfolio evidence.</dd><dt>Do the work</dt><dd>Complete two simulations and curate the most relevant project runs, commits and decisions.</dd><dt>Pass check</dt><dd>Record scores, follow-up tasks and a clean-clone demo another person can reproduce.</dd></dl>
 <a href="../../learning/projects/B24/notes/00-warehouse-practice.md">Task notes</a></details>
 <details><summary><strong>DS24</strong> Solve 5 new DSA problems and revisit errors <small>Core</small></summary>
@@ -719,4 +719,5 @@ summary{cursor:pointer} small{margin-inline-start:.5rem} dt{font-weight:700} dd{
 <details><summary><strong>RV24</strong> Review evidence, questions and next-week capacity <small>Core</small></summary>
 <dl id="RV24"><dt>Review and learn</dt><dd>Recall the week 24 concept and explain the trade-off from B24.</dd><dt>Do the work</dt><dd>Rerun one check from B24, revisit one mistake and compare actual time with your study plan.</dd><dt>Pass check</dt><dd>Record the run, one skill you can repeat, and the next gap you will address.</dd></dl>
 <a href="../../learning/review/RV24/notes/00-warehouse-practice.md">Task notes</a></details></section>
+<section id="architecture"><h2>Advanced architecture labs</h2><p><a href="architecture.md">Task links and references</a></p><ol><li><strong>1. Establish service boundaries</strong> · after <a href="#B14">B14</a><p>Draw Inventory, Dispatch and Tracking boundaries inside the Spring application. Give each module a clear owner and public interface. Keep reservation, stock mutation and dispatch confirmation within the same transaction. Write an architecture decision record explaining what would justify extracting a service.</p><p>A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split.</p></li><li><strong>2. Publish dispatch events through RabbitMQ</strong> · after <a href="#B19">B19</a><p>Record a versioned DispatchConfirmed event in a PostgreSQL outbox in the same transaction as dispatch. Publish through RabbitMQ and wait for broker confirmation. The consumer commits a deduplicated result before acknowledging. Cap retries, route failed messages to a dead-letter queue, and retain an event archive for rebuilding projections. Compare a RabbitMQ work queue with a retained Kafka log, using partition keys and consumer offsets to reason about ordering and replay.</p><p>Roll back a dispatch, stop the broker after commit, interrupt the publisher before marking a send, and replay a poison message. Show zero events for the rollback, eventual delivery for the committed event and one consumer effect under redelivery.</p></li><li><strong>3. Extract a Tracking microservice</strong> · after <a href="#B20">B20</a><p>After the broker lab, extract the read-oriented tracking projection. Give it its own PostgreSQL database and schema migrations, API and release. Update it from versioned events without reading the dispatch tables. Document eventual consistency, projection rebuild, stale-state UX, and service authentication. Model compensation for a hypothetical cross-service reservation as a separate design exercise.</p><p>Take Tracking down while dispatch continues. Restart it and rebuild a clean projection from the retained event archive. Reconcile results. Run API contract tests, deploy Tracking independently, and rehearse routing traffic back to the original tracking view.</p></li><li><strong>4. Release a Tracking micro-frontend</strong> · after <a href="#B20">B20</a><p>After the Tracking service lab, separate the read-only Tracking routes into an independently built React frontend. Compose at the route boundary. Define shared navigation, session behavior, accessibility and API contracts. Compare this with keeping feature modules in one React build.</p><p>Deploy and roll back the Tracking frontend without rebuilding Dispatch. Verify keyboard navigation, direct URLs, sign-out, API failure fallback, and bundle size before and after the split.</p></li><li><strong>5. Prove the distributed system can recover</strong> · after <a href="#B20">B20</a><p>Set a workload and targets for latency, errors and projection lag. Trace request and event IDs across components. Exercise rate limits, stale reads, backlog pressure, restore, and rollback. Compare container deployments and orchestration using the needs you measured.</p><p>Save p95 latency, error rate, oldest queued event, recovery time and restored-data checks. Test a failed release and write a runbook another person can follow.</p></li><li><strong>6. Measure algorithms against warehouse workloads</strong> · after <a href="#B10">B10</a><p>Compare reference lookup with a map and a database index. Use a heap for a prioritization experiment, intervals for dock scheduling, and a graph for warehouse route planning or dependencies. State complexity and compare representative workloads. Keep stock correctness in the transactional database.</p><p>Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises.</p></li></ol></section>
 </body></html>

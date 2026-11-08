@@ -2,6 +2,7 @@
 
 Week 18 · Core · Warehouse checkpoint B18
 
+
 ## Review and learn
 
 Practice graph and tree review. State the invariant and time and space costs before coding.
@@ -14,4 +15,4 @@ Solve 5 new problems from the Practice Bank. Revisit one prior error and use a w
 
 Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

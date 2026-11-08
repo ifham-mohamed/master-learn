@@ -4,12 +4,14 @@ CS & SQL · week 1–1 · Core · Learn
 
 [Open in Learnspace](http://127.0.0.1:3000/tasks/CS12)
 
-## Task outcome
+Start with the [current Warehouse Dispatch practice brief](notes/00-warehouse-practice.md). Use the example below to recall JOIN behavior before writing the warehouse queries yourself.
+
+## Original SQL task outcome
 
 INNER/LEFT and multi-table reasoning
 JOINs, GROUP BY, HAVING, subqueries, CTEs, CASE, aggregates
 
-## Practice prompt
+## Original practice prompt
 
 Interview: Return customers with/without orders
 

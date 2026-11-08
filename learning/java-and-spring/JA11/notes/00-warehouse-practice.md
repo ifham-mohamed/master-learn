@@ -2,6 +2,9 @@
 
 Week 4 · Core · Warehouse checkpoint B04
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Lambdas, filtering, grouping and reduction.
@@ -14,4 +17,4 @@ Summarize shipment quantities by destination and status. Compare a loop with a s
 
 Both approaches match a hand-checked fixture including empty input.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

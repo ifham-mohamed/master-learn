@@ -2,6 +2,9 @@
 
 Week 14 · Core · Warehouse checkpoint B14
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Maven lifecycle, dependency scopes and reproducible wrappers.
@@ -14,4 +17,4 @@ Pin a reproducible build and package the backend. Use the same verification entr
 
 A clean clone runs the documented build and tests without relying on IDE state.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

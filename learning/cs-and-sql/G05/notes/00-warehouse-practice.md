@@ -2,6 +2,9 @@
 
 Week 7 · Core · Warehouse checkpoint B07
 
+Before you begin, complete CS12.
+
+
 ## Review and learn
 
 NULL handling, duplicate-sensitive joins, and window ordering.
@@ -14,4 +17,4 @@ Create a shipment event fixture with duplicates, missing assignments and tied ti
 
 Save expected and actual rows with explicit tie-breaking and NULL behavior.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

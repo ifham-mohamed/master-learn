@@ -1,32 +1,16 @@
-# JA26 results and evidence
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. No result has been recorded in this file.
+# JA26 — Evidence
 
-## What I ran or demonstrated
+## Pass check
 
-Command, environment, input, and date:
+Two concurrent requests yield one success, one conflict, and a valid stock balance.
 
-## Expected result
+## My result
 
-Describe what would demonstrate the task outcome.
+- What I ran or demonstrated
+- What actually happened
+- What I will do next
+- Commit or artifact, if available
 
-## Actual result
-
-Paste actual output or add screenshots/logs next to this document. Link local files with Markdown.
-
-## Conclusion
-
-What passed? What remains unverified?
-
-## Task acceptance criteria
-
-optimistic/pessimistic locks, unique constraints, retries
-Use transaction/constraint/idempotency appropriately
-race conditions and atomicity
-@Transactional, isolation, optimistic/pessimistic locking, retries
-Races, locking, optimistic control, consistency concepts
-optimistic/pessimistic locks, versioning, unique constraints, retries
-
-## Related work
-
-[Theory](../theory/concepts.md) · [Notes](../notes/journal.md) · [Code](../code/README.md)
+[Practice brief](../notes/00-warehouse-practice.md)

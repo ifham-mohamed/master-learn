@@ -1,6 +1,9 @@
-# PF04 — Spring Boot Commerce / Booking Backend
+# PF04 — Spring Boot and PostgreSQL backend showcase
 
 Week 20 · Optional · Warehouse checkpoint B20
+
+Before you begin, complete B20.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Prepare a Spring Boot showcase of migration, reservation and permission enforcem
 
 Provide a repeatable demo with one success and one business conflict.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

@@ -1,26 +1,15 @@
-# M11 — Double booking / transactions / isolation
+<!-- Managed by export_warehouse_plan.py -->
 
-Mock interviews · week 10–10 · Core · Mock
+# M11 — Last-unit reservation, transactions and isolation
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/M11)
+Mock interviews · Week 10 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Complete the timed round. Record technical and communication scores, result, evidence, and one correction before the next mock.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-Use the task outcome to design a small demonstration.
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: None specified.
-Original workbook: Master Plan row 115.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/mock-interviews.md#m11)

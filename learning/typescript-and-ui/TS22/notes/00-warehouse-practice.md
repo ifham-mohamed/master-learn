@@ -2,6 +2,9 @@
 
 Week 16 · Optional · Warehouse checkpoint B16
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Node.js runtime, server boundaries and environment variables.
@@ -14,4 +17,4 @@ Use a small optional Node CLI to inspect a shipment fixture or call a read-only 
 
 Record the result and explain where it differs from browser execution.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

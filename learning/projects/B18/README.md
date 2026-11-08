@@ -1,31 +1,15 @@
-# B18 — Implement core Spring endpoints + TypeScript client + integration tests
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 18–18 · Core · Build
+# B18 — Build the delivery and exception workflow
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B18)
+Projects · Week 18 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: Target weak fundamentals
-Design: Timed system design #2
-AI practice: AI-assisted feature allowed; independently verify
-Implement core Spring endpoints + TypeScript client + integration tests
-Timed system-design practice #2: use capstone/booking/commerce prompt
--
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B17.
-Original workbook: Master Plan row 189.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b18)

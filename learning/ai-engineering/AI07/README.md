@@ -1,31 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # AI07 — LLM integration and validated structured output
 
-AI Engineering · week 8–8 · Optional · Learn
+AI Engineering · Week 8 · Optional
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/AI07)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-Requests, streaming, timeouts, retries, cost
-JSON schema / validation / retries
-Schemas/JSON validation, retries, deterministic handling
-
-## Practice prompt
-
-Build a safe server-side call
-Failure to test: Secret leakage, retry storms
-Generate typed object and reject invalid
-Failure to test: Malformed output
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: None specified.
-Original workbook: Master Plan row 90.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/ai-engineering.md#ai07)

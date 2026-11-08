@@ -1,10 +1,11 @@
-# M36 — Timed AI-assisted repo task
+# M36 — Timed independent repository verification
 
 Week 22 · Core · Warehouse checkpoint B22
 
+
 ## Review and learn
 
-Recall Timed AI-assisted repo task and the assumptions that affect your answer.
+Recall Timed independent repository verification and the assumptions that affect your answer.
 
 ## Do the work
 
@@ -14,4 +15,4 @@ Attempt the original timed prompt unaided. Use an actual B22 artifact if it illu
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

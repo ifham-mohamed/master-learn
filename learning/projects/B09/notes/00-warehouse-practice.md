@@ -1,6 +1,9 @@
-# B09 — Profile/fix an N+1 query + Vitest service/client tests
+# B09 — Measure and fix shipment-list queries
 
 Week 9 · Core · Warehouse checkpoint B09
+
+Before you begin, complete B08.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Reproduce and fix an N+1 shipment list query. Add a frontend or service regressi
 
 Save before and after counts on identical data and verify page correctness.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

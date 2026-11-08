@@ -2,6 +2,9 @@
 
 Week 6 · Core · Warehouse checkpoint B06
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Profiles, environment configuration and secrets.
@@ -14,4 +17,4 @@ Separate local fixture settings from database and staging settings. Document the
 
 The selected profile uses the intended data source. A missing required variable fails safely.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

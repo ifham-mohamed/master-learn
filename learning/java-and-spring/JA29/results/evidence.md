@@ -1,30 +1,16 @@
-# JA29 results and evidence
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. No result has been recorded in this file.
+# JA29 — Evidence
 
-## What I ran or demonstrated
+## Pass check
 
-Command, environment, input, and date:
+Tests fail when an invariant is intentionally broken and pass when restored.
 
-## Expected result
+## My result
 
-Describe what would demonstrate the task outcome.
+- What I ran or demonstrated
+- What actually happened
+- What I will do next
+- Commit or artifact, if available
 
-## Actual result
-
-Paste actual output or add screenshots/logs next to this document. Link local files with Markdown.
-
-## Conclusion
-
-What passed? What remains unverified?
-
-## Task acceptance criteria
-
-fast unit tests, mocks, stubs, boundaries
-unit boundaries, mocks/stubs, assertions, parameterized tests
-Arrange/act/assert, boundaries, mocks/stubs
-unit tests, mocks/stubs, parameterized tests, boundaries
-
-## Related work
-
-[Theory](../theory/concepts.md) · [Notes](../notes/journal.md) · [Code](../code/README.md)
+[Practice brief](../notes/00-warehouse-practice.md)

@@ -1,6 +1,9 @@
-# B24 — Two full simulations, final question-bank pass, resume/project evidence cleanup
+# B24 — Run final simulations and package the demo
 
 Week 24 · Core · Warehouse checkpoint B24
+
+Before you begin, complete B23.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Complete two simulations and curate the most relevant project runs, commits and 
 
 Record scores, follow-up tasks and a clean-clone demo another person can reproduce.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

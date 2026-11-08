@@ -2,6 +2,9 @@
 
 Week 3 · Core · Warehouse checkpoint B03
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Generics, inference and constraints.
@@ -14,4 +17,4 @@ Use one typed result or page shape for shipments and inventory items.
 
 Both uses preserve the item type without unchecked casts.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

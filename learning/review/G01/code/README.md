@@ -1,17 +1,15 @@
-# G01 experiments
+<!-- Managed by export_warehouse_plan.py -->
 
-Place source files or a small project here. Nested folders are supported. Learnspace displays the source; run programs in your editor or terminal.
+# G01 — Build and run
 
-## Deliverable
+Record what you can already do in Java, TypeScript and SQL without help. Plan five hours per selected study day.
 
-Record target roles, start date, available weekly hours and current Java/TS/SQL baseline. Review the proposed task estimates and optional scope.
+Work in `projects/warehouse-dispatch/` for a shared feature. Use this task folder for isolated experiments. For design, review, and interview tasks, save the artifact in Notes or Results.
 
-## Run instructions
+Record the working directory, tool version, command or scenario, and test input. Keep your own code and checks here or in the shared project.
 
-Record prerequisites, exact versions, setup commands, and a repeatable command.
+## Check your work
 
-## Checks
+Save one real attempt per skill and a study plan with a next gap.
 
-Describe a normal case, edge case, and failure case. Save real output in ../results/.
-
-For a web project, record its separately running URL in [resources](../resources/links.md). Generated folders such as node_modules, .next, dist, build, and .venv are excluded from the viewer.
+[Practice brief](../notes/00-warehouse-practice.md) · [Results](../results/evidence.md)

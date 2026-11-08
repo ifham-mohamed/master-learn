@@ -2,6 +2,9 @@
 
 Week 1 · Core · Warehouse checkpoint B01
 
+Before you begin, complete G02, JA05.
+
+
 ## Review and learn
 
 Encapsulation, constructors, composition, interfaces, and when inheritance helps.
@@ -14,4 +17,4 @@ Separate the menu from Shipment and ShipmentService. Model allowed transitions a
 
 The terminal still works. Tests reject duplicate references and illegal transitions. Explain why you used composition.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

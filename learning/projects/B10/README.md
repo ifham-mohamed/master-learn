@@ -1,32 +1,15 @@
-# B10 — Double-booking race lab using transaction/constraint/locking
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 10–10 · Core · Build
+# B10 — Reserve and release stock safely under contention
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B10)
+Projects · Week 10 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: Isolation levels + locks/deadlocks + OS concurrency
-Design: Concurrency + atomic transactions
-AI practice: AI may suggest fixes; independently prove race safety
-Double-booking race lab using transaction/constraint/locking
-Concurrency - Prevent double booking
-Transactions - Checkout + inventory decrement
-Adversarial check: prove concurrency correctness independently
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B09.
-Original workbook: Master Plan row 113.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b10)

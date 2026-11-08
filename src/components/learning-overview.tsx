@@ -9,6 +9,7 @@ import { TaskList, Status } from "./task-list";
 import { addDays, readyTasks } from "@/lib/planner";
 import { categories, formatDate, isComplete, slug } from "@/lib/tracker";
 import { clockText, elapsedMs, studyDate, todayStudyMs } from "@/lib/study";
+import { nextWarehouseTask, warehouseBrief, warehouseTitle } from "@/lib/warehouse";
 
 export function LearningOverview() {
   const { tasks, study, planner, loaded, timerAction, localCount } =
@@ -16,8 +17,10 @@ export function LearningOverview() {
   const now = useStudyClock();
   const today = now ? studyDate(now) : planner.schedule.start;
   const ready = readyTasks(tasks);
+  const suggested = nextWarehouseTask(tasks);
+  const projectReady = ready.find((task) => task.id === suggested?.id);
   const current =
-    tasks.find((task) => task.id === study.active?.taskId) || ready[0];
+    tasks.find((task) => task.id === study.active?.taskId) || projectReady || ready[0];
   const running = !!study.active && study.active.startedAt !== null;
   const pending = tasks.filter((task) => !isComplete(task));
   const due = pending
@@ -47,7 +50,7 @@ export function LearningOverview() {
       <header className="page-heading">
         <div>
           <h1>Learning overview</h1>
-          <p>{formatDate(today)} · Your tasks, schedule, and curriculum.</p>
+          <p>{formatDate(today)} · Warehouse Dispatch and your study schedule.</p>
         </div>
         <Link className="button secondary" href="/weeks">
           <CalendarDays size={16} />
@@ -81,7 +84,7 @@ export function LearningOverview() {
         <section className="catalog-current" aria-labelledby="current-heading">
           <div className="catalog-section-top">
             <h2 id="current-heading">
-              {study.active ? "Current task" : "Next ready task"}
+              {study.active ? "Current task" : projectReady ? "Next warehouse task" : "Next ready task"}
             </h2>
             {current && (
               <Status
@@ -103,10 +106,10 @@ export function LearningOverview() {
                 <span>{current.priority} priority</span>
               </div>
               <h3>
-                <Link href={`/tasks/${current.id}`}>{current.title}</Link>
+                <Link href={`/tasks/${current.id}`}>{warehouseTitle(current)}</Link>
               </h3>
               <p className="catalog-outcome">
-                {current.nextAction || current.doneWhen}
+                {current.nextAction || warehouseBrief(current.id)?.build || current.doneWhen}
               </p>
               <dl className="catalog-task-facts">
                 <div>
@@ -204,8 +207,7 @@ export function LearningOverview() {
           <details className="catalog-disclosure">
             <summary>How tasks are selected</summary>
             <p>
-              Tasks with completed prerequisite IDs are ordered by deadline and
-              priority. Read the full prerequisites before starting.
+              The overview highlights the next warehouse task when its prerequisites are complete. Other ready tasks are ordered by deadline and priority.
             </p>
           </details>
         </section>
@@ -220,7 +222,7 @@ export function LearningOverview() {
                 <li key={task.id}>
                   <Link href={`/tasks/${task.id}`}>
                     <span>
-                      {task.id} · {task.title}
+                      {task.id} · {warehouseTitle(task)}
                     </span>
                     <small
                       className={task.dueDate < today ? "deadline-overdue" : ""}

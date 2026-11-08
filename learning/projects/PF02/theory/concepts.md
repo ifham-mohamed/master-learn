@@ -1,38 +1,9 @@
-# Booking / Appointment Concurrency Lab — theory
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. Replace these prompts with your own explanation.
+# PF02 — Concepts to review
 
-## Learning goal
+Optional concurrency comparison and invariant testing.
 
-Evidence: Concurrency integration tests
-Security: Authorization/input validation
-Reliability: Idempotency + retries
-Write a 2-minute story and a project deep dive with your own contribution, defect, trade-off and measured result.
+Explain one idea from memory. Predict a case where the implementation could fail, then check that prediction against your run or design.
 
-## Concepts to explain
-
-Explain the user problem, your contribution, architecture decisions, implementation, test evidence, and trade-offs.
-
-- What problem does this solve?
-- How does it work in your own words?
-- What assumptions does it rely on?
-
-## Small example
-
-Add an example and explain each step. Link to a file in ../code/ when useful.
-
-## Edge cases and trade-offs
-
-Record a counterexample, common mistake, and a trade-off.
-
-## Check your understanding
-
-Source status: Recommended extension
-Contribution: Solo
-Bug: Race between two bookings
-Trade-off: Constraint vs lock vs optimistic approach
-Build a small reproducible module
-
-## References
-
-See [task resources](../resources/links.md).
+[Practice brief](../notes/00-warehouse-practice.md) · [References](../resources/links.md)

@@ -4,6 +4,7 @@ import { isGitHubPages } from "@/lib/deployment";
 import { useState } from "react";
 import { ArrowRight, BookOpen, FolderOpen, Search } from "lucide-react";
 import { categories, tasks, slug } from "@/lib/tracker";
+import { warehouseSearch, warehouseTitle } from "@/lib/warehouse";
 
 export function LearningLibrary() {
   const [category, setCategory] = useState("");
@@ -13,15 +14,13 @@ export function LearningLibrary() {
     (t) =>
       (!category || t.category === category) &&
       (!week || t.startWeek === Number(week)) &&
-      `${t.id} ${t.title} ${t.category}`
-        .toLowerCase()
-        .includes(query.toLowerCase()),
+      warehouseSearch(t, query),
   );
   return (
     <>
       <div className="page-heading">
         <div>
-          <h1>Learn it. Build it. Keep the proof.</h1>
+          <h1>Learning workspaces</h1>
           <p>
             One folder for each task. Theory, notes, code, results, and
             references in one place.
@@ -34,7 +33,7 @@ export function LearningLibrary() {
           <FolderOpen size={28} />
         </div>
         <div>
-          <h2>A workspace that grows with you</h2>
+          <h2>Start with your Warehouse Dispatch brief</h2>
           <p>
             Open a task, copy its folder path, and work in your editor. Saved
             documents appear{" "}
@@ -43,8 +42,8 @@ export function LearningLibrary() {
               : "automatically in the task viewer"}
             . Run code and web projects separately, then bring the results back.
           </p>
-          <Link href="/tasks/CS12">
-            Explore the complete SQL JOINs example <ArrowRight size={15} />
+          <Link href="/tasks/JA05">
+            Open JA05 and start the terminal shipment <ArrowRight size={15} />
           </Link>
           <p>
             <Link href="/guide">
@@ -112,7 +111,7 @@ export function LearningLibrary() {
               </span>
               <ArrowRight size={15} />
             </div>
-            <h3>{t.title}</h3>
+            <h3>{warehouseTitle(t)}</h3>
             <p>
               {t.category} · {t.workType}
             </p>
@@ -121,9 +120,7 @@ export function LearningLibrary() {
             </code>
             <span className="learning-task-foot">
               <BookOpen size={14} />
-              {t.id === "CS12"
-                ? "Worked example included"
-                : "Theory · Notes · Code · Results · Resources"}
+              Practice brief · Code · Evidence
             </span>
           </Link>
         ))}

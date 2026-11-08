@@ -35,9 +35,9 @@ Use the panel button beside the Learnspace logo to collapse the desktop navigati
 - **Weekly journey** lets you explore all 24 weeks. The selected week is remembered on this device.
 - **Master plan** supports search, category filters, and status filters. Open any task for its full deliverable, practice prompt, prerequisites, original references, and suggested guides.
 - **Practice bank** contains expandable patterns and questions; practice counts remain the supplied workbook snapshot.
-- **Projects** explains the five project profiles as one connected capstone with optional extensions.
+- **Projects** lists the requirements, 24 ordered build checkpoints, their supporting tasks, and the [advanced architecture labs](sources/warehouse-dispatch/architecture.md).
 - **Resource library** keeps original notes separate from newly added official learning guides. HTTP availability was checked on 4 October 2026; this does not verify all inherited claims.
-- **Plan & guidance** preserves the original workflow notes, strategy, gap review, and interview checklist.
+- **Handbook** explains the current self-coding workflow and keeps workbook guidance under an archive disclosure.
 
 Browsing is the default. **Edit progress** enables task-only editing: status, evidence, next action, hours, confidence, completion date, and mock scores/results. Updates are stored in this browser under `learnspace-progress-v1`, without accounts or a cloud service. Editing is switched off on reload. Progress and filters persist. **Export local progress** downloads a JSON backup; reviewed backup import is available in Settings & backups. Clearing browser storage removes local updates. The original workbook is never rewritten.
 
@@ -52,7 +52,7 @@ The application plan starts **5 October 2026**. Week 1 runs **5–11 October**, 
 5. For a missed pause or offline study, stop the timer, expand **Session history & time corrections**, enter the corrected total Actual hours, and give a reason. The correction is recorded alongside the original sessions.
 6. Pause or stop before **Review changes → Sync to Google Sheets**. Saved Actual hours use the existing Master Plan column M mapping; a running segment is not synced until saved. Session history and correction reasons remain local and are included in JSON exports.
 
-Overview shows plan dates, today's recorded study time, overdue/due-today counts, and upcoming tasks. Next task skips blocked/completed tasks and the active timer, then sorts by deadline and priority. Check prerequisites yourself before starting. Day boundaries and completion defaults use Sri Lanka time (`Asia/Colombo`). Today's study time reflects session timestamps; manual corrections change task totals but do not rewrite session history.
+Overview shows the active timer, then the next Warehouse Dispatch task if it is ready. Other ready tasks are sorted by deadline and priority. Check prerequisites before starting. Day boundaries and completion defaults use Sri Lanka time (`Asia/Colombo`). Today's study time reflects session timestamps.
 
 Timers and progress share one browser-storage record. Tabs on the same origin coordinate writes to avoid counting a session twice. Use a current browser over HTTPS or localhost. Existing browser progress is retained; different browsers/devices/origins have separate timers. Export regularly; clearing site data removes this history, and use Settings & backups to restore an exported JSON file.
 
@@ -66,7 +66,8 @@ learning/
     CS12/
       README.md                  Task outcome and original context
       theory/concepts.md         Understand and explain the concepts
-      notes/journal.md           Predictions, questions, and reflections
+      notes/00-warehouse-practice.md  Current practice brief
+      notes/journal.md               Predictions, questions, and reflections
       code/                      Source files and experiments
       results/evidence.md        Commands, actual output, and conclusions
       resources/links.md         Original references and further reading
@@ -74,9 +75,9 @@ learning/
 
 This structure is scaffolded for all 236 tasks across 11 categories. Templates contain task-specific outcomes and category-specific questions; they are starting points, not completed lessons. Run `npm run learning:init` to create missing templates after an import. It never overwrites existing files. Folder names follow category slugs and stable workbook task IDs; arbitrary new task IDs must first be added to the curriculum.
 
-1. Read the task outcome, then explain the theory in your own words.
+1. Read the practice brief, then explain the concept in your own words.
 2. Write your prediction or approach in Notes.
-3. Save code under Code and run it with the appropriate tools in your editor or terminal.
+3. Write shared features in `projects/warehouse-dispatch/`. Keep task-specific experiments under Code and run them in your editor or terminal.
 4. Save actual output, screenshots, a report, or a project URL under Results.
 5. Record what changed in your understanding and the sources you used.
 6. Enable **Edit progress** when ready and record evidence and completion separately. Saving files never automatically marks learning complete.
@@ -93,7 +94,7 @@ This structure is scaffolded for all 236 tasks across 11 categories. Templates c
 
 Relative Markdown links such as `[Results](../results/evidence.md)` open the matching file in this task. Local Markdown image paths work too; save assets in one of the five sections. Remote images, embedded raw HTML in Markdown, executable MDX, SVG, and unsupported file formats are not rendered. Nested folders are supported. JSX is displayed as source: start your separate React/Next.js project on another port and put its URL in a results document.
 
-**Start with the complete example:** [CS12 JOINs in the app](http://localhost:3000/tasks/CS12), or [read its theory](learning/cs-and-sql/CS12/theory/01-worked-example.md). It includes SQL, an illustrative JSX component, a static HTML result, notes, and executed assertions. Run `python learning/cs-and-sql/CS12/code/run_example.py` using Python 3. It creates a temporary in-memory SQLite database and rewrites only the example's `results/evidence.md` and `results/output.json`. Store personal notes separately.
+**Start with [JA05](learning/java-and-spring/JA05/notes/00-warehouse-practice.md).** The earlier [CS12 SQLite example](learning/cs-and-sql/CS12/theory/01-worked-example.md) remains a reference for JOINs. Use the current CS12 brief for your warehouse query and save your own results separately.
 
 The content endpoint is read-only and restricted to known task folders. Hidden files, symbolic links/junctions, dependencies, build output, and virtual environments are excluded. Preview limits are 1 MB for text, 20 MB for downloads, 500 files per task, and eight levels of nested folders. Keep credentials out of learning files. Files are visible to anyone who can access the app; the default local server binds to this computer. Deployment requires a Node.js server and the `learning/` directory on disk; a static export cannot provide this feature. Browser progress and project files are separate stores: back up both.
 

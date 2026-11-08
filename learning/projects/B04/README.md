@@ -1,31 +1,15 @@
-# B04 — Java aggregation kata + 10 JS async-order drills
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 4–4 · Core · Build
+# B04 — Summarize shipments and trace async work
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B04)
+Projects · Week 4 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: Process vs thread + memory + DNS/HTTP basics
-Design: Foundation design review
-AI practice: AI-free mixed assessment
-Java aggregation kata + 10 JS async-order drills
-10-minute foundation design review: requirements to API to schema
-Run one fully AI-free mixed assessment
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B03.
-Original workbook: Master Plan row 50.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b04)

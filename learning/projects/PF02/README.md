@@ -1,33 +1,15 @@
-# PF02 — Booking / Appointment Concurrency Lab
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 12–12 · Optional · Review
+# PF02 — Warehouse reservation concurrency lab
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/PF02)
+Projects · Week 12 · Optional
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Evidence: Concurrency integration tests
-Security: Authorization/input validation
-Reliability: Idempotency + retries
-Write a 2-minute story and a project deep dive with your own contribution, defect, trade-off and measured result.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-Source status: Recommended extension
-Contribution: Solo
-Bug: Race between two bookings
-Trade-off: Constraint vs lock vs optimistic approach
-Build a small reproducible module
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B12.
-Original workbook: Master Plan row 136.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#pf02)

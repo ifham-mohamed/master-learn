@@ -1,26 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # G04 — Draft a resume and verify portfolio links
 
-Career · week 4–4 · Core · Career
+Career · Week 4 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/G04)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-Write truthful project bullets tied to your contribution and evidence. Test links and have one person review the draft.
-
-## Practice prompt
-
-Use the task outcome to design a small demonstration.
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: G03.
-Original workbook: Master Plan row 52.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/career.md#g04)

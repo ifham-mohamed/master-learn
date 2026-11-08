@@ -11,6 +11,8 @@ Build this project yourself in small, runnable steps. Use official documentation
 
 The [HTML learning plan](../../sources/warehouse-dispatch/index.html) and [Markdown task index](../../sources/warehouse-dispatch/README.md) show each later step. Continue [CS12](../../learning/cs-and-sql/CS12/notes/00-warehouse-practice.md) alongside the CLI if you want to alternate Java and SQL.
 
+In Learnspace, open **Projects → Build order** for each checkpoint’s preparation tasks, pass check, and follow-up practice. Use the [architecture lab briefs](../../sources/warehouse-dispatch/architecture.md) for modular boundaries, RabbitMQ, the Tracking microservice, a separate React release, distributed recovery, and algorithm measurement. The core build and each lab require your own tests and observed results.
+
 ## Business workflow
 
 A dispatcher creates an outbound shipment for one warehouse and destination. A warehouse operator receives stock, reserves it, confirms a pick, and records dispatch. A viewer reads inventory and shipment history for their authorized scope. Start with one SKU per shipment. Add multiple lines, another warehouse and a second tenant as the relevant tests require them.

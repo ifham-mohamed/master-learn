@@ -1,31 +1,15 @@
-# B13 — Service/controller test suite + failing-test and PR-review drills
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 13–13 · Core · Build
+# B13 — Strengthen the regression suite
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B13)
+Projects · Week 13 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: Advanced SQL review
-Design: Queues + retry/reliability basics
-AI practice: Agent may implement; you must review tests and diff
-Service/controller test suite + failing-test and PR-review drills
-Queue/retry reliability mini-design
-Review AI-generated test/code diff; reject weak coverage
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B12.
-Original workbook: Master Plan row 140.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b13)

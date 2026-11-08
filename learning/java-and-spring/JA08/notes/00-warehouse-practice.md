@@ -2,6 +2,9 @@
 
 Week 2 · Core · Warehouse checkpoint B02
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 List, Set and Map, deterministic iteration, and lookup cost.
@@ -14,4 +17,8 @@ Support multiple shipments and look up by reference. Compare a list scan with a 
 
 Preserve all valid shipments, reject duplicate keys and explain complexity with a trace.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+## Further architecture practice
+
+- 6. Measure algorithms against warehouse workloads · after B10. Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises.
+
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

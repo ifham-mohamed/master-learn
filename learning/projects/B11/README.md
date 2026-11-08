@@ -1,31 +1,15 @@
-# B11 — RBAC + ownership/tenant checks + security regression tests
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 11–11 · Core · Build
+# B11 — Secure the warehouse workflow
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B11)
+Projects · Week 11 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: Sessions/JWT + CORS/CSRF/XSS
-Design: Security boundaries + tenant isolation
-AI practice: Security-review AI output; never trust generated auth code
-RBAC + ownership/tenant checks + security regression tests
-Security - Multi-tenant merchant portal
-Secrets/privacy - Identify sensitive context boundaries
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B10.
-Original workbook: Master Plan row 123.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b11)

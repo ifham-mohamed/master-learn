@@ -1,27 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # DS09 — Solve 7 new DSA problems and revisit errors
 
-DSA · week 9–9 · Core · Practice
+DSA · Week 9 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/DS09)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-Record 7 distinct new problem IDs, explain complexity, and retry one earlier mistake without hints.
-
-## Practice prompt
-
-Graph introduction + mixed medium problems (6)
-Use Practice Bank for topic totals. Do not count repeat solutions as new problems.
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: None specified.
-Original workbook: Master Plan row 103.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/dsa.md#ds09)

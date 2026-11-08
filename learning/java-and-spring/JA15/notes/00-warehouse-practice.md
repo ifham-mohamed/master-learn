@@ -2,6 +2,9 @@
 
 Week 16 · Optional · Warehouse checkpoint B16
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Virtual threads, blocking I/O and downstream resource limits.
@@ -14,4 +17,4 @@ Compare two executor models on the same synthetic blocking task as an optional l
 
 Record throughput and resource assumptions. Explain why database connection limits still apply.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

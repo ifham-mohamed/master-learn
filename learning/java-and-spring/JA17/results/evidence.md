@@ -1,29 +1,16 @@
-# JA17 results and evidence
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. No result has been recorded in this file.
+# JA17 — Evidence
 
-## What I ran or demonstrated
+## Pass check
 
-Command, environment, input, and date:
+A domain test runs without a server. Spring starts with the intended dependency.
 
-## Expected result
+## My result
 
-Describe what would demonstrate the task outcome.
+- What I ran or demonstrated
+- What actually happened
+- What I will do next
+- Commit or artifact, if available
 
-## Actual result
-
-Paste actual output or add screenshots/logs next to this document. Link local files with Markdown.
-
-## Conclusion
-
-What passed? What remains unverified?
-
-## Task acceptance criteria
-
-beans, constructor injection, component scanning, configuration
-IoC/DI, beans, configuration, AOP concept, validation
-Explain beans, constructor injection, configuration and testability
-
-## Related work
-
-[Theory](../theory/concepts.md) · [Notes](../notes/journal.md) · [Code](../code/README.md)
+[Practice brief](../notes/00-warehouse-practice.md)

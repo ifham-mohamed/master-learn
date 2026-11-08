@@ -2,6 +2,9 @@
 
 Week 2 · Core · Warehouse checkpoint B02
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Objects, prototypes, ownership and mutation.
@@ -14,4 +17,4 @@ Compare a plain shipment DTO with an object that inherits behavior. Inspect an o
 
 JSON contains the intended fields. Explain what crosses the API boundary.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

@@ -1,6 +1,9 @@
-# B01 — Set up Java/TS repo; Java domain kata; convert a small JS module to strict TS
+# B01 — Run the first shipment CLI
 
 Week 1 · Core · Warehouse checkpoint B01
+
+Before you begin, complete G02, JA06.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Deliver a runnable Java create/find CLI and a strict TypeScript shipment display
 
 A clean folder can build and run it. Save valid and invalid terminal runs, the TypeScript check, and one design decision.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

@@ -1,6 +1,9 @@
-# B02 — Immutable Java value objects + typed TS API-state exercise
+# B02 — Model shipments and client states
 
 Week 2 · Core · Warehouse checkpoint B02
+
+Before you begin, complete B01.
+
 
 ## Review and learn
 
@@ -14,4 +17,4 @@ Support multiple shipment references and basic status rules. Model loading, empt
 
 Duplicate identity and invalid transitions are rejected. Each typed UI state renders.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

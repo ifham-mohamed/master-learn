@@ -1,30 +1,16 @@
-# TS28 results and evidence
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. No result has been recorded in this file.
+# TS28 — Evidence
 
-## What I ran or demonstrated
+## Pass check
 
-Command, environment, input, and date:
+Text renders safely, the forged write is denied, and sensitive views clear after logout.
 
-## Expected result
+## My result
 
-Describe what would demonstrate the task outcome.
+- What I ran or demonstrated
+- What actually happened
+- What I will do next
+- Commit or artifact, if available
 
-## Actual result
-
-Paste actual output or add screenshots/logs next to this document. Link local files with Markdown.
-
-## Conclusion
-
-What passed? What remains unverified?
-
-## Task acceptance criteria
-
-XSS, CSRF, CORS, token storage, secrets
-Explain browser security boundaries and mitigations
-SQLi, XSS, CSRF, CORS, secrets, rate limiting
-SQLi, XSS, CSRF, SSRF concept, auth mistakes
-
-## Related work
-
-[Theory](../theory/concepts.md) · [Notes](../notes/journal.md) · [Code](../code/README.md)
+[Practice brief](../notes/00-warehouse-practice.md)

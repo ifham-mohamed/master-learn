@@ -1,26 +1,15 @@
+<!-- Managed by export_warehouse_plan.py -->
+
 # FE32 — HTML/CSS fundamentals
 
-TypeScript & UI · week 5–5 · Core · Learn
+TypeScript & UI · Week 5 · Core
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/FE32)
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-## Task outcome
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-Semantic HTML, layout, responsive design, forms
-
-## Practice prompt
-
-Use the task outcome to design a small demonstration.
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: None specified.
-Original workbook: Master Plan row 61.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/typescript-and-ui.md#fe32)

@@ -1,31 +1,9 @@
-# Set the target role, baseline and weekly time budget — theory
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. Replace these prompts with your own explanation.
+# G01 — Concepts to review
 
-## Learning goal
+Baseline, realistic capacity, and the difference between recognition and recall.
 
-Record target roles, start date, available weekly hours and current Java/TS/SQL baseline. Review the proposed task estimates and optional scope.
+Explain one idea from memory. Predict a case where the implementation could fail, then check that prediction against your run or design.
 
-## Concepts to explain
-
-Reflect on what you demonstrated, what remains uncertain, workload changes, and the next review action.
-
-- What problem does this solve?
-- How does it work in your own words?
-- What assumptions does it rely on?
-
-## Small example
-
-Add an example and explain each step. Link to a file in ../code/ when useful.
-
-## Edge cases and trade-offs
-
-Record a counterexample, common mistake, and a trade-off.
-
-## Check your understanding
-
-Explain the outcome without looking at your notes, then demonstrate it.
-
-## References
-
-See [task resources](../resources/links.md).
+[Practice brief](../notes/00-warehouse-practice.md) · [References](../resources/links.md)

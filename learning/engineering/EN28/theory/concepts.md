@@ -1,34 +1,9 @@
-# CI/CD — theory
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. Replace these prompts with your own explanation.
+# EN28 — Concepts to review
 
-## Learning goal
+CI checks, artifacts, deployment stages and reproducibility.
 
-lint/test/build/security/deploy gates
-Build/test/lint/deploy pipeline, quality gates
+Explain one idea from memory. Predict a case where the implementation could fail, then check that prediction against your run or design.
 
-## Concepts to explain
-
-Explain the engineering decision, demonstrate the workflow, and record how you verified success and investigated failure.
-
-- What problem does this solve?
-- How does it work in your own words?
-- What assumptions does it rely on?
-
-## Small example
-
-Add an example and explain each step. Link to a file in ../code/ when useful.
-
-## Edge cases and trade-offs
-
-Record a counterexample, common mistake, and a trade-off.
-
-## Check your understanding
-
-Create PR pipeline for Java + TypeScript
-GitHub Actions pipeline
-Shared
-
-## References
-
-See [task resources](../resources/links.md).
+[Practice brief](../notes/00-warehouse-practice.md) · [References](../resources/links.md)

@@ -67,6 +67,552 @@
       "outcome": "Repeat a change under time and give a demo another person can run."
     }
   ],
+  "checkpoints": [
+    {
+      "week": 1,
+      "id": "B01",
+      "prepare": [
+        "G01",
+        "G02",
+        "JA05",
+        "JA06",
+        "AI18",
+        "CS12",
+        "TS05",
+        "TS08",
+        "TS26",
+        "EN26",
+        "RW20"
+      ],
+      "reflect": [
+        "DS01",
+        "M01",
+        "RV01"
+      ]
+    },
+    {
+      "week": 2,
+      "id": "B02",
+      "prepare": [
+        "CS13",
+        "JA07",
+        "JA08",
+        "TS06",
+        "TS09"
+      ],
+      "reflect": [
+        "DS02",
+        "G03",
+        "M02",
+        "RV02"
+      ]
+    },
+    {
+      "week": 3,
+      "id": "B03",
+      "prepare": [
+        "CS07",
+        "CS08",
+        "JA09",
+        "JA10",
+        "TS10",
+        "TS11",
+        "TS12"
+      ],
+      "reflect": [
+        "DS03",
+        "M03",
+        "RV03"
+      ]
+    },
+    {
+      "week": 4,
+      "id": "B04",
+      "prepare": [
+        "CS15",
+        "JA11",
+        "JA12",
+        "JA13",
+        "JA16",
+        "TS07",
+        "TS13",
+        "TS15"
+      ],
+      "reflect": [
+        "DS04",
+        "G04",
+        "M04",
+        "RV04"
+      ]
+    },
+    {
+      "week": 5,
+      "id": "B05",
+      "prepare": [
+        "AI05",
+        "CS18",
+        "CS19",
+        "CS20",
+        "JA17",
+        "JA18",
+        "FE32",
+        "TS17",
+        "RW05",
+        "SD05",
+        "SD07"
+      ],
+      "reflect": [
+        "DS05",
+        "M05",
+        "RV05"
+      ]
+    },
+    {
+      "week": 6,
+      "id": "B06",
+      "prepare": [
+        "CS21",
+        "JA19",
+        "JA20",
+        "TS18",
+        "TS19",
+        "TS20"
+      ],
+      "reflect": [
+        "DS06",
+        "M06",
+        "RV06"
+      ]
+    },
+    {
+      "week": 7,
+      "id": "B07",
+      "prepare": [
+        "CS14",
+        "JA21",
+        "JA22",
+        "TS16",
+        "TS21",
+        "G05"
+      ],
+      "reflect": [
+        "DS07",
+        "M07",
+        "RV07"
+      ]
+    },
+    {
+      "week": 8,
+      "id": "B08",
+      "prepare": [
+        "AI07",
+        "JA23",
+        "TS14",
+        "TS27",
+        "G06"
+      ],
+      "reflect": [
+        "DS08",
+        "M08",
+        "RV08"
+      ]
+    },
+    {
+      "week": 9,
+      "id": "B09",
+      "prepare": [
+        "CS09",
+        "JA24",
+        "TS23",
+        "RW06"
+      ],
+      "reflect": [
+        "DS09",
+        "M09",
+        "M10",
+        "RV09"
+      ]
+    },
+    {
+      "week": 10,
+      "id": "B10",
+      "prepare": [
+        "CS10",
+        "CS11",
+        "JA14",
+        "JA25",
+        "JA26"
+      ],
+      "reflect": [
+        "DS10",
+        "M11",
+        "M12",
+        "RV10"
+      ]
+    },
+    {
+      "week": 11,
+      "id": "B11",
+      "prepare": [
+        "AI17",
+        "CS22",
+        "JA27",
+        "JA28",
+        "TS28"
+      ],
+      "reflect": [
+        "DS11",
+        "M13",
+        "M14",
+        "RV11"
+      ]
+    },
+    {
+      "week": 12,
+      "id": "B12",
+      "prepare": [
+        "FE35",
+        "TS24",
+        "TS25"
+      ],
+      "reflect": [
+        "DS12",
+        "G07",
+        "M15",
+        "M16",
+        "PF02",
+        "RV12"
+      ]
+    },
+    {
+      "week": 13,
+      "id": "B13",
+      "prepare": [
+        "JA29",
+        "JA30",
+        "RW10"
+      ],
+      "reflect": [
+        "DS13",
+        "M17",
+        "M18",
+        "RV13"
+      ]
+    },
+    {
+      "week": 14,
+      "id": "B14",
+      "prepare": [
+        "JA31",
+        "JA33",
+        "JA34",
+        "EN28",
+        "RW11",
+        "SD13"
+      ],
+      "reflect": [
+        "DS14",
+        "M19",
+        "M20",
+        "RV14"
+      ]
+    },
+    {
+      "week": 15,
+      "id": "B15",
+      "prepare": [
+        "JA32",
+        "RW16",
+        "SD10",
+        "SD12"
+      ],
+      "reflect": [
+        "DS15",
+        "M21",
+        "M22",
+        "RV15"
+      ]
+    },
+    {
+      "week": 16,
+      "id": "B16",
+      "prepare": [
+        "AI09",
+        "AI14",
+        "OP20",
+        "JA15",
+        "TS22",
+        "TS30",
+        "EN30",
+        "G08",
+        "SD14",
+        "SD15",
+        "SD16",
+        "SD17"
+      ],
+      "reflect": [
+        "DS16",
+        "M23",
+        "M24",
+        "RV16"
+      ]
+    },
+    {
+      "week": 17,
+      "id": "B17",
+      "prepare": [],
+      "reflect": [
+        "DS17",
+        "M25",
+        "M26",
+        "RV17"
+      ]
+    },
+    {
+      "week": 18,
+      "id": "B18",
+      "prepare": [
+        "TS29",
+        "RW12"
+      ],
+      "reflect": [
+        "DS18",
+        "M27",
+        "M28",
+        "RV18"
+      ]
+    },
+    {
+      "week": 19,
+      "id": "B19",
+      "prepare": [
+        "AI10",
+        "RW14",
+        "SD21"
+      ],
+      "reflect": [
+        "DS19",
+        "M29",
+        "M30",
+        "RV19"
+      ]
+    },
+    {
+      "week": 20,
+      "id": "B20",
+      "prepare": [
+        "JA35",
+        "TS31"
+      ],
+      "reflect": [
+        "BE76",
+        "BE79",
+        "DS20",
+        "M31",
+        "M32",
+        "G09",
+        "PF01",
+        "PF04",
+        "PF05",
+        "RV20"
+      ]
+    },
+    {
+      "week": 21,
+      "id": "B21",
+      "prepare": [],
+      "reflect": [
+        "DS21",
+        "M33",
+        "M34",
+        "M35",
+        "G10",
+        "RV21"
+      ]
+    },
+    {
+      "week": 22,
+      "id": "B22",
+      "prepare": [],
+      "reflect": [
+        "DS22",
+        "M36",
+        "M37",
+        "M38",
+        "PF03",
+        "RV22"
+      ]
+    },
+    {
+      "week": 23,
+      "id": "B23",
+      "prepare": [],
+      "reflect": [
+        "DS23",
+        "M39",
+        "M40",
+        "M41",
+        "RV23"
+      ]
+    },
+    {
+      "week": 24,
+      "id": "B24",
+      "prepare": [],
+      "reflect": [
+        "DS24",
+        "M42",
+        "M43",
+        "M44",
+        "RV24"
+      ]
+    }
+  ],
+  "labs": [
+    {
+      "id": "service-boundaries",
+      "title": "1. Establish service boundaries",
+      "after": "B14",
+      "tasks": [
+        "SD05",
+        "SD07",
+        "JA17",
+        "JA25",
+        "RW11",
+        "B14"
+      ],
+      "build": "Draw Inventory, Dispatch and Tracking boundaries inside the Spring application. Give each module a clear owner and public interface. Keep reservation, stock mutation and dispatch confirmation within the same transaction. Write an architecture decision record explaining what would justify extracting a service.",
+      "verify": "A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split.",
+      "references": [
+        {
+          "label": "Service data ownership",
+          "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/"
+        }
+      ]
+    },
+    {
+      "id": "message-broker",
+      "title": "2. Publish dispatch events through RabbitMQ",
+      "after": "B19",
+      "tasks": [
+        "SD13",
+        "JA25",
+        "RW14",
+        "B19",
+        "M29"
+      ],
+      "build": "Record a versioned DispatchConfirmed event in a PostgreSQL outbox in the same transaction as dispatch. Publish through RabbitMQ and wait for broker confirmation. The consumer commits a deduplicated result before acknowledging. Cap retries, route failed messages to a dead-letter queue, and retain an event archive for rebuilding projections. Compare a RabbitMQ work queue with a retained Kafka log, using partition keys and consumer offsets to reason about ordering and replay.",
+      "verify": "Roll back a dispatch, stop the broker after commit, interrupt the publisher before marking a send, and replay a poison message. Show zero events for the rollback, eventual delivery for the committed event and one consumer effect under redelivery.",
+      "references": [
+        {
+          "label": "Transactional outbox",
+          "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html"
+        },
+        {
+          "label": "RabbitMQ reliability",
+          "url": "https://www.rabbitmq.com/docs/reliability"
+        },
+        {
+          "label": "Apache Kafka concepts",
+          "url": "https://kafka.apache.org/documentation/"
+        }
+      ]
+    },
+    {
+      "id": "microservices",
+      "title": "3. Extract a Tracking microservice",
+      "after": "B20",
+      "tasks": [
+        "SD07",
+        "SD13",
+        "SD17",
+        "TS29",
+        "B18",
+        "B20",
+        "M31"
+      ],
+      "build": "After the broker lab, extract the read-oriented tracking projection. Give it its own PostgreSQL database and schema migrations, API and release. Update it from versioned events without reading the dispatch tables. Document eventual consistency, projection rebuild, stale-state UX, and service authentication. Model compensation for a hypothetical cross-service reservation as a separate design exercise.",
+      "verify": "Take Tracking down while dispatch continues. Restart it and rebuild a clean projection from the retained event archive. Reconcile results. Run API contract tests, deploy Tracking independently, and rehearse routing traffic back to the original tracking view.",
+      "references": [
+        {
+          "label": "Service data ownership",
+          "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/"
+        },
+        {
+          "label": "Saga patterns",
+          "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/saga-patterns.html"
+        }
+      ]
+    },
+    {
+      "id": "micro-frontends",
+      "title": "4. Release a Tracking micro-frontend",
+      "after": "B20",
+      "tasks": [
+        "TS17",
+        "TS19",
+        "TS20",
+        "TS24",
+        "TS25",
+        "TS28",
+        "FE35",
+        "PF05"
+      ],
+      "build": "After the Tracking service lab, separate the read-only Tracking routes into an independently built React frontend. Compose at the route boundary. Define shared navigation, session behavior, accessibility and API contracts. Compare this with keeping feature modules in one React build.",
+      "verify": "Deploy and roll back the Tracking frontend without rebuilding Dispatch. Verify keyboard navigation, direct URLs, sign-out, API failure fallback, and bundle size before and after the split.",
+      "references": [
+        {
+          "label": "Independently deployable micro-frontends",
+          "url": "https://martinfowler.com/articles/micro-frontends.html"
+        }
+      ]
+    },
+    {
+      "id": "scale-and-recovery",
+      "title": "5. Prove the distributed system can recover",
+      "after": "B20",
+      "tasks": [
+        "JA32",
+        "EN28",
+        "G08",
+        "RW16",
+        "SD10",
+        "SD14",
+        "SD16",
+        "SD17",
+        "SD21",
+        "G09"
+      ],
+      "build": "Set a workload and targets for latency, errors and projection lag. Trace request and event IDs across components. Exercise rate limits, stale reads, backlog pressure, restore, and rollback. Compare container deployments and orchestration using the needs you measured.",
+      "verify": "Save p95 latency, error rate, oldest queued event, recovery time and restored-data checks. Test a failed release and write a runbook another person can follow.",
+      "references": [
+        {
+          "label": "RabbitMQ failure and recovery behavior",
+          "url": "https://www.rabbitmq.com/docs/reliability"
+        }
+      ]
+    },
+    {
+      "id": "algorithm-tradeoffs",
+      "title": "6. Measure algorithms against warehouse workloads",
+      "after": "B10",
+      "tasks": [
+        "JA08",
+        "CS09",
+        "DS01",
+        "DS07",
+        "DS08",
+        "DS09",
+        "DS10",
+        "SD12",
+        "RW16"
+      ],
+      "build": "Compare reference lookup with a map and a database index. Use a heap for a prioritization experiment, intervals for dock scheduling, and a graph for warehouse route planning or dependencies. State complexity and compare representative workloads. Keep stock correctness in the transactional database.",
+      "verify": "Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises.",
+      "references": []
+    }
+  ],
+  "requirements": "A dispatcher creates an outbound shipment for one warehouse and destination. A warehouse operator receives stock, reserves it, confirms a pick, and records dispatch. A viewer reads inventory and shipment history for their authorized scope. Start with one SKU per shipment. Add multiple lines, another warehouse and a second tenant as the relevant tests require them.\n\n| Operation | Required behavior | Example to test |\n| --- | --- | --- |\n| Receive | A positive whole quantity increases on-hand stock for one SKU and warehouse. Record a stock movement with its receipt reference. | Receiving 10 into an empty warehouse makes 10 available. Reject invalid quantities and duplicate receipts. |\n| Create shipment | Capture an immutable reference, warehouse, destination and one or more positive SKU quantities. Initial state is `CREATED`. Use synthetic destinations and recipients. | Creating a shipment does not move stock. A duplicate reference within the tenant fails. |\n| Reserve | Move a shipment to `RESERVED` only if every line has sufficient available stock. Increase reserved stock while on-hand stays unchanged. | Reserving 3 of 10 leaves 10 on hand, 3 reserved and 7 available. A second request for 8 fails. |\n| Cancel | Allow cancellation from `CREATED` or `RESERVED`. Release each active reservation once. For a picked shipment, use the later exception flow. | Cancelling a reservation for 3 restores availability to 10. A repeated cancel leaves balances unchanged. |\n| Pick | Confirm all reserved SKU quantities before entering `PICKED`. Record who confirmed and when. | A wrong SKU or quantity leaves the shipment reserved. Picking leaves physical balances unchanged. |\n| Dispatch | Require a confirmed pick. In one transaction, deduct the picked quantity from on-hand and reserved stock, record movements and mark `DISPATCHED`. | Dispatching 3 from 10 on hand and 3 reserved leaves 7 on hand and 0 reserved. Double dispatch has one physical effect. |\n| Record delivery or exception | Add this after the dispatch flow works. Record an event with shipment, time, location, actor or source, and reason. A dispatch exception keeps the event history and follows an explicit state rule. | An out-of-order delivery confirmation is rejected. A failed delivery does not automatically return stock to the warehouse. |\n\n### Rules to carry through each version\n\n- Available stock equals on hand minus reserved. All quantities are whole units and `0 ≤ reserved ≤ on hand`. Use warehouse and SKU together when looking up stock. Stock in another warehouse cannot satisfy a reservation for this warehouse.\n- Aggregate or reject repeated SKU lines before checking availability. For multiple lines, a failed line leaves every balance and shipment state unchanged. A two-client test for the last unit must prove one successful reservation and one business conflict.\n- Each transition and stock movement needs a traceable reference. Record timestamps consistently and test ordering when events share a timestamp. Enforce allowed transitions and role/scope checks on the server. Tenant scope comes from the signed-in identity.\n- Start with Spring Security sessions for the React browser application. Compare an OIDC login and an external API access-token flow in separate exercises. Keep tests for anonymous requests, wrong roles, cross-tenant access, CSRF, and logout.\n- Add idempotency after the basic operation is correct. Retry the same request after a simulated lost response and verify it has one committed effect. Reusing a key for a different request must fail. Keep receipts and dispatches auditable.\n\nThe stock distinctions and picking workflow are based on the [Dynamics 365 inventory reference](https://learn.microsoft.com/en-us/dynamics365/supply-chain/inventory/inventory-on-hand-list) and [picking confirmation guide](https://learn.microsoft.com/en-us/dynamics365/supply-chain/warehousing/piece-picking-confirmation). The event fields are inspired by [GS1 EPCIS](https://support.gs1.org/support/solutions/articles/43000755325-what-is-electronic-product-code-information-services-epcis-). The capstone implements the simpler rules in this brief.",
   "tasks": {
     "G01": {
       "title": "Set the target role, baseline and weekly time budget",
@@ -76,7 +622,9 @@
       "checkpoint": "B01",
       "focus": "Baseline, realistic capacity, and the difference between recognition and recall.",
       "build": "Record what you can already do in Java, TypeScript and SQL without help. Plan five hours per selected study day.",
-      "verify": "Save one real attempt per skill and a study plan with a next gap."
+      "verify": "Save one real attempt per skill and a study plan with a next gap.",
+      "requires": [],
+      "labs": []
     },
     "G02": {
       "title": "Run both toolchains and a first test from a clean clone",
@@ -86,7 +634,9 @@
       "checkpoint": "B01",
       "focus": "JDK, Java compiler, Maven, Node, npm and reproducible builds.",
       "build": "Verify both toolchains. Compile a tiny Java file and run the smallest TypeScript check from a clean folder.",
-      "verify": "Record tool versions, exact commands and real exit results."
+      "verify": "Record tool versions, exact commands and real exit results.",
+      "requires": [],
+      "labs": []
     },
     "AI18": {
       "title": "Confirm round policy and rehearse AI-free fallback",
@@ -96,7 +646,9 @@
       "checkpoint": "B01",
       "focus": "Tool restrictions, AI-free fallback and independent verification.",
       "build": "Use the official docs, compiler, debugger and tests during a timed Java or SQL attempt.",
-      "verify": "Record what you solved unaided and one fallback technique you can repeat."
+      "verify": "Record what you solved unaided and one fallback technique you can repeat.",
+      "requires": [],
+      "labs": []
     },
     "CS12": {
       "title": "JOINs",
@@ -106,7 +658,9 @@
       "checkpoint": "B01",
       "focus": "INNER JOIN, LEFT JOIN, join keys, and filters in ON versus WHERE.",
       "build": "Query warehouses with assigned shipments, including a warehouse with none. Adapt the existing fixture and rerun on PostgreSQL when available.",
-      "verify": "Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse."
+      "verify": "Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse.",
+      "requires": [],
+      "labs": []
     },
     "JA05": {
       "title": "Syntax + object model",
@@ -116,7 +670,11 @@
       "checkpoint": "B01",
       "focus": "String and int, Scanner line input, parsing, conditionals, loops, methods, primitives and references.",
       "build": "Write a terminal menu to create and find one shipment. Ask for reference, destination, SKU and quantity. Work through the source drills as small input and method variations.",
-      "verify": "A valid create and lookup work. Blank input and non-numeric or nonpositive quantities recover without a crash. Explain pass-by-value using your own code."
+      "verify": "A valid create and lookup work. Blank input and non-numeric or nonpositive quantities recover without a crash. Explain pass-by-value using your own code.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA06": {
       "title": "OOP",
@@ -126,7 +684,12 @@
       "checkpoint": "B01",
       "focus": "Encapsulation, constructors, composition, interfaces, and when inheritance helps.",
       "build": "Separate the menu from Shipment and ShipmentService. Model allowed transitions and add an in-memory collection when a second shipment is needed.",
-      "verify": "The terminal still works. Tests reject duplicate references and illegal transitions. Explain why you used composition."
+      "verify": "The terminal still works. Tests reject duplicate references and illegal transitions. Explain why you used composition.",
+      "requires": [
+        "G02",
+        "JA05"
+      ],
+      "labs": []
     },
     "TS05": {
       "title": "Scopes / closures",
@@ -136,7 +699,9 @@
       "checkpoint": "B01",
       "focus": "Lexical scope, closures and captured state.",
       "build": "Write a shipment display helper with a configurable label. Trace two functions created with different options.",
-      "verify": "Each function keeps its own options. Explain one stale closure risk in React."
+      "verify": "Each function keeps its own options. Explain one stale closure risk in React.",
+      "requires": [],
+      "labs": []
     },
     "TS08": {
       "title": "Strict types",
@@ -146,7 +711,9 @@
       "checkpoint": "B01",
       "focus": "Strict types, inference, nullability and safe inputs.",
       "build": "Port a shipment display helper to strict TypeScript. Handle a missing value explicitly.",
-      "verify": "Type checks pass and a deliberately incompatible input fails compilation."
+      "verify": "Type checks pass and a deliberately incompatible input fails compilation.",
+      "requires": [],
+      "labs": []
     },
     "TS26": {
       "title": "pnpm/npm + lockfiles",
@@ -156,7 +723,9 @@
       "checkpoint": "B01",
       "focus": "Package manager, scripts, lockfile and repeatable installs.",
       "build": "Create the minimal React/TypeScript package when needed. Pin dependencies with the lockfile.",
-      "verify": "A clean install and typecheck use the documented commands."
+      "verify": "A clean install and typecheck use the documented commands.",
+      "requires": [],
+      "labs": []
     },
     "EN26": {
       "title": "Git",
@@ -166,17 +735,24 @@
       "checkpoint": "B01",
       "focus": "Git status, small commits, diff review and safe undo.",
       "build": "Commit the first working CLI in a small branch. Rehearse undo on an isolated practice change.",
-      "verify": "The diff explains one change and the branch can be built after checkout."
+      "verify": "The diff explains one change and the branch can be built after checkout.",
+      "requires": [],
+      "labs": []
     },
     "B01": {
-      "title": "Set up Java/TS repo; Java domain kata; convert a small JS module to strict TS",
+      "title": "Run the first shipment CLI",
       "week": 1,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B01",
       "focus": "Terminal I/O, methods, OOP basics, Git and strict TypeScript.",
       "build": "Deliver a runnable Java create/find CLI and a strict TypeScript shipment display helper. Use one shipment and split the code once the flow runs.",
-      "verify": "A clean folder can build and run it. Save valid and invalid terminal runs, the TypeScript check, and one design decision."
+      "verify": "A clean folder can build and run it. Save valid and invalid terminal runs, the TypeScript check, and one design decision.",
+      "requires": [
+        "G02",
+        "JA06"
+      ],
+      "labs": []
     },
     "DS01": {
       "title": "Solve 7 new DSA problems and revisit errors",
@@ -186,7 +762,11 @@
       "checkpoint": "B01",
       "focus": "Practice arrays and hash maps. State the invariant and time and space costs before coding.",
       "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": [
+        "algorithm-tradeoffs"
+      ]
     },
     "RW20": {
       "title": "Think-aloud communication",
@@ -196,7 +776,9 @@
       "checkpoint": "B01",
       "focus": "Think aloud, state assumptions and explain a failure.",
       "build": "Explain your CLI flow while trying an invalid quantity and an unknown reference.",
-      "verify": "A listener can reconstruct the expected behavior and the reason for your next step."
+      "verify": "A listener can reconstruct the expected behavior and the reason for your next step.",
+      "requires": [],
+      "labs": []
     },
     "M01": {
       "title": "Java Big-O/arrays/OOP + verbal reasoning",
@@ -206,7 +788,9 @@
       "checkpoint": "B01",
       "focus": "Recall Java Big-O/arrays/OOP + verbal reasoning and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B01 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV01": {
       "title": "Review evidence, questions and next-week capacity",
@@ -216,7 +800,9 @@
       "checkpoint": "B01",
       "focus": "Recall the week 1 concept and explain the trade-off from B01.",
       "build": "Rerun one check from B01, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "CS13": {
       "title": "GROUP BY / HAVING",
@@ -226,7 +812,9 @@
       "checkpoint": "B02",
       "focus": "Grouping, aggregates, HAVING and duplicate-sensitive totals.",
       "build": "Build a stock or shipment report grouped by warehouse. Include a warehouse below the reporting threshold.",
-      "verify": "Compare totals with a hand-checked fixture and justify WHERE versus HAVING."
+      "verify": "Compare totals with a hand-checked fixture and justify WHERE versus HAVING.",
+      "requires": [],
+      "labs": []
     },
     "JA07": {
       "title": "equals/hashCode/immutability",
@@ -236,7 +824,11 @@
       "checkpoint": "B02",
       "focus": "Value equality, hash codes and immutable identifiers.",
       "build": "Make SKU or shipment reference an immutable value. Use it to look up a record created from a separate but equal value.",
-      "verify": "Equal values share a hash and resolve the same map entry. An unrelated value does not match."
+      "verify": "Equal values share a hash and resolve the same map entry. An unrelated value does not match.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA08": {
       "title": "Collections",
@@ -246,7 +838,13 @@
       "checkpoint": "B02",
       "focus": "List, Set and Map, deterministic iteration, and lookup cost.",
       "build": "Support multiple shipments and look up by reference. Compare a list scan with a keyed map for the same fixture.",
-      "verify": "Preserve all valid shipments, reject duplicate keys and explain complexity with a trace."
+      "verify": "Preserve all valid shipments, reject duplicate keys and explain complexity with a trace.",
+      "requires": [
+        "G02"
+      ],
+      "labs": [
+        "algorithm-tradeoffs"
+      ]
     },
     "TS06": {
       "title": "Objects / prototypes",
@@ -256,7 +854,11 @@
       "checkpoint": "B02",
       "focus": "Objects, prototypes, ownership and mutation.",
       "build": "Compare a plain shipment DTO with an object that inherits behavior. Inspect an own field and an inherited field.",
-      "verify": "JSON contains the intended fields. Explain what crosses the API boundary."
+      "verify": "JSON contains the intended fields. Explain what crosses the API boundary.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS09": {
       "title": "Union/intersection/narrowing",
@@ -266,17 +868,25 @@
       "checkpoint": "B02",
       "focus": "Discriminated unions, narrowing and exhaustive cases.",
       "build": "Model loading, success, empty and failed shipment states as a union.",
-      "verify": "Each valid state renders and adding a new case forces the missing branch to be handled."
+      "verify": "Each valid state renders and adding a new case forces the missing branch to be handled.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "B02": {
-      "title": "Immutable Java value objects + typed TS API-state exercise",
+      "title": "Model shipments and client states",
       "week": 2,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B02",
       "focus": "Immutable identities, collections, composition and UI state unions.",
       "build": "Support multiple shipment references and basic status rules. Model loading, empty, success and error states with fixtures.",
-      "verify": "Duplicate identity and invalid transitions are rejected. Each typed UI state renders."
+      "verify": "Duplicate identity and invalid transitions are rejected. Each typed UI state renders.",
+      "requires": [
+        "B01"
+      ],
+      "labs": []
     },
     "DS02": {
       "title": "Solve 7 new DSA problems and revisit errors",
@@ -286,7 +896,9 @@
       "checkpoint": "B02",
       "focus": "Practice two pointers and hash maps. State the invariant and time and space costs before coding.",
       "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "G03": {
       "title": "Create a role shortlist and requirements checklist",
@@ -296,7 +908,9 @@
       "checkpoint": "B02",
       "focus": "Role requirements, evidence mapping and priorities.",
       "build": "Compare the roles you are targeting and map their Java, SQL and React requirements to capstone checkpoints.",
-      "verify": "Record your shortlist and two skills that need stronger evidence."
+      "verify": "Record your shortlist and two skills that need stronger evidence.",
+      "requires": [],
+      "labs": []
     },
     "M02": {
       "title": "HashMap/two pointers + Java collections",
@@ -306,7 +920,9 @@
       "checkpoint": "B02",
       "focus": "Recall HashMap/two pointers + Java collections and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B02 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV02": {
       "title": "Review evidence, questions and next-week capacity",
@@ -316,7 +932,9 @@
       "checkpoint": "B02",
       "focus": "Recall the week 2 concept and explain the trade-off from B02.",
       "build": "Rerun one check from B02, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "CS07": {
       "title": "ACID",
@@ -326,7 +944,9 @@
       "checkpoint": "B03",
       "focus": "ACID, commit and rollback.",
       "build": "Run a PostgreSQL transaction that changes reservation and stock records. Intentionally fail partway.",
-      "verify": "A second connection sees no partial reservation and final balances reconcile."
+      "verify": "A second connection sees no partial reservation and final balances reconcile.",
+      "requires": [],
+      "labs": []
     },
     "CS08": {
       "title": "Normalization",
@@ -336,7 +956,9 @@
       "checkpoint": "B03",
       "focus": "Keys, dependencies and normalization.",
       "build": "Sketch warehouse, SKU, stock, shipment and shipment-line tables. Compare with one denormalized spreadsheet-style record.",
-      "verify": "Demonstrate one update anomaly the normalized model prevents."
+      "verify": "Demonstrate one update anomaly the normalized model prevents.",
+      "requires": [],
+      "labs": []
     },
     "JA09": {
       "title": "Generics",
@@ -346,7 +968,11 @@
       "checkpoint": "B03",
       "focus": "Generic type parameters, bounds and compile-time guarantees.",
       "build": "Give a small lookup or result type two real uses, such as SKU and shipment queries. Replace a cast at the boundary.",
-      "verify": "Both callers type-check and an incompatible use fails compilation."
+      "verify": "Both callers type-check and an incompatible use fails compilation.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA10": {
       "title": "Exceptions",
@@ -356,7 +982,11 @@
       "checkpoint": "B03",
       "focus": "Validation, domain exceptions, failure boundaries and recoverability.",
       "build": "Distinguish bad input, unknown shipment and a failed business rule. Recover at the terminal boundary.",
-      "verify": "Every failure has an actionable message and returns to the menu without partial state."
+      "verify": "Every failure has an actionable message and returns to the menu without partial state.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS10": {
       "title": "Generics",
@@ -366,7 +996,11 @@
       "checkpoint": "B03",
       "focus": "Generics, inference and constraints.",
       "build": "Use one typed result or page shape for shipments and inventory items.",
-      "verify": "Both uses preserve the item type without unchecked casts."
+      "verify": "Both uses preserve the item type without unchecked casts.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS11": {
       "title": "Utility / mapped types",
@@ -376,7 +1010,11 @@
       "checkpoint": "B03",
       "focus": "Pick, Omit, Partial and mapped types.",
       "build": "Derive a form or display type from a shipment type. Keep server-only fields out of the create request.",
-      "verify": "A compile-time check rejects a server-only field on the request type."
+      "verify": "A compile-time check rejects a server-only field on the request type.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS12": {
       "title": "Interfaces vs type aliases",
@@ -386,17 +1024,25 @@
       "checkpoint": "B03",
       "focus": "Interfaces, aliases and structural typing.",
       "build": "Define the shipment DTO shape and a closed union for its status or load state.",
-      "verify": "Explain the type choice and show an incompatible DTO rejected by the checker."
+      "verify": "Explain the type choice and show an incompatible DTO rejected by the checker.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "B03": {
-      "title": "Generic Java service + typed DTO transformations",
+      "title": "Refine lookup and mapping",
       "week": 3,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B03",
       "focus": "Generics, lookup boundaries, mapping and exceptions.",
       "build": "Refine the Java lookup service and map shipment summaries to typed display objects.",
-      "verify": "Tests cover known and unknown references, invalid input and mapping correctness."
+      "verify": "Tests cover known and unknown references, invalid input and mapping correctness.",
+      "requires": [
+        "B02"
+      ],
+      "labs": []
     },
     "DS03": {
       "title": "Solve 7 new DSA problems and revisit errors",
@@ -406,7 +1052,9 @@
       "checkpoint": "B03",
       "focus": "Practice sliding windows and prefix sums. State the invariant and time and space costs before coding.",
       "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "M03": {
       "title": "Sliding window/prefix + generics + SQL",
@@ -416,7 +1064,9 @@
       "checkpoint": "B03",
       "focus": "Recall Sliding window/prefix + generics + SQL and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B03 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV03": {
       "title": "Review evidence, questions and next-week capacity",
@@ -426,7 +1076,9 @@
       "checkpoint": "B03",
       "focus": "Recall the week 3 concept and explain the trade-off from B03.",
       "build": "Rerun one check from B03, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "CS15": {
       "title": "Process vs thread",
@@ -436,7 +1088,9 @@
       "checkpoint": "B04",
       "focus": "Processes, threads and shared versus isolated memory.",
       "build": "Compare separate CLI processes with concurrent work inside one Java process.",
-      "verify": "Record which state is visible to each worker and where a race could occur."
+      "verify": "Record which state is visible to each worker and where a race could occur.",
+      "requires": [],
+      "labs": []
     },
     "JA11": {
       "title": "Streams/lambdas",
@@ -446,7 +1100,11 @@
       "checkpoint": "B04",
       "focus": "Lambdas, filtering, grouping and reduction.",
       "build": "Summarize shipment quantities by destination and status. Compare a loop with a stream implementation.",
-      "verify": "Both approaches match a hand-checked fixture including empty input."
+      "verify": "Both approaches match a hand-checked fixture including empty input.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA12": {
       "title": "Optional",
@@ -456,7 +1114,11 @@
       "checkpoint": "B04",
       "focus": "Optional for absence and explicit behavior at boundaries.",
       "build": "Return Optional from shipment lookup and handle the missing case where the caller can decide what to do.",
-      "verify": "Found and missing lookups are tested. Explain where a domain error belongs."
+      "verify": "Found and missing lookups are tested. Explain where a domain error belongs.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA13": {
       "title": "Records / sealed classes",
@@ -466,7 +1128,11 @@
       "checkpoint": "B04",
       "focus": "Records for immutable data and sealed types for a closed set of cases.",
       "build": "Model a shipment summary as a record. Try a closed result type for accepted and refused reservation in a small exercise.",
-      "verify": "Map the result cases explicitly and explain which object must still manage mutable state."
+      "verify": "Map the result cases explicitly and explain which object must still manage mutable state.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA16": {
       "title": "Memory / GC basics",
@@ -476,7 +1142,11 @@
       "checkpoint": "B04",
       "focus": "Object lifetime, heap, stack and basic garbage collection.",
       "build": "Load a repeatable shipment fixture and inspect memory before and after releasing it.",
-      "verify": "Save an observation and separate live data from temporary allocation."
+      "verify": "Save an observation and separate live data from temporary allocation.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS07": {
       "title": "Event loop",
@@ -486,7 +1156,11 @@
       "checkpoint": "B04",
       "focus": "Event loop, microtasks, timers and ordering.",
       "build": "Predict the order of a small shipment loading simulation, then run it.",
-      "verify": "Explain each observed step and correct a wrong prediction."
+      "verify": "Explain each observed step and correct a wrong prediction.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS13": {
       "title": "Modules / ESM",
@@ -496,7 +1170,11 @@
       "checkpoint": "B04",
       "focus": "ES modules, imports, exports and boundary ownership.",
       "build": "Separate shipment types, formatting and API access into small modules.",
-      "verify": "The build and a clean test run pass. Explain which dependency points toward the network boundary."
+      "verify": "The build and a clean test run pass. Explain which dependency points toward the network boundary.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS15": {
       "title": "Async/await + errors",
@@ -506,17 +1184,25 @@
       "checkpoint": "B04",
       "focus": "Async/await, rejected promises and cleanup.",
       "build": "Load a shipment through an async adapter. Handle rejection and a slow request that outlives a change of selection.",
-      "verify": "An older response cannot replace the current shipment. Failure remains visible."
+      "verify": "An older response cannot replace the current shipment. Failure remains visible.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "B04": {
-      "title": "Java aggregation kata + 10 JS async-order drills",
+      "title": "Summarize shipments and trace async work",
       "week": 4,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B04",
       "focus": "Aggregation, memory behavior and JavaScript async ordering.",
       "build": "Report shipment totals by destination and work through the async-order drills using shipment data.",
-      "verify": "Compare totals with a fixture and explain the observed execution order."
+      "verify": "Compare totals with a fixture and explain the observed execution order.",
+      "requires": [
+        "B03"
+      ],
+      "labs": []
     },
     "DS04": {
       "title": "Solve 7 new DSA problems and revisit errors",
@@ -526,7 +1212,9 @@
       "checkpoint": "B04",
       "focus": "Practice binary search and stacks. State the invariant and time and space costs before coding.",
       "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "G04": {
       "title": "Draft a resume and verify portfolio links",
@@ -536,7 +1224,11 @@
       "checkpoint": "B04",
       "focus": "Résumé accuracy, reproducible portfolio links and concise results.",
       "build": "Draft a project entry using only completed work and check its links.",
-      "verify": "Each claim has a real artifact and a reviewer can open it."
+      "verify": "Each claim has a real artifact and a reviewer can open it.",
+      "requires": [
+        "G03"
+      ],
+      "labs": []
     },
     "M04": {
       "title": "Binary search/stack + event loop + CS basics",
@@ -546,7 +1238,9 @@
       "checkpoint": "B04",
       "focus": "Recall Binary search/stack + event loop + CS basics and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B04 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV04": {
       "title": "Review evidence, questions and next-week capacity",
@@ -556,7 +1250,9 @@
       "checkpoint": "B04",
       "focus": "Recall the week 4 concept and explain the trade-off from B04.",
       "build": "Rerun one check from B04, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "AI05": {
       "title": "AI limitations, context and token budgets",
@@ -566,7 +1262,9 @@
       "checkpoint": "B05",
       "focus": "Context limits, incomplete specifications and plausible but wrong suggestions.",
       "build": "Compare two supplied descriptions of a warehouse rule and identify missing context. Write the correct test yourself.",
-      "verify": "Show which assumption changes the expected result and verify it without an AI tool."
+      "verify": "Show which assumption changes the expected result and verify it without an AI tool.",
+      "requires": [],
+      "labs": []
     },
     "CS18": {
       "title": "TCP vs UDP",
@@ -576,7 +1274,9 @@
       "checkpoint": "B05",
       "focus": "TCP, UDP and what a delivery guarantee means.",
       "build": "Trace the TCP connection for a local API request. Explain where an unreliable datagram could be acceptable in a telemetry example.",
-      "verify": "Identify the observed connection and explain why a successful connection is separate from a committed reservation."
+      "verify": "Identify the observed connection and explain why a successful connection is separate from a committed reservation.",
+      "requires": [],
+      "labs": []
     },
     "CS19": {
       "title": "DNS",
@@ -586,7 +1286,9 @@
       "checkpoint": "B05",
       "focus": "DNS names, resolution and environments.",
       "build": "Resolve the staging hostname or inspect Compose service-name resolution from the app network.",
-      "verify": "Save the lookup result and distinguish DNS failure from a server response."
+      "verify": "Save the lookup result and distinguish DNS failure from a server response.",
+      "requires": [],
+      "labs": []
     },
     "CS20": {
       "title": "HTTP",
@@ -596,7 +1298,9 @@
       "checkpoint": "B05",
       "focus": "HTTP requests, responses, headers, status and content types.",
       "build": "Use a terminal HTTP client to inspect shipment create, detail and conflict responses.",
-      "verify": "Show the method, status and body for each case and identify which failures are safe to retry."
+      "verify": "Show the method, status and body for each case and identify which failures are safe to retry.",
+      "requires": [],
+      "labs": []
     },
     "JA17": {
       "title": "IoC / DI",
@@ -606,7 +1310,13 @@
       "checkpoint": "B05",
       "focus": "Dependency injection, composition roots and test doubles.",
       "build": "Inject the existing shipment service and repository in Spring while keeping domain rules independent of HTTP.",
-      "verify": "A domain test runs without a server. Spring starts with the intended dependency."
+      "verify": "A domain test runs without a server. Spring starts with the intended dependency.",
+      "requires": [
+        "JA06"
+      ],
+      "labs": [
+        "service-boundaries"
+      ]
     },
     "JA18": {
       "title": "Boot fundamentals",
@@ -616,7 +1326,11 @@
       "checkpoint": "B05",
       "focus": "Boot application startup, starters, configuration and health checks.",
       "build": "Run the same shipment service inside a Spring Boot application with a development fixture.",
-      "verify": "A fresh start and one smoke request succeed. A broken configuration gives a useful error."
+      "verify": "A fresh start and one smoke request succeed. A broken configuration gives a useful error.",
+      "requires": [
+        "JA17"
+      ],
+      "labs": []
     },
     "FE32": {
       "title": "HTML/CSS fundamentals",
@@ -626,7 +1340,9 @@
       "checkpoint": "B05",
       "focus": "Semantic HTML, labels, CSS layout and responsive behavior.",
       "build": "Build the shipment entry form and list using semantic controls and narrow-screen layout.",
-      "verify": "Labels and errors are associated correctly and the page works on a narrow screen."
+      "verify": "Labels and errors are associated correctly and the page works on a narrow screen.",
+      "requires": [],
+      "labs": []
     },
     "TS17": {
       "title": "Components / props",
@@ -636,17 +1352,27 @@
       "checkpoint": "B05",
       "focus": "Components, props and single responsibility.",
       "build": "Build a small shipment list, status badge and detail view with fixtures.",
-      "verify": "The same component renders multiple statuses from typed props."
+      "verify": "The same component renders multiple statuses from typed props.",
+      "requires": [
+        "TS08"
+      ],
+      "labs": [
+        "micro-frontends"
+      ]
     },
     "B05": {
-      "title": "Create Spring Boot service skeleton + typed Next/React client shell",
+      "title": "Start Spring Boot and the React client",
       "week": 5,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B05",
       "focus": "Spring Boot, dependency injection, service boundaries and React components.",
       "build": "Start Spring around the existing Java service. Build a React shipment list with fixture data.",
-      "verify": "Document one successful smoke request and show the React list with two fixture states."
+      "verify": "Document one successful smoke request and show the React list with two fixture states.",
+      "requires": [
+        "B04"
+      ],
+      "labs": []
     },
     "DS05": {
       "title": "Solve 7 new DSA problems and revisit errors",
@@ -656,7 +1382,9 @@
       "checkpoint": "B05",
       "focus": "Practice linked lists and trees. State the invariant and time and space costs before coding.",
       "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "RW05": {
       "title": "Unfamiliar codebase orientation",
@@ -666,7 +1394,9 @@
       "checkpoint": "B05",
       "focus": "Repository entry points, data flow and unfamiliar code navigation.",
       "build": "Trace startup to shipment lookup in a clean checkout. Draw the route through two actual files.",
-      "verify": "Verify the trace with a run or debugger and identify where a small change belongs."
+      "verify": "Verify the trace with a run or debugger and identify where a small change belongs.",
+      "requires": [],
+      "labs": []
     },
     "SD05": {
       "title": "Requirements",
@@ -676,7 +1406,11 @@
       "checkpoint": "B05",
       "focus": "Actors, use cases, constraints and measurable acceptance criteria.",
       "build": "Write requirements for receive, reserve, pick, dispatch and cancel. Rank the smallest end-to-end workflow.",
-      "verify": "Each core requirement has one success and one failure example."
+      "verify": "Each core requirement has one success and one failure example.",
+      "requires": [],
+      "labs": [
+        "service-boundaries"
+      ]
     },
     "SD07": {
       "title": "Data model",
@@ -686,7 +1420,12 @@
       "checkpoint": "B05",
       "focus": "Entities, relationships, lifecycle states and ownership.",
       "build": "Model a warehouse, SKU, balance, shipment, shipment lines, reservation and event history.",
-      "verify": "Walk through create, reserve, cancel and dispatch and reconcile both quantities and transitions."
+      "verify": "Walk through create, reserve, cancel and dispatch and reconcile both quantities and transitions.",
+      "requires": [],
+      "labs": [
+        "service-boundaries",
+        "microservices"
+      ]
     },
     "M05": {
       "title": "Spring DI/Boot + linked list/tree",
@@ -696,7 +1435,9 @@
       "checkpoint": "B05",
       "focus": "Recall Spring DI/Boot + linked list/tree and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B05 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV05": {
       "title": "Review evidence, questions and next-week capacity",
@@ -706,7 +1447,9 @@
       "checkpoint": "B05",
       "focus": "Recall the week 5 concept and explain the trade-off from B05.",
       "build": "Rerun one check from B05, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "CS21": {
       "title": "HTTPS/TLS",
@@ -716,7 +1459,9 @@
       "checkpoint": "B06",
       "focus": "TLS, certificate validation and termination.",
       "build": "Inspect staging HTTPS and trace where TLS terminates. Use a local test endpoint if staging is not ready.",
-      "verify": "Show a valid connection and a rejected untrusted certificate case without bypassing validation."
+      "verify": "Show a valid connection and a rejected untrusted certificate case without bypassing validation.",
+      "requires": [],
+      "labs": []
     },
     "JA19": {
       "title": "Configuration / profiles",
@@ -726,7 +1471,11 @@
       "checkpoint": "B06",
       "focus": "Profiles, environment configuration and secrets.",
       "build": "Separate local fixture settings from database and staging settings. Document the required environment variables.",
-      "verify": "The selected profile uses the intended data source. A missing required variable fails safely."
+      "verify": "The selected profile uses the intended data source. A missing required variable fails safely.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA20": {
       "title": "Spring MVC",
@@ -736,7 +1485,11 @@
       "checkpoint": "B06",
       "focus": "Controllers, DTOs, request binding and service boundaries.",
       "build": "Add create and lookup operations for shipments. Keep request parsing and business decisions in their respective layers.",
-      "verify": "A terminal HTTP client can create and read a shipment. A controller test covers binding failure."
+      "verify": "A terminal HTTP client can create and read a shipment. A controller test covers binding failure.",
+      "requires": [
+        "JA18"
+      ],
+      "labs": []
     },
     "TS18": {
       "title": "State / hooks",
@@ -746,7 +1499,11 @@
       "checkpoint": "B06",
       "focus": "Local state, derived values, hooks and ownership.",
       "build": "Keep form values local and derive filtered counts. Put shareable filter state in the URL when routing is available.",
-      "verify": "Changing a filter updates results without stale counts or duplicated state."
+      "verify": "Changing a filter updates results without stale counts or duplicated state.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS19": {
       "title": "Rendering / performance",
@@ -756,7 +1513,13 @@
       "checkpoint": "B06",
       "focus": "Render cost, React profiling and deliberate optimization.",
       "build": "Profile a representative shipment list before deciding whether memoization, pagination or virtualization is useful.",
-      "verify": "Save comparable before and after measurements and report what changed."
+      "verify": "Save comparable before and after measurements and report what changed.",
+      "requires": [
+        "G02"
+      ],
+      "labs": [
+        "micro-frontends"
+      ]
     },
     "TS20": {
       "title": "Routing / boundaries",
@@ -766,17 +1529,27 @@
       "checkpoint": "B06",
       "focus": "React routes, parameters and route-level fallback states.",
       "build": "Add list, detail and create routes. Handle an unknown reference and direct navigation.",
-      "verify": "Direct refresh and navigation work. Missing references show a useful fallback."
+      "verify": "Direct refresh and navigation work. Missing references show a useful fallback.",
+      "requires": [
+        "TS17"
+      ],
+      "labs": [
+        "micro-frontends"
+      ]
     },
     "B06": {
-      "title": "Controller/service/DTO flow + typed React form and route",
+      "title": "Build shipment endpoints and routes",
       "week": 6,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B06",
       "focus": "Controller/service/DTO flow, forms and routing.",
       "build": "Add shipment create and detail API operations. Build typed React form and detail routes.",
-      "verify": "Create and read from a terminal HTTP client and navigate the form by keyboard."
+      "verify": "Create and read from a terminal HTTP client and navigate the form by keyboard.",
+      "requires": [
+        "B05"
+      ],
+      "labs": []
     },
     "DS06": {
       "title": "Solve 7 new DSA problems and revisit errors",
@@ -786,17 +1559,21 @@
       "checkpoint": "B06",
       "focus": "Practice tree traversal and binary search trees. State the invariant and time and space costs before coding.",
       "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "M06": {
-      "title": "Spring MVC + React/Next + trees/BST",
+      "title": "Spring MVC, React routes and binary search trees",
       "week": 6,
       "category": "Mock interviews",
       "scope": "Core",
       "checkpoint": "B06",
-      "focus": "Recall Spring MVC + React/Next + trees/BST and the assumptions that affect your answer.",
+      "focus": "Recall Spring MVC, React routes and binary search trees and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B06 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV06": {
       "title": "Review evidence, questions and next-week capacity",
@@ -806,7 +1583,9 @@
       "checkpoint": "B06",
       "focus": "Recall the week 6 concept and explain the trade-off from B06.",
       "build": "Rerun one check from B06, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "CS14": {
       "title": "CTEs/subqueries/window awareness",
@@ -816,7 +1595,9 @@
       "checkpoint": "B07",
       "focus": "CTEs, subqueries and window functions.",
       "build": "Write a report that returns the latest status per shipment while retaining its earlier events for history.",
-      "verify": "A fixture with tied timestamps produces a deterministic result."
+      "verify": "A fixture with tied timestamps produces a deterministic result.",
+      "requires": [],
+      "labs": []
     },
     "JA21": {
       "title": "Validation + errors",
@@ -826,7 +1607,11 @@
       "checkpoint": "B07",
       "focus": "Boundary validation, domain errors and consistent problem responses.",
       "build": "Validate quantity and required fields, and map duplicate and invalid transition failures to stable responses.",
-      "verify": "Bad input and conflicts have distinct responses and no stack trace or partial write."
+      "verify": "Bad input and conflicts have distinct responses and no stack trace or partial write.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA22": {
       "title": "REST correctness",
@@ -836,7 +1621,11 @@
       "checkpoint": "B07",
       "focus": "HTTP methods, status codes, safe reads and repeatable requests.",
       "build": "Write the API contract for shipment create, detail and reservation. Decide how clients find a newly created record.",
-      "verify": "Test success, missing resource, invalid input and a reservation conflict against the contract."
+      "verify": "Test success, missing resource, invalid input and a reservation conflict against the contract.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS16": {
       "title": "Runtime validation",
@@ -846,7 +1635,11 @@
       "checkpoint": "B07",
       "focus": "Runtime validation, unknown input and response parsing.",
       "build": "Validate a real shipment API response before handing it to the UI.",
-      "verify": "A malformed response shows a useful error instead of rendering invalid data."
+      "verify": "A malformed response shows a useful error instead of rendering invalid data.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS21": {
       "title": "API integration",
@@ -856,17 +1649,25 @@
       "checkpoint": "B07",
       "focus": "Typed fetch, status handling, loading, and server state.",
       "build": "Connect the shipment form and list to Spring. Refresh relevant data after a successful write.",
-      "verify": "Loading, success, conflict and network failure are visible and independently tested."
+      "verify": "Loading, success, conflict and network failure are visible and independently tested.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "B07": {
-      "title": "Validated booking/order endpoint + Zod client contract",
+      "title": "Connect React to the validated shipment API",
       "week": 7,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B07",
       "focus": "REST contracts, input validation, response parsing and failure states.",
       "build": "Connect React to Spring for shipment create and lookup. Surface duplicate and validation failures.",
-      "verify": "Verify success, invalid input, conflict, malformed response, loading and failure states."
+      "verify": "Verify success, invalid input, conflict, malformed response, loading and failure states.",
+      "requires": [
+        "B06"
+      ],
+      "labs": []
     },
     "G05": {
       "title": "Practice window functions, NULLs and duplicate-sensitive joins",
@@ -876,7 +1677,11 @@
       "checkpoint": "B07",
       "focus": "NULL handling, duplicate-sensitive joins, and window ordering.",
       "build": "Create a shipment event fixture with duplicates, missing assignments and tied times. Test the report against it.",
-      "verify": "Save expected and actual rows with explicit tie-breaking and NULL behavior."
+      "verify": "Save expected and actual rows with explicit tie-breaking and NULL behavior.",
+      "requires": [
+        "CS12"
+      ],
+      "labs": []
     },
     "DS07": {
       "title": "Solve 7 new DSA problems and revisit errors",
@@ -886,7 +1691,11 @@
       "checkpoint": "B07",
       "focus": "Practice heaps and intervals. State the invariant and time and space costs before coding.",
       "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": [
+        "algorithm-tradeoffs"
+      ]
     },
     "M07": {
       "title": "Validation/REST + heap/intervals + SQL",
@@ -896,7 +1705,9 @@
       "checkpoint": "B07",
       "focus": "Recall Validation/REST + heap/intervals + SQL and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B07 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV07": {
       "title": "Review evidence, questions and next-week capacity",
@@ -906,7 +1717,9 @@
       "checkpoint": "B07",
       "focus": "Recall the week 7 concept and explain the trade-off from B07.",
       "build": "Rerun one check from B07, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "AI07": {
       "title": "LLM integration and validated structured output",
@@ -916,7 +1729,9 @@
       "checkpoint": "B08",
       "focus": "Optional structured extraction, schemas and validation.",
       "build": "Treat a fixture as untrusted extracted shipment data. Validate required fields and reject a malformed record.",
-      "verify": "The test proves invalid data cannot become a reservation. AI use is unnecessary for the lab."
+      "verify": "The test proves invalid data cannot become a reservation. AI use is unnecessary for the lab.",
+      "requires": [],
+      "labs": []
     },
     "JA23": {
       "title": "JPA entities / repositories",
@@ -926,7 +1741,11 @@
       "checkpoint": "B08",
       "focus": "Entities, keys, relationships and repository boundaries.",
       "build": "Persist warehouse, SKU, stock, shipment and shipment-line records in PostgreSQL. Use versioned migrations.",
-      "verify": "A restart keeps the data. Referential and uniqueness constraints reject bad rows."
+      "verify": "A restart keeps the data. Referential and uniqueness constraints reject bad rows.",
+      "requires": [
+        "JA20"
+      ],
+      "labs": []
     },
     "TS14": {
       "title": "TypeScript configuration and migration awareness",
@@ -936,7 +1755,11 @@
       "checkpoint": "B08",
       "focus": "Strict compiler settings and incremental migration.",
       "build": "Tighten checks for the shipment client and fix one real nullable or type boundary issue.",
-      "verify": "Save the original compiler diagnostic and the corrected check."
+      "verify": "Save the original compiler diagnostic and the corrected check.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS27": {
       "title": "Lint / format / typecheck",
@@ -946,7 +1769,11 @@
       "checkpoint": "B08",
       "focus": "Lint, formatting, typecheck and CI quality gates.",
       "build": "Set up the smallest checks needed for the React client.",
-      "verify": "Each command runs on a clean clone. Introduce and fix one type or lint error to verify the gate."
+      "verify": "Each command runs on a clean clone. Introduce and fix one type or lint error to verify the gate.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "G06": {
       "title": "Create and test a database migration",
@@ -956,17 +1783,25 @@
       "checkpoint": "B08",
       "focus": "Versioned migrations, forward compatibility and recovery.",
       "build": "Add an additive shipment schema migration. Rehearse both fresh setup and upgrade from a populated fixture.",
-      "verify": "Rows survive upgrade, the new rule holds, and a failed upgrade has a documented recovery."
+      "verify": "Rows survive upgrade, the new rule holds, and a failed upgrade has a documented recovery.",
+      "requires": [
+        "JA23"
+      ],
+      "labs": []
     },
     "B08": {
-      "title": "Persist customer/order model + clean frontend build/typecheck pipeline",
+      "title": "Persist shipments and receive stock in PostgreSQL",
       "week": 8,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B08",
       "focus": "PostgreSQL schema, constraints, migrations and frontend build checks.",
       "build": "Persist warehouses, SKUs, stock, shipments and lines. Implement stock receipt with a positive quantity and a unique receipt reference.",
-      "verify": "Migrations work on new and populated data. Receipt increases on-hand stock once, a duplicate is rejected, and data survives restart."
+      "verify": "Migrations work on new and populated data. Receipt increases on-hand stock once, a duplicate is rejected, and data survives restart.",
+      "requires": [
+        "B07"
+      ],
+      "labs": []
     },
     "DS08": {
       "title": "Solve 7 new DSA problems and revisit errors",
@@ -976,7 +1811,11 @@
       "checkpoint": "B08",
       "focus": "Practice graph traversal. State the invariant and time and space costs before coding.",
       "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": [
+        "algorithm-tradeoffs"
+      ]
     },
     "M08": {
       "title": "JPA entity/repository + TS tooling in existing repo",
@@ -986,7 +1825,9 @@
       "checkpoint": "B08",
       "focus": "Recall JPA entity/repository + TS tooling in existing repo and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B08 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV08": {
       "title": "Review evidence, questions and next-week capacity",
@@ -996,7 +1837,9 @@
       "checkpoint": "B08",
       "focus": "Recall the week 8 concept and explain the trade-off from B08.",
       "build": "Rerun one check from B08, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "CS09": {
       "title": "Indexes",
@@ -1006,7 +1849,11 @@
       "checkpoint": "B09",
       "focus": "Indexes, selectivity, EXPLAIN and write overhead.",
       "build": "Measure a filtered dispatch list query before and after an index on representative PostgreSQL data.",
-      "verify": "Save both plans and explain the measured change and index cost."
+      "verify": "Save both plans and explain the measured change and index cost.",
+      "requires": [],
+      "labs": [
+        "algorithm-tradeoffs"
+      ]
     },
     "JA24": {
       "title": "Queries / N+1",
@@ -1016,7 +1863,11 @@
       "checkpoint": "B09",
       "focus": "Lazy loading, N+1, query shapes and pagination.",
       "build": "Measure queries for the shipment list with multiple line items. Fix the query with a deliberate fetch strategy.",
-      "verify": "Compare query counts on the same fixture and confirm results and pagination remain correct."
+      "verify": "Compare query counts on the same fixture and confirm results and pagination remain correct.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS23": {
       "title": "Vitest / Jest concepts",
@@ -1026,17 +1877,25 @@
       "checkpoint": "B09",
       "focus": "Test runner, fixtures, mocks and deterministic async tests.",
       "build": "Test the shipment formatter and API adapter with success and failure fixtures.",
-      "verify": "Tests exercise status handling and fail when the error path is removed."
+      "verify": "Tests exercise status handling and fail when the error path is removed.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "B09": {
-      "title": "Profile/fix an N+1 query + Vitest service/client tests",
+      "title": "Measure and fix shipment-list queries",
       "week": 9,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B09",
       "focus": "Query count, pagination, testing and fair measurement.",
       "build": "Reproduce and fix an N+1 shipment list query. Add a frontend or service regression test.",
-      "verify": "Save before and after counts on identical data and verify page correctness."
+      "verify": "Save before and after counts on identical data and verify page correctness.",
+      "requires": [
+        "B08"
+      ],
+      "labs": []
     },
     "DS09": {
       "title": "Solve 7 new DSA problems and revisit errors",
@@ -1046,7 +1905,11 @@
       "checkpoint": "B09",
       "focus": "Practice topological ordering. State the invariant and time and space costs before coding.",
       "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": [
+        "algorithm-tradeoffs"
+      ]
     },
     "RW06": {
       "title": "Reproduce, diagnose and repair a defect with regression tests",
@@ -1056,7 +1919,9 @@
       "checkpoint": "B09",
       "focus": "Reproduction, debugging, minimal fixes and regression tests.",
       "build": "Reproduce a shipment list or input failure, write the smallest failing case, and fix it yourself.",
-      "verify": "Save the failing case, root cause, passing test and scope of the change."
+      "verify": "Save the failing case, root cause, passing test and scope of the change.",
+      "requires": [],
+      "labs": []
     },
     "M09": {
       "title": "N+1 query diagnosis and fix",
@@ -1066,7 +1931,9 @@
       "checkpoint": "B09",
       "focus": "Recall N+1 query diagnosis and fix and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B09 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M10": {
       "title": "Vitest/API client failure states",
@@ -1076,7 +1943,9 @@
       "checkpoint": "B09",
       "focus": "Recall Vitest/API client failure states and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B09 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV09": {
       "title": "Review evidence, questions and next-week capacity",
@@ -1086,7 +1955,9 @@
       "checkpoint": "B09",
       "focus": "Recall the week 9 concept and explain the trade-off from B09.",
       "build": "Rerun one check from B09, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "CS10": {
       "title": "Transactions/isolation",
@@ -1096,7 +1967,9 @@
       "checkpoint": "B10",
       "focus": "Isolation levels, concurrent sessions and lost updates.",
       "build": "Use two PostgreSQL connections to observe a conflicting reservation or a changed read between statements.",
-      "verify": "Record transaction order, observed values, and the fix or retry requirement."
+      "verify": "Record transaction order, observed values, and the fix or retry requirement.",
+      "requires": [],
+      "labs": []
     },
     "CS11": {
       "title": "Locks/deadlocks",
@@ -1106,7 +1979,9 @@
       "checkpoint": "B10",
       "focus": "Row locks, deadlocks and consistent lock order.",
       "build": "Reserve multiple SKU rows from two transactions in opposite orders, then repeat with one consistent order.",
-      "verify": "Record the deadlock or timeout, then show the corrected test and rollback behavior."
+      "verify": "Record the deadlock or timeout, then show the corrected test and rollback behavior.",
+      "requires": [],
+      "labs": []
     },
     "JA14": {
       "title": "Threads/executors/futures",
@@ -1116,7 +1991,11 @@
       "checkpoint": "B10",
       "focus": "Executors, tasks, futures, timeouts and coordinated starts.",
       "build": "Build a repeatable two-request reservation test using a bounded executor and a start barrier.",
-      "verify": "Both requests finish within a timeout. Record which shared state needed protection."
+      "verify": "Both requests finish within a timeout. Record which shared state needed protection.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA25": {
       "title": "Transactions",
@@ -1126,7 +2005,14 @@
       "checkpoint": "B10",
       "focus": "Atomicity, transaction boundaries and rollback behavior.",
       "build": "Reserve all lines and update shipment state in one transaction. Inject a failure after the first line.",
-      "verify": "After failure, balances, reservations and shipment state are unchanged."
+      "verify": "After failure, balances, reservations and shipment state are unchanged.",
+      "requires": [
+        "JA23"
+      ],
+      "labs": [
+        "service-boundaries",
+        "message-broker"
+      ]
     },
     "JA26": {
       "title": "Locking / concurrency",
@@ -1136,17 +2022,25 @@
       "checkpoint": "B10",
       "focus": "Concurrent updates, lock scope and conditional writes.",
       "build": "Reproduce contention for the last unit. Choose row locking or an atomic conditional update and keep lock ordering consistent.",
-      "verify": "Two concurrent requests yield one success, one conflict, and a valid stock balance."
+      "verify": "Two concurrent requests yield one success, one conflict, and a valid stock balance.",
+      "requires": [
+        "JA25"
+      ],
+      "labs": []
     },
     "B10": {
-      "title": "Double-booking race lab using transaction/constraint/locking",
+      "title": "Reserve and release stock safely under contention",
       "week": 10,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B10",
       "focus": "Inventory balance, atomic transactions, row contention and rollback.",
       "build": "Reserve all shipment lines together. Add a cancel action that releases a reservation once. Run two concurrent requests for the last unit.",
-      "verify": "One request succeeds and one conflicts. Partial failure rolls back and available stock never becomes negative."
+      "verify": "One request succeeds and one conflicts. Partial failure rolls back and available stock never becomes negative.",
+      "requires": [
+        "B09"
+      ],
+      "labs": []
     },
     "DS10": {
       "title": "Solve 6 new DSA problems and revisit errors",
@@ -1156,17 +2050,23 @@
       "checkpoint": "B10",
       "focus": "Practice graphs and union-find. State the invariant and time and space costs before coding.",
       "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": [
+        "algorithm-tradeoffs"
+      ]
     },
     "M11": {
-      "title": "Double booking / transactions / isolation",
+      "title": "Last-unit reservation, transactions and isolation",
       "week": 10,
       "category": "Mock interviews",
       "scope": "Core",
       "checkpoint": "B10",
-      "focus": "Recall Double booking / transactions / isolation and the assumptions that affect your answer.",
+      "focus": "Recall Last-unit reservation, transactions and isolation and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M12": {
       "title": "Race-condition reproduction and safe fix",
@@ -1176,7 +2076,9 @@
       "checkpoint": "B10",
       "focus": "Recall Race-condition reproduction and safe fix and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV10": {
       "title": "Review evidence, questions and next-week capacity",
@@ -1186,7 +2088,9 @@
       "checkpoint": "B10",
       "focus": "Recall the week 10 concept and explain the trade-off from B10.",
       "build": "Rerun one check from B10, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "AI17": {
       "title": "Secrets/privacy",
@@ -1196,7 +2100,9 @@
       "checkpoint": "B11",
       "focus": "Secrets, privacy, redaction and synthetic fixtures.",
       "build": "Review sample logs, environment files and docs before publishing the capstone.",
-      "verify": "Record a sanitized example and verify credentials and customer data do not enter the repository."
+      "verify": "Record a sanitized example and verify credentials and customer data do not enter the repository.",
+      "requires": [],
+      "labs": []
     },
     "CS22": {
       "title": "Cookies/sessions/JWT",
@@ -1206,7 +2112,9 @@
       "checkpoint": "B11",
       "focus": "Cookies, sessions, token lifetimes and credential boundaries.",
       "build": "Inspect the browser login request and logout. Compare the session flow with a provider-issued API access token in a lab.",
-      "verify": "Explain where credentials are validated and demonstrate session invalidation."
+      "verify": "Explain where credentials are validated and demonstrate session invalidation.",
+      "requires": [],
+      "labs": []
     },
     "JA27": {
       "title": "Authentication",
@@ -1216,7 +2124,11 @@
       "checkpoint": "B11",
       "focus": "Authentication, password encoding, sessions, CSRF and logout.",
       "build": "Implement a Spring Security browser session for seeded demo users. Practice OIDC and external bearer-token validation in separate comparisons.",
-      "verify": "Correct credentials establish a session. Invalid login, missing CSRF and requests after logout are denied."
+      "verify": "Correct credentials establish a session. Invalid login, missing CSRF and requests after logout are denied.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA28": {
       "title": "Authorization",
@@ -1226,7 +2138,11 @@
       "checkpoint": "B11",
       "focus": "Roles, tenant ownership, warehouse scope and deny-by-default rules.",
       "build": "Enforce permissions in the backend for reserve, pick, dispatch and read operations. Derive scope from the signed-in user.",
-      "verify": "Allowed operations work. Wrong role, another tenant's ID and guessed resource IDs are rejected."
+      "verify": "Allowed operations work. Wrong role, another tenant's ID and guessed resource IDs are rejected.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS28": {
       "title": "Browser/web security",
@@ -1236,17 +2152,27 @@
       "checkpoint": "B11",
       "focus": "XSS, CSRF, CORS, cookie flags and safe sign-out.",
       "build": "Test unsafe-looking text rendering and missing CSRF. Remove private client state when the session ends.",
-      "verify": "Text renders safely, the forged write is denied, and sensitive views clear after logout."
+      "verify": "Text renders safely, the forged write is denied, and sensitive views clear after logout.",
+      "requires": [
+        "G02"
+      ],
+      "labs": [
+        "micro-frontends"
+      ]
     },
     "B11": {
-      "title": "RBAC + ownership/tenant checks + security regression tests",
+      "title": "Secure the warehouse workflow",
       "week": 11,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B11",
       "focus": "Session login, CSRF, role checks and tenant isolation.",
       "build": "Secure shipment reads and writes with Spring Security. Add login, logout and UI states for denied and expired access.",
-      "verify": "Verify allowed access, wrong role, another tenant, missing CSRF and logout with tests."
+      "verify": "Verify allowed access, wrong role, another tenant, missing CSRF and logout with tests.",
+      "requires": [
+        "B10"
+      ],
+      "labs": []
     },
     "DS11": {
       "title": "Solve 6 new DSA problems and revisit errors",
@@ -1256,7 +2182,9 @@
       "checkpoint": "B11",
       "focus": "Practice backtracking. State the invariant and time and space costs before coding.",
       "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "M13": {
       "title": "Spring Security authn/authz + 401/403",
@@ -1266,7 +2194,9 @@
       "checkpoint": "B11",
       "focus": "Recall Spring Security authn/authz + 401/403 and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B11 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M14": {
       "title": "Find tenant/auth/validation flaw",
@@ -1276,7 +2206,9 @@
       "checkpoint": "B11",
       "focus": "Recall Find tenant/auth/validation flaw and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B11 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV11": {
       "title": "Review evidence, questions and next-week capacity",
@@ -1286,7 +2218,9 @@
       "checkpoint": "B11",
       "focus": "Recall the week 11 concept and explain the trade-off from B11.",
       "build": "Rerun one check from B11, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "FE35": {
       "title": "Accessibility",
@@ -1296,7 +2230,11 @@
       "checkpoint": "B12",
       "focus": "Keyboard access, focus, accessible names and status announcements.",
       "build": "Complete the shipment and sign-in flows using a keyboard. Check errors and loading announcements.",
-      "verify": "Record a real accessibility issue, its fix, and a repeatable manual check."
+      "verify": "Record a real accessibility issue, its fix, and a repeatable manual check.",
+      "requires": [],
+      "labs": [
+        "micro-frontends"
+      ]
     },
     "TS24": {
       "title": "React Testing Library",
@@ -1306,7 +2244,13 @@
       "checkpoint": "B12",
       "focus": "Testing Library queries, user events and accessible controls.",
       "build": "Test the shipment form or sign-in flow through labels and user interactions.",
-      "verify": "A keyboard-relevant path and one error case pass without asserting internal component state."
+      "verify": "A keyboard-relevant path and one error case pass without asserting internal component state.",
+      "requires": [
+        "G02"
+      ],
+      "labs": [
+        "micro-frontends"
+      ]
     },
     "TS25": {
       "title": "E2E",
@@ -1316,17 +2260,27 @@
       "checkpoint": "B12",
       "focus": "End-to-end tests, seeded state and stable locators.",
       "build": "Exercise login, shipment create, reserve, pick and dispatch in a real browser.",
-      "verify": "Verify the final state and one rejected action without depending on test order."
+      "verify": "Verify the final state and one rejected action without depending on test order.",
+      "requires": [
+        "G02"
+      ],
+      "labs": [
+        "micro-frontends"
+      ]
     },
     "B12": {
-      "title": "End-to-end Spring API to TypeScript client flow with component/E2E tests",
+      "title": "Receive, pick and dispatch from React",
       "week": 12,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B12",
       "focus": "Picking, dispatch, state transitions and browser integration.",
       "build": "Add pick confirmation and dispatch for fully reserved stock. In React, receive stock and show available, reserved and on-hand quantities.",
-      "verify": "Keyboard and browser tests cover receiving stock through dispatch. Dispatch deducts stock once and out-of-order actions fail."
+      "verify": "Keyboard and browser tests cover receiving stock through dispatch. Dispatch deducts stock once and out-of-order actions fail.",
+      "requires": [
+        "B11"
+      ],
+      "labs": []
     },
     "DS12": {
       "title": "Solve 6 new DSA problems and revisit errors",
@@ -1336,7 +2290,9 @@
       "checkpoint": "B12",
       "focus": "Practice greedy choices and intervals. State the invariant and time and space costs before coding.",
       "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "G07": {
       "title": "Start a targeted application pipeline",
@@ -1346,7 +2302,11 @@
       "checkpoint": "B12",
       "focus": "Targeted applications, evidence selection and follow-up.",
       "build": "Prepare an application tracking entry and select the project evidence most relevant to each role.",
-      "verify": "Save a next action and an accurate description of your contribution."
+      "verify": "Save a next action and an accurate description of your contribution.",
+      "requires": [
+        "G04"
+      ],
+      "labs": []
     },
     "M15": {
       "title": "Test strategy: unit/integration/E2E",
@@ -1356,7 +2316,9 @@
       "checkpoint": "B12",
       "focus": "Recall Test strategy: unit/integration/E2E and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B12 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M16": {
       "title": "Spring DTO and TS client contract",
@@ -1366,17 +2328,23 @@
       "checkpoint": "B12",
       "focus": "Recall Spring DTO and TS client contract and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B12 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "PF02": {
-      "title": "Booking / Appointment Concurrency Lab",
+      "title": "Warehouse reservation concurrency lab",
       "week": 12,
       "category": "Projects",
       "scope": "Optional",
       "checkpoint": "B12",
       "focus": "Optional concurrency comparison and invariant testing.",
       "build": "Package the last-unit race as a small standalone experiment. Compare it with a dock-slot overlap example if useful.",
-      "verify": "Show the race and safe outcome on repeat runs."
+      "verify": "Show the race and safe outcome on repeat runs.",
+      "requires": [
+        "B12"
+      ],
+      "labs": []
     },
     "RV12": {
       "title": "Review evidence, questions and next-week capacity",
@@ -1386,7 +2354,9 @@
       "checkpoint": "B12",
       "focus": "Recall the week 12 concept and explain the trade-off from B12.",
       "build": "Rerun one check from B12, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "JA29": {
       "title": "JUnit / Mockito",
@@ -1396,7 +2366,11 @@
       "checkpoint": "B13",
       "focus": "Unit tests, test boundaries, doubles and regression cases.",
       "build": "Test reservation, cancellation and transition rules in plain Java. Use a fake or mock only at a real boundary.",
-      "verify": "Tests fail when an invariant is intentionally broken and pass when restored."
+      "verify": "Tests fail when an invariant is intentionally broken and pass when restored.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA30": {
       "title": "Spring integration",
@@ -1406,17 +2380,25 @@
       "checkpoint": "B13",
       "focus": "Controller tests, integration boundaries and realistic fixtures.",
       "build": "Test shipment creation, validation and authorization at the API boundary with representative data.",
-      "verify": "The test suite checks response contracts and actual side effects, including a denied write."
+      "verify": "The test suite checks response contracts and actual side effects, including a denied write.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "B13": {
-      "title": "Service/controller test suite + failing-test and PR-review drills",
+      "title": "Strengthen the regression suite",
       "week": 13,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B13",
       "focus": "Unit tests, controller tests, regression diagnosis and review.",
       "build": "Exercise rollback and invalid transitions with tests. Review and repair a deliberately broken reservation change.",
-      "verify": "Show failing-then-passing output and one review finding verified independently."
+      "verify": "Show failing-then-passing output and one review finding verified independently.",
+      "requires": [
+        "B12"
+      ],
+      "labs": []
     },
     "DS13": {
       "title": "Solve 6 new DSA problems and revisit errors",
@@ -1426,7 +2408,9 @@
       "checkpoint": "B13",
       "focus": "Practice mixed review. State the invariant and time and space costs before coding.",
       "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "RW10": {
       "title": "Code review",
@@ -1436,7 +2420,9 @@
       "checkpoint": "B13",
       "focus": "Review for correctness, security, performance and test coverage.",
       "build": "Review a small reservation or React change line by line before merging.",
-      "verify": "Write one concrete review finding tied to a reproducible case or explain why it passes."
+      "verify": "Write one concrete review finding tied to a reproducible case or explain why it passes.",
+      "requires": [],
+      "labs": []
     },
     "M17": {
       "title": "JUnit/MockMvc + failing test repair",
@@ -1446,7 +2432,9 @@
       "checkpoint": "B13",
       "focus": "Recall JUnit/MockMvc + failing test repair and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B13 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M18": {
       "title": "Correctness/security/performance/test gaps",
@@ -1456,7 +2444,9 @@
       "checkpoint": "B13",
       "focus": "Recall Correctness/security/performance/test gaps and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B13 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV13": {
       "title": "Review evidence, questions and next-week capacity",
@@ -1466,7 +2456,9 @@
       "checkpoint": "B13",
       "focus": "Recall the week 13 concept and explain the trade-off from B13.",
       "build": "Rerun one check from B13, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "JA31": {
       "title": "Testcontainers",
@@ -1476,7 +2468,11 @@
       "checkpoint": "B14",
       "focus": "Testcontainers, real PostgreSQL and isolation between test runs.",
       "build": "Run migrations and reservation integration tests against a disposable PostgreSQL instance.",
-      "verify": "A clean run passes twice with independent data. Preserve the concurrency test result."
+      "verify": "A clean run passes twice with independent data. Preserve the concurrency test result.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA33": {
       "title": "Maven or Gradle",
@@ -1486,7 +2482,11 @@
       "checkpoint": "B14",
       "focus": "Maven lifecycle, dependency scopes and reproducible wrappers.",
       "build": "Pin a reproducible build and package the backend. Use the same verification entry point locally and in CI.",
-      "verify": "A clean clone runs the documented build and tests without relying on IDE state."
+      "verify": "A clean clone runs the documented build and tests without relying on IDE state.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "JA34": {
       "title": "Docker / config / secrets",
@@ -1496,7 +2496,11 @@
       "checkpoint": "B14",
       "focus": "Containers, Compose networking, persistence and configuration.",
       "build": "Package React, Spring and PostgreSQL for a clean demo. Provide example variables and persistent database storage.",
-      "verify": "The stack starts from documented steps and retains seeded data through a restart."
+      "verify": "The stack starts from documented steps and retains seeded data through a restart.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "EN28": {
       "title": "CI/CD",
@@ -1506,17 +2510,27 @@
       "checkpoint": "B14",
       "focus": "CI checks, artifacts, deployment stages and reproducibility.",
       "build": "Run backend, frontend and integration checks in CI. Fail a practice branch deliberately.",
-      "verify": "CI blocks the broken revision and publishes a successful verification result."
+      "verify": "CI blocks the broken revision and publishes a successful verification result.",
+      "requires": [],
+      "labs": [
+        "scale-and-recovery"
+      ]
     },
     "B14": {
-      "title": "Postgres Testcontainers + Docker Compose + CI quality gates",
+      "title": "Run PostgreSQL integration tests and CI",
       "week": 14,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B14",
       "focus": "PostgreSQL integration tests, Docker Compose and CI.",
       "build": "Run real-database migration and concurrency tests. Add a repeatable local stack and CI gates.",
-      "verify": "A clean run starts the stack and passes the tests twice with isolated test data."
+      "verify": "A clean run starts the stack and passes the tests twice with isolated test data.",
+      "requires": [
+        "B13"
+      ],
+      "labs": [
+        "service-boundaries"
+      ]
     },
     "DS14": {
       "title": "Solve 6 new DSA problems and revisit errors",
@@ -1526,7 +2540,9 @@
       "checkpoint": "B14",
       "focus": "Practice one-dimensional dynamic programming. State the invariant and time and space costs before coding.",
       "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "RW11": {
       "title": "Refactoring",
@@ -1536,7 +2552,11 @@
       "checkpoint": "B14",
       "focus": "Refactoring under tests, behavior preservation and clear boundaries.",
       "build": "Remove duplication in a shipment rule or form component after writing characterization tests.",
-      "verify": "The same tests pass before and after and the behavior of a failure case is preserved."
+      "verify": "The same tests pass before and after and the behavior of a failure case is preserved.",
+      "requires": [],
+      "labs": [
+        "service-boundaries"
+      ]
     },
     "SD13": {
       "title": "Queues, retries and service reliability",
@@ -1546,7 +2566,12 @@
       "checkpoint": "B14",
       "focus": "Queues, delivery semantics, outbox and bounded retries.",
       "build": "Simulate a delayed dispatch notification with a stub worker and a duplicate delivery.",
-      "verify": "The subscriber handles a replay safely and you can explain recovery after a failed send."
+      "verify": "The subscriber handles a replay safely and you can explain recovery after a failed send.",
+      "requires": [],
+      "labs": [
+        "message-broker",
+        "microservices"
+      ]
     },
     "M19": {
       "title": "Testcontainers/Docker/CI explanation",
@@ -1556,7 +2581,9 @@
       "checkpoint": "B14",
       "focus": "Recall Testcontainers/Docker/CI explanation and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B14 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M20": {
       "title": "1D dynamic programming",
@@ -1566,7 +2593,9 @@
       "checkpoint": "B14",
       "focus": "Recall 1D dynamic programming and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B14 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV14": {
       "title": "Review evidence, questions and next-week capacity",
@@ -1576,7 +2605,9 @@
       "checkpoint": "B14",
       "focus": "Recall the week 14 concept and explain the trade-off from B14.",
       "build": "Rerun one check from B14, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "JA32": {
       "title": "Actuator / observability",
@@ -1586,17 +2617,27 @@
       "checkpoint": "B15",
       "focus": "Health versus readiness, correlation IDs, metrics and safe logging.",
       "build": "Add health/readiness checks and trace one failed reservation across HTTP and storage.",
-      "verify": "Find the request by ID. Logs expose useful context without credentials or private payloads."
+      "verify": "Find the request by ID. Logs expose useful context without credentials or private payloads.",
+      "requires": [
+        "G02"
+      ],
+      "labs": [
+        "scale-and-recovery"
+      ]
     },
     "B15": {
-      "title": "Add logs/metrics/cache; investigate query or rendering bottleneck",
+      "title": "Measure performance and trace failures",
       "week": 15,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B15",
       "focus": "Observability, cache freshness, performance baselines and measurements.",
       "build": "Trace a failed request and measure a slow shipment list or query before choosing a fix.",
-      "verify": "Save an anonymized trace and comparable measurements with one explained trade-off."
+      "verify": "Save an anonymized trace and comparable measurements with one explained trade-off.",
+      "requires": [
+        "B14"
+      ],
+      "labs": []
     },
     "DS15": {
       "title": "Solve 6 new DSA problems and revisit errors",
@@ -1606,7 +2647,9 @@
       "checkpoint": "B15",
       "focus": "Practice two-dimensional dynamic programming. State the invariant and time and space costs before coding.",
       "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "RW16": {
       "title": "Performance investigation",
@@ -1616,7 +2659,12 @@
       "checkpoint": "B15",
       "focus": "Baseline measurement, representative load and bottleneck isolation.",
       "build": "Measure one slow query or render on identical fixtures and isolate its cause.",
-      "verify": "Save the baseline, measurement method and repeatable result after one change."
+      "verify": "Save the baseline, measurement method and repeatable result after one change.",
+      "requires": [],
+      "labs": [
+        "scale-and-recovery",
+        "algorithm-tradeoffs"
+      ]
     },
     "SD10": {
       "title": "Caching",
@@ -1626,7 +2674,11 @@
       "checkpoint": "B15",
       "focus": "Cache keys, freshness and invalidation.",
       "build": "Try caching a read-only shipment summary after measuring its cost. Evaluate staleness after a write.",
-      "verify": "Show how data changes invalidate or expire the cache and why stock reservation reads remain authoritative."
+      "verify": "Show how data changes invalidate or expire the cache and why stock reservation reads remain authoritative.",
+      "requires": [],
+      "labs": [
+        "scale-and-recovery"
+      ]
     },
     "SD12": {
       "title": "Search",
@@ -1636,7 +2688,11 @@
       "checkpoint": "B15",
       "focus": "Query filtering, indexes, search relevance and pagination.",
       "build": "Implement or prototype search by shipment reference and filter by warehouse and status.",
-      "verify": "Results match fixture cases, tenant scope and stable pagination."
+      "verify": "Results match fixture cases, tenant scope and stable pagination.",
+      "requires": [],
+      "labs": [
+        "algorithm-tradeoffs"
+      ]
     },
     "M21": {
       "title": "N+1/index/cache/observability investigation",
@@ -1646,7 +2702,9 @@
       "checkpoint": "B15",
       "focus": "Recall N+1/index/cache/observability investigation and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B15 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M22": {
       "title": "2D dynamic programming",
@@ -1656,7 +2714,9 @@
       "checkpoint": "B15",
       "focus": "Recall 2D dynamic programming and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B15 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV15": {
       "title": "Review evidence, questions and next-week capacity",
@@ -1666,7 +2726,9 @@
       "checkpoint": "B15",
       "focus": "Recall the week 15 concept and explain the trade-off from B15.",
       "build": "Rerun one check from B15, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "AI09": {
       "title": "Bounded agents, tool calls and context",
@@ -1676,7 +2738,9 @@
       "checkpoint": "B16",
       "focus": "Optional bounded tools, least privilege and validation.",
       "build": "Use a fake action runner to simulate read-only shipment lookup and a forbidden dispatch action.",
-      "verify": "Record which action was allowed, why the other failed and the test that proves it."
+      "verify": "Record which action was allowed, why the other failed and the test that proves it.",
+      "requires": [],
+      "labs": []
     },
     "AI14": {
       "title": "Verify generated code with tests and diff review",
@@ -1686,7 +2750,9 @@
       "checkpoint": "B16",
       "focus": "Human review, counterexamples and regression verification.",
       "build": "Inspect a prepared patch for a stock rule. Reject or correct it with a test you write independently.",
-      "verify": "One targeted case detects the defect and passes after the fix."
+      "verify": "One targeted case detects the defect and passes after the fix.",
+      "requires": [],
+      "labs": []
     },
     "OP20": {
       "title": "Python secondary language",
@@ -1696,7 +2762,9 @@
       "checkpoint": "B16",
       "focus": "Python data parsing and validation as a secondary language.",
       "build": "Build an optional local fixture checker for synthetic inventory CSV data.",
-      "verify": "Show rejection of a duplicate SKU and an invalid quantity with clean results."
+      "verify": "Show rejection of a duplicate SKU and an invalid quantity with clean results.",
+      "requires": [],
+      "labs": []
     },
     "JA15": {
       "title": "Virtual threads concept",
@@ -1706,7 +2774,11 @@
       "checkpoint": "B16",
       "focus": "Virtual threads, blocking I/O and downstream resource limits.",
       "build": "Compare two executor models on the same synthetic blocking task as an optional lab.",
-      "verify": "Record throughput and resource assumptions. Explain why database connection limits still apply."
+      "verify": "Record throughput and resource assumptions. Explain why database connection limits still apply.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS22": {
       "title": "Node.js",
@@ -1716,7 +2788,11 @@
       "checkpoint": "B16",
       "focus": "Node.js runtime, server boundaries and environment variables.",
       "build": "Use a small optional Node CLI to inspect a shipment fixture or call a read-only API.",
-      "verify": "Record the result and explain where it differs from browser execution."
+      "verify": "Record the result and explain where it differs from browser execution.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "TS30": {
       "title": "AI-generated TypeScript verification",
@@ -1726,7 +2802,11 @@
       "checkpoint": "B16",
       "focus": "Diff review, type boundaries and independent verification.",
       "build": "Review a prepared flawed client patch manually. Write the correction yourself and use typecheck plus tests.",
-      "verify": "Identify the flaw, prove it with a failing check, and explain the fix unaided."
+      "verify": "Identify the flaw, prove it with a failing check, and explain the fix unaided.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "EN30": {
       "title": "AWS/Azure/GCP concepts",
@@ -1736,17 +2816,23 @@
       "checkpoint": "B16",
       "focus": "Runtime, managed database, DNS, TLS and deployment trade-offs.",
       "build": "Draw a staging architecture and map each part to a generic cloud capability.",
-      "verify": "Explain configuration, backups and how you would diagnose a failed health check."
+      "verify": "Explain configuration, backups and how you would diagnose a failed health check.",
+      "requires": [],
+      "labs": []
     },
     "B16": {
-      "title": "Deployable dual-stack architecture + 2 timed agentic repo tickets",
+      "title": "Stage a release and test rate limits",
       "week": 16,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B16",
       "focus": "Staging configuration, safe rollout, rate limiting and repository fluency.",
       "build": "Package a staging build, rate-limit login and general API traffic separately, and complete two timed repo tickets manually.",
-      "verify": "Save smoke results, isolated client quotas, 429 recovery, and proof for both fixes."
+      "verify": "Save smoke results, isolated client quotas, 429 recovery, and proof for both fixes.",
+      "requires": [
+        "B15"
+      ],
+      "labs": []
     },
     "DS16": {
       "title": "Solve 6 new DSA problems and revisit errors",
@@ -1756,7 +2842,9 @@
       "checkpoint": "B16",
       "focus": "Practice timed pattern selection. State the invariant and time and space costs before coding.",
       "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "G08": {
       "title": "Rehearse deployment failure and recovery",
@@ -1766,7 +2854,13 @@
       "checkpoint": "B16",
       "focus": "Deployment rollback, database compatibility, smoke checks and restoration.",
       "build": "Deploy a deliberately bad change in staging or a local simulation. Restore service and verify old data.",
-      "verify": "Record time to recover, smoke output and the restore or rollback steps."
+      "verify": "Record time to recover, smoke output and the restore or rollback steps.",
+      "requires": [
+        "JA34"
+      ],
+      "labs": [
+        "scale-and-recovery"
+      ]
     },
     "SD14": {
       "title": "Rate limiting",
@@ -1776,7 +2870,11 @@
       "checkpoint": "B16",
       "focus": "Rate limits, burst behavior, client identity and HTTP 429.",
       "build": "Exercise independent login and API limits in staging or a local simulation.",
-      "verify": "Show burst rejection, isolated callers and recovery after the limit resets."
+      "verify": "Show burst rejection, isolated callers and recovery after the limit resets.",
+      "requires": [],
+      "labs": [
+        "scale-and-recovery"
+      ]
     },
     "SD15": {
       "title": "File/object storage",
@@ -1786,7 +2884,9 @@
       "checkpoint": "B16",
       "focus": "Object storage, access control, signed access and retention.",
       "build": "Design an optional proof-of-dispatch attachment flow using synthetic files.",
-      "verify": "Show a tenant-isolated access test or an explicit design test case with expiration."
+      "verify": "Show a tenant-isolated access test or an explicit design test case with expiration.",
+      "requires": [],
+      "labs": []
     },
     "SD16": {
       "title": "Load balancing",
@@ -1796,7 +2896,11 @@
       "checkpoint": "B16",
       "focus": "Load balancing, health checks and session behavior.",
       "build": "Simulate routing to two app instances and failing one health check.",
-      "verify": "Explain which requests recover and how session state behaves across instances."
+      "verify": "Explain which requests recover and how session state behaves across instances.",
+      "requires": [],
+      "labs": [
+        "scale-and-recovery"
+      ]
     },
     "SD17": {
       "title": "Replication",
@@ -1806,7 +2910,12 @@
       "checkpoint": "B16",
       "focus": "Replication, lag, failover and authoritative reads.",
       "build": "Model a delayed replica read after a stock change. Decide which screens can accept stale data.",
-      "verify": "Trace stale availability and show how reservation avoids a stale read."
+      "verify": "Trace stale availability and show how reservation avoids a stale read.",
+      "requires": [],
+      "labs": [
+        "microservices",
+        "scale-and-recovery"
+      ]
     },
     "M23": {
       "title": "Bounded bug/feature with diff/tests/security review",
@@ -1816,7 +2925,9 @@
       "checkpoint": "B16",
       "focus": "Recall Bounded bug/feature with diff/tests/security review and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B16 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M24": {
       "title": "Scaling/load balancing/replication/rate limiting",
@@ -1826,7 +2937,9 @@
       "checkpoint": "B16",
       "focus": "Recall Scaling/load balancing/replication/rate limiting and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B16 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV16": {
       "title": "Review evidence, questions and next-week capacity",
@@ -1836,17 +2949,23 @@
       "checkpoint": "B16",
       "focus": "Recall the week 16 concept and explain the trade-off from B16.",
       "build": "Rerun one check from B16, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "B17": {
-      "title": "Design Spring Boot + Next.js commerce/booking capstone; define APIs/schema/acceptance tests",
+      "title": "Design delivery and dispatch exceptions",
       "week": 17,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B17",
       "focus": "Requirements, event history, exception policy and API compatibility.",
       "build": "Design a dispatch exception and delivery confirmation workflow with state rules and event fields.",
-      "verify": "Write API examples, expected data changes and failure tests before implementation."
+      "verify": "Write API examples, expected data changes and failure tests before implementation.",
+      "requires": [
+        "B16"
+      ],
+      "labs": []
     },
     "DS17": {
       "title": "Solve 5 new DSA problems and revisit errors",
@@ -1856,7 +2975,9 @@
       "checkpoint": "B17",
       "focus": "Practice mixed timed practice. State the invariant and time and space costs before coding.",
       "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "M25": {
       "title": "Capstone requirements/API/data model",
@@ -1866,7 +2987,9 @@
       "checkpoint": "B17",
       "focus": "Recall Capstone requirements/API/data model and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B17 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M26": {
       "title": "Java mixed DSA under time",
@@ -1876,7 +2999,9 @@
       "checkpoint": "B17",
       "focus": "Recall Java mixed DSA under time and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B17 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV17": {
       "title": "Review evidence, questions and next-week capacity",
@@ -1886,7 +3011,9 @@
       "checkpoint": "B17",
       "focus": "Recall the week 17 concept and explain the trade-off from B17.",
       "build": "Rerun one check from B17, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "TS29": {
       "title": "Spring Boot contract",
@@ -1896,17 +3023,30 @@
       "checkpoint": "B18",
       "focus": "DTO compatibility, stable errors and contract testing.",
       "build": "Make one backwards-compatible change to the Spring shipment response and exercise the typed client.",
-      "verify": "A documented contract test covers valid, malformed and earlier response shapes as applicable."
+      "verify": "A documented contract test covers valid, malformed and earlier response shapes as applicable.",
+      "requires": [
+        "JA22",
+        "TS21"
+      ],
+      "labs": [
+        "microservices"
+      ]
     },
     "B18": {
-      "title": "Implement core Spring endpoints + TypeScript client + integration tests",
+      "title": "Build the delivery and exception workflow",
       "week": 18,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B18",
       "focus": "Vertical feature delivery, contract tests and domain events.",
       "build": "Implement the approved exception and delivery flow across React, Spring and PostgreSQL.",
-      "verify": "Verify authorized actions, invalid transitions, ordered event history and accessible feedback."
+      "verify": "Verify authorized actions, invalid transitions, ordered event history and accessible feedback.",
+      "requires": [
+        "B17"
+      ],
+      "labs": [
+        "microservices"
+      ]
     },
     "DS18": {
       "title": "Solve 5 new DSA problems and revisit errors",
@@ -1916,7 +3056,9 @@
       "checkpoint": "B18",
       "focus": "Practice graph and tree review. State the invariant and time and space costs before coding.",
       "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "RW12": {
       "title": "Feature in existing repo",
@@ -1926,7 +3068,9 @@
       "checkpoint": "B18",
       "focus": "Working in an existing repo, incremental design and compatibility.",
       "build": "Add one small shipment exception feature through the existing test and review flow.",
-      "verify": "Demonstrate the new behavior and a previously working behavior that still passes."
+      "verify": "Demonstrate the new behavior and a previously working behavior that still passes.",
+      "requires": [],
+      "labs": []
     },
     "M27": {
       "title": "Implement scoped Spring + TS feature",
@@ -1936,7 +3080,9 @@
       "checkpoint": "B18",
       "focus": "Recall Implement scoped Spring + TS feature and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B18 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M28": {
       "title": "Trace UI to API to DB failure",
@@ -1946,7 +3092,9 @@
       "checkpoint": "B18",
       "focus": "Recall Trace UI to API to DB failure and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B18 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV18": {
       "title": "Review evidence, questions and next-week capacity",
@@ -1956,7 +3104,9 @@
       "checkpoint": "B18",
       "focus": "Recall the week 18 concept and explain the trade-off from B18.",
       "build": "Rerun one check from B18, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "AI10": {
       "title": "Retrieval, grounding and citations",
@@ -1966,17 +3116,25 @@
       "checkpoint": "B19",
       "focus": "Optional retrieval, source grounding and uncertainty.",
       "build": "Manually retrieve the applicable warehouse rule from supplied docs and cite the exact supporting section.",
-      "verify": "Show what happens when a query lacks supporting evidence or matches conflicting rules."
+      "verify": "Show what happens when a query lacks supporting evidence or matches conflicting rules.",
+      "requires": [],
+      "labs": []
     },
     "B19": {
-      "title": "Add idempotency/concurrency protection, retry/queue/cache/offline design evidence",
+      "title": "Make dispatch safe to retry",
       "week": 19,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B19",
       "focus": "Idempotency, request identity, retry, and consistency under partial failure.",
       "build": "Make dispatch confirmation safe to retry. Compare bounded retry, outbox and offline failure options in small labs.",
-      "verify": "Identical replay has one effect, conflicting payload reuse is rejected and simulated failure recovers."
+      "verify": "Identical replay has one effect, conflicting payload reuse is rejected and simulated failure recovers.",
+      "requires": [
+        "B18"
+      ],
+      "labs": [
+        "message-broker"
+      ]
     },
     "DS19": {
       "title": "Solve 5 new DSA problems and revisit errors",
@@ -1986,7 +3144,9 @@
       "checkpoint": "B19",
       "focus": "Practice mixed recall. State the invariant and time and space costs before coding.",
       "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "RW14": {
       "title": "API failure handling",
@@ -1996,7 +3156,11 @@
       "checkpoint": "B19",
       "focus": "Timeouts, failure classification, bounded retries and user feedback.",
       "build": "Simulate a carrier acknowledgement timeout in a fixture and decide when retry is safe.",
-      "verify": "Verify no duplicate dispatch and an understandable retry or failure state."
+      "verify": "Verify no duplicate dispatch and an understandable retry or failure state.",
+      "requires": [],
+      "labs": [
+        "message-broker"
+      ]
     },
     "SD21": {
       "title": "Offline sync",
@@ -2006,7 +3170,11 @@
       "checkpoint": "B19",
       "focus": "Offline work, conflict detection, versions and replay.",
       "build": "Design an offline pick draft and simulate a conflict on reconnect.",
-      "verify": "Show the conflict outcome and explain which operations require authoritative online stock checks."
+      "verify": "Show the conflict outcome and explain which operations require authoritative online stock checks.",
+      "requires": [],
+      "labs": [
+        "scale-and-recovery"
+      ]
     },
     "M29": {
       "title": "Queues/retries/idempotency/offline sync",
@@ -2016,7 +3184,11 @@
       "checkpoint": "B19",
       "focus": "Recall Queues/retries/idempotency/offline sync and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B19 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": [
+        "message-broker"
+      ]
     },
     "M30": {
       "title": "Reject/fix an almost-right generated change",
@@ -2026,7 +3198,9 @@
       "checkpoint": "B19",
       "focus": "Recall Reject/fix an almost-right generated change and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B19 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV19": {
       "title": "Review evidence, questions and next-week capacity",
@@ -2036,7 +3210,9 @@
       "checkpoint": "B19",
       "focus": "Recall the week 19 concept and explain the trade-off from B19.",
       "build": "Rerun one check from B19, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "BE76": {
       "title": "STAR stories",
@@ -2046,7 +3222,9 @@
       "checkpoint": "B20",
       "focus": "Situation, task, action and result with evidence.",
       "build": "Write a story about a stock reservation bug, design choice or deployment recovery you actually handled.",
-      "verify": "Tell the story within the timebox and identify the exact result you can prove."
+      "verify": "Tell the story within the timebox and identify the exact result you can prove.",
+      "requires": [],
+      "labs": []
     },
     "BE79": {
       "title": "Trade-off communication",
@@ -2056,17 +3234,25 @@
       "checkpoint": "B20",
       "focus": "Trade-off communication, constraints and alternatives.",
       "build": "Explain one choice such as locks versus conditional updates, or session versus bearer authentication.",
-      "verify": "State the chosen approach, the cost accepted and a condition that would change your choice."
+      "verify": "State the chosen approach, the cost accepted and a condition that would change your choice.",
+      "requires": [],
+      "labs": []
     },
     "B20": {
-      "title": "Docker/CI/observability/security hardening + architecture one-pager + STAR/deep-dive stories",
+      "title": "Release, restore and verify the system",
       "week": 20,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B20",
       "focus": "Deployment hardening, recovery, reliability targets and project explanation.",
       "build": "Release to staging, run the agreed smoke and load checks, then rehearse rollback and database restore.",
-      "verify": "Show a clean release, restored data, security results and a reviewer-ready walkthrough."
+      "verify": "Show a clean release, restored data, security results and a reviewer-ready walkthrough.",
+      "requires": [
+        "B19"
+      ],
+      "labs": [
+        "microservices"
+      ]
     },
     "DS20": {
       "title": "Solve 5 new DSA problems and revisit errors",
@@ -2076,7 +3262,9 @@
       "checkpoint": "B20",
       "focus": "Practice weakest patterns. State the invariant and time and space costs before coding.",
       "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "M31": {
       "title": "Architecture/trade-offs/security/testing/story",
@@ -2086,7 +3274,11 @@
       "checkpoint": "B20",
       "focus": "Recall Architecture/trade-offs/security/testing/story and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B20 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": [
+        "microservices"
+      ]
     },
     "M32": {
       "title": "Logs/metrics/query/app failure investigation",
@@ -2096,7 +3288,9 @@
       "checkpoint": "B20",
       "focus": "Recall Logs/metrics/query/app failure investigation and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B20 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "JA35": {
       "title": "Project deep dive",
@@ -2106,7 +3300,11 @@
       "checkpoint": "B20",
       "focus": "Domain rules, trade-offs, failure diagnosis and maintainability.",
       "build": "Trace reserve and dispatch from request to committed data. Explain one rejected design with evidence.",
-      "verify": "Demonstrate the workflow from a clean start and answer a change request without notes."
+      "verify": "Demonstrate the workflow from a clean start and answer a change request without notes.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "G09": {
       "title": "Measure and explain the capstone result",
@@ -2116,37 +3314,57 @@
       "checkpoint": "B20",
       "focus": "Success criteria, fair measurement and credible explanations.",
       "build": "Measure the capstone against its stated invariants and one performance target.",
-      "verify": "Save real numbers, the workload, a trade-off and any limitation."
+      "verify": "Save real numbers, the workload, a trade-off and any limitation.",
+      "requires": [
+        "B20"
+      ],
+      "labs": [
+        "scale-and-recovery"
+      ]
     },
     "PF01": {
-      "title": "Project ONE - multi-tenant commerce/POS",
+      "title": "Compare Project ONE experience with Warehouse Dispatch",
       "week": 20,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B20",
       "focus": "Project ownership, tenancy and transferable lessons.",
       "build": "Record your real contribution to Project ONE and compare one inventory or tenancy decision with the capstone.",
-      "verify": "Separate each project's evidence and explain one relevant difference with examples."
+      "verify": "Separate each project's evidence and explain one relevant difference with examples.",
+      "requires": [
+        "B20"
+      ],
+      "labs": []
     },
     "PF04": {
-      "title": "Spring Boot Commerce / Booking Backend",
+      "title": "Spring Boot and PostgreSQL backend showcase",
       "week": 20,
       "category": "Projects",
       "scope": "Optional",
       "checkpoint": "B20",
       "focus": "Backend project demonstration, PostgreSQL and security.",
       "build": "Prepare a Spring Boot showcase of migration, reservation and permission enforcement.",
-      "verify": "Provide a repeatable demo with one success and one business conflict."
+      "verify": "Provide a repeatable demo with one success and one business conflict.",
+      "requires": [
+        "B20"
+      ],
+      "labs": []
     },
     "PF05": {
-      "title": "TypeScript / Next.js Client for Spring API",
+      "title": "React dispatch client showcase",
       "week": 20,
       "category": "Projects",
       "scope": "Optional",
       "checkpoint": "B20",
       "focus": "React project demonstration, typed contracts and accessibility.",
       "build": "Prepare a React showcase of the signed-in dispatch flow and error handling.",
-      "verify": "Show direct navigation, keyboard access, and one recoverable API error."
+      "verify": "Show direct navigation, keyboard access, and one recoverable API error.",
+      "requires": [
+        "B20"
+      ],
+      "labs": [
+        "micro-frontends"
+      ]
     },
     "RV20": {
       "title": "Review evidence, questions and next-week capacity",
@@ -2156,7 +3374,9 @@
       "checkpoint": "B20",
       "focus": "Recall the week 20 concept and explain the trade-off from B20.",
       "build": "Rerun one check from B20, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "TS31": {
       "title": "Project deep dive",
@@ -2166,17 +3386,25 @@
       "checkpoint": "B20",
       "focus": "Client state, contracts, accessibility and performance trade-offs.",
       "build": "Demonstrate the React dispatch workflow and trace one client error to its cause.",
-      "verify": "Explain a design decision with a test or measurement and repeat a small change independently."
+      "verify": "Explain a design decision with a test or measurement and repeat a small change independently.",
+      "requires": [
+        "G02"
+      ],
+      "labs": []
     },
     "B21": {
-      "title": "Timed Java coding, SQL and debugging rounds; repair top 3 gaps",
+      "title": "Practice timed Java, SQL and debugging",
       "week": 21,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B21",
       "focus": "Timed Java, SQL and debugging with independent recall.",
       "build": "Run three timed exercises drawn from your CLI, stock reports and dispatch failures. Repair the three most consequential gaps.",
-      "verify": "Save original attempts, fixes and unaided retests."
+      "verify": "Save original attempts, fixes and unaided retests.",
+      "requires": [
+        "B20"
+      ],
+      "labs": []
     },
     "DS21": {
       "title": "Solve 5 new DSA problems and revisit errors",
@@ -2186,7 +3414,9 @@
       "checkpoint": "B21",
       "focus": "Practice timed Java practice. State the invariant and time and space costs before coding.",
       "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "M33": {
       "title": "Company-style timed Java DSA",
@@ -2196,7 +3426,9 @@
       "checkpoint": "B21",
       "focus": "Recall Company-style timed Java DSA and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B21 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M34": {
       "title": "DBMS/OS/networking/SQL rapid interview",
@@ -2206,7 +3438,9 @@
       "checkpoint": "B21",
       "focus": "Recall DBMS/OS/networking/SQL rapid interview and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B21 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M35": {
       "title": "STAR + project ownership/trade-offs",
@@ -2216,7 +3450,9 @@
       "checkpoint": "B21",
       "focus": "Recall STAR + project ownership/trade-offs and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B21 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "G10": {
       "title": "Rehearse collaboration and failure stories",
@@ -2226,7 +3462,11 @@
       "checkpoint": "B21",
       "focus": "Collaboration, failures and ownership in interviews.",
       "build": "Rehearse a review or failed deployment story based on a real attempt.",
-      "verify": "Record feedback and repeat the explanation with a concrete next action."
+      "verify": "Record feedback and repeat the explanation with a concrete next action.",
+      "requires": [
+        "BE76"
+      ],
+      "labs": []
     },
     "RV21": {
       "title": "Review evidence, questions and next-week capacity",
@@ -2236,17 +3476,23 @@
       "checkpoint": "B21",
       "focus": "Recall the week 21 concept and explain the trade-off from B21.",
       "build": "Rerun one check from B21, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "B22": {
-      "title": "Timed unfamiliar-repo bug/feature task in both AI-free and AI-assisted modes",
+      "title": "Fix a task in an unfamiliar repository",
       "week": 22,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B22",
       "focus": "Unfamiliar repository reading and verification.",
       "build": "Handle a timed bug or feature ticket in a clean branch. Use a supplied failing scenario as the comparison exercise.",
-      "verify": "Save the reproduction, smallest fix, independent test and what you learned."
+      "verify": "Save the reproduction, smallest fix, independent test and what you learned.",
+      "requires": [
+        "B21"
+      ],
+      "labs": []
     },
     "DS22": {
       "title": "Solve 5 new DSA problems and revisit errors",
@@ -2256,17 +3502,21 @@
       "checkpoint": "B22",
       "focus": "Practice previously failed problems. State the invariant and time and space costs before coding.",
       "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "M36": {
-      "title": "Timed AI-assisted repo task",
+      "title": "Timed independent repository verification",
       "week": 22,
       "category": "Mock interviews",
       "scope": "Core",
       "checkpoint": "B22",
-      "focus": "Recall Timed AI-assisted repo task and the assumptions that affect your answer.",
+      "focus": "Recall Timed independent repository verification and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M37": {
       "title": "Unfamiliar repo bug fix",
@@ -2276,27 +3526,35 @@
       "checkpoint": "B22",
       "focus": "Recall Unfamiliar repo bug fix and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M38": {
-      "title": "Booking/commerce timed design",
+      "title": "Timed warehouse workflow design",
       "week": 22,
       "category": "Mock interviews",
       "scope": "Core",
       "checkpoint": "B22",
-      "focus": "Recall Booking/commerce timed design and the assumptions that affect your answer.",
+      "focus": "Recall Timed warehouse workflow design and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "PF03": {
-      "title": "AI-Assisted Repo Debugging Lab",
+      "title": "Independent repository debugging lab",
       "week": 22,
       "category": "Projects",
       "scope": "Optional",
       "checkpoint": "B22",
       "focus": "Optional repository debugging and verification.",
       "build": "Use a prepared flawed patch in a small existing repo and investigate it manually.",
-      "verify": "Record the root cause, independent fix and a regression test you wrote."
+      "verify": "Record the root cause, independent fix and a regression test you wrote.",
+      "requires": [
+        "B22"
+      ],
+      "labs": []
     },
     "RV22": {
       "title": "Review evidence, questions and next-week capacity",
@@ -2306,17 +3564,23 @@
       "checkpoint": "B22",
       "focus": "Recall the week 22 concept and explain the trade-off from B22.",
       "build": "Rerun one check from B22, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "B23": {
-      "title": "Spring technical drill + TS/React drill + project deep-dive rehearsal",
+      "title": "Rehearse the engineering walkthrough",
       "week": 23,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B23",
       "focus": "Backend, frontend and architecture explanation under time.",
       "build": "Rehearse Java/Spring and React questions against your own changes. Trace a request end to end.",
-      "verify": "Record a timed explanation, the gap it exposed and an improved unaided retry."
+      "verify": "Record a timed explanation, the gap it exposed and an improved unaided retry.",
+      "requires": [
+        "B22"
+      ],
+      "labs": []
     },
     "DS23": {
       "title": "Solve 5 new DSA problems and revisit errors",
@@ -2326,7 +3590,9 @@
       "checkpoint": "B23",
       "focus": "Practice mixed interview sets. State the invariant and time and space costs before coding.",
       "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "M39": {
       "title": "Spring/JPA/security/testing deep dive",
@@ -2336,17 +3602,21 @@
       "checkpoint": "B23",
       "focus": "Recall Spring/JPA/security/testing deep dive and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M40": {
-      "title": "TS runtime/types/React/Next deep dive",
+      "title": "TypeScript runtime, types and React client design",
       "week": 23,
       "category": "Mock interviews",
       "scope": "Core",
       "checkpoint": "B23",
-      "focus": "Recall TS runtime/types/React/Next deep dive and the assumptions that affect your answer.",
+      "focus": "Recall TypeScript runtime, types and React client design and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M41": {
       "title": "Browser to Spring to DB + behavioral",
@@ -2356,7 +3626,9 @@
       "checkpoint": "B23",
       "focus": "Recall Browser to Spring to DB + behavioral and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV23": {
       "title": "Review evidence, questions and next-week capacity",
@@ -2366,17 +3638,23 @@
       "checkpoint": "B23",
       "focus": "Recall the week 23 concept and explain the trade-off from B23.",
       "build": "Rerun one check from B23, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     },
     "B24": {
-      "title": "Two full simulations, final question-bank pass, resume/project evidence cleanup",
+      "title": "Run final simulations and package the demo",
       "week": 24,
       "category": "Projects",
       "scope": "Core",
       "checkpoint": "B24",
       "focus": "Full interview simulation, retrieval practice and portfolio evidence.",
       "build": "Complete two simulations and curate the most relevant project runs, commits and decisions.",
-      "verify": "Record scores, follow-up tasks and a clean-clone demo another person can reproduce."
+      "verify": "Record scores, follow-up tasks and a clean-clone demo another person can reproduce.",
+      "requires": [
+        "B23"
+      ],
+      "labs": []
     },
     "DS24": {
       "title": "Solve 5 new DSA problems and revisit errors",
@@ -2386,7 +3664,9 @@
       "checkpoint": "B24",
       "focus": "Practice final timed review. State the invariant and time and space costs before coding.",
       "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
-      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
+      "requires": [],
+      "labs": []
     },
     "M42": {
       "title": "Coding + CS + project",
@@ -2396,7 +3676,9 @@
       "checkpoint": "B24",
       "focus": "Recall Coding + CS + project and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B24 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M43": {
       "title": "Repo task + verification",
@@ -2406,7 +3688,9 @@
       "checkpoint": "B24",
       "focus": "Recall Repo task + verification and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B24 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "M44": {
       "title": "System design + trade-offs + STAR",
@@ -2416,7 +3700,9 @@
       "checkpoint": "B24",
       "focus": "Recall System design + trade-offs + STAR and the assumptions that affect your answer.",
       "build": "Attempt the original timed prompt unaided. Use an actual B24 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
-      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry."
+      "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
+      "requires": [],
+      "labs": []
     },
     "RV24": {
       "title": "Review evidence, questions and next-week capacity",
@@ -2426,7 +3712,9 @@
       "checkpoint": "B24",
       "focus": "Recall the week 24 concept and explain the trade-off from B24.",
       "build": "Rerun one check from B24, revisit one mistake and compare actual time with your study plan.",
-      "verify": "Record the run, one skill you can repeat, and the next gap you will address."
+      "verify": "Record the run, one skill you can repeat, and the next gap you will address.",
+      "requires": [],
+      "labs": []
     }
   }
 }

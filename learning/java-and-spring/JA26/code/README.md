@@ -1,22 +1,15 @@
-# JA26 experiments
+<!-- Managed by export_warehouse_plan.py -->
 
-Place source files or a small project here. Nested folders are supported. Learnspace displays the source; run programs in your editor or terminal.
+# JA26 — Build and run
 
-## Deliverable
+Reproduce contention for the last unit. Choose row locking or an atomic conditional update and keep lock ordering consistent.
 
-optimistic/pessimistic locks, unique constraints, retries
-Use transaction/constraint/idempotency appropriately
-race conditions and atomicity
-@Transactional, isolation, optimistic/pessimistic locking, retries
-Races, locking, optimistic control, consistency concepts
-optimistic/pessimistic locks, versioning, unique constraints, retries
+Work in `projects/warehouse-dispatch/` for a shared feature. Use this task folder for isolated experiments. For design, review, and interview tasks, save the artifact in Notes or Results.
 
-## Run instructions
+Record the working directory, tool version, command or scenario, and test input. Keep your own code and checks here or in the shared project.
 
-Record prerequisites, exact versions, setup commands, and a repeatable command.
+## Check your work
 
-## Checks
+Two concurrent requests yield one success, one conflict, and a valid stock balance.
 
-Describe a normal case, edge case, and failure case. Save real output in ../results/.
-
-For a web project, record its separately running URL in [resources](../resources/links.md). Generated folders such as node_modules, .next, dist, build, and .venv are excluded from the viewer.
+[Practice brief](../notes/00-warehouse-practice.md) · [Results](../results/evidence.md)

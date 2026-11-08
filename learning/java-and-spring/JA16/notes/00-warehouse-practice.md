@@ -2,6 +2,9 @@
 
 Week 4 · Core · Warehouse checkpoint B04
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Object lifetime, heap, stack and basic garbage collection.
@@ -14,4 +17,4 @@ Load a repeatable shipment fixture and inspect memory before and after releasing
 
 Save an observation and separate live data from temporary allocation.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

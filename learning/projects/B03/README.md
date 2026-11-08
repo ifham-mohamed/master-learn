@@ -1,31 +1,15 @@
-# B03 — Generic Java service + typed DTO transformations
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 3–3 · Core · Build
+# B03 — Refine lookup and mapping
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B03)
+Projects · Week 3 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: ACID + normalization + SQL aggregates
-Design: Schema, keys, constraints and relationships
-AI practice: AI-free first; use AI only for critique
-Generic Java service + typed DTO transformations
-Add keys, relationships, uniqueness and validation constraints
-Use AI only as a critic; keep implementation independent
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B02.
-Original workbook: Master Plan row 38.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b03)

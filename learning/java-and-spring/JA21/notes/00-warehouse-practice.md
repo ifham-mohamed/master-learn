@@ -2,6 +2,9 @@
 
 Week 7 · Core · Warehouse checkpoint B07
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Boundary validation, domain errors and consistent problem responses.
@@ -14,4 +17,4 @@ Validate quantity and required fields, and map duplicate and invalid transition 
 
 Bad input and conflicts have distinct responses and no stack trace or partial write.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

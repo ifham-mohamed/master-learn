@@ -59,19 +59,19 @@ export function safeUrl(value: string) {
   }
 }
 export const trackDescriptions: Record<string, string> = {
-  "Java & Spring": "From language fundamentals to dependable backend services.",
+  "Java & Spring": "Build the shipment CLI, then enforce stock rules through Spring APIs and PostgreSQL transactions.",
   "TypeScript & UI":
-    "Build a strong foundation for thoughtful, typed interfaces.",
-  "CS & SQL": "Understand the systems and data beneath your applications.",
-  Engineering: "Test, debug, ship, and explain the decisions you make.",
+    "Build the React warehouse workflow with typed contracts, accessible screens, and secure session handling.",
+  "CS & SQL": "Query warehouse data and verify indexes, transactions, locking, networking, and sessions.",
+  Engineering: "Test, debug, review, release and recover the warehouse application.",
   "AI Engineering":
-    "Work with AI deliberately. Verify and explain independently.",
-  DSA: "Develop problem-solving patterns through consistent practice.",
+    "Practice independent verification, source checking, and safe handling of inputs and secrets.",
+  DSA: "Practice coding patterns and measure the structures that fit warehouse workloads.",
   "System design":
-    "Reason about architecture, scale, and the trade-offs between.",
-  Projects: "Turn your knowledge into one capstone with reusable evidence.",
+    "Design warehouse boundaries, messaging, search, caching, and failure recovery.",
+  Projects: "Follow 24 warehouse checkpoints from terminal input to an independently repeatable demo.",
   "Mock interviews":
-    "Rehearse technical work and clear communication under time.",
-  Review: "Reflect on the work, revisit gaps, and adjust the next step.",
-  Career: "Connect your skills and evidence to the roles you want.",
+    "Practice timed coding and explain your warehouse decisions with real evidence.",
+  Review: "Rerun checks, revisit gaps, and adjust the next checkpoint to your capacity.",
+  Career: "Turn verified warehouse work into accurate portfolio and interview evidence.",
 };

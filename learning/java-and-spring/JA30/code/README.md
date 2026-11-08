@@ -1,20 +1,15 @@
-# JA30 experiments
+<!-- Managed by export_warehouse_plan.py -->
 
-Place source files or a small project here. Nested folders are supported. Learnspace displays the source; run programs in your editor or terminal.
+# JA30 — Build and run
 
-## Deliverable
+Test shipment creation, validation and authorization at the API boundary with representative data.
 
-TestContext, MockMvc, transactional tests
-context tests, controller tests, transactions, failure paths
-DB/API integration, fixtures, failure behavior
-MockMvc/TestContext, transactions, API/DB failure paths
+Work in `projects/warehouse-dispatch/` for a shared feature. Use this task folder for isolated experiments. For design, review, and interview tasks, save the artifact in Notes or Results.
 
-## Run instructions
+Record the working directory, tool version, command or scenario, and test input. Keep your own code and checks here or in the shared project.
 
-Record prerequisites, exact versions, setup commands, and a repeatable command.
+## Check your work
 
-## Checks
+The test suite checks response contracts and actual side effects, including a denied write.
 
-Describe a normal case, edge case, and failure case. Save real output in ../results/.
-
-For a web project, record its separately running URL in [resources](../resources/links.md). Generated folders such as node_modules, .next, dist, build, and .venv are excluded from the viewer.
+[Practice brief](../notes/00-warehouse-practice.md) · [Results](../results/evidence.md)

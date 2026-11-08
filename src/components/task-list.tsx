@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Check, Circle, Clock3 } from "lucide-react";
 import { formatDate, type Task } from "@/lib/tracker";
+import { warehouseTitle } from "@/lib/warehouse";
 
 export function Status({ value }: { value: string }) {
   return (
@@ -41,7 +42,7 @@ export function TaskList({
             ) : null}
           </span>
           <span className="task-main">
-            <span className="task-title">{task.title}</span>
+            <span className="task-title">{warehouseTitle(task)}</span>
             <span className="task-meta">
               <span>{task.category}</span>
               <span>·</span>

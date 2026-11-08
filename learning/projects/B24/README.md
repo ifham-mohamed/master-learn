@@ -1,31 +1,15 @@
-# B24 — Two full simulations, final question-bank pass, resume/project evidence cleanup
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 24–24 · Core · Build
+# B24 — Run final simulations and package the demo
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B24)
+Projects · Week 24 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: Final targeted revision
-Design: Final timed system design
-AI practice: One AI-free full simulation + one AI-allowed simulation
-Two full simulations, final question-bank pass, resume/project evidence cleanup
-Timed system-design practice #8: use capstone/booking/commerce prompt
--
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B23.
-Original workbook: Master Plan row 236.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b24)

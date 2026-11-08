@@ -1,0 +1,56 @@
+[
+  {
+    "id": "service-boundaries",
+    "title": "1. Establish service boundaries",
+    "after": "B14",
+    "tasks": ["SD05", "SD07", "JA17", "JA25", "RW11", "B14"],
+    "build": "Draw Inventory, Dispatch and Tracking boundaries inside the Spring application. Give each module a clear owner and public interface. Keep reservation, stock mutation and dispatch confirmation within the same transaction. Write an architecture decision record explaining what would justify extracting a service.",
+    "verify": "A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split.",
+    "references": [{"label": "Service data ownership", "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/"}]
+  },
+  {
+    "id": "message-broker",
+    "title": "2. Publish dispatch events through RabbitMQ",
+    "after": "B19",
+    "tasks": ["SD13", "JA25", "RW14", "B19", "M29"],
+    "build": "Record a versioned DispatchConfirmed event in a PostgreSQL outbox in the same transaction as dispatch. Publish through RabbitMQ and wait for broker confirmation. The consumer commits a deduplicated result before acknowledging. Cap retries, route failed messages to a dead-letter queue, and retain an event archive for rebuilding projections. Compare a RabbitMQ work queue with a retained Kafka log, using partition keys and consumer offsets to reason about ordering and replay.",
+    "verify": "Roll back a dispatch, stop the broker after commit, interrupt the publisher before marking a send, and replay a poison message. Show zero events for the rollback, eventual delivery for the committed event and one consumer effect under redelivery.",
+    "references": [{"label": "Transactional outbox", "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html"}, {"label": "RabbitMQ reliability", "url": "https://www.rabbitmq.com/docs/reliability"}, {"label": "Apache Kafka concepts", "url": "https://kafka.apache.org/documentation/"}]
+  },
+  {
+    "id": "microservices",
+    "title": "3. Extract a Tracking microservice",
+    "after": "B20",
+    "tasks": ["SD07", "SD13", "SD17", "TS29", "B18", "B20", "M31"],
+    "build": "After the broker lab, extract the read-oriented tracking projection. Give it its own PostgreSQL database and schema migrations, API and release. Update it from versioned events without reading the dispatch tables. Document eventual consistency, projection rebuild, stale-state UX, and service authentication. Model compensation for a hypothetical cross-service reservation as a separate design exercise.",
+    "verify": "Take Tracking down while dispatch continues. Restart it and rebuild a clean projection from the retained event archive. Reconcile results. Run API contract tests, deploy Tracking independently, and rehearse routing traffic back to the original tracking view.",
+    "references": [{"label": "Service data ownership", "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/"}, {"label": "Saga patterns", "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/saga-patterns.html"}]
+  },
+  {
+    "id": "micro-frontends",
+    "title": "4. Release a Tracking micro-frontend",
+    "after": "B20",
+    "tasks": ["TS17", "TS19", "TS20", "TS24", "TS25", "TS28", "FE35", "PF05"],
+    "build": "After the Tracking service lab, separate the read-only Tracking routes into an independently built React frontend. Compose at the route boundary. Define shared navigation, session behavior, accessibility and API contracts. Compare this with keeping feature modules in one React build.",
+    "verify": "Deploy and roll back the Tracking frontend without rebuilding Dispatch. Verify keyboard navigation, direct URLs, sign-out, API failure fallback, and bundle size before and after the split.",
+    "references": [{"label": "Independently deployable micro-frontends", "url": "https://martinfowler.com/articles/micro-frontends.html"}]
+  },
+  {
+    "id": "scale-and-recovery",
+    "title": "5. Prove the distributed system can recover",
+    "after": "B20",
+    "tasks": ["JA32", "EN28", "G08", "RW16", "SD10", "SD14", "SD16", "SD17", "SD21", "G09"],
+    "build": "Set a workload and targets for latency, errors and projection lag. Trace request and event IDs across components. Exercise rate limits, stale reads, backlog pressure, restore, and rollback. Compare container deployments and orchestration using the needs you measured.",
+    "verify": "Save p95 latency, error rate, oldest queued event, recovery time and restored-data checks. Test a failed release and write a runbook another person can follow.",
+    "references": [{"label": "RabbitMQ failure and recovery behavior", "url": "https://www.rabbitmq.com/docs/reliability"}]
+  },
+  {
+    "id": "algorithm-tradeoffs",
+    "title": "6. Measure algorithms against warehouse workloads",
+    "after": "B10",
+    "tasks": ["JA08", "CS09", "DS01", "DS07", "DS08", "DS09", "DS10", "SD12", "RW16"],
+    "build": "Compare reference lookup with a map and a database index. Use a heap for a prioritization experiment, intervals for dock scheduling, and a graph for warehouse route planning or dependencies. State complexity and compare representative workloads. Keep stock correctness in the transactional database.",
+    "verify": "Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises.",
+    "references": []
+  }
+]

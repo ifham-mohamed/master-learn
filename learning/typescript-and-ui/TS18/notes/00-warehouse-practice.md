@@ -2,6 +2,9 @@
 
 Week 6 · Core · Warehouse checkpoint B06
 
+Before you begin, complete G02.
+
+
 ## Review and learn
 
 Local state, derived values, hooks and ownership.
@@ -14,4 +17,4 @@ Keep form values local and derive filtered counts. Put shareable filter state in
 
 Changing a filter updates results without stale counts or duplicated state.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

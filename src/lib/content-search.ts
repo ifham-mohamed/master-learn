@@ -1,5 +1,6 @@
 import { tasks } from "./tracker";
 import { getLearningManifest, readLearningDocument } from "./learning-files";
+import { warehouseTitle } from "./warehouse";
 export type SearchEntry = {
   id: string;
   title: string;
@@ -17,7 +18,7 @@ export async function buildSearchIndex() {
       const doc = await readLearningDocument(task.id, file.path);
       index.push({
         id: task.id,
-        title: task.title,
+        title: warehouseTitle(task),
         path: file.path,
         section: file.section,
         text: doc.content,

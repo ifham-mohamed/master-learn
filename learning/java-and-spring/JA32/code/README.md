@@ -1,21 +1,15 @@
-# JA32 experiments
+<!-- Managed by export_warehouse_plan.py -->
 
-Place source files or a small project here. Nested folders are supported. Learnspace displays the source; run programs in your editor or terminal.
+# JA32 — Build and run
 
-## Deliverable
+Add health/readiness checks and trace one failed reservation across HTTP and storage.
 
-health, metrics, logs, tracing concepts
-logs/metrics/traces, identifiers
-health, metrics, logs, tracing concepts, correlation IDs
-Structured logs, metrics, tracing concept, correlation IDs
-health, metrics, logs, traces, production diagnostics
+Work in `projects/warehouse-dispatch/` for a shared feature. Use this task folder for isolated experiments. For design, review, and interview tasks, save the artifact in Notes or Results.
 
-## Run instructions
+Record the working directory, tool version, command or scenario, and test input. Keep your own code and checks here or in the shared project.
 
-Record prerequisites, exact versions, setup commands, and a repeatable command.
+## Check your work
 
-## Checks
+Find the request by ID. Logs expose useful context without credentials or private payloads.
 
-Describe a normal case, edge case, and failure case. Save real output in ../results/.
-
-For a web project, record its separately running URL in [resources](../resources/links.md). Generated folders such as node_modules, .next, dist, build, and .venv are excluded from the viewer.
+[Practice brief](../notes/00-warehouse-practice.md) · [Results](../results/evidence.md)

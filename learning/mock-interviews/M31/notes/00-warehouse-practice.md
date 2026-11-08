@@ -2,6 +2,7 @@
 
 Week 20 · Core · Warehouse checkpoint B20
 
+
 ## Review and learn
 
 Recall Architecture/trade-offs/security/testing/story and the assumptions that affect your answer.
@@ -14,4 +15,8 @@ Attempt the original timed prompt unaided. Use an actual B20 artifact if it illu
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
-Write the implementation and checks yourself. Use documentation, the debugger and actual runs. Save what you ran, what happened, and your next action in [Results](../results/evidence.md) or record it in Learnspace. Include a commit or result path when useful.
+## Further architecture practice
+
+- 3. Extract a Tracking microservice · after B20. Take Tracking down while dispatch continues. Restart it and rebuild a clean projection from the retained event archive. Reconcile results. Run API contract tests, deploy Tracking independently, and rehearse routing traffic back to the original tracking view.
+
+Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.

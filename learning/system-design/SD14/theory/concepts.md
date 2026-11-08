@@ -1,33 +1,9 @@
-# Rate limiting — theory
+<!-- Managed by export_warehouse_plan.py -->
 
-> Starter template. Replace these prompts with your own explanation.
+# SD14 — Concepts to review
 
-## Learning goal
+Rate limits, burst behavior, client identity and HTTP 429.
 
-per key/window algorithms concept
-Token bucket concept, per-user/IP policies, backoff
+Explain one idea from memory. Predict a case where the implementation could fail, then check that prediction against your run or design.
 
-## Concepts to explain
-
-Capture requirements, assumptions, an architecture sketch, capacity estimates, trade-offs, and failure modes.
-
-- What problem does this solve?
-- How does it work in your own words?
-- What assumptions does it rely on?
-
-## Small example
-
-Add an example and explain each step. Link to a file in ../code/ when useful.
-
-## Edge cases and trade-offs
-
-Record a counterexample, common mistake, and a trade-off.
-
-## Check your understanding
-
-Design: Public API protection
-Trade-off: fairness vs simplicity
-
-## References
-
-See [task resources](../resources/links.md).
+[Practice brief](../notes/00-warehouse-practice.md) · [References](../resources/links.md)

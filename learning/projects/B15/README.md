@@ -1,33 +1,15 @@
-# B15 — Add logs/metrics/cache; investigate query or rendering bottleneck
+<!-- Managed by export_warehouse_plan.py -->
 
-Projects · week 15–15 · Core · Build
+# B15 — Measure performance and trace failures
 
-[Open in Learnspace](http://127.0.0.1:3000/tasks/B15)
+Projects · Week 15 · Core
 
-## Task outcome
+Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
 
-Demonstrate the working output, relevant tests, and one design trade-off.
+- [Theory](theory/concepts.md) for your explanation
+- [Notes](notes/journal.md) for your prediction and decisions
+- [Code](code/README.md) for where to build and run
+- [Results](results/evidence.md) for what you observed
+- [Resources](resources/links.md) for references
 
-## Practice prompt
-
-CS/SQL: Indexes/query performance revision
-Design: Caching + search + pagination + observability
-AI practice: AI-assisted performance hypothesis; measure before accepting
-Add logs/metrics/cache; investigate query or rendering bottleneck
-Caching - Product catalogue cache
-Search - Product/business search
-Observability - Debug failed checkout
-Measure performance before accepting AI optimization
-
-## Work here
-
-- [Theory](theory/concepts.md)
-- [Notes](notes/journal.md)
-- [Code](code/README.md)
-- [Results](results/evidence.md)
-- [Resources](resources/links.md)
-
-Prerequisites: B14.
-Original workbook: Master Plan row 158.
-
-These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.
+[Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/projects.md#b15)
