@@ -22,8 +22,8 @@ export function LearningLibrary() {
         <div>
           <h1>Learning workspaces</h1>
           <p>
-            One folder for each task. Theory, notes, code, results, and
-            references in one place.
+            One learning log per task. Open the extra files when you need code,
+            results, or references.
           </p>
         </div>
         <span className="count-chip">236 task workspaces</span>
@@ -120,7 +120,7 @@ export function LearningLibrary() {
             </code>
             <span className="learning-task-foot">
               <BookOpen size={14} />
-              Practice brief · Code · Evidence
+              Practice brief · Learning log · Task files
             </span>
           </Link>
         ))}

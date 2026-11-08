@@ -1,4 +1,12 @@
 import { isGitHubPages, assetUrl, staticFilePath } from "./deployment";
+export const learningLogPath = "notes/journal.md";
+
+export function learningLogEntry(learned: string, observed: string, next: string) {
+  return [["What I learned", learned], ["What I tried and what happened", observed], ["Next step", next]]
+    .filter(([, value]) => value.trim())
+    .map(([heading, value]) => `${heading}: ${value.trim()}`)
+    .join("\n\n");
+}
 export const contentSections = [
   "theory",
   "notes",

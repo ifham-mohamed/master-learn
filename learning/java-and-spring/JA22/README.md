@@ -4,12 +4,8 @@
 
 Java & Spring · Week 7 · Core
 
-Start with the [practice brief](notes/00-warehouse-practice.md). It gives the concepts, work, and pass check for this task.
+Read the [practice brief](notes/00-warehouse-practice.md), then write one entry in your [learning log](notes/journal.md).
 
-- [Theory](theory/concepts.md) for your explanation
-- [Notes](notes/journal.md) for your prediction and decisions
-- [Code](code/README.md) for where to build and run
-- [Results](results/evidence.md) for what you observed
-- [Resources](resources/links.md) for references
+Use the other files when needed. [Concepts](theory/concepts.md) · [Code guide](code/README.md) · [Evidence](results/evidence.md) · [References](resources/links.md)
 
 [Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/java-and-spring.md#ja22)

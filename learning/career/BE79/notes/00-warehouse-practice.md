@@ -15,4 +15,4 @@ Explain one choice such as locks versus conditional updates, or session versus b
 
 State the chosen approach, the cost accepted and a condition that would change your choice.
 
-Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Add one entry in the [learning log](journal.md) or use the Learning log form in Learnspace. Write what you learned, what you tried and observed, and your next step. Link output from `results/` when it needs a separate file.

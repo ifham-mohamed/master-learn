@@ -17,7 +17,7 @@ Open [the local workspace](http://localhost:3000). For a production build, run `
 
 Open **Today** for your next checkpoint or **Projects → Warehouse Dispatch** for the six phases. Start with **JA05**. Build a Java terminal shipment flow yourself, then grow the same project through Spring Boot, PostgreSQL, React, and staging. The [project README](projects/warehouse-dispatch/README.md) gives the warehouse rules and test scenarios. The [HTML plan](sources/warehouse-dispatch/index.html), [Markdown task index](sources/warehouse-dispatch/README.md), and **Warehouse Learning** tab in [Final Tracker.xlsx](sources/Final%20Tracker.xlsx) carry the same practice briefs.
 
-Each task shows what to review, what to build, and how to check it. Use **Quick note** for a private thought or **Record result** for a command, observed result, and next action. Add a commit or file link when useful. Keep runnable code and tests in `projects/warehouse-dispatch/`. Use each task's `results/` folder for output that needs a durable file. Only mark work complete after running the checks yourself.
+Each task shows what to review, what to build, and how to check it. Keep one short **Learning log** entry per session. Write it in Learnspace or in the task’s `notes/journal.md`. Use **Task files** to read the saved file and **Copy to evidence draft** to reuse a browser entry when updating progress. Keep runnable code and tests in `projects/warehouse-dispatch/` and larger output in the task’s `results/` folder.
 
 New schedules start at five hours per study day. If you already have a saved schedule, choose your days in **Settings & backups**, select **Use 5 hours per selected day**, then preview and save. The workbook's **Master Plan** remains the place to record spreadsheet progress.
 
@@ -67,7 +67,7 @@ learning/
       README.md                  Task outcome and original context
       theory/concepts.md         Understand and explain the concepts
       notes/00-warehouse-practice.md  Current practice brief
-      notes/journal.md               Predictions, questions, and reflections
+      notes/journal.md               Your dated learning log
       code/                      Source files and experiments
       results/evidence.md        Commands, actual output, and conclusions
       resources/links.md         Original references and further reading
@@ -188,7 +188,7 @@ Google access now survives client-side navigation between app pages until its to
 - **Offline tasks:** open a task and use Download task for offline use below its journal. The app caches its page, documents and attachments (50 MB per-task limit), plus the core app shell. A first successful online visit is required. Undownloaded pages show an offline fallback. Google sign-in and sync require internet. Browser storage eviction can remove downloads. An activated app update clears task downloads to avoid mixing versions; re-download them. Local progress is retained.
 - **Today:** resume a task, see available hours from weekly capacity and selected days, and start a task whose referenced prerequisites are complete. Written prerequisites still need your judgment. This is an advisory daily budget; the app does not automatically move tasks between weeks.
 - **Reviews:** compare allocated estimates, saved session hours, completed tasks, blockers and low-confidence topics for any week. Complete spaced reviews at 1, 3, 7 and 14 days after the task completion date. Historical completion dates are retained.
-- **Quick journal:** add notes, questions, mistakes or reflections inside a task. Export Markdown to your task's notes folder. Browser journals are separate from the on-disk files and are included in full backups.
+- **Learning log:** record what you learned, what you tried and observed, and your next step. Export entries as Markdown to append to `notes/journal.md`. Browser entries are included in full backups.
 - **Focus mode:** enable it on a task timer. Set focus/break lengths in Settings. Prompts appear while the app is open; the task keeps counting until explicitly paused. The break countdown is temporary and resets on reload. A two-hour running reminder helps catch missed pauses. No background push-notification service is used.
 - **Search content:** searches deployed theory, notes, code, results and resources and opens the matching file. Text files over 1 MB, images and PDFs are excluded from indexing. Local Node mode reads current learning files on opening Search; Pages updates the index on deployment. Search displays up to 50 matches and filters by section.
 - **Sync status:** shows task records changed since the last verified sync and its timestamp. This is a local estimate; Review changes fetches exact Google cell differences and conflicts. No tokens are included in backups. Phone/computer progress is not automatically synchronized; transfer a backup when changing devices.

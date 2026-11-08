@@ -1,22 +1,9 @@
-# DS04 learning journal
+# DS04 learning log
 
-> Starter template. Record your own session; no work is claimed here.
+Add one short entry per session. Date each entry and repeat the three prompts below.
 
-## Session
+## What I learned
 
-- Date:
-- Goal: Solve 7 new DSA problems and revisit errors
-- Time spent:
-- Tools / AI policy: AI-free first
+## What I tried and what happened
 
-## What I understood
-
-Explain the concept in your own words.
-
-## Attempts and mistakes
-
-What did you try? What failed, and why?
-
-## Next action
-
-Write one concrete next step.
+## Next step

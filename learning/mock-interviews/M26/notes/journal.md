@@ -1,22 +1,9 @@
-# M26 learning journal
+# M26 learning log
 
-> Starter template. Record your own session; no work is claimed here.
+Add one short entry per session. Date each entry and repeat the three prompts below.
 
-## Session
+## What I learned
 
-- Date:
-- Goal: Java mixed DSA under time
-- Time spent:
-- Tools / AI policy: AI-Free
+## What I tried and what happened
 
-## What I understood
-
-Explain the concept in your own words.
-
-## Attempts and mistakes
-
-What did you try? What failed, and why?
-
-## Next action
-
-Write one concrete next step.
+## Next step

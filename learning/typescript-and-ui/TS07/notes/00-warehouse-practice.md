@@ -17,4 +17,4 @@ Predict the order of a small shipment loading simulation, then run it.
 
 Explain each observed step and correct a wrong prediction.
 
-Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Add one entry in the [learning log](journal.md) or use the Learning log form in Learnspace. Write what you learned, what you tried and observed, and your next step. Link output from `results/` when it needs a separate file.

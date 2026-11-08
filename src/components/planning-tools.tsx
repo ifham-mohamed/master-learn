@@ -14,7 +14,7 @@ import { ToolsHeading, ToolHeading } from "./tools-heading";
 import { useState } from "react";
 import { useTracker } from "./tracker-provider";
 import { useStudyClock } from "./study-timer";
-import { formatDate, isComplete, tasks as baseline } from "@/lib/tracker";
+import { formatDate, isComplete, slug, tasks as baseline } from "@/lib/tracker";
 import {
   addDays,
   missingPrerequisites,
@@ -28,6 +28,7 @@ import { studyDate, todayStudyMs } from "@/lib/study";
 import { InstallApp, OfflineTask } from "./pwa-controls";
 import { WarehouseNext } from "./warehouse-path";
 import { warehouseBrief, warehouseHoursPerDay, warehouseTitle } from "@/lib/warehouse";
+import { learningLogEntry, learningLogPath } from "@/lib/learning-types";
 
 export function downloadText(
   name: string,
@@ -340,86 +341,79 @@ export function ReviewView() {
     </div>
   );
 }
-export function TaskJournal({ id }: { id: string }) {
+export function TaskJournal({ id, category, onUseAsEvidence }: {
+  id: string; category: string; onUseAsEvidence: (text: string) => void;
+}) {
   const { planner, addJournal, loaded } = useTracker();
-  const [text, setText] = useState(""),
-    [kind, setKind] = useState("Note"),
-    [message, setMessage] = useState("");
+  const [learned, setLearned] = useState("");
+  const [observed, setObserved] = useState("");
+  const [next, setNext] = useState("");
+  const [message, setMessage] = useState("");
+  const [saving, setSaving] = useState(false);
   const entries = planner.journal.filter((j) => j.taskId === id);
+  const latest = entries.at(-1);
+  const text = learningLogEntry(learned, observed, next);
+  const file = `learning/${slug(category)}/${id}/${learningLogPath}`;
   return (
-    <section id="learning-journal" className="panel tool-card">
-      <h2>Quick learning journal</h2>
+    <section id="learning-journal" className="panel tool-card learning-log" aria-labelledby="learning-log-heading">
+      <h2 id="learning-log-heading">Learning log</h2>
       <p>
-        Private to this browser. Export Markdown into your task’s notes folder
-        when ready.
+        Keep one short entry per session. Save it here in this browser, or write directly in your task’s log file.
       </p>
       <form
         onSubmit={async (e) => {
           e.preventDefault();
-          if (
-            await addJournal({
-              taskId: id,
-              at: studyDate(Date.now()),
-              kind,
-              text: text.trim(),
-            })
-          ) {
-            setText("");
-            setMessage("Journal entry saved.");
+          if (!text || saving) return;
+          setSaving(true);
+          try {
+            if (await addJournal({ taskId: id, at: studyDate(Date.now()), kind: "Note", text })) {
+              setLearned("");
+              setObserved("");
+              setNext("");
+              setMessage("Learning log saved on this device.");
+            } else {
+              setMessage("Could not save the entry. Your draft is still here.");
+            }
+          } finally {
+            setSaving(false);
           }
         }}
       >
         <label>
-          Entry type
-          <select value={kind} onChange={(e) => setKind(e.target.value)}>
-            {["Note", "Question", "Mistake", "Reflection"].map((k) => (
-              <option key={k}>{k}</option>
-            ))}
-          </select>
+          What I learned
+          <textarea rows={2} maxLength={6000} value={learned} onChange={(e) => setLearned(e.target.value)} placeholder="Explain the idea in your own words." />
         </label>
         <label>
-          Your note
-          <textarea
-            required
-            maxLength={20000}
-            rows={4}
-            placeholder="What did you try? What happened? What will you try next?"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          />
+          What I tried and what happened
+          <textarea rows={2} maxLength={10000} value={observed} onChange={(e) => setObserved(e.target.value)} placeholder="Record the command, result, or artifact when you have one." />
         </label>
-        <button className="button primary" disabled={!loaded || !text.trim()}>
-          Save journal entry
+        <label>
+          Next step
+          <input maxLength={2000} value={next} onChange={(e) => setNext(e.target.value)} placeholder="One thing to try or review next." />
+        </label>
+        <button className="button primary" disabled={!loaded || !text || saving}>
+          {saving ? "Saving…" : "Save learning log"}
         </button>
       </form>
       <p role="status">{message}</p>
-      <button
-        className="button secondary"
-        disabled={!entries.length}
-        onClick={() =>
-          downloadText(
-            `${id}-journal.md`,
-            entries
-              .map((j) => `## ${j.at} · ${j.kind}\n\n${j.text}`)
-              .join("\n\n"),
-          )
-        }
-      >
-        Export journal as Markdown
-      </button>
-      <div className="journal-entries">
-        {entries
-          .slice()
-          .reverse()
-          .map((j) => (
-            <article key={j.id}>
-              <b>
-                {j.at} · {j.kind}
-              </b>
-              <p>{j.text}</p>
-            </article>
-          ))}
-      </div>
+      {latest && <div className="journal-entries">
+        <article><b>Latest browser entry · {formatDate(latest.at)}</b><p className="preserve-lines">{latest.text}</p>
+          <button type="button" className="button secondary" onClick={() => onUseAsEvidence(latest.text)}>Copy to evidence draft</button>
+        </article>
+        {entries.length > 1 && <details>
+          <summary>{entries.length - 1} earlier {entries.length === 2 ? "entry" : "entries"}</summary>
+          {entries.slice(0, -1).reverse().map((entry) => <article key={entry.id}><b>{formatDate(entry.at)} · {entry.kind}</b><p className="preserve-lines">{entry.text}</p></article>)}
+        </details>}
+      </div>}
+      <details className="learning-log-file">
+        <summary>Use the Markdown log file</summary>
+        <p><code>{file}</code></p>
+        <p>Open the file in your editor or export your browser entries and append them to it. The task viewer shows the file saved in the repository. GitHub Pages shows it after deployment.</p>
+        <div className="warehouse-actions">
+          <a className="button secondary" href="#learning-files">Open task files</a>
+          <button type="button" className="button secondary" disabled={!entries.length} onClick={() => downloadText(`${id}-learning-log.md`, `# ${id} learning log\n\n${entries.map((j) => `## ${j.at} · ${j.kind}\n\n${j.text}`).join("\n\n")}\n`)}>Export entries</button>
+        </div>
+      </details>
       <OfflineTask id={id} />
     </section>
   );

@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import {
   contentSections,
+  learningLogPath,
   learningFileUrl,
   learningManifestUrl,
   resolveLearningLink,
@@ -45,6 +46,11 @@ const icons = {
   results: TestTube2,
   resources: Link2,
 };
+function displayFileName(file: LearningFile) {
+  if (file.path === learningLogPath) return "Learning log";
+  if (file.path === "notes/00-warehouse-practice.md") return "Practice brief";
+  return file.path.split("/").slice(1).join("/");
+}
 async function readJson<T>(url: string, signal?: AbortSignal): Promise<T> {
   const response = await fetch(url, { cache: isGitHubPages ? "default" : "no-store", signal });
   const data = await response.json();
@@ -58,6 +64,7 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
   const [section, setSection] = useState<ContentSection>(initialFile ? "notes" : "theory");
   const [selectedPath, setSelectedPath] = useState(initialFile ?? "");
   const lastRequested = useRef<string | null | undefined>(undefined);
+  const filesDisclosure = useRef<HTMLDetailsElement>(null);
   const [error, setError] = useState("");
   const [refreshing, setRefreshing] = useState(false);
   const [refreshVersion, setRefreshVersion] = useState(0);
@@ -79,6 +86,7 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
           if (match) {
             setSection(match.section);
             setSelectedPath(match.path);
+            if (filesDisclosure.current) filesDisclosure.current.open = true;
           }
           lastRequested.current = requested;
         }
@@ -139,10 +147,13 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
     }
   }
   return (
-    <section
+    <details
       className="learning-workspace"
+      ref={filesDisclosure}
       aria-label="Task learning workspace"
     >
+      <summary className="learning-files-summary">Task files <span>Learning log, code, results, and references</span></summary>
+      <div id="learning-files">
       <Link className="workspace-help-link" href="/guide">
         New here? Read the learning & coding guide →
       </Link>
@@ -278,7 +289,7 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
                 <FileText size={15} />
               )}
               <span>
-                {file.path.split("/").slice(1).join("/")}
+                {displayFileName(file)}
                 <small>
                   {file.kind} ·{" "}
                   {file.bytes < 1024
@@ -332,15 +343,8 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
           )}
         </div>
       </div>
-      <div className="learning-workflow-note">
-        <BookOpen size={16} />
-        <span>
-          <strong>A simple learning loop:</strong> understand the theory →
-          capture your reasoning → run the code → record actual results.
-          Templates are starting points; they do not mark your task complete.
-        </span>
       </div>
-    </section>
+    </details>
   );
 }
 
@@ -388,7 +392,7 @@ function DocumentViewer({
     <>
       <div className="document-toolbar">
         <div>
-          <strong>{file.name}</strong>
+          <strong>{displayFileName(file)}</strong>
           <span>
             {file.kind === "code"
               ? "Source preview · run in your own project"

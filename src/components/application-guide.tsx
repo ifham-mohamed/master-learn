@@ -17,12 +17,12 @@ const chapters = [
 2. Open [JA05](/tasks/JA05) for the first terminal exercise. Read **Review and learn**, **Do the work**, and **Pass check** in **Your practice**. Check the prerequisites on the task page.
 3. Create your own first Java file in \`projects/warehouse-dispatch/\`. Use the task workspace for isolated experiments, notes and results.
 4. Recall the concepts, predict one failure, and write the smallest working behavior yourself. Run the normal and invalid-input cases before moving on.
-5. Use **Record result** to save the command and observed result, or keep output under **Results**. Use **Quick note** to capture a question or next action.
+5. Use **Learning log** to write what you learned, what you tried and observed, and your next step. Use **Copy to evidence draft** to reuse the entry when recording progress.
 6. Choose **Start task** when you begin, and **Pause timer** for breaks. **Complete task & add evidence** saves time and opens your completion form. Add evidence, confidence, and next action, then save. Mark Done only when the task outcome is demonstrated.
 
-**On mobile:** Use Install Learnspace above the page, or Safari → Share → Add to Home Screen on iPhone/iPad. Download a task for offline use below its quick journal. Reconnect for Google sync. App updates clear downloaded lessons; local progress remains. Export backups regularly.
+**On mobile:** Use Install Learnspace above the page, or Safari → Share → Add to Home Screen on iPhone/iPad. Download a task for offline use below its learning log. Reconnect for Google sync. App updates clear downloaded lessons; local progress remains. Export backups regularly.
 
-**Daily tools:** Today recommends ready tasks; Reviews tracks weekly learning and spaced recall. Use each task's quick journal to capture questions and export Markdown. Optional Focus mode prompts you to pause for a break while the app is open; the task timer keeps counting until paused.
+**Daily tools:** Today recommends ready tasks. Reviews tracks weekly learning and spaced recall. Export browser log entries as Markdown when you want to keep them in the task folder. Optional Focus mode prompts you to take a break while the app is open.
 
 **Alongside Java:** [CS12](/tasks/CS12) has a warehouse JOIN exercise and an archived SQLite worked example. Record your own results separately.
 `,
@@ -82,7 +82,7 @@ learning/
 | Results | Actual output, screenshots, test reports, conclusions, and links to running projects. |
 | Resources | Useful links, why they helped, and commands/ports for separately running projects. |
 
-The task README explains the outcome and links to its sections. The app lists supported files inside the **five section folders**, not the task README itself. Nested folders work, so you can keep multiple attempts such as \`code/attempt-01/\` and \`results/attempt-01/\`.
+Use \`notes/journal.md\` as your single session log. Edit it in your editor or export entries from the browser and append them to the file. In Learnspace, open **Task files** to read it. Use the other folders for code, output, and references when needed.
 
 Edit the existing templates or add new files. Templates are prompts, not complete lessons. Run \`npm run learning:init\` from the repository root to recreate missing templates; existing files are never overwritten. Use the folder paths shown in the app and keep task IDs stable. A new arbitrary folder is not a new curriculum task.
 `,
@@ -99,22 +99,15 @@ Edit the existing templates or add new files. Templates are prompts, not complet
 
 **After coding:** Record the real output, explain whether it supports your prediction, and list what remains uncertain. A screenshot without an explanation is less useful than a reproducible example with a short conclusion.
 
-Use this outline in your results document:
+Use this outline in your learning log:
 
 \`\`\`markdown
-# Experiment: describe the question
-## Prediction
-What do I expect, and why?
-## Run
-Working folder, tool versions, command, and input.
-## Actual result
-Paste the actual output or link a saved screenshot.
-## Checks
-Which cases passed or failed?
-## Explanation
-What does the result tell me? What are its limits?
-## Next action
-What will I try or review next?
+## What I learned
+Explain the idea in your own words.
+## What I tried and what happened
+Record a command, observed result, or link to an artifact.
+## Next step
+Choose one thing to try or review.
 \`\`\`
 
 Adapt the evidence to the subject: SQL result rows and NULL cases; DSA invariants and complexity; Java behavior and failure handling; UI keyboard interaction and screen sizes; system-design assumptions and tradeoffs; mock-interview scores and reflection. Revisit weak areas instead of treating file creation as mastery.

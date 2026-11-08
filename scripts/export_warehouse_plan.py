@@ -166,7 +166,28 @@ Week {week} · {scope} · Warehouse checkpoint {checkpoint}
 
 {verify}
 {lab_notes}
-Write the work yourself. Save the command or scenario, actual result, and next action in [Results](../results/evidence.md) or in Learnspace. Include a commit or result path when useful.
+Write the work yourself. Add one entry in the [learning log](journal.md) or use the Learning log form in Learnspace. Write what you learned, what you tried and observed, and your next step. Link output from `results/` when it needs a separate file.
+''')
+        journal = ROOT / folder / 'notes/journal.md'
+        # Migrate only the original empty template. The log belongs to the learner.
+        old_log = journal.read_text(encoding='utf-8').strip() if journal.exists() else ''
+        empty_template = re.fullmatch(
+            rf'# {task_id} learning journal\n\n> Starter template\. Record your own session; no work is claimed here\.\n\n'
+            r'## Session\n\n- Date:\n- Goal: [^\n]+\n- Time spent:\n- Tools / AI policy: [^\n]+\n\n'
+            r'## What I understood\n\nExplain the concept in your own words\.\n\n'
+            r'## Attempts and mistakes\n\nWhat did you try\? What failed, and why\?\n\n'
+            r'## Next action\n\nWrite one concrete next step\.', old_log,
+        )
+        if not check and (not journal.exists() or empty_template):
+            publish(journal, f'''# {task_id} learning log
+
+Add one short entry per session. Date each entry and repeat the three prompts below.
+
+## What I learned
+
+## What I tried and what happened
+
+## Next step
 ''')
         starter_readme = 'These are starter prompts, not completed learning. Save new files in the five section folders; supported files appear automatically in the UI.'
         readme = ROOT / folder / 'README.md'
@@ -178,13 +199,9 @@ Write the work yourself. Save the command or scenario, actual result, and next a
 
 {category} · Week {week} · {scope}
 
-Start with the [practice brief](notes/{BRIEF_NAME}). It gives the concepts, work, and pass check for this task.
+Read the [practice brief](notes/{BRIEF_NAME}), then write one entry in your [learning log](notes/journal.md).
 
-- [Theory](theory/concepts.md) for your explanation
-- [Notes](notes/journal.md) for your prediction and decisions
-- [Code](code/README.md) for where to build and run
-- [Results](results/evidence.md) for what you observed
-- [Resources](resources/links.md) for references
+Use the other files when needed. [Concepts](theory/concepts.md) · [Code guide](code/README.md) · [Evidence](results/evidence.md) · [References](resources/links.md)
 
 [Warehouse Dispatch project](../../../projects/warehouse-dispatch/README.md) · [Original task record](../../../sources/markdown/categories/{slug(category)}.md#{task_id.lower()})
 ''')

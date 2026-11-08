@@ -1,22 +1,9 @@
-# B01 learning journal
+# B01 learning log
 
-> Starter template. Record your own session; no work is claimed here.
+Add one short entry per session. Date each entry and repeat the three prompts below.
 
-## Session
+## What I learned
 
-- Date:
-- Goal: Set up Java/TS repo; Java domain kata; convert a small JS module to strict TS
-- Time spent:
-- Tools / AI policy: AI-free first
+## What I tried and what happened
 
-## What I understood
-
-Explain the concept in your own words.
-
-## Attempts and mistakes
-
-What did you try? What failed, and why?
-
-## Next action
-
-Write one concrete next step.
+## Next step

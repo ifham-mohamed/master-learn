@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { TaskTimer } from "./study-timer";
 import { studyDate } from "@/lib/study";
 import { taskDates, taskPrerequisites } from '@/lib/planner';
@@ -24,11 +24,15 @@ import {
 } from "@/lib/tracker";
 import { statuses, type Progress } from "@/lib/progress";
 import { LearningWorkspace } from "./learning-workspace";
+import { learningLogPath } from "@/lib/learning-types";
 import { checkpointHref, warehouseBrief, warehouseLabs, warehouseTitle } from "@/lib/warehouse";
+
+type ProgressRequest = { complete: boolean; evidence?: string };
 
 export function TaskDetail({ id }: { id: string }) {
   const { tasks, editing, setEditing,planner } = useTracker();
-  const [progressRequest, setProgressRequest] = useState<{ complete: boolean } | null>(null);
+  const [progressRequest, setProgressRequest] = useState<ProgressRequest | null>(null);
+  const clearProgressRequest = useCallback(() => setProgressRequest(null), []);
   const task = tasks.find((t) => t.id === id)!;
   const brief = warehouseBrief(id);
   const prerequisites = taskPrerequisites(task);
@@ -95,16 +99,19 @@ export function TaskDetail({ id }: { id: string }) {
             ))}
           </p>}
           <div className="warehouse-actions">
-            <button className="button primary" onClick={() => {
+            <a className="button primary" href="#learning-journal">Write a learning log</a>
+            <button className="button secondary" onClick={() => {
               setEditing(true);
               setProgressRequest({ complete: false });
-            }}>Record result</button>
-            <a className="button secondary" href="#learning-journal">Quick note</a>
+            }}>Update progress</button>
           </div>
         </section>
       )}
-      <LearningWorkspace key={id} taskId={id} initialFile={brief ? "notes/00-warehouse-practice.md" : undefined} />
-      <TaskJournal key={`journal-${id}`} id={id}/>
+      <TaskJournal key={`journal-${id}`} id={id} category={task.category} onUseAsEvidence={(evidence) => {
+        setEditing(true);
+        setProgressRequest({ complete: false, evidence });
+      }} />
+      <LearningWorkspace key={id} taskId={id} initialFile={learningLogPath} />
       <div className="detail-layout">
         <div>
           <section className="panel detail-panel">
@@ -215,6 +222,7 @@ export function TaskDetail({ id }: { id: string }) {
               key={task.id}
               task={task}
               progressRequest={progressRequest}
+              clearProgressRequest={clearProgressRequest}
             />
           ) : (
             <section className="edit-invitation">
@@ -240,9 +248,11 @@ export function TaskDetail({ id }: { id: string }) {
 function ProgressForm({
   task,
   progressRequest,
+  clearProgressRequest,
 }: {
   task: Task;
-  progressRequest: { complete: boolean } | null;
+  progressRequest: ProgressRequest | null;
+  clearProgressRequest: () => void;
 }) {
   const { save } = useTracker();
   const [message, setMessage] = useState("");
@@ -266,19 +276,23 @@ function ProgressForm({
   const isMock = task.workType === "Mock";
   useEffect(() => {
     if (!progressRequest) return;
-    if (progressRequest.complete) {
-      // Apply only an explicit completion request and retain the evidence draft.
+    const { complete, evidence } = progressRequest;
+    if (complete || evidence) {
+      // Preserve any evidence already saved or drafted for this task.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setForm((previous) => ({
         ...previous,
-        status: "Done",
-        completedOn: previous.completedOn || studyDate(Date.now()),
+        ...(complete && { status: "Done", completedOn: previous.completedOn || studyDate(Date.now()) }),
+        evidence: evidence && !previous.evidence.includes(evidence)
+          ? [previous.evidence.trim(), evidence].filter(Boolean).join("\n\n")
+          : previous.evidence,
       }));
-      setStatusEdited(true);
+      if (complete) setStatusEdited(true);
     }
     evidenceRef.current?.scrollIntoView({ block: "center" });
     evidenceRef.current?.focus({ preventScroll: true });
-  }, [progressRequest]);
+    clearProgressRequest();
+  }, [progressRequest, clearProgressRequest]);
   return (
     <form
       className="panel progress-form"

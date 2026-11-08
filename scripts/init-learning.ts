@@ -86,7 +86,7 @@ async function main() {
     );
     await create(
       `${folder}/notes/journal.md`,
-      `# ${task.id} learning journal\n\n> Starter template. Record your own session; no work is claimed here.\n\n## Session\n\n- Date:\n- Goal: ${task.title}\n- Time spent:\n- Tools / AI policy: ${task.aiMode || "Confirm the applicable policy."}\n\n## What I understood\n\nExplain the concept in your own words.\n\n## Attempts and mistakes\n\nWhat did you try? What failed, and why?\n\n## Next action\n\nWrite one concrete next step.\n`,
+      `# ${task.id} learning log\n\nAdd one short entry per session. Date each entry and repeat the three prompts below.\n\n## What I learned\n\n## What I tried and what happened\n\n## Next step\n`,
     );
     await create(
       `${folder}/code/README.md`,
