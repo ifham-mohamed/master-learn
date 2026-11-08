@@ -1,4 +1,5 @@
 "use client";
+import { WarehousePath } from "./warehouse-path";
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -469,19 +470,14 @@ export function Workspace({
     return (
       <>
         <Heading
-          label="TURN KNOWLEDGE INTO EVIDENCE"
-          title="One capstone. Many skills."
-          description="Connect your Java backend and TypeScript interface in a product you can explain."
+          label="SELF-CODING CAPSTONE"
+          title="Warehouse Dispatch"
+          description="Start with one terminal shipment. Grow it into a stock reservation and dispatch application with Spring Boot, PostgreSQL and React."
         />
-        <div className="inline-notice">
-          <Layers3 size={20} />
-          <span>
-            The five profiles describe a connected capstone and optional
-            extensions. Existing exposure is preserved as context; it does not
-            establish completion.
-          </span>
-        </div>
-        <div className="project-profiles">
+        <WarehousePath tasks={tasks} />
+        <details className="panel tool-card">
+          <summary>Original project profiles</summary>
+          <div className="project-profiles">
           {tracker.guide
             .filter((g) => g.type === "Project profile")
             .map((p, i) => (
@@ -506,7 +502,8 @@ export function Workspace({
                 </div>
               </details>
             ))}
-        </div>
+          </div>
+        </details>
         <section className="panel">
           <div className="section-heading">
             <h2>Your project deliverables</h2>

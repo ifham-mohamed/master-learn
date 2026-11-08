@@ -10,6 +10,7 @@ import {
   validateStudy,
 } from "../src/lib/study";
 import { tasks, tracker } from "../src/lib/tracker";
+import imported from "../src/data/tracker.json";
 
 test("schedule starts 5 October and preserves week durations across year boundaries", () => {
   assert.equal(tracker.settings.startDate, "2026-10-05");
@@ -18,7 +19,7 @@ test("schedule starts 5 October and preserves week durations across year boundar
   assert.equal(planDate(167), "2027-03-21");
   for (const task of tasks)
     assert.equal(task.dueDate, planDate(task.endWeek * 7 - 1));
-  assert.equal(tasks[0].completedOn, "2026-09-29");
+  assert.deepEqual(tasks.map((task) => task.completedOn), imported.tasks.map((task) => task.completedOn));
 });
 test("pause and resume record only running segments, and stopping a paused timer cannot double count", () => {
   const start = Date.parse("2026-10-05T09:00:00+05:30");

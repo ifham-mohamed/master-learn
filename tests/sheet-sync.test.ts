@@ -9,6 +9,7 @@ import { tasks } from "../src/lib/tracker";
 import type { Progress } from "../src/lib/progress";
 
 const task = tasks.find((task) => task.id === "CS12")!;
+const changedStatus = task.status === "In progress" ? "Not started" : "In progress";
 function fixture() {
   const header: (string | number)[] = Array(31).fill("");
   header[0] = "Task ID";
@@ -30,7 +31,7 @@ test("sync touches only changed progress fields and resolves task rows by ID", (
   const { rows, progress } = fixture();
   rows.splice(1, 0, ["ANOTHER"]);
   const changes = planSheetChanges(rows, {
-    CS12: { ...progress, status: "In progress", evidence: "=literal text" },
+    CS12: { ...progress, status: changedStatus, evidence: "=literal text" },
   });
   assert.deepEqual(
     changes.map((c) => c.range),
@@ -41,7 +42,7 @@ test("sync touches only changed progress fields and resolves task rows by ID", (
 });
 test("sync rejects changed headers, duplicate IDs, and formula cells", () => {
   const { rows, progress } = fixture();
-  const local = { CS12: { ...progress, status: "In progress" } };
+  const local = { CS12: { ...progress, status: changedStatus } };
   rows[0][6] = "Renamed";
   assert.throws(() => planSheetChanges(rows, local), /columns changed/);
   rows[0][6] = "Status";
@@ -55,11 +56,11 @@ test("sync flags remote conflicts, skips already-synced values, and retains unre
   const { rows, progress } = fixture();
   rows[1][6] = "Blocked";
   rows[1][7] = "Remote evidence";
-  const local = { CS12: { ...progress, status: "In progress" } };
+  const local = { CS12: { ...progress, status: changedStatus } };
   const changes = planSheetChanges(rows, local);
   assert.equal(changes.length, 1);
   assert.equal(changes[0].conflict, true);
-  rows[1][6] = "In progress";
+  rows[1][6] = changedStatus;
   assert.deepEqual(planSheetChanges(rows, local), []);
 });
 test("completion dates are numeric spreadsheet dates; unknown tasks rejected", () => {

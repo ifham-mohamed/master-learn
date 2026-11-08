@@ -26,6 +26,8 @@ import {
 } from "@/lib/planner";
 import { studyDate, todayStudyMs } from "@/lib/study";
 import { InstallApp, OfflineTask } from "./pwa-controls";
+import { WarehouseNext } from "./warehouse-path";
+import { warehouseBrief, warehouseHoursPerDay } from "@/lib/warehouse";
 
 export function downloadText(
   name: string,
@@ -92,9 +94,7 @@ export function TodayView() {
                 {study.active?.startedAt === null ? "Resume" : "Pause & save"}
               </button>
             </>
-          ) : (
-            <p>No timer running. Choose a task below.</p>
-          )}
+          ) : <WarehouseNext tasks={tasks} />}
           <p role="status">{message}</p>
         </section>
         <section className="panel tool-card tool-feature tool-blue">
@@ -126,7 +126,7 @@ export function TodayView() {
               <Link href={`/tasks/${t.id}`}>
                 <span className="tool-id">{t.id}</span> {t.title}
               </Link>
-              <p>{t.nextAction || t.doneWhen}</p>
+              <p>{t.nextAction || warehouseBrief(t.id)?.build || t.doneWhen}</p>
               <p className="tool-metadata">
                 <span
                   className={
@@ -347,7 +347,7 @@ export function TaskJournal({ id }: { id: string }) {
     [message, setMessage] = useState("");
   const entries = planner.journal.filter((j) => j.taskId === id);
   return (
-    <section className="panel tool-card">
+    <section id="learning-journal" className="panel tool-card">
       <h2>Quick learning journal</h2>
       <p>
         Private to this browser. Export Markdown into your task’s notes folder
@@ -378,11 +378,12 @@ export function TaskJournal({ id }: { id: string }) {
           </select>
         </label>
         <label>
-          Your thought
+          Your note
           <textarea
             required
             maxLength={20000}
             rows={4}
+            placeholder="What did you try? What happened? What will you try next?"
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
@@ -558,6 +559,17 @@ export function SettingsView() {
               </label>
             ))}
           </fieldset>
+          <button
+            type="button"
+            className="button secondary"
+            disabled={!schedule.days.length}
+            onClick={() => {
+              setPreview(false);
+              setSchedule({ ...schedule, capacity: warehouseHoursPerDay * schedule.days.length });
+            }}
+          >
+            Use {warehouseHoursPerDay} hours per selected day
+          </button>
           <button className="button secondary" disabled={!schedule.days.length}>
             Preview schedule
           </button>

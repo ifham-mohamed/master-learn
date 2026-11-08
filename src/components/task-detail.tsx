@@ -24,11 +24,13 @@ import {
 } from "@/lib/tracker";
 import { statuses, type Progress } from "@/lib/progress";
 import { LearningWorkspace } from "./learning-workspace";
+import { warehouseBrief } from "@/lib/warehouse";
 
 export function TaskDetail({ id }: { id: string }) {
   const { tasks, editing, setEditing,planner } = useTracker();
-  const [completionRequest, setCompletionRequest] = useState(0);
+  const [progressRequest, setProgressRequest] = useState<{ complete: boolean } | null>(null);
   const task = tasks.find((t) => t.id === id)!;
+  const brief = warehouseBrief(id);
   const prerequisites = task.prerequisites.match(/[A-Z]+\d+/g) || [];
   const reviewDue = task.completedOn
     ? new Date(
@@ -71,22 +73,40 @@ export function TaskDetail({ id }: { id: string }) {
         task={task}
         onComplete={() => {
           setEditing(true);
-          setCompletionRequest((value) => value + 1);
+          setProgressRequest({ complete: true });
         }}
       />
+      {brief && (
+        <section className="panel tool-card warehouse-brief" aria-labelledby="warehouse-practice">
+          <div className="section-heading">
+            <h2 id="warehouse-practice">Your practice</h2>
+            <Link href="/projects">Warehouse Dispatch path →</Link>
+          </div>
+          <dl>
+            <div><dt>Review and learn</dt><dd>{brief.focus}</dd></div>
+            <div><dt>Do the work</dt><dd>{brief.build}</dd></div>
+            <div><dt>Pass check</dt><dd>{brief.verify}</dd></div>
+          </dl>
+          <p>Write and test the code yourself. Save what you ran, what happened, and what comes next.</p>
+          <div className="warehouse-actions">
+            <button className="button primary" onClick={() => {
+              setEditing(true);
+              setProgressRequest({ complete: false });
+            }}>Record result</button>
+            <a className="button secondary" href="#learning-journal">Quick note</a>
+          </div>
+        </section>
+      )}
       <LearningWorkspace key={id} taskId={id} />
       <TaskJournal key={`journal-${id}`} id={id}/>
       <div className="detail-layout">
         <div>
           <section className="panel detail-panel">
-            <h2>What good looks like</h2>
-            <p className="preserve-lines">{task.doneWhen}</p>
-            {task.prompt && (
-              <>
-                <h2>Put it into practice</h2>
-                <p className="preserve-lines">{task.prompt}</p>
-              </>
-            )}
+            <details open={!brief}>
+              <summary>Original task guidance</summary>
+              <p className="preserve-lines">{task.doneWhen}</p>
+              {task.prompt && <p className="preserve-lines">{task.prompt}</p>}
+            </details>
             <ResourceLinks ids={task.sourceIds} taskId={task.id} />
           </section>
           <section className="panel detail-panel">
@@ -147,7 +167,7 @@ export function TaskDetail({ id }: { id: string }) {
               <dt>Review due</dt>
               <dd>{formatDate(reviewDue)}</dd>
               <dt>Practice mode</dt>
-              <dd>{task.aiMode}</dd>
+              <dd>{brief ? "Write and verify your own code" : task.aiMode}</dd>
               {task.workType === "Mock" && (
                 <>
                   <dt>Technical</dt>
@@ -187,7 +207,7 @@ export function TaskDetail({ id }: { id: string }) {
             <ProgressForm
               key={task.id}
               task={task}
-              completionRequest={completionRequest}
+              progressRequest={progressRequest}
             />
           ) : (
             <section className="edit-invitation">
@@ -212,10 +232,10 @@ export function TaskDetail({ id }: { id: string }) {
 
 function ProgressForm({
   task,
-  completionRequest,
+  progressRequest,
 }: {
   task: Task;
-  completionRequest: number;
+  progressRequest: { complete: boolean } | null;
 }) {
   const { save } = useTracker();
   const [message, setMessage] = useState("");
@@ -238,21 +258,20 @@ function ProgressForm({
   };
   const isMock = task.workType === "Mock";
   useEffect(() => {
-    if (!completionRequest) return;
-    // Apply the explicit Complete task action while retaining evidence already typed.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setForm((previous) => ({
-      ...previous,
-      status: "Done",
-      completedOn: previous.completedOn || studyDate(Date.now()),
-    }));
-    setStatusEdited(true);
-    evidenceRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+    if (!progressRequest) return;
+    if (progressRequest.complete) {
+      // Apply only an explicit completion request and retain the evidence draft.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setForm((previous) => ({
+        ...previous,
+        status: "Done",
+        completedOn: previous.completedOn || studyDate(Date.now()),
+      }));
+      setStatusEdited(true);
+    }
+    evidenceRef.current?.scrollIntoView({ block: "center" });
     evidenceRef.current?.focus({ preventScroll: true });
-  }, [completionRequest]);
+  }, [progressRequest]);
   return (
     <form
       className="panel progress-form"
@@ -292,14 +311,14 @@ function ProgressForm({
         </select>
       </label>
       <label>
-        Evidence / result
+        What you ran and what happened
         <textarea
           ref={evidenceRef}
           value={form.evidence}
           required={form.status === "Done"}
           rows={4}
           onChange={(e) => patch({ evidence: e.target.value })}
-          placeholder="What did you build, solve, or demonstrate?"
+          placeholder="Command or test, observed result, and a commit or result path if available."
         />
       </label>
       <label>

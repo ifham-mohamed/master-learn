@@ -57,7 +57,7 @@
       ],
       [
         "Plan start",
-        "2026-09-29",
+        "2026-10-05",
         "",
         "",
         "Plan length",
@@ -114,7 +114,7 @@
         "",
         "",
         "",
-        0.008849557522,
+        0.01327433628,
         "",
         "",
         "",
@@ -123,7 +123,7 @@
         "",
         "",
         "",
-        0.5,
+        1.446235,
         "",
         ""
       ],
@@ -258,7 +258,7 @@
         15,
         0,
         0,
-        0,
+        1,
         0,
         11.5,
         0,
@@ -328,12 +328,12 @@
       [
         "AI Engineering",
         7,
-        0,
-        0,
         1,
+        0.1428571429,
+        0,
         0,
         5.25,
-        0,
+        0.946235,
         "",
         "",
         "",
@@ -527,10 +527,10 @@
         1,
         16.25,
         13,
-        0.5,
-        2,
+        1.446235,
+        3,
         15,
-        0.1333333333,
+        0.2,
         -3.25,
         "",
         "",
@@ -1102,12 +1102,12 @@
       [
         "Interview Policy",
         1,
-        0,
-        0,
+        1,
         1,
         0,
-        0.75,
         0,
+        0.75,
+        0.946235,
         "",
         "If nonzero, add new section labels below the section table and copy its formulas.",
         "",
@@ -1122,7 +1122,7 @@
         3,
         0,
         0,
-        0,
+        1,
         0,
         2.25,
         0,
@@ -1309,7 +1309,7 @@
         "",
         "AI Engineering",
         5.25,
-        0,
+        0.946235,
         "",
         "",
         "",
@@ -4125,8 +4125,8 @@
         "Record target roles, start date, available weekly hours and current Java/TS/SQL baseline. Review the proposed task estimates and optional scope.",
         "",
         "",
-        "2026-09-29",
-        "2026-10-06",
+        "2026-10-05",
+        "2026-10-12",
         "AI-free first",
         "New gap task",
         "",
@@ -4158,8 +4158,8 @@
         "Install compatible JDK/Node tools, pin project versions and lockfiles, run Java tests and TypeScript typecheck/tests, and commit setup instructions.",
         "",
         "",
-        "2026-09-29",
-        "2026-10-06",
+        "2026-10-05",
+        "2026-10-12",
         "AI-free first",
         "New gap task",
         "",
@@ -4180,19 +4180,19 @@
         "Learn",
         "Confirm round policy and rehearse AI-free fallback",
         "P0",
-        "In progress",
-        "",
+        "Done",
+        "Confirm the exact permitted tools and boundaries\nCode/debug/explain without an assistant\nImplement and explain independently\nSolve/debug/explain without AI when required",
         "",
         "2026-10-05",
         "Core",
         0.75,
-        0.0,
-        0.0,
+        0.946235,
+        5.0,
         "Confirm exact permitted tools and boundaries\nCode/debug/explain with no assistant\nImplement and explain independently\nSolve/debug/explain without AI when required",
         "Transparent AI-assisted session\nFailure to test: Policy violation\n60-min unaided mock\nFailure to test: Dependency on tools\nRedo representative task without any assistant\nPractice mode: AI-free Yes, AI-assisted No",
         "",
-        "",
-        "",
+        "2026-11-06",
+        "2026-11-13",
         "AI-free first",
         "Merged",
         "AI Engineering!18\nAI Engineering!19\nReal-World Eng!19\nMaster Roadmap!75",
@@ -4203,7 +4203,7 @@
         "",
         "",
         "W22–24\nReview: Repeat until interview\nW21–24",
-        "",
+        "Complete",
         "AI Engineering|1"
       ],
       [
@@ -4213,7 +4213,7 @@
         "Learn",
         "JOINs",
         "P0",
-        "Not started",
+        "In progress",
         "",
         "",
         "2026-10-05",
@@ -12924,9 +12924,9 @@
         "Tasks",
         7,
         "Complete",
-        0,
+        1,
         "Progress",
-        0,
+        0.1428571429,
         "",
         "",
         "",
@@ -13041,22 +13041,22 @@
         "AI18",
         1,
         "Confirm round policy and rehearse AI-free fallback",
-        "In progress",
+        "Done",
         "P0",
         "Core",
         0.75,
-        0,
+        0.946235,
         "2026-10-05",
-        "",
+        "Complete",
         "",
         "Confirm exact permitted tools and boundaries\nCode/debug/explain with no assistant\nImplement and explain independently\nSolve/debug/explain without AI when required",
         "Transparent AI-assisted session\nFailure to test: Policy violation\n60-min unaided mock\nFailure to test: Dependency on tools\nRedo representative task without any assistant\nPractice mode: AI-free Yes, AI-assisted No",
         "",
         "Interview Policy",
         "AI Engineering",
-        "",
-        "",
-        "",
+        "Confirm the exact permitted tools and boundaries\nCode/debug/explain without an assistant\nImplement and explain independently\nSolve/debug/explain without AI when required",
+        "2026-11-06",
+        "2026-11-13",
         "AI-free first",
         "S026\nS027\nS025",
         3
@@ -45943,7 +45943,7 @@
         "CS12",
         1,
         "JOINs",
-        "Not started",
+        "In progress",
         "P0",
         "Core",
         0.75,
@@ -144663,8 +144663,8 @@
         "Gap closure",
         "Engineering",
         "already workedon java & js/ts projects",
-        "2026-09-29",
-        "2026-10-06",
+        "2026-10-05",
+        "2026-10-12",
         "AI-free first",
         "",
         2
@@ -177551,10 +177551,10 @@
         13.0,
         16.25,
         0,
-        0.5,
+        1.446235,
         15,
-        2,
-        0.1333333333,
+        3,
+        0.2,
         -3.25,
         7.0,
         1,
@@ -313428,8 +313428,8 @@
         "Gap closure",
         "Review",
         "java --version, javac --version, npm --version, nvm --version",
-        "2026-09-29",
-        "2026-10-06",
+        "2026-10-05",
+        "2026-10-12",
         "AI-free first",
         "",
         1
@@ -379019,5 +379019,2179 @@
       },
       "V308": "=IF(ROW()-8>$E$4,\"\",MATCH($C$4&\"|\"&(ROW()-8),PlanTasks[Category key],0))"
     }
+  },
+  "Warehouse Learning": {
+    "rows": [
+      [
+        "Warehouse Dispatch learning plan",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Study 5 hours per selected day. Start with JA05. PostgreSQL is the primary database.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Write and test your own code. Record status, evidence and hours in Master Plan using the same task ID.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Task ID",
+        "Week",
+        "Scope",
+        "Task",
+        "Review and learn",
+        "Do the work",
+        "Pass check"
+      ],
+      [
+        "G01",
+        1,
+        "Core",
+        "Set the target role, baseline and weekly time budget",
+        "Baseline, realistic capacity, and the difference between recognition and recall.",
+        "Record what you can already do in Java, TypeScript and SQL without help. Plan five hours per selected study day.",
+        "Save one real attempt per skill and a study plan with a next gap."
+      ],
+      [
+        "G02",
+        1,
+        "Core",
+        "Run both toolchains and a first test from a clean clone",
+        "JDK, Java compiler, Maven, Node, npm and reproducible builds.",
+        "Verify both toolchains. Compile a tiny Java file and run the smallest TypeScript check from a clean folder.",
+        "Record tool versions, exact commands and real exit results."
+      ],
+      [
+        "AI18",
+        1,
+        "Core",
+        "Confirm round policy and rehearse AI-free fallback",
+        "Tool restrictions, AI-free fallback and independent verification.",
+        "Use the official docs, compiler, debugger and tests during a timed Java or SQL attempt.",
+        "Record what you solved unaided and one fallback technique you can repeat."
+      ],
+      [
+        "CS12",
+        1,
+        "Core",
+        "JOINs",
+        "INNER JOIN, LEFT JOIN, join keys, and filters in ON versus WHERE.",
+        "Query warehouses with assigned shipments, including a warehouse with none. Adapt the existing fixture and rerun on PostgreSQL when available.",
+        "Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse."
+      ],
+      [
+        "JA05",
+        1,
+        "Core",
+        "Syntax + object model",
+        "String and int, Scanner line input, parsing, conditionals, loops, methods, primitives and references.",
+        "Write a terminal menu to create and find one shipment. Ask for reference, destination, SKU and quantity. Work through the source drills as small input and method variations.",
+        "A valid create and lookup work. Blank input and non-numeric or nonpositive quantities recover without a crash. Explain pass-by-value using your own code."
+      ],
+      [
+        "JA06",
+        1,
+        "Core",
+        "OOP",
+        "Encapsulation, constructors, composition, interfaces, and when inheritance helps.",
+        "Separate the menu from Shipment and ShipmentService. Model allowed transitions and add an in-memory collection when a second shipment is needed.",
+        "The terminal still works. Tests reject duplicate references and illegal transitions. Explain why you used composition."
+      ],
+      [
+        "TS05",
+        1,
+        "Core",
+        "Scopes / closures",
+        "Lexical scope, closures and captured state.",
+        "Write a shipment display helper with a configurable label. Trace two functions created with different options.",
+        "Each function keeps its own options. Explain one stale closure risk in React."
+      ],
+      [
+        "TS08",
+        1,
+        "Core",
+        "Strict types",
+        "Strict types, inference, nullability and safe inputs.",
+        "Port a shipment display helper to strict TypeScript. Handle a missing value explicitly.",
+        "Type checks pass and a deliberately incompatible input fails compilation."
+      ],
+      [
+        "TS26",
+        1,
+        "Core",
+        "pnpm/npm + lockfiles",
+        "Package manager, scripts, lockfile and repeatable installs.",
+        "Create the minimal React/TypeScript package when needed. Pin dependencies with the lockfile.",
+        "A clean install and typecheck use the documented commands."
+      ],
+      [
+        "EN26",
+        1,
+        "Core",
+        "Git",
+        "Git status, small commits, diff review and safe undo.",
+        "Commit the first working CLI in a small branch. Rehearse undo on an isolated practice change.",
+        "The diff explains one change and the branch can be built after checkout."
+      ],
+      [
+        "B01",
+        1,
+        "Core",
+        "Set up Java/TS repo; Java domain kata; convert a small JS module to strict TS",
+        "Terminal I/O, methods, OOP basics, Git and strict TypeScript.",
+        "Deliver a runnable Java create/find CLI and a strict TypeScript shipment display helper. Use one shipment and split the code once the flow runs.",
+        "A clean folder can build and run it. Save valid and invalid terminal runs, the TypeScript check, and one design decision."
+      ],
+      [
+        "DS01",
+        1,
+        "Core",
+        "Solve 7 new DSA problems and revisit errors",
+        "Practice arrays and hash maps. State the invariant and time and space costs before coding.",
+        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "RW20",
+        1,
+        "Core",
+        "Think-aloud communication",
+        "Think aloud, state assumptions and explain a failure.",
+        "Explain your CLI flow while trying an invalid quantity and an unknown reference.",
+        "A listener can reconstruct the expected behavior and the reason for your next step."
+      ],
+      [
+        "M01",
+        1,
+        "Core",
+        "Java Big-O/arrays/OOP + verbal reasoning",
+        "Recall Java Big-O/arrays/OOP + verbal reasoning and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B01 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV01",
+        1,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 1 concept and explain the trade-off from B01.",
+        "Rerun one check from B01, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "CS13",
+        2,
+        "Core",
+        "GROUP BY / HAVING",
+        "Grouping, aggregates, HAVING and duplicate-sensitive totals.",
+        "Build a stock or shipment report grouped by warehouse. Include a warehouse below the reporting threshold.",
+        "Compare totals with a hand-checked fixture and justify WHERE versus HAVING."
+      ],
+      [
+        "JA07",
+        2,
+        "Core",
+        "equals/hashCode/immutability",
+        "Value equality, hash codes and immutable identifiers.",
+        "Make SKU or shipment reference an immutable value. Use it to look up a record created from a separate but equal value.",
+        "Equal values share a hash and resolve the same map entry. An unrelated value does not match."
+      ],
+      [
+        "JA08",
+        2,
+        "Core",
+        "Collections",
+        "List, Set and Map, deterministic iteration, and lookup cost.",
+        "Support multiple shipments and look up by reference. Compare a list scan with a keyed map for the same fixture.",
+        "Preserve all valid shipments, reject duplicate keys and explain complexity with a trace."
+      ],
+      [
+        "TS06",
+        2,
+        "Core",
+        "Objects / prototypes",
+        "Objects, prototypes, ownership and mutation.",
+        "Compare a plain shipment DTO with an object that inherits behavior. Inspect an own field and an inherited field.",
+        "JSON contains the intended fields. Explain what crosses the API boundary."
+      ],
+      [
+        "TS09",
+        2,
+        "Core",
+        "Union/intersection/narrowing",
+        "Discriminated unions, narrowing and exhaustive cases.",
+        "Model loading, success, empty and failed shipment states as a union.",
+        "Each valid state renders and adding a new case forces the missing branch to be handled."
+      ],
+      [
+        "B02",
+        2,
+        "Core",
+        "Immutable Java value objects + typed TS API-state exercise",
+        "Immutable identities, collections, composition and UI state unions.",
+        "Support multiple shipment references and basic status rules. Model loading, empty, success and error states with fixtures.",
+        "Duplicate identity and invalid transitions are rejected. Each typed UI state renders."
+      ],
+      [
+        "DS02",
+        2,
+        "Core",
+        "Solve 7 new DSA problems and revisit errors",
+        "Practice two pointers and hash maps. State the invariant and time and space costs before coding.",
+        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "G03",
+        2,
+        "Core",
+        "Create a role shortlist and requirements checklist",
+        "Role requirements, evidence mapping and priorities.",
+        "Compare the roles you are targeting and map their Java, SQL and React requirements to capstone checkpoints.",
+        "Record your shortlist and two skills that need stronger evidence."
+      ],
+      [
+        "M02",
+        2,
+        "Core",
+        "HashMap/two pointers + Java collections",
+        "Recall HashMap/two pointers + Java collections and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B02 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV02",
+        2,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 2 concept and explain the trade-off from B02.",
+        "Rerun one check from B02, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "CS07",
+        3,
+        "Core",
+        "ACID",
+        "ACID, commit and rollback.",
+        "Run a PostgreSQL transaction that changes reservation and stock records. Intentionally fail partway.",
+        "A second connection sees no partial reservation and final balances reconcile."
+      ],
+      [
+        "CS08",
+        3,
+        "Core",
+        "Normalization",
+        "Keys, dependencies and normalization.",
+        "Sketch warehouse, SKU, stock, shipment and shipment-line tables. Compare with one denormalized spreadsheet-style record.",
+        "Demonstrate one update anomaly the normalized model prevents."
+      ],
+      [
+        "JA09",
+        3,
+        "Core",
+        "Generics",
+        "Generic type parameters, bounds and compile-time guarantees.",
+        "Give a small lookup or result type two real uses, such as SKU and shipment queries. Replace a cast at the boundary.",
+        "Both callers type-check and an incompatible use fails compilation."
+      ],
+      [
+        "JA10",
+        3,
+        "Core",
+        "Exceptions",
+        "Validation, domain exceptions, failure boundaries and recoverability.",
+        "Distinguish bad input, unknown shipment and a failed business rule. Recover at the terminal boundary.",
+        "Every failure has an actionable message and returns to the menu without partial state."
+      ],
+      [
+        "TS10",
+        3,
+        "Core",
+        "Generics",
+        "Generics, inference and constraints.",
+        "Use one typed result or page shape for shipments and inventory items.",
+        "Both uses preserve the item type without unchecked casts."
+      ],
+      [
+        "TS11",
+        3,
+        "Core",
+        "Utility / mapped types",
+        "Pick, Omit, Partial and mapped types.",
+        "Derive a form or display type from a shipment type. Keep server-only fields out of the create request.",
+        "A compile-time check rejects a server-only field on the request type."
+      ],
+      [
+        "TS12",
+        3,
+        "Core",
+        "Interfaces vs type aliases",
+        "Interfaces, aliases and structural typing.",
+        "Define the shipment DTO shape and a closed union for its status or load state.",
+        "Explain the type choice and show an incompatible DTO rejected by the checker."
+      ],
+      [
+        "B03",
+        3,
+        "Core",
+        "Generic Java service + typed DTO transformations",
+        "Generics, lookup boundaries, mapping and exceptions.",
+        "Refine the Java lookup service and map shipment summaries to typed display objects.",
+        "Tests cover known and unknown references, invalid input and mapping correctness."
+      ],
+      [
+        "DS03",
+        3,
+        "Core",
+        "Solve 7 new DSA problems and revisit errors",
+        "Practice sliding windows and prefix sums. State the invariant and time and space costs before coding.",
+        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M03",
+        3,
+        "Core",
+        "Sliding window/prefix + generics + SQL",
+        "Recall Sliding window/prefix + generics + SQL and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B03 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV03",
+        3,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 3 concept and explain the trade-off from B03.",
+        "Rerun one check from B03, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "CS15",
+        4,
+        "Core",
+        "Process vs thread",
+        "Processes, threads and shared versus isolated memory.",
+        "Compare separate CLI processes with concurrent work inside one Java process.",
+        "Record which state is visible to each worker and where a race could occur."
+      ],
+      [
+        "JA11",
+        4,
+        "Core",
+        "Streams/lambdas",
+        "Lambdas, filtering, grouping and reduction.",
+        "Summarize shipment quantities by destination and status. Compare a loop with a stream implementation.",
+        "Both approaches match a hand-checked fixture including empty input."
+      ],
+      [
+        "JA12",
+        4,
+        "Core",
+        "Optional",
+        "Optional for absence and explicit behavior at boundaries.",
+        "Return Optional from shipment lookup and handle the missing case where the caller can decide what to do.",
+        "Found and missing lookups are tested. Explain where a domain error belongs."
+      ],
+      [
+        "JA13",
+        4,
+        "Core",
+        "Records / sealed classes",
+        "Records for immutable data and sealed types for a closed set of cases.",
+        "Model a shipment summary as a record. Try a closed result type for accepted and refused reservation in a small exercise.",
+        "Map the result cases explicitly and explain which object must still manage mutable state."
+      ],
+      [
+        "JA16",
+        4,
+        "Core",
+        "Memory / GC basics",
+        "Object lifetime, heap, stack and basic garbage collection.",
+        "Load a repeatable shipment fixture and inspect memory before and after releasing it.",
+        "Save an observation and separate live data from temporary allocation."
+      ],
+      [
+        "TS07",
+        4,
+        "Core",
+        "Event loop",
+        "Event loop, microtasks, timers and ordering.",
+        "Predict the order of a small shipment loading simulation, then run it.",
+        "Explain each observed step and correct a wrong prediction."
+      ],
+      [
+        "TS13",
+        4,
+        "Core",
+        "Modules / ESM",
+        "ES modules, imports, exports and boundary ownership.",
+        "Separate shipment types, formatting and API access into small modules.",
+        "The build and a clean test run pass. Explain which dependency points toward the network boundary."
+      ],
+      [
+        "TS15",
+        4,
+        "Core",
+        "Async/await + errors",
+        "Async/await, rejected promises and cleanup.",
+        "Load a shipment through an async adapter. Handle rejection and a slow request that outlives a change of selection.",
+        "An older response cannot replace the current shipment. Failure remains visible."
+      ],
+      [
+        "B04",
+        4,
+        "Core",
+        "Java aggregation kata + 10 JS async-order drills",
+        "Aggregation, memory behavior and JavaScript async ordering.",
+        "Report shipment totals by destination and work through the async-order drills using shipment data.",
+        "Compare totals with a fixture and explain the observed execution order."
+      ],
+      [
+        "DS04",
+        4,
+        "Core",
+        "Solve 7 new DSA problems and revisit errors",
+        "Practice binary search and stacks. State the invariant and time and space costs before coding.",
+        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "G04",
+        4,
+        "Core",
+        "Draft a resume and verify portfolio links",
+        "Résumé accuracy, reproducible portfolio links and concise results.",
+        "Draft a project entry using only completed work and check its links.",
+        "Each claim has a real artifact and a reviewer can open it."
+      ],
+      [
+        "M04",
+        4,
+        "Core",
+        "Binary search/stack + event loop + CS basics",
+        "Recall Binary search/stack + event loop + CS basics and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B04 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV04",
+        4,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 4 concept and explain the trade-off from B04.",
+        "Rerun one check from B04, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "AI05",
+        5,
+        "Core",
+        "AI limitations, context and token budgets",
+        "Context limits, incomplete specifications and plausible but wrong suggestions.",
+        "Compare two supplied descriptions of a warehouse rule and identify missing context. Write the correct test yourself.",
+        "Show which assumption changes the expected result and verify it without an AI tool."
+      ],
+      [
+        "CS18",
+        5,
+        "Core",
+        "TCP vs UDP",
+        "TCP, UDP and what a delivery guarantee means.",
+        "Trace the TCP connection for a local API request. Explain where an unreliable datagram could be acceptable in a telemetry example.",
+        "Identify the observed connection and explain why a successful connection is separate from a committed reservation."
+      ],
+      [
+        "CS19",
+        5,
+        "Core",
+        "DNS",
+        "DNS names, resolution and environments.",
+        "Resolve the staging hostname or inspect Compose service-name resolution from the app network.",
+        "Save the lookup result and distinguish DNS failure from a server response."
+      ],
+      [
+        "CS20",
+        5,
+        "Core",
+        "HTTP",
+        "HTTP requests, responses, headers, status and content types.",
+        "Use a terminal HTTP client to inspect shipment create, detail and conflict responses.",
+        "Show the method, status and body for each case and identify which failures are safe to retry."
+      ],
+      [
+        "JA17",
+        5,
+        "Core",
+        "IoC / DI",
+        "Dependency injection, composition roots and test doubles.",
+        "Inject the existing shipment service and repository in Spring while keeping domain rules independent of HTTP.",
+        "A domain test runs without a server. Spring starts with the intended dependency."
+      ],
+      [
+        "JA18",
+        5,
+        "Core",
+        "Boot fundamentals",
+        "Boot application startup, starters, configuration and health checks.",
+        "Run the same shipment service inside a Spring Boot application with a development fixture.",
+        "A fresh start and one smoke request succeed. A broken configuration gives a useful error."
+      ],
+      [
+        "FE32",
+        5,
+        "Core",
+        "HTML/CSS fundamentals",
+        "Semantic HTML, labels, CSS layout and responsive behavior.",
+        "Build the shipment entry form and list using semantic controls and narrow-screen layout.",
+        "Labels and errors are associated correctly and the page works on a narrow screen."
+      ],
+      [
+        "TS17",
+        5,
+        "Core",
+        "Components / props",
+        "Components, props and single responsibility.",
+        "Build a small shipment list, status badge and detail view with fixtures.",
+        "The same component renders multiple statuses from typed props."
+      ],
+      [
+        "B05",
+        5,
+        "Core",
+        "Create Spring Boot service skeleton + typed Next/React client shell",
+        "Spring Boot, dependency injection, service boundaries and React components.",
+        "Start Spring around the existing Java service. Build a React shipment list with fixture data.",
+        "Document one successful smoke request and show the React list with two fixture states."
+      ],
+      [
+        "DS05",
+        5,
+        "Core",
+        "Solve 7 new DSA problems and revisit errors",
+        "Practice linked lists and trees. State the invariant and time and space costs before coding.",
+        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "RW05",
+        5,
+        "Core",
+        "Unfamiliar codebase orientation",
+        "Repository entry points, data flow and unfamiliar code navigation.",
+        "Trace startup to shipment lookup in a clean checkout. Draw the route through two actual files.",
+        "Verify the trace with a run or debugger and identify where a small change belongs."
+      ],
+      [
+        "SD05",
+        5,
+        "Core",
+        "Requirements",
+        "Actors, use cases, constraints and measurable acceptance criteria.",
+        "Write requirements for receive, reserve, pick, dispatch and cancel. Rank the smallest end-to-end workflow.",
+        "Each core requirement has one success and one failure example."
+      ],
+      [
+        "SD07",
+        5,
+        "Core",
+        "Data model",
+        "Entities, relationships, lifecycle states and ownership.",
+        "Model a warehouse, SKU, balance, shipment, shipment lines, reservation and event history.",
+        "Walk through create, reserve, cancel and dispatch and reconcile both quantities and transitions."
+      ],
+      [
+        "M05",
+        5,
+        "Core",
+        "Spring DI/Boot + linked list/tree",
+        "Recall Spring DI/Boot + linked list/tree and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B05 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV05",
+        5,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 5 concept and explain the trade-off from B05.",
+        "Rerun one check from B05, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "CS21",
+        6,
+        "Core",
+        "HTTPS/TLS",
+        "TLS, certificate validation and termination.",
+        "Inspect staging HTTPS and trace where TLS terminates. Use a local test endpoint if staging is not ready.",
+        "Show a valid connection and a rejected untrusted certificate case without bypassing validation."
+      ],
+      [
+        "JA19",
+        6,
+        "Core",
+        "Configuration / profiles",
+        "Profiles, environment configuration and secrets.",
+        "Separate local fixture settings from database and staging settings. Document the required environment variables.",
+        "The selected profile uses the intended data source. A missing required variable fails safely."
+      ],
+      [
+        "JA20",
+        6,
+        "Core",
+        "Spring MVC",
+        "Controllers, DTOs, request binding and service boundaries.",
+        "Add create and lookup operations for shipments. Keep request parsing and business decisions in their respective layers.",
+        "A terminal HTTP client can create and read a shipment. A controller test covers binding failure."
+      ],
+      [
+        "TS18",
+        6,
+        "Core",
+        "State / hooks",
+        "Local state, derived values, hooks and ownership.",
+        "Keep form values local and derive filtered counts. Put shareable filter state in the URL when routing is available.",
+        "Changing a filter updates results without stale counts or duplicated state."
+      ],
+      [
+        "TS19",
+        6,
+        "Core",
+        "Rendering / performance",
+        "Render cost, React profiling and deliberate optimization.",
+        "Profile a representative shipment list before deciding whether memoization, pagination or virtualization is useful.",
+        "Save comparable before and after measurements and report what changed."
+      ],
+      [
+        "TS20",
+        6,
+        "Core",
+        "Routing / boundaries",
+        "React routes, parameters and route-level fallback states.",
+        "Add list, detail and create routes. Handle an unknown reference and direct navigation.",
+        "Direct refresh and navigation work. Missing references show a useful fallback."
+      ],
+      [
+        "B06",
+        6,
+        "Core",
+        "Controller/service/DTO flow + typed React form and route",
+        "Controller/service/DTO flow, forms and routing.",
+        "Add shipment create and detail API operations. Build typed React form and detail routes.",
+        "Create and read from a terminal HTTP client and navigate the form by keyboard."
+      ],
+      [
+        "DS06",
+        6,
+        "Core",
+        "Solve 7 new DSA problems and revisit errors",
+        "Practice tree traversal and binary search trees. State the invariant and time and space costs before coding.",
+        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M06",
+        6,
+        "Core",
+        "Spring MVC + React/Next + trees/BST",
+        "Recall Spring MVC + React/Next + trees/BST and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B06 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV06",
+        6,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 6 concept and explain the trade-off from B06.",
+        "Rerun one check from B06, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "CS14",
+        7,
+        "Core",
+        "CTEs/subqueries/window awareness",
+        "CTEs, subqueries and window functions.",
+        "Write a report that returns the latest status per shipment while retaining its earlier events for history.",
+        "A fixture with tied timestamps produces a deterministic result."
+      ],
+      [
+        "JA21",
+        7,
+        "Core",
+        "Validation + errors",
+        "Boundary validation, domain errors and consistent problem responses.",
+        "Validate quantity and required fields, and map duplicate and invalid transition failures to stable responses.",
+        "Bad input and conflicts have distinct responses and no stack trace or partial write."
+      ],
+      [
+        "JA22",
+        7,
+        "Core",
+        "REST correctness",
+        "HTTP methods, status codes, safe reads and repeatable requests.",
+        "Write the API contract for shipment create, detail and reservation. Decide how clients find a newly created record.",
+        "Test success, missing resource, invalid input and a reservation conflict against the contract."
+      ],
+      [
+        "TS16",
+        7,
+        "Core",
+        "Runtime validation",
+        "Runtime validation, unknown input and response parsing.",
+        "Validate a real shipment API response before handing it to the UI.",
+        "A malformed response shows a useful error instead of rendering invalid data."
+      ],
+      [
+        "TS21",
+        7,
+        "Core",
+        "API integration",
+        "Typed fetch, status handling, loading, and server state.",
+        "Connect the shipment form and list to Spring. Refresh relevant data after a successful write.",
+        "Loading, success, conflict and network failure are visible and independently tested."
+      ],
+      [
+        "B07",
+        7,
+        "Core",
+        "Validated booking/order endpoint + Zod client contract",
+        "REST contracts, input validation, response parsing and failure states.",
+        "Connect React to Spring for shipment create and lookup. Surface duplicate and validation failures.",
+        "Verify success, invalid input, conflict, malformed response, loading and failure states."
+      ],
+      [
+        "G05",
+        7,
+        "Core",
+        "Practice window functions, NULLs and duplicate-sensitive joins",
+        "NULL handling, duplicate-sensitive joins, and window ordering.",
+        "Create a shipment event fixture with duplicates, missing assignments and tied times. Test the report against it.",
+        "Save expected and actual rows with explicit tie-breaking and NULL behavior."
+      ],
+      [
+        "DS07",
+        7,
+        "Core",
+        "Solve 7 new DSA problems and revisit errors",
+        "Practice heaps and intervals. State the invariant and time and space costs before coding.",
+        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M07",
+        7,
+        "Core",
+        "Validation/REST + heap/intervals + SQL",
+        "Recall Validation/REST + heap/intervals + SQL and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B07 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV07",
+        7,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 7 concept and explain the trade-off from B07.",
+        "Rerun one check from B07, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "AI07",
+        8,
+        "Optional",
+        "LLM integration and validated structured output",
+        "Optional structured extraction, schemas and validation.",
+        "Treat a fixture as untrusted extracted shipment data. Validate required fields and reject a malformed record.",
+        "The test proves invalid data cannot become a reservation. AI use is unnecessary for the lab."
+      ],
+      [
+        "JA23",
+        8,
+        "Core",
+        "JPA entities / repositories",
+        "Entities, keys, relationships and repository boundaries.",
+        "Persist warehouse, SKU, stock, shipment and shipment-line records in PostgreSQL. Use versioned migrations.",
+        "A restart keeps the data. Referential and uniqueness constraints reject bad rows."
+      ],
+      [
+        "TS14",
+        8,
+        "Core",
+        "TypeScript configuration and migration awareness",
+        "Strict compiler settings and incremental migration.",
+        "Tighten checks for the shipment client and fix one real nullable or type boundary issue.",
+        "Save the original compiler diagnostic and the corrected check."
+      ],
+      [
+        "TS27",
+        8,
+        "Core",
+        "Lint / format / typecheck",
+        "Lint, formatting, typecheck and CI quality gates.",
+        "Set up the smallest checks needed for the React client.",
+        "Each command runs on a clean clone. Introduce and fix one type or lint error to verify the gate."
+      ],
+      [
+        "G06",
+        8,
+        "Core",
+        "Create and test a database migration",
+        "Versioned migrations, forward compatibility and recovery.",
+        "Add an additive shipment schema migration. Rehearse both fresh setup and upgrade from a populated fixture.",
+        "Rows survive upgrade, the new rule holds, and a failed upgrade has a documented recovery."
+      ],
+      [
+        "B08",
+        8,
+        "Core",
+        "Persist customer/order model + clean frontend build/typecheck pipeline",
+        "PostgreSQL schema, constraints, migrations and frontend build checks.",
+        "Persist warehouses, SKUs, stock, shipments and lines. Implement stock receipt with a positive quantity and a unique receipt reference.",
+        "Migrations work on new and populated data. Receipt increases on-hand stock once, a duplicate is rejected, and data survives restart."
+      ],
+      [
+        "DS08",
+        8,
+        "Core",
+        "Solve 7 new DSA problems and revisit errors",
+        "Practice graph traversal. State the invariant and time and space costs before coding.",
+        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M08",
+        8,
+        "Core",
+        "JPA entity/repository + TS tooling in existing repo",
+        "Recall JPA entity/repository + TS tooling in existing repo and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B08 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV08",
+        8,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 8 concept and explain the trade-off from B08.",
+        "Rerun one check from B08, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "CS09",
+        9,
+        "Core",
+        "Indexes",
+        "Indexes, selectivity, EXPLAIN and write overhead.",
+        "Measure a filtered dispatch list query before and after an index on representative PostgreSQL data.",
+        "Save both plans and explain the measured change and index cost."
+      ],
+      [
+        "JA24",
+        9,
+        "Core",
+        "Queries / N+1",
+        "Lazy loading, N+1, query shapes and pagination.",
+        "Measure queries for the shipment list with multiple line items. Fix the query with a deliberate fetch strategy.",
+        "Compare query counts on the same fixture and confirm results and pagination remain correct."
+      ],
+      [
+        "TS23",
+        9,
+        "Core",
+        "Vitest / Jest concepts",
+        "Test runner, fixtures, mocks and deterministic async tests.",
+        "Test the shipment formatter and API adapter with success and failure fixtures.",
+        "Tests exercise status handling and fail when the error path is removed."
+      ],
+      [
+        "B09",
+        9,
+        "Core",
+        "Profile/fix an N+1 query + Vitest service/client tests",
+        "Query count, pagination, testing and fair measurement.",
+        "Reproduce and fix an N+1 shipment list query. Add a frontend or service regression test.",
+        "Save before and after counts on identical data and verify page correctness."
+      ],
+      [
+        "DS09",
+        9,
+        "Core",
+        "Solve 7 new DSA problems and revisit errors",
+        "Practice topological ordering. State the invariant and time and space costs before coding.",
+        "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "RW06",
+        9,
+        "Core",
+        "Reproduce, diagnose and repair a defect with regression tests",
+        "Reproduction, debugging, minimal fixes and regression tests.",
+        "Reproduce a shipment list or input failure, write the smallest failing case, and fix it yourself.",
+        "Save the failing case, root cause, passing test and scope of the change."
+      ],
+      [
+        "M09",
+        9,
+        "Core",
+        "N+1 query diagnosis and fix",
+        "Recall N+1 query diagnosis and fix and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B09 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M10",
+        9,
+        "Core",
+        "Vitest/API client failure states",
+        "Recall Vitest/API client failure states and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B09 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV09",
+        9,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 9 concept and explain the trade-off from B09.",
+        "Rerun one check from B09, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "CS10",
+        10,
+        "Core",
+        "Transactions/isolation",
+        "Isolation levels, concurrent sessions and lost updates.",
+        "Use two PostgreSQL connections to observe a conflicting reservation or a changed read between statements.",
+        "Record transaction order, observed values, and the fix or retry requirement."
+      ],
+      [
+        "CS11",
+        10,
+        "Core",
+        "Locks/deadlocks",
+        "Row locks, deadlocks and consistent lock order.",
+        "Reserve multiple SKU rows from two transactions in opposite orders, then repeat with one consistent order.",
+        "Record the deadlock or timeout, then show the corrected test and rollback behavior."
+      ],
+      [
+        "JA14",
+        10,
+        "Core",
+        "Threads/executors/futures",
+        "Executors, tasks, futures, timeouts and coordinated starts.",
+        "Build a repeatable two-request reservation test using a bounded executor and a start barrier.",
+        "Both requests finish within a timeout. Record which shared state needed protection."
+      ],
+      [
+        "JA25",
+        10,
+        "Core",
+        "Transactions",
+        "Atomicity, transaction boundaries and rollback behavior.",
+        "Reserve all lines and update shipment state in one transaction. Inject a failure after the first line.",
+        "After failure, balances, reservations and shipment state are unchanged."
+      ],
+      [
+        "JA26",
+        10,
+        "Core",
+        "Locking / concurrency",
+        "Concurrent updates, lock scope and conditional writes.",
+        "Reproduce contention for the last unit. Choose row locking or an atomic conditional update and keep lock ordering consistent.",
+        "Two concurrent requests yield one success, one conflict, and a valid stock balance."
+      ],
+      [
+        "B10",
+        10,
+        "Core",
+        "Double-booking race lab using transaction/constraint/locking",
+        "Inventory balance, atomic transactions, row contention and rollback.",
+        "Reserve all shipment lines together. Add a cancel action that releases a reservation once. Run two concurrent requests for the last unit.",
+        "One request succeeds and one conflicts. Partial failure rolls back and available stock never becomes negative."
+      ],
+      [
+        "DS10",
+        10,
+        "Core",
+        "Solve 6 new DSA problems and revisit errors",
+        "Practice graphs and union-find. State the invariant and time and space costs before coding.",
+        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M11",
+        10,
+        "Core",
+        "Double booking / transactions / isolation",
+        "Recall Double booking / transactions / isolation and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M12",
+        10,
+        "Core",
+        "Race-condition reproduction and safe fix",
+        "Recall Race-condition reproduction and safe fix and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV10",
+        10,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 10 concept and explain the trade-off from B10.",
+        "Rerun one check from B10, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "AI17",
+        11,
+        "Core",
+        "Secrets/privacy",
+        "Secrets, privacy, redaction and synthetic fixtures.",
+        "Review sample logs, environment files and docs before publishing the capstone.",
+        "Record a sanitized example and verify credentials and customer data do not enter the repository."
+      ],
+      [
+        "CS22",
+        11,
+        "Core",
+        "Cookies/sessions/JWT",
+        "Cookies, sessions, token lifetimes and credential boundaries.",
+        "Inspect the browser login request and logout. Compare the session flow with a provider-issued API access token in a lab.",
+        "Explain where credentials are validated and demonstrate session invalidation."
+      ],
+      [
+        "JA27",
+        11,
+        "Core",
+        "Authentication",
+        "Authentication, password encoding, sessions, CSRF and logout.",
+        "Implement a Spring Security browser session for seeded demo users. Practice OIDC and external bearer-token validation in separate comparisons.",
+        "Correct credentials establish a session. Invalid login, missing CSRF and requests after logout are denied."
+      ],
+      [
+        "JA28",
+        11,
+        "Core",
+        "Authorization",
+        "Roles, tenant ownership, warehouse scope and deny-by-default rules.",
+        "Enforce permissions in the backend for reserve, pick, dispatch and read operations. Derive scope from the signed-in user.",
+        "Allowed operations work. Wrong role, another tenant's ID and guessed resource IDs are rejected."
+      ],
+      [
+        "TS28",
+        11,
+        "Core",
+        "Browser/web security",
+        "XSS, CSRF, CORS, cookie flags and safe sign-out.",
+        "Test unsafe-looking text rendering and missing CSRF. Remove private client state when the session ends.",
+        "Text renders safely, the forged write is denied, and sensitive views clear after logout."
+      ],
+      [
+        "B11",
+        11,
+        "Core",
+        "RBAC + ownership/tenant checks + security regression tests",
+        "Session login, CSRF, role checks and tenant isolation.",
+        "Secure shipment reads and writes with Spring Security. Add login, logout and UI states for denied and expired access.",
+        "Verify allowed access, wrong role, another tenant, missing CSRF and logout with tests."
+      ],
+      [
+        "DS11",
+        11,
+        "Core",
+        "Solve 6 new DSA problems and revisit errors",
+        "Practice backtracking. State the invariant and time and space costs before coding.",
+        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M13",
+        11,
+        "Core",
+        "Spring Security authn/authz + 401/403",
+        "Recall Spring Security authn/authz + 401/403 and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B11 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M14",
+        11,
+        "Core",
+        "Find tenant/auth/validation flaw",
+        "Recall Find tenant/auth/validation flaw and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B11 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV11",
+        11,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 11 concept and explain the trade-off from B11.",
+        "Rerun one check from B11, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "FE35",
+        12,
+        "Core",
+        "Accessibility",
+        "Keyboard access, focus, accessible names and status announcements.",
+        "Complete the shipment and sign-in flows using a keyboard. Check errors and loading announcements.",
+        "Record a real accessibility issue, its fix, and a repeatable manual check."
+      ],
+      [
+        "TS24",
+        12,
+        "Core",
+        "React Testing Library",
+        "Testing Library queries, user events and accessible controls.",
+        "Test the shipment form or sign-in flow through labels and user interactions.",
+        "A keyboard-relevant path and one error case pass without asserting internal component state."
+      ],
+      [
+        "TS25",
+        12,
+        "Core",
+        "E2E",
+        "End-to-end tests, seeded state and stable locators.",
+        "Exercise login, shipment create, reserve, pick and dispatch in a real browser.",
+        "Verify the final state and one rejected action without depending on test order."
+      ],
+      [
+        "B12",
+        12,
+        "Core",
+        "End-to-end Spring API to TypeScript client flow with component/E2E tests",
+        "Picking, dispatch, state transitions and browser integration.",
+        "Add pick confirmation and dispatch for fully reserved stock. In React, receive stock and show available, reserved and on-hand quantities.",
+        "Keyboard and browser tests cover receiving stock through dispatch. Dispatch deducts stock once and out-of-order actions fail."
+      ],
+      [
+        "DS12",
+        12,
+        "Core",
+        "Solve 6 new DSA problems and revisit errors",
+        "Practice greedy choices and intervals. State the invariant and time and space costs before coding.",
+        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "G07",
+        12,
+        "Core",
+        "Start a targeted application pipeline",
+        "Targeted applications, evidence selection and follow-up.",
+        "Prepare an application tracking entry and select the project evidence most relevant to each role.",
+        "Save a next action and an accurate description of your contribution."
+      ],
+      [
+        "M15",
+        12,
+        "Core",
+        "Test strategy: unit/integration/E2E",
+        "Recall Test strategy: unit/integration/E2E and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B12 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M16",
+        12,
+        "Core",
+        "Spring DTO and TS client contract",
+        "Recall Spring DTO and TS client contract and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B12 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "PF02",
+        12,
+        "Optional",
+        "Booking / Appointment Concurrency Lab",
+        "Optional concurrency comparison and invariant testing.",
+        "Package the last-unit race as a small standalone experiment. Compare it with a dock-slot overlap example if useful.",
+        "Show the race and safe outcome on repeat runs."
+      ],
+      [
+        "RV12",
+        12,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 12 concept and explain the trade-off from B12.",
+        "Rerun one check from B12, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "JA29",
+        13,
+        "Core",
+        "JUnit / Mockito",
+        "Unit tests, test boundaries, doubles and regression cases.",
+        "Test reservation, cancellation and transition rules in plain Java. Use a fake or mock only at a real boundary.",
+        "Tests fail when an invariant is intentionally broken and pass when restored."
+      ],
+      [
+        "JA30",
+        13,
+        "Core",
+        "Spring integration",
+        "Controller tests, integration boundaries and realistic fixtures.",
+        "Test shipment creation, validation and authorization at the API boundary with representative data.",
+        "The test suite checks response contracts and actual side effects, including a denied write."
+      ],
+      [
+        "B13",
+        13,
+        "Core",
+        "Service/controller test suite + failing-test and PR-review drills",
+        "Unit tests, controller tests, regression diagnosis and review.",
+        "Exercise rollback and invalid transitions with tests. Review and repair a deliberately broken reservation change.",
+        "Show failing-then-passing output and one review finding verified independently."
+      ],
+      [
+        "DS13",
+        13,
+        "Core",
+        "Solve 6 new DSA problems and revisit errors",
+        "Practice mixed review. State the invariant and time and space costs before coding.",
+        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "RW10",
+        13,
+        "Core",
+        "Code review",
+        "Review for correctness, security, performance and test coverage.",
+        "Review a small reservation or React change line by line before merging.",
+        "Write one concrete review finding tied to a reproducible case or explain why it passes."
+      ],
+      [
+        "M17",
+        13,
+        "Core",
+        "JUnit/MockMvc + failing test repair",
+        "Recall JUnit/MockMvc + failing test repair and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B13 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M18",
+        13,
+        "Core",
+        "Correctness/security/performance/test gaps",
+        "Recall Correctness/security/performance/test gaps and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B13 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV13",
+        13,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 13 concept and explain the trade-off from B13.",
+        "Rerun one check from B13, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "JA31",
+        14,
+        "Core",
+        "Testcontainers",
+        "Testcontainers, real PostgreSQL and isolation between test runs.",
+        "Run migrations and reservation integration tests against a disposable PostgreSQL instance.",
+        "A clean run passes twice with independent data. Preserve the concurrency test result."
+      ],
+      [
+        "JA33",
+        14,
+        "Core",
+        "Maven or Gradle",
+        "Maven lifecycle, dependency scopes and reproducible wrappers.",
+        "Pin a reproducible build and package the backend. Use the same verification entry point locally and in CI.",
+        "A clean clone runs the documented build and tests without relying on IDE state."
+      ],
+      [
+        "JA34",
+        14,
+        "Core",
+        "Docker / config / secrets",
+        "Containers, Compose networking, persistence and configuration.",
+        "Package React, Spring and PostgreSQL for a clean demo. Provide example variables and persistent database storage.",
+        "The stack starts from documented steps and retains seeded data through a restart."
+      ],
+      [
+        "EN28",
+        14,
+        "Core",
+        "CI/CD",
+        "CI checks, artifacts, deployment stages and reproducibility.",
+        "Run backend, frontend and integration checks in CI. Fail a practice branch deliberately.",
+        "CI blocks the broken revision and publishes a successful verification result."
+      ],
+      [
+        "B14",
+        14,
+        "Core",
+        "Postgres Testcontainers + Docker Compose + CI quality gates",
+        "PostgreSQL integration tests, Docker Compose and CI.",
+        "Run real-database migration and concurrency tests. Add a repeatable local stack and CI gates.",
+        "A clean run starts the stack and passes the tests twice with isolated test data."
+      ],
+      [
+        "DS14",
+        14,
+        "Core",
+        "Solve 6 new DSA problems and revisit errors",
+        "Practice one-dimensional dynamic programming. State the invariant and time and space costs before coding.",
+        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "RW11",
+        14,
+        "Core",
+        "Refactoring",
+        "Refactoring under tests, behavior preservation and clear boundaries.",
+        "Remove duplication in a shipment rule or form component after writing characterization tests.",
+        "The same tests pass before and after and the behavior of a failure case is preserved."
+      ],
+      [
+        "SD13",
+        14,
+        "Core",
+        "Queues, retries and service reliability",
+        "Queues, delivery semantics, outbox and bounded retries.",
+        "Simulate a delayed dispatch notification with a stub worker and a duplicate delivery.",
+        "The subscriber handles a replay safely and you can explain recovery after a failed send."
+      ],
+      [
+        "M19",
+        14,
+        "Core",
+        "Testcontainers/Docker/CI explanation",
+        "Recall Testcontainers/Docker/CI explanation and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B14 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M20",
+        14,
+        "Core",
+        "1D dynamic programming",
+        "Recall 1D dynamic programming and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B14 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV14",
+        14,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 14 concept and explain the trade-off from B14.",
+        "Rerun one check from B14, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "JA32",
+        15,
+        "Core",
+        "Actuator / observability",
+        "Health versus readiness, correlation IDs, metrics and safe logging.",
+        "Add health/readiness checks and trace one failed reservation across HTTP and storage.",
+        "Find the request by ID. Logs expose useful context without credentials or private payloads."
+      ],
+      [
+        "B15",
+        15,
+        "Core",
+        "Add logs/metrics/cache; investigate query or rendering bottleneck",
+        "Observability, cache freshness, performance baselines and measurements.",
+        "Trace a failed request and measure a slow shipment list or query before choosing a fix.",
+        "Save an anonymized trace and comparable measurements with one explained trade-off."
+      ],
+      [
+        "DS15",
+        15,
+        "Core",
+        "Solve 6 new DSA problems and revisit errors",
+        "Practice two-dimensional dynamic programming. State the invariant and time and space costs before coding.",
+        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "RW16",
+        15,
+        "Core",
+        "Performance investigation",
+        "Baseline measurement, representative load and bottleneck isolation.",
+        "Measure one slow query or render on identical fixtures and isolate its cause.",
+        "Save the baseline, measurement method and repeatable result after one change."
+      ],
+      [
+        "SD10",
+        15,
+        "Core",
+        "Caching",
+        "Cache keys, freshness and invalidation.",
+        "Try caching a read-only shipment summary after measuring its cost. Evaluate staleness after a write.",
+        "Show how data changes invalidate or expire the cache and why stock reservation reads remain authoritative."
+      ],
+      [
+        "SD12",
+        15,
+        "Core",
+        "Search",
+        "Query filtering, indexes, search relevance and pagination.",
+        "Implement or prototype search by shipment reference and filter by warehouse and status.",
+        "Results match fixture cases, tenant scope and stable pagination."
+      ],
+      [
+        "M21",
+        15,
+        "Core",
+        "N+1/index/cache/observability investigation",
+        "Recall N+1/index/cache/observability investigation and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B15 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M22",
+        15,
+        "Core",
+        "2D dynamic programming",
+        "Recall 2D dynamic programming and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B15 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV15",
+        15,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 15 concept and explain the trade-off from B15.",
+        "Rerun one check from B15, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "AI09",
+        16,
+        "Optional",
+        "Bounded agents, tool calls and context",
+        "Optional bounded tools, least privilege and validation.",
+        "Use a fake action runner to simulate read-only shipment lookup and a forbidden dispatch action.",
+        "Record which action was allowed, why the other failed and the test that proves it."
+      ],
+      [
+        "AI14",
+        16,
+        "Core",
+        "Verify generated code with tests and diff review",
+        "Human review, counterexamples and regression verification.",
+        "Inspect a prepared patch for a stock rule. Reject or correct it with a test you write independently.",
+        "One targeted case detects the defect and passes after the fix."
+      ],
+      [
+        "OP20",
+        16,
+        "Optional",
+        "Python secondary language",
+        "Python data parsing and validation as a secondary language.",
+        "Build an optional local fixture checker for synthetic inventory CSV data.",
+        "Show rejection of a duplicate SKU and an invalid quantity with clean results."
+      ],
+      [
+        "JA15",
+        16,
+        "Optional",
+        "Virtual threads concept",
+        "Virtual threads, blocking I/O and downstream resource limits.",
+        "Compare two executor models on the same synthetic blocking task as an optional lab.",
+        "Record throughput and resource assumptions. Explain why database connection limits still apply."
+      ],
+      [
+        "TS22",
+        16,
+        "Optional",
+        "Node.js",
+        "Node.js runtime, server boundaries and environment variables.",
+        "Use a small optional Node CLI to inspect a shipment fixture or call a read-only API.",
+        "Record the result and explain where it differs from browser execution."
+      ],
+      [
+        "TS30",
+        16,
+        "Core",
+        "AI-generated TypeScript verification",
+        "Diff review, type boundaries and independent verification.",
+        "Review a prepared flawed client patch manually. Write the correction yourself and use typecheck plus tests.",
+        "Identify the flaw, prove it with a failing check, and explain the fix unaided."
+      ],
+      [
+        "EN30",
+        16,
+        "Core",
+        "AWS/Azure/GCP concepts",
+        "Runtime, managed database, DNS, TLS and deployment trade-offs.",
+        "Draw a staging architecture and map each part to a generic cloud capability.",
+        "Explain configuration, backups and how you would diagnose a failed health check."
+      ],
+      [
+        "B16",
+        16,
+        "Core",
+        "Deployable dual-stack architecture + 2 timed agentic repo tickets",
+        "Staging configuration, safe rollout, rate limiting and repository fluency.",
+        "Package a staging build, rate-limit login and general API traffic separately, and complete two timed repo tickets manually.",
+        "Save smoke results, isolated client quotas, 429 recovery, and proof for both fixes."
+      ],
+      [
+        "DS16",
+        16,
+        "Core",
+        "Solve 6 new DSA problems and revisit errors",
+        "Practice timed pattern selection. State the invariant and time and space costs before coding.",
+        "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "G08",
+        16,
+        "Core",
+        "Rehearse deployment failure and recovery",
+        "Deployment rollback, database compatibility, smoke checks and restoration.",
+        "Deploy a deliberately bad change in staging or a local simulation. Restore service and verify old data.",
+        "Record time to recover, smoke output and the restore or rollback steps."
+      ],
+      [
+        "SD14",
+        16,
+        "Core",
+        "Rate limiting",
+        "Rate limits, burst behavior, client identity and HTTP 429.",
+        "Exercise independent login and API limits in staging or a local simulation.",
+        "Show burst rejection, isolated callers and recovery after the limit resets."
+      ],
+      [
+        "SD15",
+        16,
+        "Core",
+        "File/object storage",
+        "Object storage, access control, signed access and retention.",
+        "Design an optional proof-of-dispatch attachment flow using synthetic files.",
+        "Show a tenant-isolated access test or an explicit design test case with expiration."
+      ],
+      [
+        "SD16",
+        16,
+        "Core",
+        "Load balancing",
+        "Load balancing, health checks and session behavior.",
+        "Simulate routing to two app instances and failing one health check.",
+        "Explain which requests recover and how session state behaves across instances."
+      ],
+      [
+        "SD17",
+        16,
+        "Core",
+        "Replication",
+        "Replication, lag, failover and authoritative reads.",
+        "Model a delayed replica read after a stock change. Decide which screens can accept stale data.",
+        "Trace stale availability and show how reservation avoids a stale read."
+      ],
+      [
+        "M23",
+        16,
+        "Core",
+        "Bounded bug/feature with diff/tests/security review",
+        "Recall Bounded bug/feature with diff/tests/security review and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B16 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M24",
+        16,
+        "Core",
+        "Scaling/load balancing/replication/rate limiting",
+        "Recall Scaling/load balancing/replication/rate limiting and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B16 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV16",
+        16,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 16 concept and explain the trade-off from B16.",
+        "Rerun one check from B16, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "B17",
+        17,
+        "Core",
+        "Design Spring Boot + Next.js commerce/booking capstone; define APIs/schema/acceptance tests",
+        "Requirements, event history, exception policy and API compatibility.",
+        "Design a dispatch exception and delivery confirmation workflow with state rules and event fields.",
+        "Write API examples, expected data changes and failure tests before implementation."
+      ],
+      [
+        "DS17",
+        17,
+        "Core",
+        "Solve 5 new DSA problems and revisit errors",
+        "Practice mixed timed practice. State the invariant and time and space costs before coding.",
+        "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M25",
+        17,
+        "Core",
+        "Capstone requirements/API/data model",
+        "Recall Capstone requirements/API/data model and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B17 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M26",
+        17,
+        "Core",
+        "Java mixed DSA under time",
+        "Recall Java mixed DSA under time and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B17 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV17",
+        17,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 17 concept and explain the trade-off from B17.",
+        "Rerun one check from B17, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "TS29",
+        18,
+        "Core",
+        "Spring Boot contract",
+        "DTO compatibility, stable errors and contract testing.",
+        "Make one backwards-compatible change to the Spring shipment response and exercise the typed client.",
+        "A documented contract test covers valid, malformed and earlier response shapes as applicable."
+      ],
+      [
+        "B18",
+        18,
+        "Core",
+        "Implement core Spring endpoints + TypeScript client + integration tests",
+        "Vertical feature delivery, contract tests and domain events.",
+        "Implement the approved exception and delivery flow across React, Spring and PostgreSQL.",
+        "Verify authorized actions, invalid transitions, ordered event history and accessible feedback."
+      ],
+      [
+        "DS18",
+        18,
+        "Core",
+        "Solve 5 new DSA problems and revisit errors",
+        "Practice graph and tree review. State the invariant and time and space costs before coding.",
+        "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "RW12",
+        18,
+        "Core",
+        "Feature in existing repo",
+        "Working in an existing repo, incremental design and compatibility.",
+        "Add one small shipment exception feature through the existing test and review flow.",
+        "Demonstrate the new behavior and a previously working behavior that still passes."
+      ],
+      [
+        "M27",
+        18,
+        "Core",
+        "Implement scoped Spring + TS feature",
+        "Recall Implement scoped Spring + TS feature and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B18 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M28",
+        18,
+        "Core",
+        "Trace UI to API to DB failure",
+        "Recall Trace UI to API to DB failure and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B18 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV18",
+        18,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 18 concept and explain the trade-off from B18.",
+        "Rerun one check from B18, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "AI10",
+        19,
+        "Optional",
+        "Retrieval, grounding and citations",
+        "Optional retrieval, source grounding and uncertainty.",
+        "Manually retrieve the applicable warehouse rule from supplied docs and cite the exact supporting section.",
+        "Show what happens when a query lacks supporting evidence or matches conflicting rules."
+      ],
+      [
+        "B19",
+        19,
+        "Core",
+        "Add idempotency/concurrency protection, retry/queue/cache/offline design evidence",
+        "Idempotency, request identity, retry, and consistency under partial failure.",
+        "Make dispatch confirmation safe to retry. Compare bounded retry, outbox and offline failure options in small labs.",
+        "Identical replay has one effect, conflicting payload reuse is rejected and simulated failure recovers."
+      ],
+      [
+        "DS19",
+        19,
+        "Core",
+        "Solve 5 new DSA problems and revisit errors",
+        "Practice mixed recall. State the invariant and time and space costs before coding.",
+        "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "RW14",
+        19,
+        "Core",
+        "API failure handling",
+        "Timeouts, failure classification, bounded retries and user feedback.",
+        "Simulate a carrier acknowledgement timeout in a fixture and decide when retry is safe.",
+        "Verify no duplicate dispatch and an understandable retry or failure state."
+      ],
+      [
+        "SD21",
+        19,
+        "Core",
+        "Offline sync",
+        "Offline work, conflict detection, versions and replay.",
+        "Design an offline pick draft and simulate a conflict on reconnect.",
+        "Show the conflict outcome and explain which operations require authoritative online stock checks."
+      ],
+      [
+        "M29",
+        19,
+        "Core",
+        "Queues/retries/idempotency/offline sync",
+        "Recall Queues/retries/idempotency/offline sync and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B19 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M30",
+        19,
+        "Core",
+        "Reject/fix an almost-right generated change",
+        "Recall Reject/fix an almost-right generated change and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B19 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV19",
+        19,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 19 concept and explain the trade-off from B19.",
+        "Rerun one check from B19, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "BE76",
+        20,
+        "Core",
+        "STAR stories",
+        "Situation, task, action and result with evidence.",
+        "Write a story about a stock reservation bug, design choice or deployment recovery you actually handled.",
+        "Tell the story within the timebox and identify the exact result you can prove."
+      ],
+      [
+        "BE79",
+        20,
+        "Core",
+        "Trade-off communication",
+        "Trade-off communication, constraints and alternatives.",
+        "Explain one choice such as locks versus conditional updates, or session versus bearer authentication.",
+        "State the chosen approach, the cost accepted and a condition that would change your choice."
+      ],
+      [
+        "B20",
+        20,
+        "Core",
+        "Docker/CI/observability/security hardening + architecture one-pager + STAR/deep-dive stories",
+        "Deployment hardening, recovery, reliability targets and project explanation.",
+        "Release to staging, run the agreed smoke and load checks, then rehearse rollback and database restore.",
+        "Show a clean release, restored data, security results and a reviewer-ready walkthrough."
+      ],
+      [
+        "DS20",
+        20,
+        "Core",
+        "Solve 5 new DSA problems and revisit errors",
+        "Practice weakest patterns. State the invariant and time and space costs before coding.",
+        "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M31",
+        20,
+        "Core",
+        "Architecture/trade-offs/security/testing/story",
+        "Recall Architecture/trade-offs/security/testing/story and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B20 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M32",
+        20,
+        "Core",
+        "Logs/metrics/query/app failure investigation",
+        "Recall Logs/metrics/query/app failure investigation and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B20 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "JA35",
+        20,
+        "Core",
+        "Project deep dive",
+        "Domain rules, trade-offs, failure diagnosis and maintainability.",
+        "Trace reserve and dispatch from request to committed data. Explain one rejected design with evidence.",
+        "Demonstrate the workflow from a clean start and answer a change request without notes."
+      ],
+      [
+        "G09",
+        20,
+        "Core",
+        "Measure and explain the capstone result",
+        "Success criteria, fair measurement and credible explanations.",
+        "Measure the capstone against its stated invariants and one performance target.",
+        "Save real numbers, the workload, a trade-off and any limitation."
+      ],
+      [
+        "PF01",
+        20,
+        "Core",
+        "Project ONE - multi-tenant commerce/POS",
+        "Project ownership, tenancy and transferable lessons.",
+        "Record your real contribution to Project ONE and compare one inventory or tenancy decision with the capstone.",
+        "Separate each project's evidence and explain one relevant difference with examples."
+      ],
+      [
+        "PF04",
+        20,
+        "Optional",
+        "Spring Boot Commerce / Booking Backend",
+        "Backend project demonstration, PostgreSQL and security.",
+        "Prepare a Spring Boot showcase of migration, reservation and permission enforcement.",
+        "Provide a repeatable demo with one success and one business conflict."
+      ],
+      [
+        "PF05",
+        20,
+        "Optional",
+        "TypeScript / Next.js Client for Spring API",
+        "React project demonstration, typed contracts and accessibility.",
+        "Prepare a React showcase of the signed-in dispatch flow and error handling.",
+        "Show direct navigation, keyboard access, and one recoverable API error."
+      ],
+      [
+        "RV20",
+        20,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 20 concept and explain the trade-off from B20.",
+        "Rerun one check from B20, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "TS31",
+        20,
+        "Core",
+        "Project deep dive",
+        "Client state, contracts, accessibility and performance trade-offs.",
+        "Demonstrate the React dispatch workflow and trace one client error to its cause.",
+        "Explain a design decision with a test or measurement and repeat a small change independently."
+      ],
+      [
+        "B21",
+        21,
+        "Core",
+        "Timed Java coding, SQL and debugging rounds; repair top 3 gaps",
+        "Timed Java, SQL and debugging with independent recall.",
+        "Run three timed exercises drawn from your CLI, stock reports and dispatch failures. Repair the three most consequential gaps.",
+        "Save original attempts, fixes and unaided retests."
+      ],
+      [
+        "DS21",
+        21,
+        "Core",
+        "Solve 5 new DSA problems and revisit errors",
+        "Practice timed Java practice. State the invariant and time and space costs before coding.",
+        "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M33",
+        21,
+        "Core",
+        "Company-style timed Java DSA",
+        "Recall Company-style timed Java DSA and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B21 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M34",
+        21,
+        "Core",
+        "DBMS/OS/networking/SQL rapid interview",
+        "Recall DBMS/OS/networking/SQL rapid interview and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B21 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M35",
+        21,
+        "Core",
+        "STAR + project ownership/trade-offs",
+        "Recall STAR + project ownership/trade-offs and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B21 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "G10",
+        21,
+        "Core",
+        "Rehearse collaboration and failure stories",
+        "Collaboration, failures and ownership in interviews.",
+        "Rehearse a review or failed deployment story based on a real attempt.",
+        "Record feedback and repeat the explanation with a concrete next action."
+      ],
+      [
+        "RV21",
+        21,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 21 concept and explain the trade-off from B21.",
+        "Rerun one check from B21, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "B22",
+        22,
+        "Core",
+        "Timed unfamiliar-repo bug/feature task in both AI-free and AI-assisted modes",
+        "Unfamiliar repository reading and verification.",
+        "Handle a timed bug or feature ticket in a clean branch. Use a supplied failing scenario as the comparison exercise.",
+        "Save the reproduction, smallest fix, independent test and what you learned."
+      ],
+      [
+        "DS22",
+        22,
+        "Core",
+        "Solve 5 new DSA problems and revisit errors",
+        "Practice previously failed problems. State the invariant and time and space costs before coding.",
+        "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M36",
+        22,
+        "Core",
+        "Timed AI-assisted repo task",
+        "Recall Timed AI-assisted repo task and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M37",
+        22,
+        "Core",
+        "Unfamiliar repo bug fix",
+        "Recall Unfamiliar repo bug fix and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M38",
+        22,
+        "Core",
+        "Booking/commerce timed design",
+        "Recall Booking/commerce timed design and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "PF03",
+        22,
+        "Optional",
+        "AI-Assisted Repo Debugging Lab",
+        "Optional repository debugging and verification.",
+        "Use a prepared flawed patch in a small existing repo and investigate it manually.",
+        "Record the root cause, independent fix and a regression test you wrote."
+      ],
+      [
+        "RV22",
+        22,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 22 concept and explain the trade-off from B22.",
+        "Rerun one check from B22, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "B23",
+        23,
+        "Core",
+        "Spring technical drill + TS/React drill + project deep-dive rehearsal",
+        "Backend, frontend and architecture explanation under time.",
+        "Rehearse Java/Spring and React questions against your own changes. Trace a request end to end.",
+        "Record a timed explanation, the gap it exposed and an improved unaided retry."
+      ],
+      [
+        "DS23",
+        23,
+        "Core",
+        "Solve 5 new DSA problems and revisit errors",
+        "Practice mixed interview sets. State the invariant and time and space costs before coding.",
+        "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M39",
+        23,
+        "Core",
+        "Spring/JPA/security/testing deep dive",
+        "Recall Spring/JPA/security/testing deep dive and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M40",
+        23,
+        "Core",
+        "TS runtime/types/React/Next deep dive",
+        "Recall TS runtime/types/React/Next deep dive and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M41",
+        23,
+        "Core",
+        "Browser to Spring to DB + behavioral",
+        "Recall Browser to Spring to DB + behavioral and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV23",
+        23,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 23 concept and explain the trade-off from B23.",
+        "Rerun one check from B23, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ],
+      [
+        "B24",
+        24,
+        "Core",
+        "Two full simulations, final question-bank pass, resume/project evidence cleanup",
+        "Full interview simulation, retrieval practice and portfolio evidence.",
+        "Complete two simulations and curate the most relevant project runs, commits and decisions.",
+        "Record scores, follow-up tasks and a clean-clone demo another person can reproduce."
+      ],
+      [
+        "DS24",
+        24,
+        "Core",
+        "Solve 5 new DSA problems and revisit errors",
+        "Practice final timed review. State the invariant and time and space costs before coding.",
+        "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+        "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt."
+      ],
+      [
+        "M42",
+        24,
+        "Core",
+        "Coding + CS + project",
+        "Recall Coding + CS + project and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B24 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M43",
+        24,
+        "Core",
+        "Repo task + verification",
+        "Recall Repo task + verification and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B24 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "M44",
+        24,
+        "Core",
+        "System design + trade-offs + STAR",
+        "Recall System design + trade-offs + STAR and the assumptions that affect your answer.",
+        "Attempt the original timed prompt unaided. Use an actual B24 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+        "Record time, result, both scores, one specific improvement, and an unaided retry."
+      ],
+      [
+        "RV24",
+        24,
+        "Core",
+        "Review evidence, questions and next-week capacity",
+        "Recall the week 24 concept and explain the trade-off from B24.",
+        "Rerun one check from B24, revisit one mistake and compare actual time with your study plan.",
+        "Record the run, one skill you can repeat, and the next gap you will address."
+      ]
+    ],
+    "formulas": {}
   }
 }

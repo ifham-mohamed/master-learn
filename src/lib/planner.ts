@@ -6,6 +6,7 @@ import {
 } from "./study";
 import { tasks, type Task, isComplete } from "./tracker";
 import { validateProgress, type Progress } from "./progress";
+import { warehouseHoursPerDay } from "./warehouse";
 
 export type Schedule = {
   start: string;
@@ -30,7 +31,7 @@ export type Planner = {
 };
 export const defaultSchedule: Schedule = {
   start: PLAN_START,
-  capacity: 10,
+  capacity: warehouseHoursPerDay * 7,
   days: [0, 1, 2, 3, 4, 5, 6],
   focus: 25,
   breakMinutes: 5,

@@ -2,8 +2,8 @@
   "inventory": [
     {
       "path": "sources/Final Tracker.xlsx",
-      "bytes": 1252308,
-      "sha256": "0639fa02ef16b0f90d4c24a8e233e99da8935e22ec9fa8aff7990097c982cad8"
+      "bytes": 1227625,
+      "sha256": "b096efef8b17a241ecd27c79d00c9cf0d1e63dcd500fe779c83b04664fc4df98"
     },
     {
       "path": "sources/html/AI Engineering.html",
@@ -668,9 +668,9 @@
       "System design": 10
     },
     "statuses": {
-      "Done": 2,
+      "Done": 3,
       "In progress": 1,
-      "Not started": 233
+      "Not started": 232
     }
   },
   "issues": []

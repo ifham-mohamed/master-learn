@@ -55,7 +55,7 @@ test("resource references resolve and DSA targets reconcile", () => {
     145,
   );
   assert.equal(tasks.filter((t) => t.scope === "Core").length, 226);
-  assert.equal(tasks.filter(isComplete).length, 2);
+  assert.deepEqual(tasks.filter(isComplete).map((t) => t.id), ["G01", "G02", "AI18"]);
 });
 test("completion requires evidence and a date, never confidence or hours alone", () => {
   const task: Task = {

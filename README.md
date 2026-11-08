@@ -13,6 +13,14 @@ npm run dev
 
 Open [the local workspace](http://localhost:3000). For a production build, run `npm run build`, then `npm start`.
 
+## Start Warehouse Dispatch
+
+Open **Today** for your next checkpoint or **Projects → Warehouse Dispatch** for the six phases. Start with **JA05**. Build a Java terminal shipment flow yourself, then grow the same project through Spring Boot, PostgreSQL, React, and staging. The [project README](projects/warehouse-dispatch/README.md) gives the warehouse rules and test scenarios. The [HTML plan](sources/warehouse-dispatch/index.html), [Markdown task index](sources/warehouse-dispatch/README.md), and **Warehouse Learning** tab in [Final Tracker.xlsx](sources/Final%20Tracker.xlsx) carry the same practice briefs.
+
+Each task shows what to review, what to build, and how to check it. Use **Quick note** for a private thought or **Record result** for a command, observed result, and next action. Add a commit or file link when useful. Keep runnable code and tests in `projects/warehouse-dispatch/`. Use each task's `results/` folder for output that needs a durable file. Only mark work complete after running the checks yourself.
+
+New schedules start at five hours per study day. If you already have a saved schedule, choose your days in **Settings & backups**, select **Use 5 hours per selected day**, then preview and save. The workbook's **Master Plan** remains the place to record spreadsheet progress.
+
 ## How to use it
 
 Open **Plan & guidance** for the searchable in-app application handbook. Its nine chapters cover first-session setup, navigation, task folders, a practice routine, running code and separate web projects, file formats, progress backups, the application codebase, and troubleshooting. The handbook is also linked from the learning library and every task workspace. Original workbook guidance remains below it.
@@ -92,9 +100,11 @@ The content endpoint is read-only and restricted to known task folders. Hidden f
 ## Application folders
 
 ```text
-sources/                     Untouched input files
-  Final Tracker.xlsx         Authoritative workbook
-  html/                      All 16 HTML exports and their resources/
+sources/                     Source workbook and curriculum exports
+  Final Tracker.xlsx         Authoritative workbook with Warehouse Learning tab
+  html/                      All 16 original HTML exports and their resources/
+  warehouse-dispatch/        Project-led task briefs, Markdown and HTML
+projects/warehouse-dispatch/  Requirements and your capstone code
 src/
   app/                       Next.js routes, layout, and design system styles
     [view]/                  Weekly plan, master plan, practice, projects, resources, guide
@@ -126,6 +136,8 @@ python scripts/check_resources.py
 ```
 
 Importing reads every worksheet, keeps all original fields, extracts the master data, records every source file's SHA-256 hash, and reconciles the category export task IDs with the master plan. Rebuild the website after importing. The HTML exports are preserved snapshots and are not regenerated. Browser progress stays attached to task IDs; retain stable IDs when revising the workbook.
+
+Update `sources/warehouse-dispatch/task-briefs.txt` for changes to the project practice instructions. Run `python scripts/export_warehouse_plan.py` to update the site data, HTML, Markdown index, and generated `notes/00-warehouse-practice.md` files. Use `--check` to verify those views. Personal notes and results belong in separate files. Keep the workbook's **Warehouse Learning** view aligned when revising the briefs.
 
 ## Quality checks
 
