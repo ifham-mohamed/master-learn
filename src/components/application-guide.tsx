@@ -52,6 +52,9 @@ export function ApplicationGuide() {
         {message && <p role="status">{message}</p>}
       </section>
       <p className="handbook-progress-link"><Link href="/settings">Settings & backups</Link> keeps your study schedule and progress backups in one place.</p>
+      <p className="handbook-progress-link">
+        <Link href="/weeks">Weekly plan</Link> · <Link href="/tracks">Learning tracks</Link> · <Link href="/practice">Practice bank</Link>
+      </p>
     </div>
   );
 }

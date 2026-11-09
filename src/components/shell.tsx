@@ -186,22 +186,27 @@ export function Shell({ children }: { children: React.ReactNode }) {
         {[
           {
             label: "Daily work",
-            routes: ["/", "/today", "/weeks", "/reviews"],
+            routes: [
+              "/",
+              "/today",
+              "/reviews",
+              // "/weeks", // Weekly sequence is available in Roadmap.
+            ],
           },
           {
             label: "Curriculum",
             routes: [
               "/roadmap",
-              "/learning",
-              "/plan",
-              "/tracks",
-              "/practice",
               "/projects",
-              "/resources",
-              "/search",
+              // "/learning", // Overview links to the file browser.
+              // "/plan", // Overview links to the workbook-style plan.
+              // "/tracks", // Roadmap includes a By track view.
+              // "/practice", // Available from the handbook and task guides.
+              // "/resources", // Task references link to the resource library.
+              // "/search", // Opens from the header.
             ],
           },
-          { label: "Workspace", routes: ["/guide", "/sync", "/settings"] },
+          // { label: "Workspace", routes: ["/guide", "/settings", "/sync"] },
         ].map((group) => (
           <div className="navigation-group" key={group.label}>
             <div className="workspace-label">{group.label}</div>
@@ -212,8 +217,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 )!;
                 const active =
                   pathname === url ||
-                  (url === "/tracks" && pathname.startsWith("/tracks/")) ||
-                  (url === "/plan" && pathname.startsWith("/tasks/"));
+                  (url === "/roadmap" && /^\/(tasks|tracks)\//.test(pathname));
                 return (
                   <Tooltip key={url} label={label} enabled={compact}>
                     <Link
@@ -269,6 +273,18 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <strong>{pageTitle}</strong>
           </div>
           <div className="topbar-right">
+            {pathname !== "/search" && (
+              <Link
+                className="topbar-search"
+                href="/search"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Search content (opens in a new tab)"
+                title="Search content (opens in a new tab)"
+              >
+                <Search size={18} aria-hidden="true" />
+              </Link>
+            )}
             <ThemeToggle />
             <span className="snapshot-pill">
               <span />
@@ -296,7 +312,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           {children}
         </main>
         <footer className="footer">
-          <span>Learnspace · Software engineering</span>
+          <span><Link href="/guide">Handbook</Link> · <Link href="/settings">Settings & backups</Link></span>
           <span>Progress is saved on this device</span>
         </footer>
       </div>

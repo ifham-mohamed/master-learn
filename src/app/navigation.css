@@ -142,6 +142,26 @@
 .profile {
   flex-shrink: 0;
 }
+.topbar-search {
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--soft-surface);
+}
+
+.topbar-search:hover {
+  background: var(--accent-soft);
+}
+
+.footer a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .topbar {
   position: sticky;
   top: 0;
