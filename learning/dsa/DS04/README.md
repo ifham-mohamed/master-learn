@@ -2,8 +2,7 @@
 
 # DS04 — Solve 7 new DSA problems and revisit errors
 
-Week 4 · Core · Warehouse checkpoint B04
-
+Week 4 · Core · Warehouse checkpoint [B04](../../projects/B04/README.md)
 
 ## Review and learn
 
@@ -11,18 +10,32 @@ Practice binary search and stacks. State the invariant and time and space costs 
 
 ## Do the work
 
-Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.
+Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.
 
 ## Pass check
 
 Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.
 
-## References
+## Read and practice
 
-- [MIT Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)
+- Choose a challenge in the matching topic, solve it in Java and save its link or ID. [HackerRank interview practice](https://www.hackerrank.com/interview/interview-preparation-kit)
+- Predict the next operation on a relevant structure, then step through the animation. [VisuAlgo](https://visualgo.net/en)
+- Use the pattern rows to plan which topics to practice and check your targets. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 51. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Record 7 distinct new problem IDs, explain complexity, and retry one earlier mistake without hints.
+
+### Exercise / interview prompt
+
+> Binary search (bank target 8)\
+> Stack (bank target 7)\
+> Queue / deque (bank target 5)\
+> Use Practice Bank for topic totals. Do not count repeat solutions as new problems.
 
 ## Record one entry
 

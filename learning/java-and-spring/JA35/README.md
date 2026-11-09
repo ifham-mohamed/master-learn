@@ -2,10 +2,9 @@
 
 # JA35 — Project deep dive
 
-Week 20 · Core · Warehouse checkpoint B20
+Week 20 · Core · Warehouse checkpoint [B20](../../projects/B20/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,23 @@ Trace reserve and dispatch from request to committed data. Explain one rejected 
 
 Demonstrate the workflow from a clean start and answer a change request without notes.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Select a relevant topic and explain an actual project decision, an alternative and the evidence. [Amazon software development interview topics](https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 209. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> architecture, trade-offs, bugs, tests, concurrency, security\
+> Architecture, trade-offs, failures, metrics, contribution
+
+### Exercise / interview prompt
+
+> 2-minute + 15-minute story\
+> Interview: walk through request from API to DB
 
 ## Record one entry
 

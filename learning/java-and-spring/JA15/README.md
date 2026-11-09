@@ -2,10 +2,9 @@
 
 # JA15 — Virtual threads concept
 
-Week 16 · Optional · Warehouse checkpoint B16
+Week 16 · Optional · Warehouse checkpoint [B16](../../projects/B16/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Compare two executor models on the same synthetic blocking task as an optional l
 
 Record throughput and resource assumptions. Explain why database connection limits still apply.
 
-## References
+## Read and practice
 
-- [Java language guides](https://dev.java/learn/language/)
+- Run the same small blocking fixture with both executors and record the concurrency limit downstream. [Dev.java virtual threads guide](https://dev.java/learn/api/virtual-threads/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 169. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> why lightweight blocking concurrency can help I/O workloads
+
+### Exercise / interview prompt
+
+> small I/O benchmark/read-up\
+> Interview: platform vs virtual thread high-level
 
 ## Record one entry
 

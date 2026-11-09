@@ -4,8 +4,7 @@
 
 Week 3 · Core · Warehouse checkpoint B03
 
-Before you begin, complete B02.
-
+Before you begin, complete [B02](../../projects/B02/README.md).
 
 ## Review and learn
 
@@ -19,8 +18,26 @@ Refine the Java lookup service and map shipment summaries to typed display objec
 
 Tests cover known and unknown references, invalid input and mapping correctness.
 
+## Read and practice
 
+- Use a typed helper with two values and intentionally compile one incompatible call. [Dev.java generics and lambdas](https://dev.java/learn/language/fp/)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 38. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Demonstrate the working output, relevant tests, and one design trade-off.
+
+### Exercise / interview prompt
+
+> CS/SQL: ACID + normalization + SQL aggregates\
+> Design: Schema, keys, constraints and relationships\
+> AI practice: AI-free first; use AI only for critique\
+> Generic Java service + typed DTO transformations\
+> Add keys, relationships, uniqueness and validation constraints\
+> Use AI only as a critic; keep implementation independent
 
 ## Record one entry
 

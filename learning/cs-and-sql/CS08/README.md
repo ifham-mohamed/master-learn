@@ -2,8 +2,7 @@
 
 # CS08 — Normalization
 
-Week 3 · Core · Warehouse checkpoint B03
-
+Week 3 · Core · Warehouse checkpoint [B03](../../projects/B03/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,27 @@ Sketch warehouse, SKU, stock, shipment and shipment-line tables. Compare with on
 
 Demonstrate one update anomaly the normalized model prevents.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Turn one business rule into a constraint and insert a deliberately invalid fixture. [PostgreSQL constraints](https://www.postgresql.org/docs/current/ddl-constraints.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 32. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> 1NF/2NF/3NF and denormalization trade-offs\
+> DDL/DML, joins, constraints, indexes, transactions, isolation\
+> Schema, constraints, transactions, indexes, EXPLAIN basics\
+> 1NF–3NF reasoning, entities, cardinality, integrity
+
+### Exercise / interview prompt
+
+> Interview: Normalize this schema\
+> Design + query a commerce schema\
+> Schema + 20 SQL questions\
+> Shared database foundation
 
 ## Record one entry
 

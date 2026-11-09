@@ -669,7 +669,7 @@
       "scope": "Core",
       "checkpoint": "B01",
       "focus": "String and int, Scanner line input, parsing, conditionals, loops, methods, primitives and references.",
-      "build": "Write a terminal menu to create and find one shipment. Ask for reference, destination, SKU and quantity. Work through the source drills as small input and method variations.",
+      "build": "Write a terminal menu to create and find one shipment. Ask for reference, destination, SKU and quantity. Run the 20 short input and method checks in the guide.",
       "verify": "A valid create and lookup work. Blank input and non-numeric or nonpositive quantities recover without a crash. Explain pass-by-value using your own code.",
       "requires": [
         "G02"
@@ -761,7 +761,7 @@
       "scope": "Core",
       "checkpoint": "B01",
       "focus": "Practice arrays and hash maps. State the invariant and time and space costs before coding.",
-      "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": [
@@ -787,7 +787,7 @@
       "scope": "Core",
       "checkpoint": "B01",
       "focus": "Recall Java Big-O/arrays/OOP + verbal reasoning and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B01 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B01 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -895,7 +895,7 @@
       "scope": "Core",
       "checkpoint": "B02",
       "focus": "Practice two pointers and hash maps. State the invariant and time and space costs before coding.",
-      "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -919,7 +919,7 @@
       "scope": "Core",
       "checkpoint": "B02",
       "focus": "Recall HashMap/two pointers + Java collections and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B02 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B02 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -1051,7 +1051,7 @@
       "scope": "Core",
       "checkpoint": "B03",
       "focus": "Practice sliding windows and prefix sums. State the invariant and time and space costs before coding.",
-      "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -1063,7 +1063,7 @@
       "scope": "Core",
       "checkpoint": "B03",
       "focus": "Recall Sliding window/prefix + generics + SQL and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B03 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B03 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -1211,7 +1211,7 @@
       "scope": "Core",
       "checkpoint": "B04",
       "focus": "Practice binary search and stacks. State the invariant and time and space costs before coding.",
-      "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -1237,7 +1237,7 @@
       "scope": "Core",
       "checkpoint": "B04",
       "focus": "Recall Binary search/stack + event loop + CS basics and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B04 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B04 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -1381,7 +1381,7 @@
       "scope": "Core",
       "checkpoint": "B05",
       "focus": "Practice linked lists and trees. State the invariant and time and space costs before coding.",
-      "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -1434,7 +1434,7 @@
       "scope": "Core",
       "checkpoint": "B05",
       "focus": "Recall Spring DI/Boot + linked list/tree and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B05 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B05 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -1558,7 +1558,7 @@
       "scope": "Core",
       "checkpoint": "B06",
       "focus": "Practice tree traversal and binary search trees. State the invariant and time and space costs before coding.",
-      "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -1570,7 +1570,7 @@
       "scope": "Core",
       "checkpoint": "B06",
       "focus": "Recall Spring MVC, React routes and binary search trees and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B06 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B06 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -1690,7 +1690,7 @@
       "scope": "Core",
       "checkpoint": "B07",
       "focus": "Practice heaps and intervals. State the invariant and time and space costs before coding.",
-      "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": [
@@ -1704,7 +1704,7 @@
       "scope": "Core",
       "checkpoint": "B07",
       "focus": "Recall Validation/REST + heap/intervals + SQL and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B07 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B07 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -1810,7 +1810,7 @@
       "scope": "Core",
       "checkpoint": "B08",
       "focus": "Practice graph traversal. State the invariant and time and space costs before coding.",
-      "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": [
@@ -1824,7 +1824,7 @@
       "scope": "Core",
       "checkpoint": "B08",
       "focus": "Recall JPA entity/repository + TS tooling in existing repo and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B08 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B08 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -1904,7 +1904,7 @@
       "scope": "Core",
       "checkpoint": "B09",
       "focus": "Practice topological ordering. State the invariant and time and space costs before coding.",
-      "build": "Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": [
@@ -1930,7 +1930,7 @@
       "scope": "Core",
       "checkpoint": "B09",
       "focus": "Recall N+1 query diagnosis and fix and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B09 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B09 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -1942,7 +1942,7 @@
       "scope": "Core",
       "checkpoint": "B09",
       "focus": "Recall Vitest/API client failure states and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B09 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B09 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2049,7 +2049,7 @@
       "scope": "Core",
       "checkpoint": "B10",
       "focus": "Practice graphs and union-find. State the invariant and time and space costs before coding.",
-      "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 6 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": [
@@ -2063,7 +2063,7 @@
       "scope": "Core",
       "checkpoint": "B10",
       "focus": "Recall Last-unit reservation, transactions and isolation and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B10 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2075,7 +2075,7 @@
       "scope": "Core",
       "checkpoint": "B10",
       "focus": "Recall Race-condition reproduction and safe fix and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B10 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2181,7 +2181,7 @@
       "scope": "Core",
       "checkpoint": "B11",
       "focus": "Practice backtracking. State the invariant and time and space costs before coding.",
-      "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 6 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -2193,7 +2193,7 @@
       "scope": "Core",
       "checkpoint": "B11",
       "focus": "Recall Spring Security authn/authz + 401/403 and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B11 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B11 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2205,7 +2205,7 @@
       "scope": "Core",
       "checkpoint": "B11",
       "focus": "Recall Find tenant/auth/validation flaw and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B11 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B11 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2289,7 +2289,7 @@
       "scope": "Core",
       "checkpoint": "B12",
       "focus": "Practice greedy choices and intervals. State the invariant and time and space costs before coding.",
-      "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 6 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -2315,7 +2315,7 @@
       "scope": "Core",
       "checkpoint": "B12",
       "focus": "Recall Test strategy: unit/integration/E2E and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B12 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B12 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2327,7 +2327,7 @@
       "scope": "Core",
       "checkpoint": "B12",
       "focus": "Recall Spring DTO and TS client contract and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B12 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B12 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2407,7 +2407,7 @@
       "scope": "Core",
       "checkpoint": "B13",
       "focus": "Practice mixed review. State the invariant and time and space costs before coding.",
-      "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 6 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -2431,7 +2431,7 @@
       "scope": "Core",
       "checkpoint": "B13",
       "focus": "Recall JUnit/MockMvc + failing test repair and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B13 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B13 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2443,7 +2443,7 @@
       "scope": "Core",
       "checkpoint": "B13",
       "focus": "Recall Correctness/security/performance/test gaps and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B13 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B13 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2539,7 +2539,7 @@
       "scope": "Core",
       "checkpoint": "B14",
       "focus": "Practice one-dimensional dynamic programming. State the invariant and time and space costs before coding.",
-      "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 6 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -2580,7 +2580,7 @@
       "scope": "Core",
       "checkpoint": "B14",
       "focus": "Recall Testcontainers/Docker/CI explanation and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B14 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B14 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2592,7 +2592,7 @@
       "scope": "Core",
       "checkpoint": "B14",
       "focus": "Recall 1D dynamic programming and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B14 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B14 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2646,7 +2646,7 @@
       "scope": "Core",
       "checkpoint": "B15",
       "focus": "Practice two-dimensional dynamic programming. State the invariant and time and space costs before coding.",
-      "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 6 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -2701,7 +2701,7 @@
       "scope": "Core",
       "checkpoint": "B15",
       "focus": "Recall N+1/index/cache/observability investigation and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B15 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B15 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2713,7 +2713,7 @@
       "scope": "Core",
       "checkpoint": "B15",
       "focus": "Recall 2D dynamic programming and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B15 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B15 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2841,7 +2841,7 @@
       "scope": "Core",
       "checkpoint": "B16",
       "focus": "Practice timed pattern selection. State the invariant and time and space costs before coding.",
-      "build": "Solve 6 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 6 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -2924,7 +2924,7 @@
       "scope": "Core",
       "checkpoint": "B16",
       "focus": "Recall Bounded bug/feature with diff/tests/security review and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B16 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B16 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2936,7 +2936,7 @@
       "scope": "Core",
       "checkpoint": "B16",
       "focus": "Recall Scaling/load balancing/replication/rate limiting and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B16 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B16 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2974,7 +2974,7 @@
       "scope": "Core",
       "checkpoint": "B17",
       "focus": "Practice mixed timed practice. State the invariant and time and space costs before coding.",
-      "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 5 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -2986,7 +2986,7 @@
       "scope": "Core",
       "checkpoint": "B17",
       "focus": "Recall Capstone requirements/API/data model and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B17 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B17 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -2998,7 +2998,7 @@
       "scope": "Core",
       "checkpoint": "B17",
       "focus": "Recall Java mixed DSA under time and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B17 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B17 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3055,7 +3055,7 @@
       "scope": "Core",
       "checkpoint": "B18",
       "focus": "Practice graph and tree review. State the invariant and time and space costs before coding.",
-      "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 5 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -3079,7 +3079,7 @@
       "scope": "Core",
       "checkpoint": "B18",
       "focus": "Recall Implement scoped Spring + TS feature and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B18 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B18 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3091,7 +3091,7 @@
       "scope": "Core",
       "checkpoint": "B18",
       "focus": "Recall Trace UI to API to DB failure and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B18 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B18 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3143,7 +3143,7 @@
       "scope": "Core",
       "checkpoint": "B19",
       "focus": "Practice mixed recall. State the invariant and time and space costs before coding.",
-      "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 5 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -3183,7 +3183,7 @@
       "scope": "Core",
       "checkpoint": "B19",
       "focus": "Recall Queues/retries/idempotency/offline sync and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B19 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B19 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": [
@@ -3197,7 +3197,7 @@
       "scope": "Core",
       "checkpoint": "B19",
       "focus": "Recall Reject/fix an almost-right generated change and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B19 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B19 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3261,7 +3261,7 @@
       "scope": "Core",
       "checkpoint": "B20",
       "focus": "Practice weakest patterns. State the invariant and time and space costs before coding.",
-      "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 5 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -3273,7 +3273,7 @@
       "scope": "Core",
       "checkpoint": "B20",
       "focus": "Recall Architecture/trade-offs/security/testing/story and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B20 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B20 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": [
@@ -3287,7 +3287,7 @@
       "scope": "Core",
       "checkpoint": "B20",
       "focus": "Recall Logs/metrics/query/app failure investigation and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B20 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B20 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3413,7 +3413,7 @@
       "scope": "Core",
       "checkpoint": "B21",
       "focus": "Practice timed Java practice. State the invariant and time and space costs before coding.",
-      "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 5 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -3425,7 +3425,7 @@
       "scope": "Core",
       "checkpoint": "B21",
       "focus": "Recall Company-style timed Java DSA and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B21 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B21 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3437,7 +3437,7 @@
       "scope": "Core",
       "checkpoint": "B21",
       "focus": "Recall DBMS/OS/networking/SQL rapid interview and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B21 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B21 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3449,7 +3449,7 @@
       "scope": "Core",
       "checkpoint": "B21",
       "focus": "Recall STAR + project ownership/trade-offs and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B21 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B21 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3501,7 +3501,7 @@
       "scope": "Core",
       "checkpoint": "B22",
       "focus": "Practice previously failed problems. State the invariant and time and space costs before coding.",
-      "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 5 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -3513,7 +3513,7 @@
       "scope": "Core",
       "checkpoint": "B22",
       "focus": "Recall Timed independent repository verification and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B22 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3525,7 +3525,7 @@
       "scope": "Core",
       "checkpoint": "B22",
       "focus": "Recall Unfamiliar repo bug fix and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B22 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3537,7 +3537,7 @@
       "scope": "Core",
       "checkpoint": "B22",
       "focus": "Recall Timed warehouse workflow design and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B22 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B22 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3589,7 +3589,7 @@
       "scope": "Core",
       "checkpoint": "B23",
       "focus": "Practice mixed interview sets. State the invariant and time and space costs before coding.",
-      "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 5 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -3601,7 +3601,7 @@
       "scope": "Core",
       "checkpoint": "B23",
       "focus": "Recall Spring/JPA/security/testing deep dive and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B23 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3613,7 +3613,7 @@
       "scope": "Core",
       "checkpoint": "B23",
       "focus": "Recall TypeScript runtime, types and React client design and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B23 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3625,7 +3625,7 @@
       "scope": "Core",
       "checkpoint": "B23",
       "focus": "Recall Browser to Spring to DB + behavioral and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B23 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3663,7 +3663,7 @@
       "scope": "Core",
       "checkpoint": "B24",
       "focus": "Practice final timed review. State the invariant and time and space costs before coding.",
-      "build": "Solve 5 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.",
+      "build": "Use the Practice Bank to choose topics. Solve 5 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.",
       "verify": "Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.",
       "requires": [],
       "labs": []
@@ -3675,7 +3675,7 @@
       "scope": "Core",
       "checkpoint": "B24",
       "focus": "Recall Coding + CS + project and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B24 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B24 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3687,7 +3687,7 @@
       "scope": "Core",
       "checkpoint": "B24",
       "focus": "Recall Repo task + verification and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B24 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B24 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []
@@ -3699,7 +3699,7 @@
       "scope": "Core",
       "checkpoint": "B24",
       "focus": "Recall System design + trade-offs + STAR and the assumptions that affect your answer.",
-      "build": "Attempt the original timed prompt unaided. Use an actual B24 artifact if it illustrates the topic, or a self-contained fixture when it does not.",
+      "build": "Attempt a timed question on the topics in the task title unaided. Use an actual B24 artifact if it illustrates the topic, or create a small fixture.",
       "verify": "Record time, result, both scores, one specific improvement, and an unaided retry.",
       "requires": [],
       "labs": []

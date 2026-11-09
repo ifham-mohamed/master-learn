@@ -2,8 +2,7 @@
 
 # CS22 — Cookies/sessions/JWT
 
-Week 11 · Core · Warehouse checkpoint B11
-
+Week 11 · Core · Warehouse checkpoint [B11](../../projects/B11/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,21 @@ Inspect the browser login request and logout. Compare the session flow with a pr
 
 Explain where credentials are validated and demonstrate session invalidation.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Use browser developer tools to inspect demo cookie attributes and sign-out behavior. [MDN HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 119. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> State/auth trade-offs and storage risks
+
+### Exercise / interview prompt
+
+> Interview: Session vs JWT?
 
 ## Record one entry
 

@@ -2,8 +2,7 @@
 
 # RW05 — Unfamiliar codebase orientation
 
-Week 5 · Core · Warehouse checkpoint B05
-
+Week 5 · Core · Warehouse checkpoint [B05](../../projects/B05/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,22 @@ Trace startup to shipment lookup in a clean checkout. Draw the route through two
 
 Verify the trace with a run or debugger and identify where a small change belongs.
 
-## References
+## Read and practice
 
-- [Pro Git](https://git-scm.com/book/en/v2)
+- Use history and a small diff to explain one code path or justify a minimal change. [Pro Git](https://git-scm.com/book/en/v2)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 65. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Accurate mental model; identify entrypoints and tests
+
+### Exercise / interview prompt
+
+> Open a medium repo and find request to service to DB path in 10 minutes\
+> Practice mode: AI-free Yes, AI-assisted Yes
 
 ## Record one entry
 

@@ -2,8 +2,7 @@
 
 # EN26 — Git
 
-Week 1 · Core · Warehouse checkpoint B01
-
+Week 1 · Core · Warehouse checkpoint [B01](../../projects/B01/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,24 @@ Commit the first working CLI in a small branch. Rehearse undo on an isolated pra
 
 The diff explains one change and the branch can be built after checkout.
 
-## References
+## Read and practice
 
-- [Pro Git](https://git-scm.com/book/en/v2)
+- Use history and a small diff to explain one code path or justify a minimal change. [Pro Git](https://git-scm.com/book/en/v2)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 15. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> branch, commit, merge/rebase, conflict, PR, bisect concept\
+> Branching, merge/rebase, conflicts, PR workflow
+
+### Exercise / interview prompt
+
+> Resolve a conflict and explain history\
+> PR-based practice\
+> Shared
 
 ## Record one entry
 

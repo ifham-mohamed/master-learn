@@ -2,10 +2,9 @@
 
 # TS19 — Rendering / performance
 
-Week 6 · Core · Warehouse checkpoint B06
+Week 6 · Core · Warehouse checkpoint [B06](../../projects/B06/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,17 +18,29 @@ Profile a representative shipment list before deciding whether memoization, pagi
 
 Save comparable before and after measurements and report what changed.
 
-## References
+## Read and practice
 
-- [Thinking in React](https://react.dev/learn/thinking-in-react)
-- [Independently deployable micro-frontends](https://martinfowler.com/articles/micro-frontends.html)
-
+- Record a before and after render measurement on the same fixture. [React Profiler reference](https://react.dev/reference/react/Profiler)
 
 ## Further architecture practice
 
-- 4. Release a Tracking micro-frontend · after B20. Deploy and roll back the Tracking frontend without rebuilding Dispatch. Verify keyboard navigation, direct URLs, sign-out, API failure fallback, and bundle size before and after the split.
+- **4. Release a Tracking micro-frontend.** Deploy and roll back the Tracking frontend without rebuilding Dispatch. Verify keyboard navigation, direct URLs, sign-out, API failure fallback, and bundle size before and after the split. Start after [B20](../../projects/B20/README.md).
 
+[Independently deployable micro-frontends](https://martinfowler.com/articles/micro-frontends.html)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 74. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> keys, memoization basics, state placement\
+> Bundle/loading, caching, rendering, Core Web Vitals concepts
+
+### Exercise / interview prompt
+
+> profile rerender issue\
+> Interview: when does memo help/hurt?
 
 ## Record one entry
 

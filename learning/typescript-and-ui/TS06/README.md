@@ -2,10 +2,9 @@
 
 # TS06 — Objects / prototypes
 
-Week 2 · Core · Warehouse checkpoint B02
+Week 2 · Core · Warehouse checkpoint [B02](../../projects/B02/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Compare a plain shipment DTO with an object that inherits behavior. Inspect an o
 
 JSON contains the intended fields. Explain what crosses the API boundary.
 
-## References
+## Read and practice
 
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- Compare an inherited property with an own property before serializing a DTO. [MDN prototypes guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 24. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> object semantics, prototype chain high level, this behavior
+
+### Exercise / interview prompt
+
+> object method drills\
+> Interview: arrow vs function this?
 
 ## Record one entry
 

@@ -46,16 +46,32 @@ ACTIVE_TITLES = {
 }
 MANAGED = '<!-- Managed by export_warehouse_plan.py -->'
 
-TRACK_READING = {
-    'Java & Spring': ('Java language guides', 'https://dev.java/learn/language/'),
-    'TypeScript & UI': ('TypeScript Handbook', 'https://www.typescriptlang.org/docs/handbook/intro.html'),
-    'CS & SQL': ('PostgreSQL tutorial', 'https://www.postgresql.org/docs/current/tutorial.html'),
-    'DSA': ('MIT Introduction to Algorithms', 'https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/'),
-}
+ALGORITHM_PRACTICE = (
+    ('HackerRank interview practice', 'https://www.hackerrank.com/interview/interview-preparation-kit',
+     'Choose a challenge in the matching topic, solve it in Java and save its link or ID.'),
+    ('VisuAlgo', 'https://visualgo.net/en', 'Predict the next operation on a relevant structure, then step through the animation.'),
+)
 
 
 def slug(category):
     return re.sub(r'[^a-z0-9]+', '-', category.lower().replace('&', 'and')).strip('-')
+
+
+def workbook_quote(value):
+    if not value:
+        return 'The workbook leaves this cell blank.'
+    lines = value.split('\n')
+    quote = []
+    for index, line in enumerate(lines):
+        if not line:
+            quote.append('>')
+            continue
+        line = re.sub(r'([\\`*_\[\]<>~])', r'\\\1', line)
+        line = re.sub(r'^(\d*)([.)#+=-])(?=\s|$)', r'\1\\\2', line)
+        line = re.sub(r'&(?=[a-zA-Z#])', r'\\&', line)
+        line_break = '\\' if index + 1 < len(lines) and lines[index + 1] else ''
+        quote.append(f'> {line}{line_break}')
+    return '\n'.join(quote)
 
 
 def fallback(task, week, dsa_targets):
@@ -72,7 +88,7 @@ def fallback(task, week, dsa_targets):
         ]
         return (
             f'Practice {patterns[week - 1]}. State the invariant and time and space costs before coding.',
-            f'Solve {dsa_targets[week]} new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.',
+            f'Use the Practice Bank to choose topics. Solve {dsa_targets[week]} new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.',
             'Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.',
         )
     if category == 'Review':
@@ -82,9 +98,10 @@ def fallback(task, week, dsa_targets):
             'Record the run, one skill you can repeat, and the next gap you will address.',
         )
     if category == 'Mock interviews':
+        prompt = 'the workbook prompt below' if task['prompt'] else 'a timed question on the topics in the task title'
         return (
             f'Recall {ACTIVE_TITLES.get(task["id"], task["title"])} and the assumptions that affect your answer.',
-            f'Attempt the original timed prompt unaided. Use an actual B{week:02} artifact if it illustrates the topic, or a self-contained fixture when it does not.',
+            f'Attempt {prompt} unaided. Use an actual B{week:02} artifact if it illustrates the topic, or create a small fixture.',
             'Record time, result, both scores, one specific improvement, and an unaided retry.',
         )
     raise ValueError(f'Write a brief for {task["id"]}')
@@ -108,7 +125,29 @@ def main(check):
     tracker = json.loads((ROOT / 'src/data/tracker.json').read_text(encoding='utf-8'))
     source_tasks = tracker['tasks']
     dsa_targets = {int(week['week']): int(week['dsaTarget']) for week in tracker['weeks']}
-    known = {task['id'] for task in source_tasks}
+    tasks_by_id = {task['id']: task for task in source_tasks}
+    known = set(tasks_by_id)
+
+    def task_link(task_id):
+        if task_id not in tasks_by_id:
+            return task_id
+        track = slug(tasks_by_id[task_id]['category'])
+        return f'[{task_id}](../../{track}/{task_id}/README.md)'
+
+    resources = {}
+    for line in (SOURCE / 'task-resources.txt').read_text(encoding='utf-8').splitlines():
+        if not line.strip() or line.startswith('#'):
+            continue
+        ids, label, url, exercise = [field.strip() for field in line.split('|')]
+        if not ids or not label or not exercise or not url.startswith('https://'):
+            raise ValueError(f'Invalid learning resource: {line}')
+        for task_id in ids.split():
+            resource = (label, url, exercise)
+            entries = resources.setdefault(task_id, [])
+            if task_id not in known or any(entry[1] == url for entry in entries):
+                raise ValueError(f'Invalid or duplicate resource for {task_id}: {url}')
+            entries.append(resource)
+
     labs = json.loads((SOURCE / 'architecture-labs.json').read_text(encoding='utf-8'))
     project = (ROOT / 'projects/warehouse-dispatch/README.md').read_text(encoding='utf-8')
     requirements = project.split('## Business workflow\n', 1)[1].split('\n## How the project grows', 1)[0].strip()
@@ -151,35 +190,35 @@ def main(check):
         weeks.setdefault(week, []).append((task_id, records[task_id], path))
         lab_notes = ''
         if linked_labs:
-            lab_notes = '\n## Further architecture practice\n\n' + '\n'.join(
-                f'- {lab["title"]} · after {lab["after"]}. {lab["verify"]}' for lab in linked_labs
-            ) + '\n'
-        before = '\nBefore you begin, complete ' + ', '.join(requires) + '.\n' if requires else ''
-        reading = TRACK_READING.get(category)
-        if category == 'Java & Spring' and 17 <= int(task_id[2:]) <= 35:
-            reading = ('Spring guides by topic', 'https://spring.io/guides')
-        elif category == 'TypeScript & UI' and week >= 5:
-            reading = ('Thinking in React', 'https://react.dev/learn/thinking-in-react')
-        elif task_id in ('EN26', 'RW05', 'RW10'):
-            reading = ('Pro Git', 'https://git-scm.com/book/en/v2')
-        refs = ([reading] if reading else []) + [
-            (ref['label'], ref['url']) for lab in linked_labs for ref in lab['references']
-        ]
-        reference_notes = '\n'.join(f'- [{label}]({url})' for label, url in dict.fromkeys(refs))
-        reading_notes = f'\n## References\n\n{reference_notes}\n' if reference_notes and task_id != 'JA05' else ''
+            lab_notes = '## Further architecture practice\n\n' + '\n'.join(
+                f'- **{lab["title"]}.** {lab["verify"]} Start after {task_link(lab["after"])}.' for lab in linked_labs
+            )
+        before = '\n\nBefore you begin, complete ' + ', '.join(map(task_link, requires)) + '.' if requires else ''
+        reading = resources.get(task_id, ALGORITHM_PRACTICE if category == 'DSA' else ())
+        practice = [f'- {exercise} [{label}]({url})' for label, url, exercise in reading]
+        if category in ('DSA', 'Mock interviews', 'Review'):
+            action = 'Use the pattern rows to plan which topics to practice and check your targets.' if category == 'DSA' else (
+                'Select a relevant question and answer it aloud before checking the notes.' if category == 'Mock interviews' else
+                'Select one due question. Answer from memory and then check your reasoning.'
+            )
+            practice.append(f'- {action} [Practice Bank](../../../sources/markdown/categories/practice-bank.md)')
+        reading_notes = '## Read and practice\n\n' + '\n'.join(practice) if practice else ''
+        lab_refs = dict.fromkeys((ref['label'], ref['url']) for lab in linked_labs for ref in lab['references'])
+        if lab_refs:
+            lab_notes += '\n\n' + ' · '.join(f'[{label}]({url})' for label, url in lab_refs)
         coaching = (SOURCE / 'ja05-coaching.md').read_text(encoding='utf-8').strip() if task_id == 'JA05' else ''
         worked_example = '''
 ## Earlier SQL worked example
 
 For a separate SQLite demonstration, see the [JOIN walkthrough](theory/01-worked-example.md), [run instructions](code/01-run-example.md), and [recorded example results](results/evidence.md). Write your own PostgreSQL warehouse queries for the current task.
 ''' if task_id == 'CS12' else ''
+        supplemental = ''.join('\n\n' + part.strip() for part in (reading_notes, worked_example, lab_notes, coaching) if part)
         mock_notes = ' In Learnspace, record technical and communication scores and the mock result.' if task['workType'] == 'Mock' else ''
         publish(ROOT / path, f'''{MANAGED}
 
 # {task_id} — {title}
 
-Week {week} · {scope} · Warehouse checkpoint {checkpoint}
-{before}
+Week {week} · {scope} · Warehouse checkpoint {task_link(checkpoint) if task_id != checkpoint else checkpoint}{before}
 
 ## Review and learn
 
@@ -191,10 +230,19 @@ Week {week} · {scope} · Warehouse checkpoint {checkpoint}
 
 ## Pass check
 
-{verify}
-{reading_notes}{worked_example}
-{lab_notes}
-{coaching}
+{verify}{supplemental}
+
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row {task['sourceRow']}. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+{workbook_quote(task['doneWhen'])}
+
+### Exercise / interview prompt
+
+{workbook_quote(task['prompt'])}
 
 ## Record one entry
 

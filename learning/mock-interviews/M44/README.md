@@ -2,8 +2,7 @@
 
 # M44 — System design + trade-offs + STAR
 
-Week 24 · Core · Warehouse checkpoint B24
-
+Week 24 · Core · Warehouse checkpoint [B24](../../projects/B24/README.md)
 
 ## Review and learn
 
@@ -11,14 +10,28 @@ Recall System design + trade-offs + STAR and the assumptions that affect your an
 
 ## Do the work
 
-Attempt the original timed prompt unaided. Use an actual B24 artifact if it illustrates the topic, or a self-contained fixture when it does not.
+Attempt a timed question on the topics in the task title unaided. Use an actual B24 artifact if it illustrates the topic, or create a small fixture.
 
 ## Pass check
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
+## Read and practice
 
+- Choose one format to rehearse and record a concrete point to improve on the next attempt. [Amazon software development interview topics](https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics)
+- Select a relevant question and answer it aloud before checking the notes. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 240. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Complete the timed round. Record technical and communication scores, result, evidence, and one correction before the next mock.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

@@ -2,10 +2,9 @@
 
 # TS27 — Lint / format / typecheck
 
-Week 8 · Core · Warehouse checkpoint B08
+Week 8 · Core · Warehouse checkpoint [B08](../../projects/B08/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Set up the smallest checks needed for the React client.
 
 Each command runs on a clean clone. Introduce and fix one type or lint error to verify the gate.
 
-## References
+## Read and practice
 
-- [Thinking in React](https://react.dev/learn/thinking-in-react)
+- Change one relevant check locally and record which diagnostic it adds or removes. [TypeScript configuration reference](https://www.typescriptlang.org/tsconfig/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 93. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> ESLint concepts, formatter, tsc --noEmit, CI gates
+
+### Exercise / interview prompt
+
+> CI quality gate\
+> Interview: lint vs typecheck vs tests?
 
 ## Record one entry
 

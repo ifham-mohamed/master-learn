@@ -27,6 +27,7 @@ import {
   learningFileUrl,
   learningManifestUrl,
   resolveLearningLink,
+  resolveGuideReference,
   type ContentSection,
   type LearningManifest,
   type LearningDocument,
@@ -404,6 +405,8 @@ function DocumentViewer({
   function transformUrl(url: string) {
     if (/^https?:\/\//i.test(url)) return url;
     if (url.startsWith("#")) return url;
+    const guideLink = resolveGuideReference(taskId, file.path, url);
+    if (guideLink) return guideLink;
     const resolved = resolveLearningLink(file.path, url);
     return resolved && files.some((f) => f.path === resolved)
       ? learningFileUrl(taskId, resolved, true)

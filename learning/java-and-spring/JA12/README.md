@@ -2,10 +2,9 @@
 
 # JA12 — Optional
 
-Week 4 · Core · Warehouse checkpoint B04
+Week 4 · Core · Warehouse checkpoint [B04](../../projects/B04/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Return Optional from shipment lookup and handle the missing case where the calle
 
 Found and missing lookups are tested. Explain where a domain error belongs.
 
-## References
+## Read and practice
 
-- [Java language guides](https://dev.java/learn/language/)
+- Try a present and missing lookup and identify where each case is handled. [Oracle Java Optional reference](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 44. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> safe absence modeling; avoid misuse
+
+### Exercise / interview prompt
+
+> repository/service examples\
+> Interview: when should Optional not be a field/parameter?
 
 ## Record one entry
 

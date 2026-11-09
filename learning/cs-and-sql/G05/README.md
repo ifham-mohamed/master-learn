@@ -2,10 +2,9 @@
 
 # G05 — Practice window functions, NULLs and duplicate-sensitive joins
 
-Week 7 · Core · Warehouse checkpoint B07
+Week 7 · Core · Warehouse checkpoint [B07](../../projects/B07/README.md)
 
-Before you begin, complete CS12.
-
+Before you begin, complete [CS12](../../cs-and-sql/CS12/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,21 @@ Create a shipment event fixture with duplicates, missing assignments and tied ti
 
 Save expected and actual rows with explicit tie-breaking and NULL behavior.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Use tied timestamps to test your report ordering. [PostgreSQL window functions tutorial](https://www.postgresql.org/docs/current/tutorial-window.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 86. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Solve latest-row-per-group, ranking and running totals. Show how ties, NULLs and duplicate join keys affect the result.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

@@ -2,10 +2,9 @@
 
 # JA23 — JPA entities / repositories
 
-Week 8 · Core · Warehouse checkpoint B08
+Week 8 · Core · Warehouse checkpoint [B08](../../projects/B08/README.md)
 
-Before you begin, complete JA20.
-
+Before you begin, complete [JA20](../../java-and-spring/JA20/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,28 @@ Persist warehouse, SKU, stock, shipment and shipment-line records in PostgreSQL.
 
 A restart keeps the data. Referential and uniqueness constraints reject bad rows.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Identify the entity and repository boundary. Reproduce the relevant pattern in your PostgreSQL project with a migration. [Spring Data JPA guide](https://spring.io/guides/gs/accessing-data-jpa/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 91. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> mapping, IDs, relationships, repository abstraction\
+> entities, repositories, fetch strategy, N+1, query methods, pagination\
+> repositories, entity mapping, query methods, pagination, projections, N+1 awareness
+
+### Exercise / interview prompt
+
+> order/customer mapping\
+> Interview: entity vs DTO?\
+> Fix N+1/query bug and justify mapping\
+> JPA order/inventory module\
+> Critical Spring backend skill\
+> Implement inventory persistence layer
 
 ## Record one entry
 

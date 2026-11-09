@@ -2,10 +2,9 @@
 
 # JA22 — REST correctness
 
-Week 7 · Core · Warehouse checkpoint B07
+Week 7 · Core · Warehouse checkpoint [B07](../../projects/B07/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,29 @@ Write the API contract for shipment create, detail and reservation. Decide how c
 
 Test success, missing resource, invalid input and a reservation conflict against the contract.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Sketch one operation with success and failure responses, then verify both against a real or stubbed endpoint. [OpenAPI overview](https://www.openapis.org/what-is-openapi)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 82. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> methods, status codes, pagination, idempotency\
+> resources, methods, idempotency, errors\
+> offset vs cursor\
+> Resources, verbs, status codes, pagination, versioning, idempotency
+
+### Exercise / interview prompt
+
+> order + booking API\
+> Interview: PUT vs PATCH? 201 vs 204?\
+> Design: Order API\
+> Trade-off: simplicity vs flexibility\
+> Design: Large orders list\
+> Trade-off: simplicity vs consistency
 
 ## Record one entry
 

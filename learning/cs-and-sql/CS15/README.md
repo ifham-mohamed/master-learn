@@ -2,8 +2,7 @@
 
 # CS15 — Process vs thread
 
-Week 4 · Core · Warehouse checkpoint B04
-
+Week 4 · Core · Warehouse checkpoint [B04](../../projects/B04/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,22 @@ Compare separate CLI processes with concurrent work inside one Java process.
 
 Record which state is visible to each worker and where a race could occur.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Compare a single worker with two workers and bound how long the caller waits. [Oracle Java ExecutorService reference](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 42. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Address space, scheduling, shared state\
+> Process/thread, memory, scheduling, file/system basics
+
+### Exercise / interview prompt
+
+> Interview: Process vs thread?
 
 ## Record one entry
 

@@ -2,8 +2,7 @@
 
 # M29 — Queues/retries/idempotency/offline sync
 
-Week 19 · Core · Warehouse checkpoint B19
-
+Week 19 · Core · Warehouse checkpoint [B19](../../projects/B19/README.md)
 
 ## Review and learn
 
@@ -11,24 +10,34 @@ Recall Queues/retries/idempotency/offline sync and the assumptions that affect y
 
 ## Do the work
 
-Attempt the original timed prompt unaided. Use an actual B19 artifact if it illustrates the topic, or a self-contained fixture when it does not.
+Attempt a timed question on the topics in the task title unaided. Use an actual B19 artifact if it illustrates the topic, or create a small fixture.
 
 ## Pass check
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
-## References
+## Read and practice
 
-- [Transactional outbox](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html)
-- [RabbitMQ reliability](https://www.rabbitmq.com/docs/reliability)
-- [Apache Kafka concepts](https://kafka.apache.org/documentation/)
-
+- Try the work queue tutorial in an isolated lab. Then test duplicate delivery using your own handler. [RabbitMQ hands-on tutorials](https://www.rabbitmq.com/tutorials)
+- Select a relevant question and answer it aloud before checking the notes. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
 ## Further architecture practice
 
-- 2. Publish dispatch events through RabbitMQ · after B19. Roll back a dispatch, stop the broker after commit, interrupt the publisher before marking a send, and replay a poison message. Show zero events for the rollback, eventual delivery for the committed event and one consumer effect under redelivery.
+- **2. Publish dispatch events through RabbitMQ.** Roll back a dispatch, stop the broker after commit, interrupt the publisher before marking a send, and replay a poison message. Show zero events for the rollback, eventual delivery for the committed event and one consumer effect under redelivery. Start after [B19](../../projects/B19/README.md).
 
+[Transactional outbox](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html) · [RabbitMQ reliability](https://www.rabbitmq.com/docs/reliability) · [Apache Kafka concepts](https://kafka.apache.org/documentation/)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 200. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Complete the timed round. Record technical and communication scores, result, evidence, and one correction before the next mock.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

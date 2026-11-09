@@ -2,8 +2,7 @@
 
 # M07 — Validation/REST + heap/intervals + SQL
 
-Week 7 · Core · Warehouse checkpoint B07
-
+Week 7 · Core · Warehouse checkpoint [B07](../../projects/B07/README.md)
 
 ## Review and learn
 
@@ -11,14 +10,28 @@ Recall Validation/REST + heap/intervals + SQL and the assumptions that affect yo
 
 ## Do the work
 
-Attempt the original timed prompt unaided. Use an actual B07 artifact if it illustrates the topic, or a self-contained fixture when it does not.
+Attempt a timed question on the topics in the task title unaided. Use an actual B07 artifact if it illustrates the topic, or create a small fixture.
 
 ## Pass check
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
+## Read and practice
 
+- Transfer one constraint to the JSON API, then send an invalid request and inspect the response. [Spring input validation guide](https://spring.io/guides/gs/validating-form-input/)
+- Select a relevant question and answer it aloud before checking the notes. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 88. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Complete the timed round. Record technical and communication scores, result, evidence, and one correction before the next mock.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

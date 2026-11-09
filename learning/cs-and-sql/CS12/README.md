@@ -2,8 +2,7 @@
 
 # CS12 — JOINs
 
-Week 1 · Core · Warehouse checkpoint B01
-
+Week 1 · Core · Warehouse checkpoint [B01](../../projects/B01/README.md)
 
 ## Review and learn
 
@@ -17,16 +16,26 @@ Query warehouses with assigned shipments, including a warehouse with none. Adapt
 
 Save expected and actual rows. Explain why a WHERE filter can remove the unmatched warehouse.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Solve one join without the answer, then make a warehouse fixture with an unmatched row. [PostgreSQL Exercises joins and subqueries](https://pgexercises.com/questions/joins/)
 
 ## Earlier SQL worked example
 
 For a separate SQLite demonstration, see the [JOIN walkthrough](theory/01-worked-example.md), [run instructions](code/01-run-example.md), and [recorded example results](results/evidence.md). Write your own PostgreSQL warehouse queries for the current task.
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 9. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> INNER/LEFT and multi-table reasoning\
+> JOINs, GROUP BY, HAVING, subqueries, CTEs, CASE, aggregates
+
+### Exercise / interview prompt
+
+> Interview: Return customers with/without orders
 
 ## Record one entry
 

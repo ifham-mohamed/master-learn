@@ -20,6 +20,7 @@ export async function exportPwa(out: string, base: string) {
       "/settings/",
       "/search/",
       "/plan/",
+      "/roadmap/",
       "/weeks/",
       "/learning/",
       "/offline/",

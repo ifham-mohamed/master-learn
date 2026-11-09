@@ -4,8 +4,7 @@
 
 Week 24 · Core · Warehouse checkpoint B24
 
-Before you begin, complete B23.
-
+Before you begin, complete [B23](../../projects/B23/README.md).
 
 ## Review and learn
 
@@ -19,8 +18,26 @@ Complete two simulations and curate the most relevant project runs, commits and 
 
 Record scores, follow-up tasks and a clean-clone demo another person can reproduce.
 
+## Read and practice
 
+- Choose one format to rehearse and record a concrete point to improve on the next attempt. [Amazon software development interview topics](https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 236. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Demonstrate the working output, relevant tests, and one design trade-off.
+
+### Exercise / interview prompt
+
+> CS/SQL: Final targeted revision\
+> Design: Final timed system design\
+> AI practice: One AI-free full simulation + one AI-allowed simulation\
+> Two full simulations, final question-bank pass, resume/project evidence cleanup\
+> Timed system-design practice #8: use capstone/booking/commerce prompt\
+> \-
 
 ## Record one entry
 

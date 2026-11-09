@@ -2,8 +2,7 @@
 
 # CS19 — DNS
 
-Week 5 · Core · Warehouse checkpoint B05
-
+Week 5 · Core · Warehouse checkpoint [B05](../../projects/B05/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,21 @@ Resolve the staging hostname or inspect Compose service-name resolution from the
 
 Save the lookup result and distinguish DNS failure from a server response.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Resolve your local or staging host and compare a resolution failure with an HTTP failure. [MDN DNS glossary](https://developer.mozilla.org/en-US/docs/Glossary/DNS)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 57. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Resolve name to IP, caching concept
+
+### Exercise / interview prompt
+
+> Interview: What happens after entering a URL?
 
 ## Record one entry
 

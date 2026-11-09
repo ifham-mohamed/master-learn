@@ -1,0 +1,80 @@
+# Task IDs | Resource title | URL | What to try before you return to the project
+# Review, interview and DSA guides also link to the workbook's Practice Bank.
+G02 B01|Dev.java first steps|https://dev.java/learn/first-steps/|Compile a tiny program from a clean folder and repeat the command without using the IDE.
+JA06 JA07 B02 M01|Dev.java object-oriented programming|https://dev.java/learn/language/oop/|Review the relevant language feature and trace what a shipment object can expose or change.
+JA13|Dev.java records guide|https://dev.java/learn/language/oop/records/|Try a shipment summary record and identify which properties can still hold mutable objects.
+JA08 JA11 B04 M02|Dev.java collections and streams|https://dev.java/learn/api/collections-and-streams/|Predict the output of your own small collection or stream fixture, then run it.
+JA09 B03 M03|Dev.java generics and lambdas|https://dev.java/learn/language/fp/|Use a typed helper with two values and intentionally compile one incompatible call.
+JA10|Dev.java exceptions guide|https://dev.java/learn/language/annotations-exceptions/|Trace where an invalid quantity is detected and where your menu can recover.
+JA12|Oracle Java Optional reference|https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html|Try a present and missing lookup and identify where each case is handled.
+CS15 JA14 M12|Oracle Java ExecutorService reference|https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html|Compare a single worker with two workers and bound how long the caller waits.
+JA15|Dev.java virtual threads guide|https://dev.java/learn/api/virtual-threads/|Run the same small blocking fixture with both executors and record the concurrency limit downstream.
+JA16|Dev.java JVM tools|https://dev.java/learn/jvm/|Capture a small memory observation and explain what your tool can measure.
+JA17 JA18 JA20 B05 B06 M05 M06 M08|Spring REST service guide|https://spring.io/guides/gs/rest-service/|Run a local endpoint and trace a request from the controller to the returned data.
+JA19|Spring Boot profiles|https://docs.spring.io/spring-boot/reference/features/profiles.html|Start the app with two local configurations and check which setting each one uses.
+JA21 B07 M07|Spring input validation guide|https://spring.io/guides/gs/validating-form-input/|Transfer one constraint to the JSON API, then send an invalid request and inspect the response.
+JA22 TS29 B17 B18 M16 M25 M27 M38|OpenAPI overview|https://www.openapis.org/what-is-openapi|Sketch one operation with success and failure responses, then verify both against a real or stubbed endpoint.
+JA23 B08 PF04|Spring Data JPA guide|https://spring.io/guides/gs/accessing-data-jpa/|Identify the entity and repository boundary. Reproduce the relevant pattern in your PostgreSQL project with a migration.
+JA24 CS09 B09 M09 M21 RW16|PostgreSQL EXPLAIN tutorial|https://www.postgresql.org/docs/current/using-explain.html|Compare plans for the same fixture and explain the observed scan, join or sort.
+JA25|Spring Data JPA transaction boundaries|https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html|Identify the service boundary and prove rollback after a partial write.
+JA26 CS11 B10 M11 PF02|PostgreSQL explicit locking|https://www.postgresql.org/docs/18/explicit-locking.html|Open two sessions and record which statement blocks, commits or rolls back.
+JA27 B11 M13|Spring Security sign-in guide|https://spring.io/guides/gs/securing-web/|Trace a browser session from sign-in to sign-out and test a rejected request.
+JA28 M14|Spring Security authorization|https://docs.spring.io/spring-security/reference/servlet/authorization/index.html|Draw the roles and warehouse scopes for one endpoint, then test a denied request.
+JA28 TS28 M14|PortSwigger access control labs|https://portswigger.net/web-security/access-control|Use a training lab to recognize an ownership bypass. Create a regression check using synthetic project accounts.
+JA29|JUnit parameterized tests guide|https://docs.junit.org/current/writing-tests/parameterized-classes-and-tests.html|Run the same stock invariant against a small table of accepted and rejected quantities.
+JA30 B13 M15 M17 M39 RW06|Spring web testing guide|https://spring.io/guides/gs/testing-web/|Compare the boundaries of a service test and a web test. Pick the narrowest test that catches your failure.
+JA31 B14 M19|Spring Boot Testcontainers reference|https://docs.spring.io/spring-boot/reference/testing/testcontainers.html|Run a PostgreSQL-backed test on disposable data and prove that a second run starts cleanly.
+JA32 B15 M32|Spring Boot Actuator guide|https://spring.io/guides/gs/actuator-service/|Compare health output with a failed dependency and trace one request through the project.
+JA33|Maven build lifecycle|https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html|Run the wrapper from the terminal and identify which phases checked and packaged your change.
+JA34 G08 B16 B20|Docker application tutorial|https://docs.docker.com/get-started/tutorials/run-an-app/|Repeat a clean build, restart and recovery check on your own project configuration.
+JA35 B23 M31 M41 M42|Amazon software development interview topics|https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics|Select a relevant topic and explain an actual project decision, an alternative and the evidence.
+CS12|PostgreSQL Exercises joins and subqueries|https://pgexercises.com/questions/joins/|Solve one join without the answer, then make a warehouse fixture with an unmatched row.
+CS13|PostgreSQL Exercises aggregates|https://pgexercises.com/questions/aggregates/|Work through one aggregate example and verify your own totals by hand.
+CS07|PostgreSQL transactions tutorial|https://www.postgresql.org/docs/current/tutorial-transactions.html|Predict the visible rows before and after a rollback, then check from a second session.
+CS08 SD07|PostgreSQL constraints|https://www.postgresql.org/docs/current/ddl-constraints.html|Turn one business rule into a constraint and insert a deliberately invalid fixture.
+CS14 G05 M34 B21|PostgreSQL window functions tutorial|https://www.postgresql.org/docs/current/tutorial-window.html|Use tied timestamps to test your report ordering.
+CS10|PostgreSQL transaction isolation|https://www.postgresql.org/docs/current/transaction-iso.html|Write a two-session timeline and compare one observed result at two isolation levels.
+CS18|MDN TCP glossary|https://developer.mozilla.org/en-US/docs/Glossary/TCP|Trace a local connection and state which success must be confirmed by the application.
+CS19|MDN DNS glossary|https://developer.mozilla.org/en-US/docs/Glossary/DNS|Resolve your local or staging host and compare a resolution failure with an HTTP failure.
+CS20|MDN HTTP overview|https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview|Read the method, headers and response from one real request to your endpoint.
+CS21|MDN transport layer security|https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Transport_Layer_Security|Inspect the certificate and hostname of a test endpoint and identify where TLS terminates.
+CS22|MDN HTTP cookies|https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies|Use browser developer tools to inspect demo cookie attributes and sign-out behavior.
+TS05|MDN closures guide|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures|Predict which values two shipment label functions capture and run your own example.
+TS06|MDN prototypes guide|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain|Compare an inherited property with an own property before serializing a DTO.
+TS07 TS15 M04 M40|MDN JavaScript execution model|https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model|Predict execution order for a promise and a timer, then trace the result.
+TS08 TS09 TS10 TS11 TS12 TS13|TypeScript Playground|https://www.typescriptlang.org/play/|Build a tiny fixture for this task and change one assumption to see the compiler response.
+TS09|TypeScript narrowing handbook|https://www.typescriptlang.org/docs/handbook/2/narrowing.html|Add a case to a discriminated union and use the compiler to find an unhandled state.
+TS14 TS27|TypeScript configuration reference|https://www.typescriptlang.org/tsconfig/|Change one relevant check locally and record which diagnostic it adds or removes.
+TS16|Zod basic usage|https://zod.dev/basics|Parse a valid response and a malformed response before either reaches the UI state.
+TS17|React interactive tutorial|https://react.dev/learn/tutorial-tic-tac-toe|Use the embedded editor to explore component boundaries and props before building your shipment UI.
+TS18 PF05|React managing state|https://react.dev/learn/managing-state|Try one embedded challenge and apply the same state decision to your own screen.
+TS19|React Profiler reference|https://react.dev/reference/react/Profiler|Record a before and after render measurement on the same fixture.
+TS20|React Router route guide|https://reactrouter.com/start/declarative/routing|Add a nested route and verify a direct URL, including a missing shipment.
+TS21 M10 M28|MDN Fetch guide|https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch|Exercise a success, an HTTP failure and an aborted request in your client.
+TS22|Node.js introduction|https://nodejs.org/learn/getting-started/introduction-to-nodejs|Run a small script and identify which work happens in Node and which happens in the browser.
+TS23|Vitest getting started|https://vitest.dev/guide/|Run one client test in watch mode and show it catch a deliberately changed behavior.
+TS24|React Testing Library introduction|https://testing-library.com/docs/react-testing-library/intro/|Write a test that locates controls by their visible behavior and accessible labels.
+TS25 B12|Playwright writing tests|https://playwright.dev/docs/writing-tests|Run one full browser workflow and keep the assertion on its visible result.
+TS26|npm lockfile reference|https://docs.npmjs.com/cli/v11/configuring-npm/package-lock-json/|Install from a lockfile, then explain which file pins the resolved dependencies.
+TS30 AI14 M23 M30 M43|GitHub pull request docs|https://docs.github.com/en/pull-requests|Review a prepared diff yourself and write the regression test for one defect you can reproduce.
+TS31|Thinking in React|https://react.dev/learn/thinking-in-react|Sketch the component and state boundaries in your existing UI and justify one change.
+FE32|MDN Learn web development|https://developer.mozilla.org/en-US/docs/Learn_web_development|Choose a semantic HTML or CSS exercise and apply the same idea to one shipment screen.
+FE35|W3C accessible forms tutorial|https://www.w3.org/WAI/tutorials/forms/|Check labels, keyboard navigation and error recovery on your actual form.
+EN26 RW05 RW10 RW11 RW12 PF03 B22|Pro Git|https://git-scm.com/book/en/v2|Use history and a small diff to explain one code path or justify a minimal change.
+EN28|GitHub Skills Actions course|https://github.com/skills/hello-github-actions|Run a workflow in the exercise before adding one repeatable check to your project CI.
+EN30 G09 SD05 M24|AWS Well-Architected Framework|https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html|Choose one reliability or performance question and answer it with a scenario and a check.
+G06|Spring Boot database initialization|https://docs.spring.io/spring-boot/how-to/data-initialization.html|Run your migration from a blank database and from an earlier schema state.
+OP20|Python CSV library|https://docs.python.org/3/library/csv.html|Test a tiny synthetic inventory file with both a valid row and a rejected one.
+SD10 SD12|PostgreSQL query plan tutorial|https://www.postgresql.org/docs/current/using-explain.html|Measure the existing lookup on a representative fixture before adding a cache or search component.
+SD13 B19 M29|RabbitMQ hands-on tutorials|https://www.rabbitmq.com/tutorials|Try the work queue tutorial in an isolated lab. Then test duplicate delivery using your own handler.
+RW14|AWS timeouts, retries and backoff|https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/|Classify one transient failure and show the result after retries stop.
+SD14|MDN HTTP 429 reference|https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/429|Send a controlled burst and inspect the rejection and retry information.
+SD15|AWS S3 presigned URL guide|https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html|Model a short-lived download and test the expired or wrong-tenant case with synthetic data.
+SD16|NGINX load balancing guide|https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/|Sketch routing across two instances and predict what happens to an active session when one fails.
+SD17|PostgreSQL standby servers|https://www.postgresql.org/docs/current/warm-standby.html|Trace a read during replica lag and identify the operation that must reach the primary.
+SD21|MDN offline and background operation guide|https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation|Use an offline simulation and verify a conflict when a draft is submitted after reconnecting.
+AI05 AI09 AI10|NIST AI Risk Management Framework|https://www.nist.gov/itl/ai-risk-management-framework|Write one observable failure case and test it with a synthetic fixture or a stubbed action.
+AI07|JSON Schema step-by-step guide|https://json-schema.org/learn/getting-started-step-by-step|Validate a hand-written valid fixture and one that is missing a required field.
+AI17|GitHub secret scanning overview|https://docs.github.com/en/code-security/concepts/secret-security/secret-scanning|Inspect your files and history for credentials using a fake value for the exercise.
+AI18 RW20 BE76 BE79 G10 B24 M35 M36 M37 M44|Amazon software development interview topics|https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics|Choose one format to rehearse and record a concrete point to improve on the next attempt.
+G01 G03 G04 G07 PF01|Amazon software development interview topics|https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics|Choose a relevant skill and map it to one artifact you can show or one gap you need to close.

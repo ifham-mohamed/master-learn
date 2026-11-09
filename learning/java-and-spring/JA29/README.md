@@ -2,10 +2,9 @@
 
 # JA29 — JUnit / Mockito
 
-Week 13 · Core · Warehouse checkpoint B13
+Week 13 · Core · Warehouse checkpoint [B13](../../projects/B13/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,29 @@ Test reservation, cancellation and transition rules in plain Java. Use a fake or
 
 Tests fail when an invariant is intentionally broken and pass when restored.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Run the same stock invariant against a small table of accepted and rejected quantities. [JUnit parameterized tests guide](https://docs.junit.org/current/writing-tests/parameterized-classes-and-tests.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 138. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> fast unit tests, mocks, stubs, boundaries\
+> unit boundaries, mocks/stubs, assertions, parameterized tests\
+> Arrange/act/assert, boundaries, mocks/stubs\
+> unit tests, mocks/stubs, parameterized tests, boundaries
+
+### Exercise / interview prompt
+
+> service unit suite\
+> Interview: when is mocking harmful?\
+> Unit-test service without starting Spring\
+> 50 focused unit tests\
+> Java testing base\
+> Test service without Spring context
 
 ## Record one entry
 

@@ -9,7 +9,7 @@ import {
   taskFolder,
   MAX_TEXT_BYTES,
 } from "../src/lib/learning-files";
-import { resolveLearningLink } from "../src/lib/learning-types";
+import { resolveLearningLink, resolveGuideReference } from "../src/lib/learning-types";
 
 test("a task guide and log are served without exposing other root files", async () => {
   const manifest = await getLearningManifest("JA05");
@@ -108,4 +108,13 @@ test("Markdown links resolve within the task and reject unsafe targets", () => {
   ]) {
     assert.equal(resolveLearningLink("notes/a.md", href), null);
   }
+});
+
+test("task guides link to known prerequisite guides without widening file access", () => {
+  assert.equal(resolveGuideReference("JA05", "README.md", "../../engineering/G02/README.md"), "/tasks/G02/?file=README.md#learning-files");
+  assert.equal(resolveGuideReference("JA06", "README.md", "../JA05/README.md"), "/tasks/JA05/?file=README.md#learning-files");
+  assert.equal(resolveGuideReference("JA05", "README.md", "../../../projects/warehouse-dispatch/README.md"), "/projects/#project-requirements");
+  assert.equal(resolveGuideReference("JA05", "README.md", "../../java-and-spring/G02/README.md"), null);
+  assert.equal(resolveGuideReference("JA05", "README.md", "../../engineering/G02/notes/journal.md"), null);
+  assert.equal(resolveGuideReference("JA05", "notes/journal.md", "../../engineering/G02/README.md"), null);
 });

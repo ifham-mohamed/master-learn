@@ -2,10 +2,9 @@
 
 # JA26 — Locking / concurrency
 
-Week 10 · Core · Warehouse checkpoint B10
+Week 10 · Core · Warehouse checkpoint [B10](../../projects/B10/README.md)
 
-Before you begin, complete JA25.
-
+Before you begin, complete [JA25](../../java-and-spring/JA25/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,35 @@ Reproduce contention for the last unit. Choose row locking or an atomic conditio
 
 Two concurrent requests yield one success, one conflict, and a valid stock balance.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Open two sessions and record which statement blocks, commits or rolls back. [PostgreSQL explicit locking](https://www.postgresql.org/docs/18/explicit-locking.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 112. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> optimistic/pessimistic locks, unique constraints, retries\
+> Use transaction/constraint/idempotency appropriately\
+> race conditions and atomicity\
+> @Transactional, isolation, optimistic/pessimistic locking, retries\
+> Races, locking, optimistic control, consistency concepts\
+> optimistic/pessimistic locks, versioning, unique constraints, retries
+
+### Exercise / interview prompt
+
+> concurrent integration test\
+> Interview: prevent two bookings for same slot?\
+> Prevent duplicate order/booking under concurrency\
+> Practice mode: AI-free Yes, AI-assisted Yes\
+> Design: Prevent double booking\
+> Trade-off: lock vs optimistic control\
+> Prevent duplicate/overlapping booking under concurrency\
+> Concurrency booking lab\
+> High interview value\
+> Prevent double booking under race
 
 ## Record one entry
 

@@ -2,8 +2,7 @@
 
 # M18 — Correctness/security/performance/test gaps
 
-Week 13 · Core · Warehouse checkpoint B13
-
+Week 13 · Core · Warehouse checkpoint [B13](../../projects/B13/README.md)
 
 ## Review and learn
 
@@ -11,14 +10,27 @@ Recall Correctness/security/performance/test gaps and the assumptions that affec
 
 ## Do the work
 
-Attempt the original timed prompt unaided. Use an actual B13 artifact if it illustrates the topic, or a self-contained fixture when it does not.
+Attempt a timed question on the topics in the task title unaided. Use an actual B13 artifact if it illustrates the topic, or create a small fixture.
 
 ## Pass check
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
+## Read and practice
 
+- Select a relevant question and answer it aloud before checking the notes. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 144. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Complete the timed round. Record technical and communication scores, result, evidence, and one correction before the next mock.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

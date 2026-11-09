@@ -2,8 +2,7 @@
 
 # RV05 — Review evidence, questions and next-week capacity
 
-Week 5 · Core · Warehouse checkpoint B05
-
+Week 5 · Core · Warehouse checkpoint [B05](../../projects/B05/README.md)
 
 ## Review and learn
 
@@ -17,8 +16,21 @@ Rerun one check from B05, revisit one mistake and compare actual time with your 
 
 Record the run, one skill you can repeat, and the next gap you will address.
 
+## Read and practice
 
+- Select one due question. Answer from memory and then check your reasoning. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 69. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Revisit due topics, practice the questions introduced this week, capture mock feedback, and choose the next three priorities. Update Weekly Review outcome and adjustment.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

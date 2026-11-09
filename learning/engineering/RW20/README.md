@@ -2,8 +2,7 @@
 
 # RW20 — Think-aloud communication
 
-Week 1 · Core · Warehouse checkpoint B01
-
+Week 1 · Core · Warehouse checkpoint [B01](../../projects/B01/README.md)
 
 ## Review and learn
 
@@ -17,8 +16,23 @@ Explain your CLI flow while trying an invalid quantity and an unknown reference.
 
 A listener can reconstruct the expected behavior and the reason for your next step.
 
+## Read and practice
 
+- Choose one format to rehearse and record a concrete point to improve on the next attempt. [Amazon software development interview topics](https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 18. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Clear reasoning without constant chatter\
+> Clarify, plan, narrate decisions without rambling
+
+### Exercise / interview prompt
+
+> Narrate plan, uncertainty, choices and validation\
+> Practice mode: AI-free Yes, AI-assisted Yes
 
 ## Record one entry
 

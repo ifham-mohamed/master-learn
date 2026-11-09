@@ -2,8 +2,7 @@
 
 # CS14 — CTEs/subqueries/window awareness
 
-Week 7 · Core · Warehouse checkpoint B07
-
+Week 7 · Core · Warehouse checkpoint [B07](../../projects/B07/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,21 @@ Write a report that returns the latest status per shipment while retaining its e
 
 A fixture with tied timestamps produces a deterministic result.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Use tied timestamps to test your report ordering. [PostgreSQL window functions tutorial](https://www.postgresql.org/docs/current/tutorial-window.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 80. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Break complex queries into understandable steps
+
+### Exercise / interview prompt
+
+> Interview: Latest order per customer?
 
 ## Record one entry
 

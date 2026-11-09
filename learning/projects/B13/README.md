@@ -4,8 +4,7 @@
 
 Week 13 · Core · Warehouse checkpoint B13
 
-Before you begin, complete B12.
-
+Before you begin, complete [B12](../../projects/B12/README.md).
 
 ## Review and learn
 
@@ -19,8 +18,26 @@ Exercise rollback and invalid transitions with tests. Review and repair a delibe
 
 Show failing-then-passing output and one review finding verified independently.
 
+## Read and practice
 
+- Compare the boundaries of a service test and a web test. Pick the narrowest test that catches your failure. [Spring web testing guide](https://spring.io/guides/gs/testing-web/)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 140. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Demonstrate the working output, relevant tests, and one design trade-off.
+
+### Exercise / interview prompt
+
+> CS/SQL: Advanced SQL review\
+> Design: Queues + retry/reliability basics\
+> AI practice: Agent may implement; you must review tests and diff\
+> Service/controller test suite + failing-test and PR-review drills\
+> Queue/retry reliability mini-design\
+> Review AI-generated test/code diff; reject weak coverage
 
 ## Record one entry
 

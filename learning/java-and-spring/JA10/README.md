@@ -2,10 +2,9 @@
 
 # JA10 — Exceptions
 
-Week 3 · Core · Warehouse checkpoint B03
+Week 3 · Core · Warehouse checkpoint [B03](../../projects/B03/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,23 @@ Distinguish bad input, unknown shipment and a failed business rule. Recover at t
 
 Every failure has an actionable message and returns to the menu without partial state.
 
-## References
+## Read and practice
 
-- [Java language guides](https://dev.java/learn/language/)
+- Trace where an invalid quantity is detected and where your menu can recover. [Dev.java exceptions guide](https://dev.java/learn/language/annotations-exceptions/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 34. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> checked/unchecked, custom exceptions, try-with-resources\
+> Design error boundaries, retries, typed errors, failure paths
+
+### Exercise / interview prompt
+
+> API exception taxonomy\
+> Interview: when should you catch vs propagate?
 
 ## Record one entry
 

@@ -2,8 +2,7 @@
 
 # CS10 — Transactions/isolation
 
-Week 10 · Core · Warehouse checkpoint B10
-
+Week 10 · Core · Warehouse checkpoint [B10](../../projects/B10/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,22 @@ Use two PostgreSQL connections to observe a conflicting reservation or a changed
 
 Record transaction order, observed values, and the fix or retry requirement.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Write a two-session timeline and compare one observed result at two isolation levels. [PostgreSQL transaction isolation](https://www.postgresql.org/docs/current/transaction-iso.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 108. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Dirty/non-repeatable/phantom/lost update concepts\
+> Atomicity, isolation levels, lost update, phantom concept
+
+### Exercise / interview prompt
+
+> Interview: Prevent double booking?
 
 ## Record one entry
 

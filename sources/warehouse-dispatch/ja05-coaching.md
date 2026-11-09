@@ -7,13 +7,14 @@
 
 ## Read only what you need for each step
 
-- [First steps in Java](https://dev.java/learn/first-steps/) for the source file, compiler and launch command.
-- [Java language basics](https://dev.java/learn/language/constructs/basics/) for variables, operators, conditions and loops.
-- [Scanner](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Scanner.html#nextLine()) for reading a line and checking for more input.
-- [Integer.parseInt](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html#parseInt(java.lang.String)) for parsing whole numbers and recognizing invalid input.
-- [Classes and Objects](https://dev.java/learn/language/oop/classes-objects/) for method parameters and pass-by-value. Move to constructors and object boundaries in JA06.
+- Create, compile and run a single source file. [First steps in Java](https://dev.java/learn/first-steps/)
+- Review variables, operators, conditions and loops as you write the menu. [Java language basics](https://dev.java/learn/language/constructs/basics/)
+- Read a line and check for more input. [Scanner](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Scanner.html#nextLine())
+- Parse whole numbers and recognize invalid input. [Integer.parseInt](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Integer.html#parseInt(java.lang.String))
+- Trace an argument into a method and explain pass-by-value. [Classes and Objects](https://dev.java/learn/language/oop/classes-objects/)
+- Predict the output of a quick parsing or method drill. Try it in the shell, then run the input checks in the terminal app. [JShell](https://dev.java/learn/first-steps/first-java-code/jshell-tool/)
 
-## Try these checks yourself
+## Try 20 short checks
 
 Use `SHP-001`, `Colombo`, `BOX-42` and `3` as synthetic input. Write your own expected results before running each set.
 
@@ -24,4 +25,4 @@ Use `SHP-001`, `Colombo`, `BOX-42` and `3` as synthetic input. Write your own ex
 | Quantity | `1`, `0`, `-1`, `abc`, `3.5`, a number above the `int` range, and valid input after a rejected value. |
 | Method reasoning | Trace a primitive argument, trace an object reference argument, and explain what happens when a parameter is reassigned. |
 
-Save your actual command, one successful lookup, and one rejected input in the log. Then re-run a check without looking at your notes. Move to JA06 when you can explain the menu loop, validation and method behavior in your own words.
+Save your actual command, one successful lookup, and one rejected input in the log. Repeat a check without looking at your notes. When you can explain the menu loop, validation and method behavior, move on to constructors and object boundaries. [JA06](../JA06/README.md)

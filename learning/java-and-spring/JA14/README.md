@@ -2,10 +2,9 @@
 
 # JA14 — Threads/executors/futures
 
-Week 10 · Core · Warehouse checkpoint B10
+Week 10 · Core · Warehouse checkpoint [B10](../../projects/B10/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,27 @@ Build a repeatable two-request reservation test using a bounded executor and a s
 
 Both requests finish within a timeout. Record which shared state needed protection.
 
-## References
+## Read and practice
 
-- [Java language guides](https://dev.java/learn/language/)
+- Compare a single worker with two workers and bound how long the caller waits. [Oracle Java ExecutorService reference](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 110. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> race conditions, synchronization, executors, CompletableFuture\
+> Race, mutex/lock concept, async vs parallel\
+> Promises/tasks, race conditions, locks, idempotency concepts\
+> threads/executors, synchronization, atomics, CompletableFuture; virtual-thread concept
+
+### Exercise / interview prompt
+
+> counter + booking race lab\
+> Interview: what is a race condition?\
+> Interview: What is a race condition?\
+> Build race-condition + fix demo
 
 ## Record one entry
 

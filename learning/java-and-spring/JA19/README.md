@@ -2,10 +2,9 @@
 
 # JA19 — Configuration / profiles
 
-Week 6 · Core · Warehouse checkpoint B06
+Week 6 · Core · Warehouse checkpoint [B06](../../projects/B06/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Separate local fixture settings from database and staging settings. Document the
 
 The selected profile uses the intended data source. A missing required variable fails safely.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Start the app with two local configurations and check which setting each one uses. [Spring Boot profiles](https://docs.spring.io/spring-boot/reference/features/profiles.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 71. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> application properties/yaml, env vars, profiles, config properties
+
+### Exercise / interview prompt
+
+> profile-specific app config\
+> Interview: how manage dev/test/prod config?
 
 ## Record one entry
 

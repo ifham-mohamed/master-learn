@@ -2,8 +2,7 @@
 
 # BE76 — STAR stories
 
-Week 20 · Core · Warehouse checkpoint B20
-
+Week 20 · Core · Warehouse checkpoint [B20](../../projects/B20/README.md)
 
 ## Review and learn
 
@@ -17,8 +16,21 @@ Write a story about a stock reservation bug, design choice or deployment recover
 
 Tell the story within the timebox and identify the exact result you can prove.
 
+## Read and practice
 
+- Choose one format to rehearse and record a concrete point to improve on the next attempt. [Amazon software development interview topics](https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 203. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Concise Situation/Task/Action/Result evidence
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

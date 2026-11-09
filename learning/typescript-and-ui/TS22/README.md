@@ -2,10 +2,9 @@
 
 # TS22 — Node.js
 
-Week 16 · Optional · Warehouse checkpoint B16
+Week 16 · Optional · Warehouse checkpoint [B16](../../projects/B16/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,27 @@ Use a small optional Node CLI to inspect a shipment fixture or call a read-only 
 
 Record the result and explain where it differs from browser execution.
 
-## References
+## Read and practice
 
-- [Thinking in React](https://react.dev/learn/thinking-in-react)
+- Run a small script and identify which work happens in Node and which happens in the browser. [Node.js introduction](https://nodejs.org/learn/getting-started/introduction-to-nodejs)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 170. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> event loop, async I/O, middleware/service patterns\
+> event loop, async I/O, service structure, errors\
+> Runtime/event loop, async I/O, errors, service structure
+
+### Exercise / interview prompt
+
+> one small Node comparison API\
+> Interview: when choose Node vs Spring Boot?\
+> Debug a slow/failing handler\
+> Maintain one small Node API\
+> Secondary backend path
 
 ## Record one entry
 

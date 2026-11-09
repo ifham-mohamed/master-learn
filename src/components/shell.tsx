@@ -17,6 +17,7 @@ import {
   LayoutDashboard,
   LibraryBig,
   ListTodo,
+  Map,
   Menu,
   PanelLeftClose,
   PanelLeftOpen,
@@ -47,6 +48,7 @@ const navigation = [
   ["/settings", "Settings & backups", Settings2],
   ["/weeks", "Weekly plan", CalendarDays],
   ["/learning", "Learning workspace", FolderOpen],
+  ["/roadmap", "Roadmap", Map],
   ["/plan", "Master plan", ListTodo],
   ["/tracks", "Learning tracks", Compass],
   ["/practice", "Practice bank", Code2],
@@ -189,6 +191,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           {
             label: "Curriculum",
             routes: [
+              "/roadmap",
               "/learning",
               "/plan",
               "/tracks",

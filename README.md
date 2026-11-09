@@ -1,6 +1,6 @@
 # Learnspace
 
-A Next.js learning workspace built from the supplied **Final Tracker** workbook and HTML exports. Explore the 24-week journey, 236 tasks, 11 learning tracks, 74 practice entries, five project profiles, and 38 resources in a coordinated blue interface with light and dark themes.
+A Next.js learning workspace built from the supplied **Final Tracker** workbook and HTML exports. Explore the 24-week journey, 236 tasks, 11 learning tracks, 74 practice entries, and five project profiles. Each task guide includes its own study links.
 
 ## Run locally
 
@@ -15,9 +15,9 @@ Open [the local workspace](http://localhost:3000). For a production build, run `
 
 ## Start Warehouse Dispatch
 
-Open **Today** for your next checkpoint or **Projects → Warehouse Dispatch** for the six phases. Start with **JA05**. Build a Java terminal shipment flow yourself, then grow the same project through Spring Boot, PostgreSQL, React, and staging. The [project README](projects/warehouse-dispatch/README.md) gives the warehouse rules and test scenarios. The [HTML plan](sources/warehouse-dispatch/index.html), [Markdown task index](sources/warehouse-dispatch/README.md), and **Warehouse Learning** tab in [Final Tracker.xlsx](sources/Final%20Tracker.xlsx) carry the same practice briefs.
+Open **Today** for your next checkpoint or **Roadmap** to browse by phase or track. Start with **JA05**. Build a Java terminal shipment flow yourself, then grow the same project through Spring Boot, PostgreSQL, React, and staging. The [project README](projects/warehouse-dispatch/README.md) gives the warehouse rules and test scenarios. The [HTML plan](sources/warehouse-dispatch/index.html), [Markdown task index](sources/warehouse-dispatch/README.md), and **Warehouse Learning** tab in [Final Tracker.xlsx](sources/Final%20Tracker.xlsx) carry the same practice briefs.
 
-Each task shows what to review, what to build, and how to check it. Write one short entry in the task’s `notes/journal.md` in your editor. Use language-tagged fences for snippets and `text` for terminal output. The workspace displays the saved Markdown, and GitHub Pages displays it after you commit, push, and deploy. Use **Update progress** separately for task status and evidence.
+Each task guide shows what to review, what to build, and how to check it. It also records **Done when** and **Exercise / interview prompt** from the workbook’s **Master Plan** sheet. Write one short entry in the task’s `notes/journal.md` in your editor. Use language-tagged fences for snippets and `text` for terminal output. The workspace displays the saved Markdown, and GitHub Pages displays it after you commit, push, and deploy. Use **Update progress** separately for task status and evidence.
 
 New schedules start at five hours per study day. If you already have a saved schedule, choose your days in **Settings & backups**, select **Use 5 hours per selected day**, then preview and save. The workbook's **Master Plan** remains the place to record spreadsheet progress.
 
@@ -33,6 +33,7 @@ Use the panel button beside the Learnspace logo to collapse the desktop navigati
 
 - **Overview** connects the selected week, recorded progress, workload, and learning tracks.
 - **Weekly journey** lets you explore all 24 weeks. The selected week is remembered on this device.
+- **Roadmap** shows the warehouse sequence and ordered tracks. Open a task’s preview to see its focus, progress, and links to its guide and learning log.
 - **Master plan** supports search, category filters, and status filters. Open any task for its full deliverable, practice prompt, prerequisites, original references, and suggested guides.
 - **Practice bank** contains expandable patterns and questions; practice counts remain the supplied workbook snapshot.
 - **Projects** lists the requirements, 24 ordered build checkpoints, their supporting tasks, and the [advanced architecture labs](sources/warehouse-dispatch/architecture.md).
@@ -64,7 +65,7 @@ Open **Learning workspace** in the sidebar, filter by category or week, and choo
 learning/
   cs-and-sql/
     CS12/
-      README.md           Concepts, instructions, checks, and references
+      README.md           Concepts, practice, workbook criteria, and resources
       notes/journal.md    Your dated learning log
 ```
 
@@ -104,6 +105,7 @@ projects/warehouse-dispatch/  Requirements and your capstone code
 src/
   app/                       Next.js routes, layout, and design system styles
     [view]/                  Weekly plan, master plan, practice, projects, resources, guide
+    roadmap/                 Interactive phase and track views
     tasks/[id]/              Individual task pages
     tracks/[slug]/           Category views
     learning/                Searchable learning workspace library
@@ -133,7 +135,7 @@ python scripts/check_resources.py
 
 Importing reads every worksheet, keeps all original fields, extracts the master data, records every source file's SHA-256 hash, and reconciles the category export task IDs with the master plan. Rebuild the website after importing. The HTML exports are preserved snapshots and are not regenerated. Browser progress stays attached to task IDs; retain stable IDs when revising the workbook.
 
-Update `sources/warehouse-dispatch/task-briefs.txt` for changes to the practice instructions. Run `python scripts/export_warehouse_plan.py` to update the site data, HTML, Markdown index, and generated task guides. Use `--check` to verify those views. Keep personal notes in the journal and larger outputs in optional files. Keep the workbook's **Warehouse Learning** view aligned when revising the briefs.
+Update `sources/warehouse-dispatch/task-briefs.txt` for practice instructions and `sources/warehouse-dispatch/task-resources.txt` for study links. After importing workbook changes, run `python scripts/export_warehouse_plan.py` to update the site data, HTML, Markdown index, and task guides. Use `--check` to verify those views. Keep personal notes in the journal and larger outputs in optional files. Keep the workbook's **Warehouse Learning** view aligned when revising the briefs.
 
 ## Quality checks
 

@@ -36,6 +36,8 @@ export const warehouseSearch = (task: Task, query: string) => {
     task.title,
     task.category,
     task.section,
+    task.doneWhen,
+    task.prompt,
     brief?.title,
     brief?.focus,
     brief?.build,

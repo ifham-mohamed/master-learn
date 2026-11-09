@@ -30,7 +30,7 @@ export function ApplicationGuide() {
       <section className="panel tool-card" aria-labelledby="start-learning">
         <h2 id="start-learning">One session, three steps</h2>
         <ol className="handbook-steps">
-          <li><h3>Open your next task</h3><p>Use <Link href="/today">Today</Link> for the next task or <Link href="/projects#build-roadmap">Projects</Link> for the full sequence. If you’re starting, open <Link href="/tasks/JA05">JA05</Link> and select <strong>Task guide</strong> in the workspace.</p></li>
+          <li><h3>Open your next task</h3><p>Use <Link href="/today">Today</Link> for the next task or <Link href="/roadmap">Roadmap</Link> to explore the sequence and tracks. Start with the <Link href="/tasks/JA05?file=README.md#learning-files">JA05 task guide</Link> for concepts, practice, and the workbook’s completion criteria.</p></li>
           <li><h3>Build and record what happened</h3><p>Write and run your own code. Edit <code>notes/journal.md</code> in the task folder. The workspace shows the path for the selected file. Add what you learned, what you tried, and your next step.</p></li>
           <li><h3>Publish your notes</h3><p>Commit and push the Markdown file. When GitHub Pages deploys the updated files, open <strong>Learning log</strong> on the task page to read it. Use <strong>Update progress</strong> separately when you have evidence.</p></li>
         </ol>

@@ -2,10 +2,9 @@
 
 # TS15 — Async/await + errors
 
-Week 4 · Core · Warehouse checkpoint B04
+Week 4 · Core · Warehouse checkpoint [B04](../../projects/B04/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Load a shipment through an async adapter. Handle rejection and a slow request th
 
 An older response cannot replace the current shipment. Failure remains visible.
 
-## References
+## Read and practice
 
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- Predict execution order for a promise and a timer, then trace the result. [MDN JavaScript execution model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 49. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Promise composition, try/catch, cancellation concept, retries
+
+### Exercise / interview prompt
+
+> API retry/error lab\
+> Interview: Promise.all vs allSettled?
 
 ## Record one entry
 

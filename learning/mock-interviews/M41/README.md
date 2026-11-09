@@ -2,8 +2,7 @@
 
 # M41 — Browser to Spring to DB + behavioral
 
-Week 23 · Core · Warehouse checkpoint B23
-
+Week 23 · Core · Warehouse checkpoint [B23](../../projects/B23/README.md)
 
 ## Review and learn
 
@@ -11,14 +10,28 @@ Recall Browser to Spring to DB + behavioral and the assumptions that affect your
 
 ## Do the work
 
-Attempt the original timed prompt unaided. Use an actual B23 artifact if it illustrates the topic, or a self-contained fixture when it does not.
+Attempt a timed question on the topics in the task title unaided. Use an actual B23 artifact if it illustrates the topic, or create a small fixture.
 
 ## Pass check
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
+## Read and practice
 
+- Select a relevant topic and explain an actual project decision, an alternative and the evidence. [Amazon software development interview topics](https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics)
+- Select a relevant question and answer it aloud before checking the notes. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 234. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Complete the timed round. Record technical and communication scores, result, evidence, and one correction before the next mock.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

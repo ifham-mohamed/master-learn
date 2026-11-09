@@ -2,8 +2,7 @@
 
 # TS26 — pnpm/npm + lockfiles
 
-Week 1 · Core · Warehouse checkpoint B01
-
+Week 1 · Core · Warehouse checkpoint [B01](../../projects/B01/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,26 @@ Create the minimal React/TypeScript package when needed. Pin dependencies with t
 
 A clean install and typecheck use the documented commands.
 
-## References
+## Read and practice
 
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- Install from a lockfile, then explain which file pins the resolved dependencies. [npm lockfile reference](https://docs.npmjs.com/cli/v11/configuring-npm/package-lock-json/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 14. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> scripts, dependency graph, lockfile reproducibility\
+> package.json, lockfiles, scripts, dependency hygiene
+
+### Exercise / interview prompt
+
+> clean build from fresh clone\
+> Interview: why commit lockfile?\
+> Explain reproducible frontend builds\
+> Clean TS build pipeline\
+> TypeScript tooling
 
 ## Record one entry
 

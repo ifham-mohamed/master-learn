@@ -2,10 +2,9 @@
 
 # JA18 — Boot fundamentals
 
-Week 5 · Core · Warehouse checkpoint B05
+Week 5 · Core · Warehouse checkpoint [B05](../../projects/B05/README.md)
 
-Before you begin, complete JA17.
-
+Before you begin, complete [JA17](../../java-and-spring/JA17/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,28 @@ Run the same shipment service inside a Spring Boot application with a developmen
 
 A fresh start and one smoke request succeed. A broken configuration gives a useful error.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Run a local endpoint and trace a request from the controller to the returned data. [Spring REST service guide](https://spring.io/guides/gs/rest-service/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 60. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> starters, auto-configuration, application startup\
+> auto-configuration, starters, profiles, config properties, lifecycle\
+> Understand starters, auto-config, profiles, config properties and app startup
+
+### Exercise / interview prompt
+
+> new Boot service from scratch\
+> Interview: what does auto-configuration do?\
+> Create/configure a production-style REST service\
+> Commerce REST service\
+> Current line supports Java 17–26\
+> Create Boot app from scratch
 
 ## Record one entry
 

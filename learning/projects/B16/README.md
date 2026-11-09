@@ -4,8 +4,7 @@
 
 Week 16 · Core · Warehouse checkpoint B16
 
-Before you begin, complete B15.
-
+Before you begin, complete [B15](../../projects/B15/README.md).
 
 ## Review and learn
 
@@ -19,8 +18,34 @@ Package a staging build, rate-limit login and general API traffic separately, an
 
 Save smoke results, isolated client quotas, 429 recovery, and proof for both fixes.
 
+## Read and practice
 
+- Repeat a clean build, restart and recovery check on your own project configuration. [Docker application tutorial](https://docs.docker.com/get-started/tutorials/run-an-app/)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 173. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Demonstrate the working output, relevant tests, and one design trade-off.
+
+### Exercise / interview prompt
+
+> CS/SQL: Weak CS/SQL repair\
+> Design: Load balancing + replication + rate limiting + object storage\
+> AI practice: Agentic coding: context to plan to diff to tests to security review\
+> Deployable dual-stack architecture + 2 timed agentic repo tickets\
+> Rate limiting - Public API protection\
+> File/object storage - Product images\
+> Load balancing - Scale API horizontally\
+> Replication - Read-heavy catalogue\
+> Tool calling - Agent can read but not mutate unsafe resources\
+> Agent loop - Give bounded repo ticket\
+> Context engineering - Improve agent output without overprompting\
+> Generated-code review - Review AI PR line-by-line\
+> Test-driven validation - Write regression before acceptance\
+> Diff discipline - Reduce an over-broad AI change
 
 ## Record one entry
 

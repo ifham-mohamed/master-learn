@@ -2,8 +2,7 @@
 
 # CS18 — TCP vs UDP
 
-Week 5 · Core · Warehouse checkpoint B05
-
+Week 5 · Core · Warehouse checkpoint [B05](../../projects/B05/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,22 @@ Trace the TCP connection for a local API request. Explain where an unreliable da
 
 Identify the observed connection and explain why a successful connection is separate from a committed reservation.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Trace a local connection and state which success must be confirmed by the application. [MDN TCP glossary](https://developer.mozilla.org/en-US/docs/Glossary/TCP)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 56. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Reliability/order vs lower overhead\
+> TCP/UDP, DNS, HTTP/HTTPS, latency
+
+### Exercise / interview prompt
+
+> Interview: When choose UDP?
 
 ## Record one entry
 

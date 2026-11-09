@@ -2,10 +2,9 @@
 
 # TS23 — Vitest / Jest concepts
 
-Week 9 · Core · Warehouse checkpoint B09
+Week 9 · Core · Warehouse checkpoint [B09](../../projects/B09/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,26 @@ Test the shipment formatter and API adapter with success and failure fixtures.
 
 Tests exercise status handling and fail when the error path is removed.
 
-## References
+## Read and practice
 
-- [Thinking in React](https://react.dev/learn/thinking-in-react)
+- Run one client test in watch mode and show it catch a deliberately changed behavior. [Vitest getting started](https://vitest.dev/guide/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 101. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> unit tests, mocks, timers, async tests\
+> unit/component behavior, async UI, mocking boundaries
+
+### Exercise / interview prompt
+
+> utility/service test suite\
+> Interview: what should be mocked?\
+> Test typed form + API failure states\
+> Frontend regression suite\
+> TypeScript test competency
 
 ## Record one entry
 

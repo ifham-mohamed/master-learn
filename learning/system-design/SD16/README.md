@@ -2,8 +2,7 @@
 
 # SD16 — Load balancing
 
-Week 16 · Core · Warehouse checkpoint B16
-
+Week 16 · Core · Warehouse checkpoint [B16](../../projects/B16/README.md)
 
 ## Review and learn
 
@@ -17,16 +16,29 @@ Simulate routing to two app instances and failing one health check.
 
 Explain which requests recover and how session state behaves across instances.
 
-## References
+## Read and practice
 
-- [RabbitMQ failure and recovery behavior](https://www.rabbitmq.com/docs/reliability)
-
+- Sketch routing across two instances and predict what happens to an active session when one fails. [NGINX load balancing guide](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
 
 ## Further architecture practice
 
-- 5. Prove the distributed system can recover · after B20. Save p95 latency, error rate, oldest queued event, recovery time and restored-data checks. Test a failed release and write a runbook another person can follow.
+- **5. Prove the distributed system can recover.** Save p95 latency, error rate, oldest queued event, recovery time and restored-data checks. Test a failed release and write a runbook another person can follow. Start after [B20](../../projects/B20/README.md).
 
+[RabbitMQ failure and recovery behavior](https://www.rabbitmq.com/docs/reliability)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 178. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> distribute requests, health checks\
+> Horizontal vs vertical, load balancing, bottlenecks
+
+### Exercise / interview prompt
+
+> Design: Scale API horizontally\
+> Trade-off: stateful vs stateless
 
 ## Record one entry
 

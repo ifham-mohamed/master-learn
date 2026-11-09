@@ -2,10 +2,9 @@
 
 # TS21 — API integration
 
-Week 7 · Core · Warehouse checkpoint B07
+Week 7 · Core · Warehouse checkpoint [B07](../../projects/B07/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Connect the shipment form and list to Spring. Refresh relevant data after a succ
 
 Loading, success, conflict and network failure are visible and independently tested.
 
-## References
+## Read and practice
 
-- [Thinking in React](https://react.dev/learn/thinking-in-react)
+- Exercise a success, an HTTP failure and an aborted request in your client. [MDN Fetch guide](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 84. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> typed fetch/client, loading/error states, caching concepts
+
+### Exercise / interview prompt
+
+> OpenAPI-generated or shared types experiment\
+> Interview: how prevent frontend/backend contract drift?
 
 ## Record one entry
 

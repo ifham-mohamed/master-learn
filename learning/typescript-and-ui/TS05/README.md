@@ -2,8 +2,7 @@
 
 # TS05 — Scopes / closures
 
-Week 1 · Core · Warehouse checkpoint B01
-
+Week 1 · Core · Warehouse checkpoint [B01](../../projects/B01/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,22 @@ Write a shipment display helper with a configurable label. Trace two functions c
 
 Each function keeps its own options. Explain one stale closure risk in React.
 
-## References
+## Read and practice
 
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- Predict which values two shipment label functions capture and run your own example. [MDN closures guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 12. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> lexical scope, closure use and pitfalls
+
+### Exercise / interview prompt
+
+> closure/event handler drills\
+> Interview: explain a closure bug
 
 ## Record one entry
 

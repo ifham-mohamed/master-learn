@@ -2,8 +2,7 @@
 
 # SD07 — Data model
 
-Week 5 · Core · Warehouse checkpoint B05
-
+Week 5 · Core · Warehouse checkpoint [B05](../../projects/B05/README.md)
 
 ## Review and learn
 
@@ -17,18 +16,30 @@ Model a warehouse, SKU, balance, shipment, shipment lines, reservation and event
 
 Walk through create, reserve, cancel and dispatch and reconcile both quantities and transitions.
 
-## References
+## Read and practice
 
-- [Service data ownership](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/)
-- [Saga patterns](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/saga-patterns.html)
-
+- Turn one business rule into a constraint and insert a deliberately invalid fixture. [PostgreSQL constraints](https://www.postgresql.org/docs/current/ddl-constraints.html)
 
 ## Further architecture practice
 
-- 1. Establish service boundaries · after B14. A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split.
-- 3. Extract a Tracking microservice · after B20. Take Tracking down while dispatch continues. Restart it and rebuild a clean projection from the retained event archive. Reconcile results. Run API contract tests, deploy Tracking independently, and rehearse routing traffic back to the original tracking view.
+- **1. Establish service boundaries.** A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split. Start after [B14](../../projects/B14/README.md).
+- **3. Extract a Tracking microservice.** Take Tracking down while dispatch continues. Restart it and rebuild a clean projection from the retained event archive. Reconcile results. Run API contract tests, deploy Tracking independently, and rehearse routing traffic back to the original tracking view. Start after [B20](../../projects/B20/README.md).
 
+[Service data ownership](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/) · [Saga patterns](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/saga-patterns.html)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 67. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> entities, keys, constraints\
+> Endpoints, entities, invariants, constraints
+
+### Exercise / interview prompt
+
+> Design: POS order + inventory\
+> Trade-off: normalization vs query speed
 
 ## Record one entry
 

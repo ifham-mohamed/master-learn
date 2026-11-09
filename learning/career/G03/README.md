@@ -2,8 +2,7 @@
 
 # G03 — Create a role shortlist and requirements checklist
 
-Week 2 · Core · Warehouse checkpoint B02
-
+Week 2 · Core · Warehouse checkpoint [B02](../../projects/B02/README.md)
 
 ## Review and learn
 
@@ -17,8 +16,21 @@ Compare the roles you are targeting and map their Java, SQL and React requiremen
 
 Record your shortlist and two skills that need stronger evidence.
 
+## Read and practice
 
+- Choose a relevant skill and map it to one artifact you can show or one gap you need to close. [Amazon software development interview topics](https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 28. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Capture five relevant role descriptions, their required skills and permitted assessment tools. Select a primary role focus.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

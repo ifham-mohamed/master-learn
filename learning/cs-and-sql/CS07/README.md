@@ -2,8 +2,7 @@
 
 # CS07 — ACID
 
-Week 3 · Core · Warehouse checkpoint B03
-
+Week 3 · Core · Warehouse checkpoint [B03](../../projects/B03/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,21 @@ Run a PostgreSQL transaction that changes reservation and stock records. Intenti
 
 A second connection sees no partial reservation and final balances reconcile.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Predict the visible rows before and after a rollback, then check from a second session. [PostgreSQL transactions tutorial](https://www.postgresql.org/docs/current/tutorial-transactions.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 31. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Explain each property using payment/order example
+
+### Exercise / interview prompt
+
+> Interview: Why do transactions matter?
 
 ## Record one entry
 

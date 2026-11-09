@@ -2,10 +2,9 @@
 
 # G10 — Rehearse collaboration and failure stories
 
-Week 21 · Core · Warehouse checkpoint B21
+Week 21 · Core · Warehouse checkpoint [B21](../../projects/B21/README.md)
 
-Before you begin, complete BE76.
-
+Before you begin, complete [BE76](../../career/BE76/README.md).
 
 ## Review and learn
 
@@ -19,8 +18,21 @@ Rehearse a review or failed deployment story based on a real attempt.
 
 Record feedback and repeat the explanation with a concrete next action.
 
+## Read and practice
 
+- Choose one format to rehearse and record a concrete point to improve on the next attempt. [Amazon software development interview topics](https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 221. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Prepare concrete examples of a disagreement, feedback received, a mistake and learning. Explain your action and observable result.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

@@ -2,10 +2,9 @@
 
 # TS11 — Utility / mapped types
 
-Week 3 · Core · Warehouse checkpoint B03
+Week 3 · Core · Warehouse checkpoint [B03](../../projects/B03/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Derive a form or display type from a shipment type. Keep server-only fields out 
 
 A compile-time check rejects a server-only field on the request type.
 
-## References
+## Read and practice
 
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- Build a tiny fixture for this task and change one assumption to see the compiler response. [TypeScript Playground](https://www.typescriptlang.org/play/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 36. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Partial, Pick, Omit, Record; mapped/conditional concepts
+
+### Exercise / interview prompt
+
+> DTO transformation examples\
+> Interview: when are utility types useful/dangerous?
 
 ## Record one entry
 

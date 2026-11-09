@@ -2,8 +2,7 @@
 
 # TS08 — Strict types
 
-Week 1 · Core · Warehouse checkpoint B01
-
+Week 1 · Core · Warehouse checkpoint [B01](../../projects/B01/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,29 @@ Port a shipment display helper to strict TypeScript. Handle a missing value expl
 
 Type checks pass and a deliberately incompatible input fails compilation.
 
-## References
+## Read and practice
 
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- Build a tiny fixture for this task and change one assumption to see the compiler response. [TypeScript Playground](https://www.typescriptlang.org/play/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 13. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> strict mode, inference, annotations, nullability\
+> strict typing, generics, narrowing, unions, utility types, async, ESM\
+> Types, closures, event loop, promises, async/await, modules, errors\
+> strict mode, unions/intersections, generics, narrowing, utility types
+
+### Exercise / interview prompt
+
+> convert JS module to strict TS\
+> Interview: why avoid any? unknown vs any?\
+> Refactor unsafe JS into strict TypeScript\
+> Strict TS utility/API module\
+> Primary frontend/full-stack language\
+> Enable strict mode and remove unsafe any
 
 ## Record one entry
 

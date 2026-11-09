@@ -2,10 +2,9 @@
 
 # TS18 — State / hooks
 
-Week 6 · Core · Warehouse checkpoint B06
+Week 6 · Core · Warehouse checkpoint [B06](../../projects/B06/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Keep form values local and derive filtered counts. Put shareable filter state in
 
 Changing a filter updates results without stale counts or duplicated state.
 
-## References
+## Read and practice
 
-- [Thinking in React](https://react.dev/learn/thinking-in-react)
+- Try one embedded challenge and apply the same state decision to your own screen. [React managing state](https://react.dev/learn/managing-state)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 73. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> useState/useReducer/useEffect, dependency correctness
+
+### Exercise / interview prompt
+
+> fix 5 hook bugs\
+> Interview: why stale closure/effect loop?
 
 ## Record one entry
 

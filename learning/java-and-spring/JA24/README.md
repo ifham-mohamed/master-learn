@@ -2,10 +2,9 @@
 
 # JA24 — Queries / N+1
 
-Week 9 · Core · Warehouse checkpoint B09
+Week 9 · Core · Warehouse checkpoint [B09](../../projects/B09/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Measure queries for the shipment list with multiple line items. Fix the query wi
 
 Compare query counts on the same fixture and confirm results and pagination remain correct.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Compare plans for the same fixture and explain the observed scan, join or sort. [PostgreSQL EXPLAIN tutorial](https://www.postgresql.org/docs/current/using-explain.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 100. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> query methods, JPQL concept, projections, fetch strategy
+
+### Exercise / interview prompt
+
+> catalogue query profiling\
+> Interview: what is N+1 and how detect/fix it?
 
 ## Record one entry
 

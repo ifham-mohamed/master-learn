@@ -2,8 +2,7 @@
 
 # SD15 — File/object storage
 
-Week 16 · Core · Warehouse checkpoint B16
-
+Week 16 · Core · Warehouse checkpoint [B16](../../projects/B16/README.md)
 
 ## Review and learn
 
@@ -17,8 +16,22 @@ Design an optional proof-of-dispatch attachment flow using synthetic files.
 
 Show a tenant-isolated access test or an explicit design test case with expiration.
 
+## Read and practice
 
+- Model a short-lived download and test the expired or wrong-tenant case with synthetic data. [AWS S3 presigned URL guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 177. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> DB vs object storage, signed URL concept
+
+### Exercise / interview prompt
+
+> Design: Product images\
+> Trade-off: security vs convenience
 
 ## Record one entry
 

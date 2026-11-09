@@ -2,10 +2,9 @@
 
 # TS13 — Modules / ESM
 
-Week 4 · Core · Warehouse checkpoint B04
+Week 4 · Core · Warehouse checkpoint [B04](../../projects/B04/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Separate shipment types, formatting and API access into small modules.
 
 The build and a clean test run pass. Explain which dependency points toward the network boundary.
 
-## References
+## Read and practice
 
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- Build a tiny fixture for this task and change one assumption to see the compiler response. [TypeScript Playground](https://www.typescriptlang.org/play/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 48. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> imports/exports, module resolution, package boundaries
+
+### Exercise / interview prompt
+
+> modern module setup\
+> Interview: ESM vs CommonJS?
 
 ## Record one entry
 

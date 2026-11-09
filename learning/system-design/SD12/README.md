@@ -2,8 +2,7 @@
 
 # SD12 — Search
 
-Week 15 · Core · Warehouse checkpoint B15
-
+Week 15 · Core · Warehouse checkpoint [B15](../../projects/B15/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,26 @@ Implement or prototype search by shipment reference and filter by warehouse and 
 
 Results match fixture cases, tenant scope and stable pagination.
 
+## Read and practice
+
+- Measure the existing lookup on a representative fixture before adding a cache or search component. [PostgreSQL query plan tutorial](https://www.postgresql.org/docs/current/using-explain.html)
 
 ## Further architecture practice
 
-- 6. Measure algorithms against warehouse workloads · after B10. Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises.
+- **6. Measure algorithms against warehouse workloads.** Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises. Start after [B10](../../projects/B10/README.md).
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 162. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> DB index vs search service concept
+
+### Exercise / interview prompt
+
+> Design: Product/business search\
+> Trade-off: features vs complexity
 
 ## Record one entry
 

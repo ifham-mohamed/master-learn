@@ -2,10 +2,9 @@
 
 # G08 — Rehearse deployment failure and recovery
 
-Week 16 · Core · Warehouse checkpoint B16
+Week 16 · Core · Warehouse checkpoint [B16](../../projects/B16/README.md)
 
-Before you begin, complete JA34.
-
+Before you begin, complete [JA34](../../java-and-spring/JA34/README.md).
 
 ## Review and learn
 
@@ -19,16 +18,27 @@ Deploy a deliberately bad change in staging or a local simulation. Restore servi
 
 Record time to recover, smoke output and the restore or rollback steps.
 
-## References
+## Read and practice
 
-- [RabbitMQ failure and recovery behavior](https://www.rabbitmq.com/docs/reliability)
-
+- Repeat a clean build, restart and recovery check on your own project configuration. [Docker application tutorial](https://docs.docker.com/get-started/tutorials/run-an-app/)
 
 ## Further architecture practice
 
-- 5. Prove the distributed system can recover · after B20. Save p95 latency, error rate, oldest queued event, recovery time and restored-data checks. Test a failed release and write a runbook another person can follow.
+- **5. Prove the distributed system can recover.** Save p95 latency, error rate, oldest queued event, recovery time and restored-data checks. Test a failed release and write a runbook another person can follow. Start after [B20](../../projects/B20/README.md).
 
+[RabbitMQ failure and recovery behavior](https://www.rabbitmq.com/docs/reliability)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 175. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Deploy to a test environment, verify health checks, simulate a failed release, and demonstrate rollback or recovery with evidence.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

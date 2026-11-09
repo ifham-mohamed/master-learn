@@ -2,8 +2,7 @@
 
 # CS20 — HTTP
 
-Week 5 · Core · Warehouse checkpoint B05
-
+Week 5 · Core · Warehouse checkpoint [B05](../../projects/B05/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,22 @@ Use a terminal HTTP client to inspect shipment create, detail and conflict respo
 
 Show the method, status and body for each case and identify which failures are safe to retry.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Read the method, headers and response from one real request to your endpoint. [MDN HTTP overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 58. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Methods, status codes, idempotency, headers\
+> Methods, headers, cookies, CORS, TLS, caching
+
+### Exercise / interview prompt
+
+> Interview: PUT vs PATCH? 401 vs 403?
 
 ## Record one entry
 

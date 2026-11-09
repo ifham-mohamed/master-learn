@@ -2,10 +2,9 @@
 
 # JA06 — OOP
 
-Week 1 · Core · Warehouse checkpoint B01
+Week 1 · Core · Warehouse checkpoint [B01](../../projects/B01/README.md)
 
-Before you begin, complete G02, JA05.
-
+Before you begin, complete [G02](../../engineering/G02/README.md), [JA05](../../java-and-spring/JA05/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,29 @@ Separate the menu from Shipment and ShipmentService. Model allowed transitions a
 
 The terminal still works. Tests reject duplicate references and illegal transitions. Explain why you used composition.
 
-## References
+## Read and practice
 
-- [Java language guides](https://dev.java/learn/language/)
+- Review the relevant language feature and trace what a shipment object can expose or change. [Dev.java object-oriented programming](https://dev.java/learn/language/oop/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 11. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> encapsulation, abstraction, inheritance, polymorphism, composition\
+> Explain each and when composition is preferable\
+> Apply principles without overengineering\
+> Encapsulation, composition, interfaces, SOLID trade-offs\
+> Model domains with classes/interfaces; composition, immutability, dependency boundaries
+
+### Exercise / interview prompt
+
+> model order/payment domain\
+> Interview: composition vs inheritance?\
+> Interview: Composition vs inheritance?\
+> Interview: Which SOLID principle is violated here?\
+> Refactor a service using composition
 
 ## Record one entry
 

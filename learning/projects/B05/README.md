@@ -4,8 +4,7 @@
 
 Week 5 · Core · Warehouse checkpoint B05
 
-Before you begin, complete B04.
-
+Before you begin, complete [B04](../../projects/B04/README.md).
 
 ## Review and learn
 
@@ -19,8 +18,29 @@ Start Spring around the existing Java service. Build a React shipment list with 
 
 Document one successful smoke request and show the React list with two fixture states.
 
+## Read and practice
 
+- Run a local endpoint and trace a request from the controller to the returned data. [Spring REST service guide](https://spring.io/guides/gs/rest-service/)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 63. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Demonstrate the working output, relevant tests, and one design trade-off.
+
+### Exercise / interview prompt
+
+> CS/SQL: TCP/UDP + HTTP request lifecycle\
+> Design: Requirements + API + data model\
+> AI practice: AI-assisted orientation only; verify generated setup\
+> Create Spring Boot service skeleton + typed Next/React client shell\
+> Requirements - Clarify a booking service\
+> API design - Order API\
+> Data model - POS order + inventory\
+> Tokens/context - Estimate context needed for repo task\
+> Model limitations - Find unsupported claim/code assumption
 
 ## Record one entry
 

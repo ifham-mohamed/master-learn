@@ -23,8 +23,8 @@ import {
 } from "@/lib/tracker";
 import { statuses, type Progress } from "@/lib/progress";
 import { LearningWorkspace } from "./learning-workspace";
-import { learningLogPath } from "@/lib/learning-types";
-import { checkpointHref, warehouseBrief, warehouseLabs, warehouseTitle } from "@/lib/warehouse";
+import { learningLogPath, taskGuidePath } from "@/lib/learning-types";
+import { warehouseBrief, warehouseLabs, warehouseTitle } from "@/lib/warehouse";
 
 type ProgressRequest = { complete: boolean };
 
@@ -83,14 +83,14 @@ export function TaskDetail({ id }: { id: string }) {
         <section className="panel tool-card warehouse-brief" aria-labelledby="warehouse-practice">
           <div className="section-heading">
             <h2 id="warehouse-practice">Your practice</h2>
-            <Link href={checkpointHref(brief.checkpoint)}>Open {brief.checkpoint} in the build order →</Link>
+            <Link href={`/roadmap#task-${id}`}>Find {id} on the roadmap →</Link>
           </div>
           <dl>
             <div><dt>Review and learn</dt><dd>{brief.focus}</dd></div>
             <div><dt>Do the work</dt><dd>{brief.build}</dd></div>
             <div><dt>Pass check</dt><dd>{brief.verify}</dd></div>
           </dl>
-          <p>Write and test the code yourself. Save what you ran, what happened, and what comes next.</p>
+          <p>Open the task guide for the workbook criteria, exercise, and reading. Record what you ran and observed in the learning log.</p>
           {brief.labs.length > 0 && <p className="warehouse-link-list">
             <strong>Further practice</strong>
             {warehouseLabs.filter((lab) => brief.labs.includes(lab.id)).map((lab) => (
@@ -98,7 +98,8 @@ export function TaskDetail({ id }: { id: string }) {
             ))}
           </p>}
           <div className="warehouse-actions">
-            <a className="button primary" href="#learning-files">View task files</a>
+            <a className="button primary" href={`?file=${taskGuidePath}#learning-files`}>Read task guide</a>
+            <a className="button secondary" href={`?file=${encodeURIComponent(learningLogPath)}#learning-files`}>Open learning log</a>
             <button className="button secondary" onClick={() => {
               setEditing(true);
               setProgressRequest({ complete: false });
@@ -109,15 +110,14 @@ export function TaskDetail({ id }: { id: string }) {
       <LearningWorkspace key={id} taskId={id} initialFile={learningLogPath} />
       <div className="detail-layout">
         <div>
-          <section className="panel detail-panel">
-            <details open={!brief}>
-              <summary>Original task guidance</summary>
-              {warehouseTitle(task) !== task.title && <p><strong>{task.title}</strong></p>}
+          {!brief && (
+            <section className="panel detail-panel">
+              <h2>Done when</h2>
               <p className="preserve-lines">{task.doneWhen}</p>
-              {task.prompt && <p className="preserve-lines">{task.prompt}</p>}
-            </details>
-            <ResourceLinks ids={task.sourceIds} taskId={task.id} />
-          </section>
+              <h3>Exercise / interview prompt</h3>
+              <p className="preserve-lines">{task.prompt || "No prompt recorded in the workbook."}</p>
+            </section>
+          )}
           <section className="panel detail-panel">
             <h2>Evidence & reflection</h2>
             <Link className="back-link" href="/sync">
@@ -144,6 +144,10 @@ export function TaskDetail({ id }: { id: string }) {
               <dd>{task.origin}</dd>
               <dt>Workbook location</dt>
               <dd>Master Plan · row {task.sourceRow}</dd>
+              {warehouseTitle(task) !== task.title && <>
+                <dt>Workbook title</dt>
+                <dd>{task.title}</dd>
+              </>}
               <dt>Original source rows</dt>
               <dd className="preserve-lines">
                 {task.originalRows || "New gap task"}
@@ -155,6 +159,7 @@ export function TaskDetail({ id }: { id: string }) {
               <dt>Source IDs</dt>
               <dd>{task.sourceIds || "None recorded"}</dd>
             </dl>
+            <ResourceLinks ids={task.sourceIds} taskId={task.id} />
           </details>
         </div>
         <aside>

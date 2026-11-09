@@ -2,8 +2,7 @@
 
 # CS11 — Locks/deadlocks
 
-Week 10 · Core · Warehouse checkpoint B10
-
+Week 10 · Core · Warehouse checkpoint [B10](../../projects/B10/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,22 @@ Reserve multiple SKU rows from two transactions in opposite orders, then repeat 
 
 Record the deadlock or timeout, then show the corrected test and rollback behavior.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Open two sessions and record which statement blocks, commits or rolls back. [PostgreSQL explicit locking](https://www.postgresql.org/docs/18/explicit-locking.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 109. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Recognize and mitigate conflicting lock orders\
+> Recognize race/deadlock scenarios and mitigation
+
+### Exercise / interview prompt
+
+> Interview: How can deadlock occur?
 
 ## Record one entry
 

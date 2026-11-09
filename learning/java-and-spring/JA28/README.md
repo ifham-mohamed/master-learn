@@ -2,10 +2,9 @@
 
 # JA28 — Authorization
 
-Week 11 · Core · Warehouse checkpoint B11
+Week 11 · Core · Warehouse checkpoint [B11](../../projects/B11/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,30 @@ Enforce permissions in the backend for reserve, pick, dispatch and read operatio
 
 Allowed operations work. Wrong role, another tenant's ID and guessed resource IDs are rejected.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Draw the roles and warehouse scopes for one endpoint, then test a denied request. [Spring Security authorization](https://docs.spring.io/spring-security/reference/servlet/authorization/index.html)
+- Use a training lab to recognize an ownership bypass. Create a regression check using synthetic project accounts. [PortSwigger access control labs](https://portswigger.net/web-security/access-control)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 121. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> request rules, method security, ownership/tenant checks\
+> Exploit path + mitigation + tests\
+> authn/authz, tenant isolation, secrets\
+> Ownership, roles/permissions, tenant boundaries
+
+### Exercise / interview prompt
+
+> RBAC + ownership tests\
+> Interview: 401 vs 403? broken object auth?\
+> Find auth/authorization/validation flaw\
+> Practice mode: AI-free Yes, AI-assisted Yes\
+> Design: Multi-tenant merchant portal\
+> Trade-off: least privilege vs usability
 
 ## Record one entry
 

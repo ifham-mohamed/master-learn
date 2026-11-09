@@ -2,10 +2,9 @@
 
 # JA33 — Maven or Gradle
 
-Week 14 · Core · Warehouse checkpoint B14
+Week 14 · Core · Warehouse checkpoint [B14](../../projects/B14/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,28 @@ Pin a reproducible build and package the backend. Use the same verification entr
 
 A clean clone runs the documented build and tests without relying on IDE state.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Run the wrapper from the terminal and identify which phases checked and packaged your change. [Maven build lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 147. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> dependencies, test/package, plugins/tasks\
+> dependencies, scopes/configurations, lifecycle/tasks, profiles\
+> dependency management, build lifecycle/tasks, test/package commands
+
+### Exercise / interview prompt
+
+> CLI build + container image\
+> Interview: Maven lifecycle? dependency scope?\
+> Build/test/package Spring app from CLI\
+> Maven or Gradle project\
+> Know one deeply; recognize both\
+> Build from CLI and inspect dependency tree
 
 ## Record one entry
 

@@ -2,8 +2,7 @@
 
 # DS08 — Solve 7 new DSA problems and revisit errors
 
-Week 8 · Core · Warehouse checkpoint B08
-
+Week 8 · Core · Warehouse checkpoint [B08](../../projects/B08/README.md)
 
 ## Review and learn
 
@@ -11,22 +10,34 @@ Practice graph traversal. State the invariant and time and space costs before co
 
 ## Do the work
 
-Solve 7 new problems from the Practice Bank. Revisit one prior error and use a warehouse scenario only where it fits the pattern.
+Use the Practice Bank to choose topics. Solve 7 new problems and retry one earlier mistake. Apply a warehouse example where the pattern fits.
 
 ## Pass check
 
 Record problem IDs, a failed case, corrected complexity, and one successful unaided reattempt.
 
-## References
+## Read and practice
 
-- [MIT Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)
-
+- Choose a challenge in the matching topic, solve it in Java and save its link or ID. [HackerRank interview practice](https://www.hackerrank.com/interview/interview-preparation-kit)
+- Predict the next operation on a relevant structure, then step through the animation. [VisuAlgo](https://visualgo.net/en)
+- Use the pattern rows to plan which topics to practice and check your targets. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
 ## Further architecture practice
 
-- 6. Measure algorithms against warehouse workloads · after B10. Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises.
+- **6. Measure algorithms against warehouse workloads.** Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises. Start after [B10](../../projects/B10/README.md).
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 96. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Record 7 distinct new problem IDs, explain complexity, and retry one earlier mistake without hints.
+
+### Exercise / interview prompt
+
+> Mixed review: trees + binary search + stacks (6 problems)\
+> Use Practice Bank for topic totals. Do not count repeat solutions as new problems.
 
 ## Record one entry
 

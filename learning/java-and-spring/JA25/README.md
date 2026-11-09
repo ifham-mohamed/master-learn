@@ -2,10 +2,9 @@
 
 # JA25 — Transactions
 
-Week 10 · Core · Warehouse checkpoint B10
+Week 10 · Core · Warehouse checkpoint [B10](../../projects/B10/README.md)
 
-Before you begin, complete JA23.
-
+Before you begin, complete [JA23](../../java-and-spring/JA23/README.md).
 
 ## Review and learn
 
@@ -19,21 +18,34 @@ Reserve all lines and update shipment state in one transaction. Inject a failure
 
 After failure, balances, reservations and shipment state are unchanged.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
-- [Service data ownership](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/)
-- [Transactional outbox](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html)
-- [RabbitMQ reliability](https://www.rabbitmq.com/docs/reliability)
-- [Apache Kafka concepts](https://kafka.apache.org/documentation/)
-
+- Identify the service boundary and prove rollback after a partial write. [Spring Data JPA transaction boundaries](https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html)
 
 ## Further architecture practice
 
-- 1. Establish service boundaries · after B14. A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split.
-- 2. Publish dispatch events through RabbitMQ · after B19. Roll back a dispatch, stop the broker after commit, interrupt the publisher before marking a send, and replay a poison message. Show zero events for the rollback, eventual delivery for the committed event and one consumer effect under redelivery.
+- **1. Establish service boundaries.** A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split. Start after [B14](../../projects/B14/README.md).
+- **2. Publish dispatch events through RabbitMQ.** Roll back a dispatch, stop the broker after commit, interrupt the publisher before marking a send, and replay a poison message. Show zero events for the rollback, eventual delivery for the committed event and one consumer effect under redelivery. Start after [B19](../../projects/B19/README.md).
 
+[Service data ownership](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/) · [Transactional outbox](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html) · [RabbitMQ reliability](https://www.rabbitmq.com/docs/reliability) · [Apache Kafka concepts](https://kafka.apache.org/documentation/)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 111. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> @Transactional boundaries, rollback, read-only, isolation concept\
+> multi-step atomic changes\
+> Use @Transactional, understand boundaries, rollback and propagation basics
+
+### Exercise / interview prompt
+
+> payment/order rollback lab\
+> Interview: where should transaction boundary live?\
+> Design: Checkout + inventory decrement\
+> Trade-off: consistency vs throughput\
+> Build rollback + concurrency tests
 
 ## Record one entry
 

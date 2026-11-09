@@ -4,8 +4,7 @@
 
 Week 10 · Core · Warehouse checkpoint B10
 
-Before you begin, complete B09.
-
+Before you begin, complete [B09](../../projects/B09/README.md).
 
 ## Review and learn
 
@@ -19,8 +18,27 @@ Reserve all shipment lines together. Add a cancel action that releases a reserva
 
 One request succeeds and one conflicts. Partial failure rolls back and available stock never becomes negative.
 
+## Read and practice
 
+- Open two sessions and record which statement blocks, commits or rolls back. [PostgreSQL explicit locking](https://www.postgresql.org/docs/18/explicit-locking.html)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 113. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Demonstrate the working output, relevant tests, and one design trade-off.
+
+### Exercise / interview prompt
+
+> CS/SQL: Isolation levels + locks/deadlocks + OS concurrency\
+> Design: Concurrency + atomic transactions\
+> AI practice: AI may suggest fixes; independently prove race safety\
+> Double-booking race lab using transaction/constraint/locking\
+> Concurrency - Prevent double booking\
+> Transactions - Checkout + inventory decrement\
+> Adversarial check: prove concurrency correctness independently
 
 ## Record one entry
 

@@ -2,10 +2,9 @@
 
 # TS10 — Generics
 
-Week 3 · Core · Warehouse checkpoint B03
+Week 3 · Core · Warehouse checkpoint [B03](../../projects/B03/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Use one typed result or page shape for shipments and inventory items.
 
 Both uses preserve the item type without unchecked casts.
 
-## References
+## Read and practice
 
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- Build a tiny fixture for this task and change one assumption to see the compiler response. [TypeScript Playground](https://www.typescriptlang.org/play/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 35. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> generic functions/types, constraints, inference
+
+### Exercise / interview prompt
+
+> generic table/API helper\
+> Interview: generic vs union?
 
 ## Record one entry
 

@@ -1,4 +1,5 @@
 import { isGitHubPages, assetUrl, staticFilePath } from "./deployment";
+import { slug, tasks } from "./tracker";
 export const learningLogPath = "notes/journal.md";
 export const taskGuidePath = "README.md";
 
@@ -37,6 +38,25 @@ export function learningManifestUrl(id: string) {
   return isGitHubPages
     ? assetUrl(`/learning-data/${encodeURIComponent(id)}/manifest.json`)
     : `/api/learning/${encodeURIComponent(id)}`;
+}
+
+export function resolveGuideReference(taskId: string, current: string, href: string) {
+  if (current !== taskGuidePath) return null;
+  const task = tasks.find((entry) => entry.id === taskId);
+  if (!task) return null;
+  const track = slug(task.category);
+  if (href === "../../../projects/warehouse-dispatch/README.md")
+    return assetUrl("/projects/#project-requirements");
+  if (href === "../../../sources/markdown/categories/practice-bank.md")
+    return assetUrl("/practice/");
+  const sourceRecord = `sources/markdown/categories/${track}.md#${task.id.toLowerCase()}`;
+  const workbook = "sources/Final%20Tracker.xlsx";
+  const source = [sourceRecord, workbook].find((path) => href === `../../../${path}`);
+  if (source) return `https://github.com/ifham-mohamed/master-learn/blob/main/${source}`;
+  const match = /^\.\.\/(?:\.\.\/([a-z0-9-]+)\/)?([A-Z]+\d+)\/README\.md$/.exec(href);
+  if (!match) return null;
+  const target = tasks.find((entry) => entry.id === match[2] && slug(entry.category) === (match[1] ?? track));
+  return target ? assetUrl(`/tasks/${target.id}/?file=${taskGuidePath}#learning-files`) : null;
 }
 
 /** Resolve relative document links against the selected file, confined to its task. */

@@ -2,10 +2,9 @@
 
 # JA21 — Validation + errors
 
-Week 7 · Core · Warehouse checkpoint B07
+Week 7 · Core · Warehouse checkpoint [B07](../../projects/B07/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Validate quantity and required fields, and map duplicate and invalid transition 
 
 Bad input and conflicts have distinct responses and no stack trace or partial write.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Transfer one constraint to the JSON API, then send an invalid request and inspect the response. [Spring input validation guide](https://spring.io/guides/gs/validating-form-input/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 81. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Bean Validation, global exception handling, stable error model
+
+### Exercise / interview prompt
+
+> validation + error response tests\
+> Interview: how validate API input?
 
 ## Record one entry
 

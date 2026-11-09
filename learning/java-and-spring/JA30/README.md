@@ -2,10 +2,9 @@
 
 # JA30 — Spring integration
 
-Week 13 · Core · Warehouse checkpoint B13
+Week 13 · Core · Warehouse checkpoint [B13](../../projects/B13/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,29 @@ Test shipment creation, validation and authorization at the API boundary with re
 
 The test suite checks response contracts and actual side effects, including a denied write.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Compare the boundaries of a service test and a web test. Pick the narrowest test that catches your failure. [Spring web testing guide](https://spring.io/guides/gs/testing-web/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 139. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> TestContext, MockMvc, transactional tests\
+> context tests, controller tests, transactions, failure paths\
+> DB/API integration, fixtures, failure behavior\
+> MockMvc/TestContext, transactions, API/DB failure paths
+
+### Exercise / interview prompt
+
+> controller + DB tests\
+> Interview: unit vs slice vs full integration?\
+> Test REST auth/validation/rollback\
+> Integration suite\
+> Interview-ready testing\
+> API integration suite
 
 ## Record one entry
 

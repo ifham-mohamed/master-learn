@@ -2,8 +2,7 @@
 
 # G02 — Run both toolchains and a first test from a clean clone
 
-Week 1 · Core · Warehouse checkpoint B01
-
+Week 1 · Core · Warehouse checkpoint [B01](../../projects/B01/README.md)
 
 ## Review and learn
 
@@ -17,8 +16,21 @@ Verify both toolchains. Compile a tiny Java file and run the smallest TypeScript
 
 Record tool versions, exact commands and real exit results.
 
+## Read and practice
 
+- Compile a tiny program from a clean folder and repeat the command without using the IDE. [Dev.java first steps](https://dev.java/learn/first-steps/)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 7. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Install compatible JDK/Node tools, pin project versions and lockfiles, run Java tests and TypeScript typecheck/tests, and commit setup instructions.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

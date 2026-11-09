@@ -256,7 +256,9 @@ export function Workspace({
           label="YOUR CONNECTED CURRICULUM"
           title="Explore your learning tracks"
           description="Eleven tracks contribute to the Warehouse Dispatch build, reviews and interview practice."
-        />
+        >
+          <Link className="button secondary" href="/roadmap">Open roadmap <ArrowRight size={15} /></Link>
+        </Heading>
         <div className="track-grid">
           {trackOrder.map((name) => (
             <TrackCard key={name} category={name} tasks={tasks} />
@@ -284,7 +286,7 @@ export function Workspace({
             tasks
           </span>
         </Heading>
-        <p><Link href="/projects#build-roadmap">See where these tasks fit in the project build order <ArrowRight size={15} /></Link></p>
+        <p><Link href={category ? `/roadmap#track-${slug(category)}` : "/roadmap"}>Explore {category ? "this track on the roadmap" : "the interactive roadmap"} <ArrowRight size={15} /></Link></p>
         <div className="filter-bar">
           <label className="search-field">
             <Search size={18} />
@@ -469,7 +471,9 @@ export function Workspace({
           label="SELF-CODING CAPSTONE"
           title="Warehouse Dispatch"
           description="From a terminal shipment to a secure, deployable warehouse application. Follow the build order and prove each step with your own tests."
-        />
+        >
+          <Link className="button secondary" href="/roadmap">Explore the roadmap <ArrowRight size={15} /></Link>
+        </Heading>
         <WarehousePath tasks={tasks} />
         <details className="panel tool-card">
           <summary>Archived workbook project profiles</summary>

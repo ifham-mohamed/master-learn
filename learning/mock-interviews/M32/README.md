@@ -2,8 +2,7 @@
 
 # M32 — Logs/metrics/query/app failure investigation
 
-Week 20 · Core · Warehouse checkpoint B20
-
+Week 20 · Core · Warehouse checkpoint [B20](../../projects/B20/README.md)
 
 ## Review and learn
 
@@ -11,14 +10,28 @@ Recall Logs/metrics/query/app failure investigation and the assumptions that aff
 
 ## Do the work
 
-Attempt the original timed prompt unaided. Use an actual B20 artifact if it illustrates the topic, or a self-contained fixture when it does not.
+Attempt a timed question on the topics in the task title unaided. Use an actual B20 artifact if it illustrates the topic, or create a small fixture.
 
 ## Pass check
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
+## Read and practice
 
+- Compare health output with a failed dependency and trace one request through the project. [Spring Boot Actuator guide](https://spring.io/guides/gs/actuator-service/)
+- Select a relevant question and answer it aloud before checking the notes. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 208. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Complete the timed round. Record technical and communication scores, result, evidence, and one correction before the next mock.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

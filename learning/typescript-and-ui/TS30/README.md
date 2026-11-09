@@ -2,10 +2,9 @@
 
 # TS30 — AI-generated TypeScript verification
 
-Week 16 · Core · Warehouse checkpoint B16
+Week 16 · Core · Warehouse checkpoint [B16](../../projects/B16/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Review a prepared flawed client patch manually. Write the correction yourself an
 
 Identify the flaw, prove it with a failing check, and explain the fix unaided.
 
-## References
+## Read and practice
 
-- [Thinking in React](https://react.dev/learn/thinking-in-react)
+- Review a prepared diff yourself and write the regression test for one defect you can reproduce. [GitHub pull request docs](https://docs.github.com/en/pull-requests)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 171. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> typecheck, tests, runtime validation, security, diff review
+
+### Exercise / interview prompt
+
+> 5 agentic repo tasks\
+> Interview: why can typed AI code still be wrong?
 
 ## Record one entry
 

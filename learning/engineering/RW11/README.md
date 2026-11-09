@@ -2,8 +2,7 @@
 
 # RW11 — Refactoring
 
-Week 14 · Core · Warehouse checkpoint B14
-
+Week 14 · Core · Warehouse checkpoint [B14](../../projects/B14/README.md)
 
 ## Review and learn
 
@@ -17,16 +16,29 @@ Remove duplication in a shipment rule or form component after writing characteri
 
 The same tests pass before and after and the behavior of a failure case is preserved.
 
-## References
+## Read and practice
 
-- [Service data ownership](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/)
-
+- Use history and a small diff to explain one code path or justify a minimal change. [Pro Git](https://git-scm.com/book/en/v2)
 
 ## Further architecture practice
 
-- 1. Establish service boundaries · after B14. A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split.
+- **1. Establish service boundaries.** A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split. Start after [B14](../../projects/B14/README.md).
 
+[Service data ownership](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 152. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Small safe steps; tests stay green\
+> Names, cohesion, duplication, interfaces, incremental refactors
+
+### Exercise / interview prompt
+
+> Improve design while preserving behavior\
+> Practice mode: AI-free Yes, AI-assisted Yes
 
 ## Record one entry
 

@@ -2,10 +2,9 @@
 
 # JA09 — Generics
 
-Week 3 · Core · Warehouse checkpoint B03
+Week 3 · Core · Warehouse checkpoint [B03](../../projects/B03/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Give a small lookup or result type two real uses, such as SKU and shipment queri
 
 Both callers type-check and an incompatible use fails compilation.
 
-## References
+## Read and practice
 
-- [Java language guides](https://dev.java/learn/language/)
+- Use a typed helper with two values and intentionally compile one incompatible call. [Dev.java generics and lambdas](https://dev.java/learn/language/fp/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 33. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> type parameters, bounds, invariance, wildcards basics
+
+### Exercise / interview prompt
+
+> generic repository/filter exercise\
+> Interview: ? extends vs ? super?
 
 ## Record one entry
 

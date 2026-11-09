@@ -2,10 +2,9 @@
 
 # JA13 — Records / sealed classes
 
-Week 4 · Core · Warehouse checkpoint B04
+Week 4 · Core · Warehouse checkpoint [B04](../../projects/B04/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,24 @@ Model a shipment summary as a record. Try a closed result type for accepted and 
 
 Map the result cases explicitly and explain which object must still manage mutable state.
 
-## References
+## Read and practice
 
-- [Java language guides](https://dev.java/learn/language/)
+- Try a shipment summary record and identify which properties can still hold mutable objects. [Dev.java records guide](https://dev.java/learn/language/oop/records/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 45. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> concise immutable carriers; constrained hierarchies\
+> records, sealed classes, pattern matching concepts, switch expressions
+
+### Exercise / interview prompt
+
+> DTO/value object refactor\
+> Interview: record vs class?\
+> Use records for DTO/value objects
 
 ## Record one entry
 

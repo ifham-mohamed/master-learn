@@ -2,10 +2,9 @@
 
 # G09 — Measure and explain the capstone result
 
-Week 20 · Core · Warehouse checkpoint B20
+Week 20 · Core · Warehouse checkpoint [B20](../../projects/B20/README.md)
 
-Before you begin, complete B20.
-
+Before you begin, complete [B20](../../projects/B20/README.md).
 
 ## Review and learn
 
@@ -19,16 +18,27 @@ Measure the capstone against its stated invariants and one performance target.
 
 Save real numbers, the workload, a trade-off and any limitation.
 
-## References
+## Read and practice
 
-- [RabbitMQ failure and recovery behavior](https://www.rabbitmq.com/docs/reliability)
-
+- Choose one reliability or performance question and answer it with a scenario and a check. [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
 
 ## Further architecture practice
 
-- 5. Prove the distributed system can recover · after B20. Save p95 latency, error rate, oldest queued event, recovery time and restored-data checks. Test a failed release and write a runbook another person can follow.
+- **5. Prove the distributed system can recover.** Save p95 latency, error rate, oldest queued event, recovery time and restored-data checks. Test a failed release and write a runbook another person can follow. Start after [B20](../../projects/B20/README.md).
 
+[RabbitMQ failure and recovery behavior](https://www.rabbitmq.com/docs/reliability)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 210. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Measure one before/after result, keep reproduction steps, and separate implemented features from proposed improvements.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

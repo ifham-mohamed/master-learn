@@ -2,10 +2,9 @@
 
 # TS14 — TypeScript configuration and migration awareness
 
-Week 8 · Core · Warehouse checkpoint B08
+Week 8 · Core · Warehouse checkpoint [B08](../../projects/B08/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,24 @@ Tighten checks for the shipment client and fix one real nullable or type boundar
 
 Save the original compiler diagnostic and the corrected check.
 
-## References
+## Read and practice
 
-- [Thinking in React](https://react.dev/learn/thinking-in-react)
+- Change one relevant check locally and record which diagnostic it adds or removes. [TypeScript configuration reference](https://www.typescriptlang.org/tsconfig/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 92. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> deprecated tsconfig cleanup; native compiler direction\
+> ESM/bundler defaults, deprecated config cleanup, modern tsconfig
+
+### Exercise / interview prompt
+
+> upgrade sample config\
+> Interview: what changed in TS 6 at high level?\
+> Upgrade sample project to TS 6
 
 ## Record one entry
 

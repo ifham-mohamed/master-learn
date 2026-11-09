@@ -2,10 +2,9 @@
 
 # JA16 — Memory / GC basics
 
-Week 4 · Core · Warehouse checkpoint B04
+Week 4 · Core · Warehouse checkpoint [B04](../../projects/B04/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,27 @@ Load a repeatable shipment fixture and inspect memory before and after releasing
 
 Save an observation and separate live data from temporary allocation.
 
-## References
+## Read and practice
 
-- [Java language guides](https://dev.java/learn/language/)
+- Capture a small memory observation and explain what your tool can measure. [Dev.java JVM tools](https://dev.java/learn/jvm/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 46. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> heap/stack, references, GC, memory leak patterns\
+> Stack/heap, references, garbage collection concept\
+> Stack/heap concepts, references, mutation, GC\
+> heap/stack, GC concept, class loading, profiling mindset
+
+### Exercise / interview prompt
+
+> heap/GC explanation notes\
+> Interview: how can Java still leak memory?\
+> Interview: What causes a memory leak?\
+> Explain memory leak scenarios
 
 ## Record one entry
 

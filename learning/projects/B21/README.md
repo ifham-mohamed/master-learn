@@ -4,8 +4,7 @@
 
 Week 21 · Core · Warehouse checkpoint B21
 
-Before you begin, complete B20.
-
+Before you begin, complete [B20](../../projects/B20/README.md).
 
 ## Review and learn
 
@@ -19,8 +18,26 @@ Run three timed exercises drawn from your CLI, stock reports and dispatch failur
 
 Save original attempts, fixes and unaided retests.
 
+## Read and practice
 
+- Use tied timestamps to test your report ordering. [PostgreSQL window functions tutorial](https://www.postgresql.org/docs/current/tutorial-window.html)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 216. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Demonstrate the working output, relevant tests, and one design trade-off.
+
+### Exercise / interview prompt
+
+> CS/SQL: Company-style CS/SQL revision\
+> Design: Timed design under interview constraints\
+> AI practice: AI prohibited practice\
+> Timed Java coding, SQL and debugging rounds; repair top 3 gaps\
+> Timed system-design practice #5: use capstone/booking/commerce prompt\
+> AI-free round - 60-min unaided mock
 
 ## Record one entry
 

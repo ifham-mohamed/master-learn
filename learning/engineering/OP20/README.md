@@ -2,8 +2,7 @@
 
 # OP20 — Python secondary language
 
-Week 16 · Optional · Warehouse checkpoint B16
-
+Week 16 · Optional · Warehouse checkpoint [B16](../../projects/B16/README.md)
 
 ## Review and learn
 
@@ -17,8 +16,21 @@ Build an optional local fixture checker for synthetic inventory CSV data.
 
 Show rejection of a duplicate SKU and an invalid quantity with clean results.
 
+## Read and practice
 
+- Test a tiny synthetic inventory file with both a valid row and a rejected one. [Python CSV library](https://docs.python.org/3/library/csv.html)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 168. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Write clean scripts/APIs; collections; typing; testing
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

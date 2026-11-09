@@ -2,8 +2,7 @@
 
 # FE32 — HTML/CSS fundamentals
 
-Week 5 · Core · Warehouse checkpoint B05
-
+Week 5 · Core · Warehouse checkpoint [B05](../../projects/B05/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,21 @@ Build the shipment entry form and list using semantic controls and narrow-screen
 
 Labels and errors are associated correctly and the page works on a narrow screen.
 
-## References
+## Read and practice
 
-- [Thinking in React](https://react.dev/learn/thinking-in-react)
+- Choose a semantic HTML or CSS exercise and apply the same idea to one shipment screen. [MDN Learn web development](https://developer.mozilla.org/en-US/docs/Learn_web_development)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 61. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Semantic HTML, layout, responsive design, forms
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

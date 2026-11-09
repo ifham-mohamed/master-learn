@@ -2,8 +2,7 @@
 
 # M15 — Test strategy: unit/integration/E2E
 
-Week 12 · Core · Warehouse checkpoint B12
-
+Week 12 · Core · Warehouse checkpoint [B12](../../projects/B12/README.md)
 
 ## Review and learn
 
@@ -11,14 +10,28 @@ Recall Test strategy: unit/integration/E2E and the assumptions that affect your 
 
 ## Do the work
 
-Attempt the original timed prompt unaided. Use an actual B12 artifact if it illustrates the topic, or a self-contained fixture when it does not.
+Attempt a timed question on the topics in the task title unaided. Use an actual B12 artifact if it illustrates the topic, or create a small fixture.
 
 ## Pass check
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
+## Read and practice
 
+- Compare the boundaries of a service test and a web test. Pick the narrowest test that catches your failure. [Spring web testing guide](https://spring.io/guides/gs/testing-web/)
+- Select a relevant question and answer it aloud before checking the notes. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 134. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Complete the timed round. Record technical and communication scores, result, evidence, and one correction before the next mock.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

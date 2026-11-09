@@ -2,10 +2,9 @@
 
 # TS12 — Interfaces vs type aliases
 
-Week 3 · Core · Warehouse checkpoint B03
+Week 3 · Core · Warehouse checkpoint [B03](../../projects/B03/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,22 @@ Define the shipment DTO shape and a closed union for its status or load state.
 
 Explain the type choice and show an incompatible DTO rejected by the checker.
 
-## References
+## Read and practice
 
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- Build a tiny fixture for this task and change one assumption to see the compiler response. [TypeScript Playground](https://www.typescriptlang.org/play/)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 37. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> extension, unions, declaration merging concept
+
+### Exercise / interview prompt
+
+> model API contracts both ways\
+> Interview: interface vs type?
 
 ## Record one entry
 

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowRight, BookOpen, Play, Pause, CalendarDays } from "lucide-react";
+import { ArrowRight, BookOpen, Map, Play, Pause } from "lucide-react";
 import { useTracker } from "./tracker-provider";
 import { useStudyClock } from "./study-timer";
 import { TaskList, Status } from "./task-list";
@@ -52,9 +52,9 @@ export function LearningOverview() {
           <h1>Learning overview</h1>
           <p>{formatDate(today)} · Warehouse Dispatch and your study schedule.</p>
         </div>
-        <Link className="button secondary" href="/weeks">
-          <CalendarDays size={16} />
-          Weekly plan
+        <Link className="button secondary" href="/roadmap">
+          <Map size={16} />
+          Learning roadmap
         </Link>
       </header>
       <div className="catalog-summary">

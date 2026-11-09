@@ -2,8 +2,7 @@
 
 # SD05 — Requirements
 
-Week 5 · Core · Warehouse checkpoint B05
-
+Week 5 · Core · Warehouse checkpoint [B05](../../projects/B05/README.md)
 
 ## Review and learn
 
@@ -17,16 +16,29 @@ Write requirements for receive, reserve, pick, dispatch and cancel. Rank the sma
 
 Each core requirement has one success and one failure example.
 
-## References
+## Read and practice
 
-- [Service data ownership](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/)
-
+- Choose one reliability or performance question and answer it with a scenario and a check. [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
 
 ## Further architecture practice
 
-- 1. Establish service boundaries · after B14. A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split.
+- **1. Establish service boundaries.** A boundary test catches a forbidden dependency. The last-unit and rollback tests still pass. State which data is authoritative and how you would roll back a split. Start after [B14](../../projects/B14/README.md).
 
+[Service data ownership](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-data-persistence/)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 66. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Functional/non-functional, constraints, scale\
+> Functional/non-functional requirements and constraints
+
+### Exercise / interview prompt
+
+> Design: Clarify a booking service\
+> Trade-off: scope vs time
 
 ## Record one entry
 

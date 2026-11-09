@@ -2,8 +2,7 @@
 
 # BE79 — Trade-off communication
 
-Week 20 · Core · Warehouse checkpoint B20
-
+Week 20 · Core · Warehouse checkpoint [B20](../../projects/B20/README.md)
 
 ## Review and learn
 
@@ -17,8 +16,21 @@ Explain one choice such as locks versus conditional updates, or session versus b
 
 State the chosen approach, the cost accepted and a condition that would change your choice.
 
+## Read and practice
 
+- Choose one format to rehearse and record a concrete point to improve on the next attempt. [Amazon software development interview topics](https://amazon.jobs/content/en/how-we-hire/interview-prep/software-development-topics)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 204. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Compare options, constraints and why one was chosen
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

@@ -2,8 +2,7 @@
 
 # M12 — Race-condition reproduction and safe fix
 
-Week 10 · Core · Warehouse checkpoint B10
-
+Week 10 · Core · Warehouse checkpoint [B10](../../projects/B10/README.md)
 
 ## Review and learn
 
@@ -11,14 +10,28 @@ Recall Race-condition reproduction and safe fix and the assumptions that affect 
 
 ## Do the work
 
-Attempt the original timed prompt unaided. Use an actual B10 artifact if it illustrates the topic, or a self-contained fixture when it does not.
+Attempt a timed question on the topics in the task title unaided. Use an actual B10 artifact if it illustrates the topic, or create a small fixture.
 
 ## Pass check
 
 Record time, result, both scores, one specific improvement, and an unaided retry.
 
+## Read and practice
 
+- Compare a single worker with two workers and bound how long the caller waits. [Oracle Java ExecutorService reference](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html)
+- Select a relevant question and answer it aloud before checking the notes. [Practice Bank](../../../sources/markdown/categories/practice-bank.md)
 
+## Workbook criteria
+
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 116. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> Complete the timed round. Record technical and communication scores, result, evidence, and one correction before the next mock.
+
+### Exercise / interview prompt
+
+The workbook leaves this cell blank.
 
 ## Record one entry
 

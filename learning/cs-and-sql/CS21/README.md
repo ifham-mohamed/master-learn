@@ -2,8 +2,7 @@
 
 # CS21 — HTTPS/TLS
 
-Week 6 · Core · Warehouse checkpoint B06
-
+Week 6 · Core · Warehouse checkpoint [B06](../../projects/B06/README.md)
 
 ## Review and learn
 
@@ -17,12 +16,21 @@ Inspect staging HTTPS and trace where TLS terminates. Use a local test endpoint 
 
 Show a valid connection and a rejected untrusted certificate case without bypassing validation.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
+- Inspect the certificate and hostname of a test endpoint and identify where TLS terminates. [MDN transport layer security](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 70. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> Encryption/authentication concept, certificates
+
+### Exercise / interview prompt
+
+> Interview: How does HTTPS protect traffic?
 
 ## Record one entry
 

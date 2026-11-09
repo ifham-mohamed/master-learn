@@ -2,10 +2,9 @@
 
 # JA31 — Testcontainers
 
-Week 14 · Core · Warehouse checkpoint B14
+Week 14 · Core · Warehouse checkpoint [B14](../../projects/B14/README.md)
 
-Before you begin, complete G02.
-
+Before you begin, complete [G02](../../engineering/G02/README.md).
 
 ## Review and learn
 
@@ -19,12 +18,28 @@ Run migrations and reservation integration tests against a disposable PostgreSQL
 
 A clean run passes twice with independent data. Preserve the concurrency test result.
 
-## References
+## Read and practice
 
-- [Spring guides by topic](https://spring.io/guides)
+- Run a PostgreSQL-backed test on disposable data and prove that a second run starts cleanly. [Spring Boot Testcontainers reference](https://docs.spring.io/spring-boot/reference/testing/testcontainers.html)
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 146. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
 
+### Done when
+
+> real dependency containers, reproducible DB integration\
+> real PostgreSQL/Redis integration tests in containers\
+> Run PostgreSQL/Redis dependencies for realistic integration tests
+
+### Exercise / interview prompt
+
+> Postgres container tests\
+> Interview: why not H2 for every integration test?\
+> Prove transaction/locking behavior against real DB\
+> Postgres Testcontainers suite\
+> Strong production signal\
+> Test against real Postgres container
 
 ## Record one entry
 

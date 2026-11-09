@@ -2,8 +2,7 @@
 
 # CS09 — Indexes
 
-Week 9 · Core · Warehouse checkpoint B09
-
+Week 9 · Core · Warehouse checkpoint [B09](../../projects/B09/README.md)
 
 ## Review and learn
 
@@ -17,16 +16,26 @@ Measure a filtered dispatch list query before and after an index on representati
 
 Save both plans and explain the measured change and index cost.
 
-## References
+## Read and practice
 
-- [PostgreSQL tutorial](https://www.postgresql.org/docs/current/tutorial.html)
-
+- Compare plans for the same fixture and explain the observed scan, join or sort. [PostgreSQL EXPLAIN tutorial](https://www.postgresql.org/docs/current/using-explain.html)
 
 ## Further architecture practice
 
-- 6. Measure algorithms against warehouse workloads · after B10. Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises.
+- **6. Measure algorithms against warehouse workloads.** Save a baseline, input size, edge cases and measured costs. Explain which structures belong in the main application and which remain interview or design exercises. Start after [B10](../../projects/B10/README.md).
 
+## Workbook criteria
 
+Use the warehouse steps above for the current build. The wording below comes from Master Plan row 99. [Final Tracker.xlsx](../../../sources/Final%20Tracker.xlsx)
+
+### Done when
+
+> B-tree concept, selectivity, composite order\
+> Choose indexes, composite order, scan trade-offs
+
+### Exercise / interview prompt
+
+> Interview: Why is this query slow?
 
 ## Record one entry
 
