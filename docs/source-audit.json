@@ -2,8 +2,8 @@
   "inventory": [
     {
       "path": "sources/Final Tracker.xlsx",
-      "bytes": 1229624,
-      "sha256": "9f12d6399f1a5545841ad9e05270b20409a3634eb5f200287e72697a2b6b51d7"
+      "bytes": 1759145,
+      "sha256": "de16715552569111e4b6a0f37354324eb257dafe3e52d6ff5f5e0f0d42daf739"
     },
     {
       "path": "sources/html/AI Engineering.html",
