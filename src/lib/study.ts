@@ -1,4 +1,6 @@
-export const PLAN_START = "2026-10-05";
+import trackerData from "../data/tracker.json";
+
+export const PLAN_START = trackerData.settings.startDate;
 export const STUDY_TIME_ZONE = "Asia/Colombo";
 export function planDate(dayOffset: number) {
   return new Date(Date.parse(`${PLAN_START}T00:00:00Z`) + dayOffset * 86400000)

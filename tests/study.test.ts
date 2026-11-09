@@ -12,11 +12,12 @@ import {
 import { tasks, tracker } from "../src/lib/tracker";
 import imported from "../src/data/tracker.json";
 
-test("schedule starts 5 October and preserves week durations across year boundaries", () => {
-  assert.equal(tracker.settings.startDate, "2026-10-05");
-  assert.equal(tracker.weeks[0].starts, "2026-10-05");
-  assert.equal(planDate(6), "2026-10-11");
-  assert.equal(planDate(167), "2027-03-21");
+test("schedule uses the workbook start and preserves week durations across year boundaries", () => {
+  assert.equal(tracker.settings.startDate, imported.settings.startDate);
+  assert.equal(tracker.weeks[0].starts, imported.settings.startDate);
+  for (const week of tracker.weeks)
+    assert.equal(week.starts, planDate((week.week - 1) * 7));
+  assert.equal(Date.parse(planDate(167)) - Date.parse(planDate(6)), 23 * 7 * 86400000);
   for (const task of tasks)
     assert.equal(task.dueDate, planDate(task.endWeek * 7 - 1));
   assert.deepEqual(tasks.map((task) => task.completedOn), imported.tasks.map((task) => task.completedOn));

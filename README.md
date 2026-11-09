@@ -44,7 +44,7 @@ Browsing is the default. **Edit progress** enables task-only editing: status, ev
 
 ## Schedule and task timers
 
-The application plan starts **5 October 2026**. Week 1 runs **5–11 October**, and the 24-week plan ends **21 March 2027**. Planned task starts use their start week; deadlines use the last day of their end week. The original workbook, imported JSON, and historical completion dates remain unchanged. The default schedule is set in `src/lib/study.ts`; change your personal start date, capacity and study days in Settings & backups. Saving it does not update the Google spreadsheet's start-date setting or formulas.
+The application imports its default start date, week starts, and task deadlines from [Final Tracker.xlsx](sources/Final%20Tracker.xlsx). Edit **Dashboard → Plan start (B4)**, let Excel recalculate, and save the workbook. GitHub Pages imports the workbook during deployment. For a local rebuild, run `python scripts/import_tracker.py` first. Week 1 currently runs **9–15 November 2026** and week 24 ends **25 April 2027**. Settings & backups can store a separate personal schedule for this browser.
 
 1. Open a task and choose **Start task**. Its status becomes In progress. Only one task can hold the timer at a time, including while paused.
 2. **Pause timer** saves the elapsed segment into Actual hours. **Resume task** starts another segment. **Stop & save time** releases the timer so you can start another task.

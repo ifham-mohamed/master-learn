@@ -1,6 +1,6 @@
 """Import the supplied workbook without modifying it. Requires openpyxl."""
 from pathlib import Path
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from collections import Counter
 from html.parser import HTMLParser
 import hashlib
@@ -51,7 +51,15 @@ tasks = records(wb['Master Plan'], 5, task_keys)
 practice = records(wb['Practice Bank'], 7, practice_keys)
 weeks = [r for r in records(wb['Weekly Review'], 9, week_keys) if isinstance(r['week'], (int, float))]
 guide = records(wb['Guide & Sources'], 7, guide_keys)
-data = {'settings': {'startDate': clean(wb['Weekly Review']['C4'].value), 'reviewInterval': wb['Weekly Review']['C5'].value}, 'tasks': tasks, 'practice': practice, 'weeks': weeks, 'guide': guide}
+start_value = wb['Dashboard']['B4'].value
+if not isinstance(start_value, (date, datetime)):
+    raise ValueError('Enter a date in Dashboard!B4.')
+start = start_value.date() if isinstance(start_value, datetime) else start_value
+if (clean(wb['Weekly Review']['C4'].value) != start.isoformat()
+        or any(week['starts'] != (start + timedelta(weeks=int(week['week']) - 1)).isoformat() for week in weeks)
+        or any(task['dueDate'] != (start + timedelta(days=int(task['endWeek']) * 7 - 1)).isoformat() for task in tasks)):
+    raise ValueError('Recalculate and save Final Tracker.xlsx in Excel before importing its schedule.')
+data = {'settings': {'startDate': start.isoformat(), 'reviewInterval': wb['Weekly Review']['C5'].value}, 'tasks': tasks, 'practice': practice, 'weeks': weeks, 'guide': guide}
 out = ROOT / 'src/data'
 out.mkdir(parents=True, exist_ok=True)
 (out / 'tracker.json').write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')

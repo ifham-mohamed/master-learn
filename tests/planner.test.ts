@@ -24,20 +24,21 @@ const progress = {
   mockResult: "",
 };
 test("schedule restricts task dates to selected study days without moving task weeks", () => {
-  assert.deepEqual(taskDates(source, defaultSchedule), {
-    start: "2026-10-05",
-    due: "2026-10-11",
+  const schedule = { ...defaultSchedule, start: "2026-11-09" };
+  assert.deepEqual(taskDates(source, schedule), {
+    start: "2026-11-09",
+    due: "2026-11-15",
   });
-  assert.deepEqual(taskDates(source, { ...defaultSchedule, days: [1, 3, 5] }), {
-    start: "2026-10-05",
-    due: "2026-10-09",
+  assert.deepEqual(taskDates(source, { ...schedule, days: [1, 3, 5] }), {
+    start: "2026-11-09",
+    due: "2026-11-13",
   });
 });
 test("backup validates legacy data and rejects corrupt progress and planner settings", () => {
   assert.equal(
     parseBackup(JSON.stringify({ version: 1, tasks: { CS12: progress } }))
       .planner.schedule.start,
-    "2026-10-05",
+    defaultSchedule.start,
   );
   assert.throws(() =>
     parseBackup(

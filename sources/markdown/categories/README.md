@@ -30,6 +30,6 @@ Attach the category document and name the task ID. Ask for theory, a practical e
 
 ## Source and regeneration
 
-All 16 original HTML sheets remain in `sources/html/`. The original schedule starts 29 September 2026; the app default is now 5 October 2026. These documents retain original dates and progress. Links and resource descriptions are inherited, not newly verified. Category export details are preserved after each category’s complete Master Plan records. No missing lessons, source text, or completion evidence is invented.
+All 16 original HTML sheets remain in `sources/html/`. The original schedule starts 29 September 2026. The current website schedule comes from the workbook Dashboard. These documents retain original dates and progress. Links and resource descriptions are inherited, not newly verified. Category export details are preserved after each category’s complete Master Plan records. No missing lessons, source text, or completion evidence is invented.
 
 Run `python scripts/export-html-markdown.py` to regenerate these documents. Generated files are overwritten; keep personal work in `learning/`.
