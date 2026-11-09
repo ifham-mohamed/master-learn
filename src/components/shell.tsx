@@ -117,7 +117,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
   );
   const pageTitle =
     navigation.find(([url]) => url === pathname)?.[1] ||
-    (pathname.startsWith("/tasks") ? "Task details" : "Learning tracks");
+    (pathname === "/all-secret-page" ? "Page directory" :
+      pathname.startsWith("/tasks") ? "Task details" : "Learning tracks");
   return (
     <div className={`app-shell ${collapsed ? "sidebar-collapsed" : ""}`}>
       <a className="skip-link" href="#main-content">
