@@ -1,4 +1,4 @@
-.handbook-quickstart { max-width: 820px; }
+.handbook-quickstart p { max-width: 72ch; }
 .handbook-steps { padding-inline-start: 1.6rem; }
 .handbook-steps li { padding: .75rem .25rem; border-bottom: 1px solid var(--border); }
 .handbook-steps li:last-child { border-bottom: 0; padding-bottom: 0; }
