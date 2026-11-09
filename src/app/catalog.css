@@ -724,9 +724,6 @@ button:disabled,
   font-size: 11px;
   color: var(--muted);
 }
-.catalog-deadlines .deadline-overdue {
-  color: var(--danger);
-}
 .catalog-disclosure {
   margin-top: 16px;
   font-size: 12px;

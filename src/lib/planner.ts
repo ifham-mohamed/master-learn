@@ -10,6 +10,7 @@ import { warehouseBrief, warehouseHoursPerDay } from "./warehouse";
 
 export type Schedule = {
   start: string;
+  followsWorkbook?: boolean;
   capacity: number;
   days: number[];
   focus: number;
@@ -31,6 +32,7 @@ export type Planner = {
 };
 export const defaultSchedule: Schedule = {
   start: PLAN_START,
+  followsWorkbook: true,
   capacity: warehouseHoursPerDay * 7,
   days: [0, 1, 2, 3, 4, 5, 6],
   focus: 25,
@@ -60,6 +62,7 @@ export function validSchedule(s: Schedule) {
   return (
     !!s &&
     validDate(s.start) &&
+    (s.followsWorkbook === undefined || typeof s.followsWorkbook === "boolean") &&
     s.start >= "2000-01-01" &&
     s.start <= "2100-01-01" &&
     Number.isFinite(s.capacity) &&
@@ -186,7 +189,17 @@ export function parsePlanner(value: unknown): Planner {
     )
   )
     throw new Error("Invalid sync history.");
-  return p;
+  // Older saves stored the October default as if it were a personal start date.
+  const followsWorkbook = p.schedule.followsWorkbook ??
+    (p.schedule.start === "2026-10-05" || p.schedule.start === PLAN_START);
+  return {
+    ...p,
+    schedule: {
+      ...p.schedule,
+      followsWorkbook,
+      start: followsWorkbook ? PLAN_START : p.schedule.start,
+    },
+  };
 }
 export function parseBackup(text: string): Backup {
   if (text.length > 10 * 1024 * 1024)

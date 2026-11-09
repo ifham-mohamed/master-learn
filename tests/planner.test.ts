@@ -4,6 +4,7 @@ import {
   defaultSchedule,
   taskDates,
   parseBackup,
+  parsePlanner,
   mergeBackup,
   emptyPlanner,
   readyTasks,
@@ -23,6 +24,15 @@ const progress = {
   communication: "",
   mockResult: "",
 };
+test("saved workbook schedules follow the current start without changing personal preferences", () => {
+  const planner = emptyPlanner();
+  const legacy = { ...planner, schedule: { ...planner.schedule, start: "2026-10-05", followsWorkbook: undefined, days: [1, 3, 5] } };
+  const migrated = parsePlanner(legacy);
+  assert.equal(migrated.schedule.start, defaultSchedule.start);
+  assert.deepEqual(migrated.schedule.days, [1, 3, 5]);
+  assert.equal(parsePlanner({ ...legacy, schedule: { ...legacy.schedule, followsWorkbook: false } }).schedule.start, "2026-10-05");
+  assert.equal(parsePlanner({ ...legacy, schedule: { ...legacy.schedule, start: "2026-10-12" } }).schedule.start, "2026-10-12");
+});
 test("schedule restricts task dates to selected study days without moving task weeks", () => {
   const schedule = { ...defaultSchedule, start: "2026-11-09" };
   assert.deepEqual(taskDates(source, schedule), {

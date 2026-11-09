@@ -1,6 +1,7 @@
 "use client";
 import { createContext, useContext, useEffect, useState, useMemo } from "react";
 import {
+  defaultSchedule,
   emptyPlanner,
   parsePlanner,
   parseBackup,
@@ -271,7 +272,10 @@ export function TrackerProvider({ children }: { children: React.ReactNode }) {
           change((next) => {
             if (!validSchedule(value))
               throw new Error("Check the schedule values.");
-            next.planner.schedule = value;
+            next.planner.schedule = {
+              ...value,
+              followsWorkbook: value.start === defaultSchedule.start,
+            };
           }),
         recordReview: (key, date) =>
           change((next) => {

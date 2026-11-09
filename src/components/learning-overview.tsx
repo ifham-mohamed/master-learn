@@ -23,8 +23,10 @@ export function LearningOverview() {
     tasks.find((task) => task.id === study.active?.taskId) || projectReady || ready[0];
   const running = !!study.active && study.active.startedAt !== null;
   const pending = tasks.filter((task) => !isComplete(task));
+  const overdue = pending.filter((task) => task.dueDate < today).length;
+  const windowEnd = addDays(today, 7);
   const due = pending
-    .filter((task) => task.dueDate <= addDays(today, 7))
+    .filter((task) => task.dueDate >= today && task.dueDate <= windowEnd)
     .sort((a, b) => a.dueDate.localeCompare(b.dueDate));
   const core = tasks.filter((task) => task.scope === "Core");
   const [busy, setBusy] = useState(false);
@@ -224,12 +226,7 @@ export function LearningOverview() {
                     <span>
                       {task.id} · {warehouseTitle(task)}
                     </span>
-                    <small
-                      className={task.dueDate < today ? "deadline-overdue" : ""}
-                    >
-                      {task.dueDate < today ? "Overdue · " : ""}
-                      {formatDate(task.dueDate)}
-                    </small>
+                    <small>{formatDate(task.dueDate)}</small>
                   </Link>
                 </li>
               ))}
@@ -238,7 +235,7 @@ export function LearningOverview() {
             <p>No deadlines in the next seven days.</p>
           )}
           <Link href="/plan">
-            View master plan <ArrowRight size={14} />
+            {overdue ? `View master plan · ${overdue} overdue` : "View master plan"} <ArrowRight size={14} />
           </Link>
         </section>
       </div>
