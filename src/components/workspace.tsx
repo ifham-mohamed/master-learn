@@ -11,7 +11,6 @@ const ApplicationGuide = dynamic(
 import { LearningOverview } from "./learning-overview";
 import { useState } from "react";
 import {
-  ArrowDownToLine,
   ArrowRight,
   ArrowUpRight,
   BookOpen,
@@ -24,7 +23,6 @@ import {
   Search,
   ShieldCheck,
   Target,
-  TrendingUp,
 } from "lucide-react";
 import {
   categories,
@@ -106,8 +104,6 @@ export function Workspace({
     tasks,
     preferences,
     setPreferences,
-    exportProgress,
-    localCount,
     planner,
   } = useTracker();
   const [resourceSearch, setResourceSearch] = useState("");
@@ -635,84 +631,11 @@ export function Workspace({
   return (
     <>
       <Heading
-        label="THE CONTEXT BEHIND THE PLAN"
-        title="Your application & practice handbook"
-        description="Keep the purpose, original guidance, and evidence behind every task close at hand."
-      >
-        <button className="button secondary" onClick={exportProgress}>
-          <ArrowDownToLine size={16} />
-          Export local progress
-        </button>
-      </Heading>
-      <div id="handbook-top">
-        <ApplicationGuide />
-      </div>
-      <section className="guide-intro" id="original-guidance">
-        <span className="track-icon color-0">
-          <TrendingUp size={24} />
-        </span>
-        <div>
-          <h2>Completion is evidence. Readiness is demonstrated.</h2>
-          <p>
-            Tasks count as complete when marked Done with evidence and a
-            completion date. Mocks also need technical and communication scores
-            and a result. A completed mock can still have a failed result.
-          </p>
-          <p>
-            Start date: <strong>{formatDate(planner.schedule.start)}</strong> ·
-            Review interval:{" "}
-            <strong>{tracker.settings.reviewInterval} days</strong> ·{" "}
-            <strong>{localCount}</strong> local task updates
-          </p>
-        </div>
-      </section>
-      <div className="inline-notice">
-        <ShieldCheck size={19} />
-        <span>
-          Browse by default. Turn on <strong>Edit progress</strong> to record
-          task progress on this device. Changes stay in this browser until you
-          explicitly review and sync to Google Sheets; your local source files
-          stay unchanged. Practice-bank counts and schedule settings remain
-          source snapshots.
-        </span>
-      </div>
-      <details className="panel tool-card">
-        <summary>Archived workbook guidance</summary>
-        <div className="guide-groups">
-        {["How to use", "Gap review", "Strategy", "Project interview"].map(
-          (type) => (
-            <section key={type} className="panel guide-section">
-              <div className="section-heading">
-                <h2>{type}</h2>
-                <span className="muted">
-                  {tracker.guide.filter((g) => g.type === type).length} notes
-                </span>
-              </div>
-              {tracker.guide
-                .filter((g) => g.type === type)
-                .map((g) => (
-                  <details key={g.sourceRow}>
-                    <summary>
-                      {g.title}
-                      <ChevronRight size={16} />
-                    </summary>
-                    <div>
-                      <p className="preserve-lines">{g.guidance}</p>
-                      <p className="muted">
-                        {g.relatedIds && `Related: ${g.relatedIds} · `}
-                        {g.verification}
-                      </p>
-                      {g.source && (
-                        <small>Original reference: {g.source}</small>
-                      )}
-                    </div>
-                  </details>
-                ))}
-            </section>
-          ),
-        )}
-        </div>
-      </details>
+        label="HANDBOOK"
+        title="Learnspace handbook"
+        description="Find your next task, write a short learning log, and read it on the site."
+      />
+      <ApplicationGuide />
     </>
   );
 }

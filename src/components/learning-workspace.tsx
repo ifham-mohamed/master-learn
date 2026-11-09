@@ -1,9 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { isValidElement, useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
 import { isGitHubPages } from "@/lib/deployment";
 import {
   BookOpen,
@@ -65,7 +65,6 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
   const [section, setSection] = useState<ContentSection>(initialFile ? "notes" : "theory");
   const [selectedPath, setSelectedPath] = useState(initialFile ?? "");
   const lastRequested = useRef<string | null | undefined>(undefined);
-  const filesDisclosure = useRef<HTMLDetailsElement>(null);
   const [error, setError] = useState("");
   const [refreshing, setRefreshing] = useState(false);
   const [refreshVersion, setRefreshVersion] = useState(0);
@@ -88,7 +87,6 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
           if (match) {
             setSection(match.section);
             setSelectedPath(match.path);
-            if (filesDisclosure.current) filesDisclosure.current.open = true;
           }
           lastRequested.current = requested;
         }
@@ -128,6 +126,7 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
   const files = manifest?.files.filter((f) => f.section === section) || [];
   const visibleSections = contentSections.filter((name) => name === "notes" || name === section || manifest?.files.some((file) => file.section === name));
   const selected = files.find((f) => f.path === selectedPath) || files[0];
+  const editorPath = manifest && (selected ? `${manifest.folder}/${selected.path}` : `${manifest.folder}/`);
   function openFile(filePath: string) {
     const file = manifest?.files.find((f) => f.path === filePath);
     if (!file) {
@@ -140,34 +139,29 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
   }
   async function copyPath() {
     try {
-      await navigator.clipboard.writeText(manifest?.folder || "");
+      if (!editorPath) return;
+      await navigator.clipboard.writeText(editorPath);
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
     } catch {
       setError(
-        "Could not copy the folder path. Select and copy the path shown below.",
+        "Could not copy the path. Select and copy it from the workspace.",
       );
     }
   }
   return (
-    <details
+    <section
+      id="learning-files"
       className="learning-workspace"
-      ref={filesDisclosure}
-      aria-label="Task learning workspace"
+      aria-labelledby="learning-files-heading"
     >
-      <summary className="learning-files-summary">Task files <span>Read the guide and any files you’ve saved</span></summary>
-      <div id="learning-files">
-      <Link className="workspace-help-link" href="/guide">
-        New here? Read the learning & coding guide →
-      </Link>
       <div className="learning-heading">
         <div>
-          <h2>Your task workspace</h2>
+          <h2 id="learning-files-heading">Your task workspace</h2>
           <p>
-            Your files, connected to your learning. Save in your editor and read
-            them here.{" "}
-            {isGitHubPages &&
-              "On GitHub Pages, commit and push your files; they appear after the next deployment."}
+            {isGitHubPages
+              ? "Edit your Markdown locally. Commit and push it to publish with the next site deployment."
+              : "Edit the file in your editor. The preview refreshes when you save."}
           </p>
         </div>
         <div className="learning-actions">
@@ -197,11 +191,11 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
           </button>
         </div>
       </div>
-      {manifest && (
+      {editorPath && (
         <div className="workspace-path">
           <FolderOpen size={15} />
-          <code>{manifest.folder}/</code>
-          <button onClick={copyPath} aria-label="Copy task folder path">
+          <code>{editorPath}</code>
+          <button onClick={copyPath} aria-label="Copy file path">
             {copied ? <Check size={15} /> : <Copy size={15} />}
           </button>
           <span role="status">{copied ? "Copied" : ""}</span>
@@ -267,7 +261,7 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
       <div
         className="learning-content"
         id="learning-content-panel"
-        role="tabpanel"
+        role={visibleSections.length > 1 ? "tabpanel" : "region"}
         aria-labelledby={visibleSections.length > 1 ? `learning-tab-${section}` : undefined}
         aria-label={visibleSections.length === 1 ? "Task guide and learning log" : undefined}
       >
@@ -346,8 +340,32 @@ export function LearningWorkspace({ taskId, initialFile }: { taskId: string; ini
           )}
         </div>
       </div>
-      </div>
-    </details>
+    </section>
+  );
+}
+
+function MarkdownCodeBlock({ children }: { children?: ReactNode }) {
+  const source = useRef<HTMLPreElement>(null);
+  const [copyStatus, setCopyStatus] = useState("");
+  const language = isValidElement<{ className?: string }>(children)
+    ? children.props.className?.match(/\blanguage-([\w+#.-]+)/)?.[1]
+    : undefined;
+  return (
+    <figure className="learning-code-block">
+      <figcaption>
+        <span>{language === "text" || !language ? "Plain text" : language}</span>
+        <button type="button" onClick={async () => {
+          try {
+            await navigator.clipboard.writeText(source.current?.textContent ?? "");
+            setCopyStatus("Copied");
+          } catch {
+            setCopyStatus("Select the text to copy it");
+          }
+        }}>Copy snippet</button>
+        {copyStatus && <span role="status">{copyStatus}</span>}
+      </figcaption>
+      <pre ref={source} tabIndex={0} aria-label={language ? `${language} snippet` : "Plain text snippet"}>{children}</pre>
+    </figure>
   );
 }
 
@@ -469,9 +487,11 @@ function DocumentViewer({
         <article className="learning-prose">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[[rehypeHighlight, { plainText: ["text", "txt", "plaintext", "output"] }]]}
             skipHtml
             urlTransform={transformUrl}
             components={{
+              pre: MarkdownCodeBlock,
               a: ({ href, children }) => {
                 const linked = files.find(
                   (entry) => learningFileUrl(taskId, entry.path, true) === href,

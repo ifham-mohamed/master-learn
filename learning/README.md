@@ -8,9 +8,9 @@ Start with [JA05 — the first warehouse terminal task](java-and-spring/JA05/REA
 
 1. Read the practice brief and try the work yourself.
 2. Open `notes/journal.md` in the task folder. For each session, record what you learned, what you tried and observed, and your next step. For example, the first log is [JA05 → Learning log](java-and-spring/JA05/notes/journal.md).
-3. If you prefer the website, use **Learning log** on the task page. Entries save to this browser. **Export entries** downloads Markdown you can append to `notes/journal.md`. **Task files** shows the file from your folder. On GitHub Pages the saved file appears after deployment.
+3. Use a fenced block marked `java`, `sql`, or the language you ran for code, and `text` for terminal output. Commit and push the file. On GitHub Pages, open **Learning log** in the task workspace after deployment.
 
-Keep shared project code in `projects/warehouse-dispatch/`. Use the task’s `code/` for isolated experiments and `results/` for output, screenshots, or reports that are too large for the log. Link them from your entry. Use **Copy to evidence draft** to reuse a browser entry when recording progress. Review the draft before saving it.
+Keep shared project code in `projects/warehouse-dispatch/`. Use the task’s `code/` for isolated experiments and `results/` for larger output, screenshots, or reports. Link them from your entry. Use **Update progress** on the task page when you have evidence to record.
 
 ## Categories
 

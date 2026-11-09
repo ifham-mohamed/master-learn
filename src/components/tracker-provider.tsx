@@ -10,7 +10,6 @@ import {
   type Planner,
   type Schedule,
   type Backup,
-  type Journal,
 } from "@/lib/planner";
 import { tasks as originalTasks, isComplete, type Task } from "@/lib/tracker";
 import { validateProgress, type Progress } from "@/lib/progress";
@@ -38,7 +37,6 @@ type Saved = {
 type Context = {
   planner: Planner;
   updateSchedule: (value: Schedule) => Promise<boolean>;
-  addJournal: (value: Omit<Journal, "id">) => Promise<boolean>;
   recordReview: (key: string, date: string) => Promise<boolean>;
   recordSync: (value: Record<string, Progress>) => Promise<boolean>;
   restoreBackup: (text: string, mode: "merge" | "replace") => Promise<boolean>;
@@ -274,17 +272,6 @@ export function TrackerProvider({ children }: { children: React.ReactNode }) {
             if (!validSchedule(value))
               throw new Error("Check the schedule values.");
             next.planner.schedule = value;
-          }),
-        addJournal: (value) =>
-          change((next) => {
-            const planner = {
-              ...next.planner,
-              journal: [
-                ...next.planner.journal,
-                { ...value, id: crypto.randomUUID() },
-              ],
-            };
-            next.planner = parsePlanner(planner);
           }),
         recordReview: (key, date) =>
           change((next) => {

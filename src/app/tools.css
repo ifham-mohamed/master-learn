@@ -180,7 +180,6 @@
 }
 .tools-page input:not([type="checkbox"]),
 .tools-page select,
-.learning-log input,
 .tool-card textarea,
 .tool-card select {
   max-width: 100%;
@@ -580,7 +579,6 @@
   }
   .tools-page input:not([type="checkbox"]),
   .tools-page select,
-  .learning-log input,
   .tool-card textarea {
     font-size: 16px;
   }

@@ -1,11 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { assetUrl, isGitHubPages } from "@/lib/deployment";
-import {
-  learningFileUrl,
-  learningManifestUrl,
-  type LearningManifest,
-} from "@/lib/learning-types";
 type InstallEvent = Event & {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: string }>;
@@ -130,8 +125,7 @@ export function InstallApp({
         <p>
           Android/desktop: choose Install in your browser menu. iPhone/iPad:
           open in Safari, tap Share → Add to Home Screen. Installation
-          availability depends on your browser. Download task files from a task
-          page for offline reading.
+          availability depends on your browser.
         </p>
       )}
       {update && (
@@ -149,98 +143,6 @@ export function InstallApp({
         </button>
       )}
       <span role="status">{message}</span>
-    </div>
-  );
-}
-export function OfflineTask({ id }: { id: string }) {
-  const [message, setMessage] = useState(""),
-    [busy, setBusy] = useState(false);
-  if (!isGitHubPages) return null;
-  return (
-    <div className="offline-task">
-      <h3>Read this task offline</h3>
-      <p>
-        Download its documents and attachments while online. Downloads stay on
-        this device; browser storage may be cleared. Activating an app update
-        clears downloaded tasks to avoid mixing versions; download them again
-        afterward.
-      </p>
-      <button
-        className="button secondary"
-        disabled={busy}
-        onClick={async () => {
-          setBusy(true);
-          setMessage("Downloading task…");
-          try {
-            if (!("serviceWorker" in navigator))
-              throw new Error(
-                "This browser does not support offline downloads.",
-              );
-            const response = await fetch(learningManifestUrl(id));
-            if (!response.ok) throw new Error("Could not read task files.");
-            const manifest: LearningManifest = await response.json();
-            if (
-              manifest.files.reduce((sum, f) => sum + f.bytes, 0) >
-              50 * 1024 * 1024
-            )
-              throw new Error(
-                "This task exceeds the 50 MB download limit. Download individual files instead.",
-              );
-            const cache = await caches.open("learnspace-tasks-v1");
-            const urls = [
-              assetUrl(`/tasks/${id}/`),
-              learningManifestUrl(id),
-              ...manifest.files.flatMap((f) =>
-                ["image", "pdf"].includes(f.kind)
-                  ? [learningFileUrl(id, f.path, true)]
-                  : [
-                      learningFileUrl(id, f.path),
-                      learningFileUrl(id, f.path, true),
-                    ],
-              ),
-            ];
-            for (let i = 0; i < urls.length; i += 4)
-              await Promise.all(
-                urls.slice(i, i + 4).map(async (url) => {
-                  const r = await fetch(url, { cache: "reload" });
-                  if (!r.ok)
-                    throw new Error(
-                      "Download incomplete. Reconnect and retry.",
-                    );
-                  await cache.put(url, r);
-                }),
-              );
-            const registration = await Promise.race([
-              navigator.serviceWorker.ready,
-              new Promise<never>((_, reject) =>
-                setTimeout(
-                  () =>
-                    reject(
-                      new Error(
-                        "Offline setup timed out. Reload online and retry.",
-                      ),
-                    ),
-                  15000,
-                ),
-              ),
-            ]);
-            if (!registration.active)
-              throw new Error("Offline setup is still preparing. Try again.");
-            setMessage(
-              `${manifest.files.length} files downloaded. Keep a backup of local progress too.`,
-            );
-          } catch (error) {
-            setMessage(
-              error instanceof Error ? error.message : "Download failed.",
-            );
-          } finally {
-            setBusy(false);
-          }
-        }}
-      >
-        Download task for offline use
-      </button>
-      <p role="status">{message}</p>
     </div>
   );
 }

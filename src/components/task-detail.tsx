@@ -4,7 +4,6 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { TaskTimer } from "./study-timer";
 import { studyDate } from "@/lib/study";
 import { taskDates, taskPrerequisites } from '@/lib/planner';
-import { TaskJournal } from './planning-tools';
 import {
   ArrowLeft,
   CalendarDays,
@@ -24,10 +23,10 @@ import {
 } from "@/lib/tracker";
 import { statuses, type Progress } from "@/lib/progress";
 import { LearningWorkspace } from "./learning-workspace";
-import { taskGuidePath } from "@/lib/learning-types";
+import { learningLogPath } from "@/lib/learning-types";
 import { checkpointHref, warehouseBrief, warehouseLabs, warehouseTitle } from "@/lib/warehouse";
 
-type ProgressRequest = { complete: boolean; evidence?: string };
+type ProgressRequest = { complete: boolean };
 
 export function TaskDetail({ id }: { id: string }) {
   const { tasks, editing, setEditing,planner } = useTracker();
@@ -99,8 +98,7 @@ export function TaskDetail({ id }: { id: string }) {
             ))}
           </p>}
           <div className="warehouse-actions">
-            <a className="button primary" href="#learning-journal">Write a learning log</a>
-            <a className="button secondary" href="#learning-files">Open task guide</a>
+            <a className="button primary" href="#learning-files">View task files</a>
             <button className="button secondary" onClick={() => {
               setEditing(true);
               setProgressRequest({ complete: false });
@@ -108,11 +106,7 @@ export function TaskDetail({ id }: { id: string }) {
           </div>
         </section>
       )}
-      <TaskJournal key={`journal-${id}`} id={id} category={task.category} onUseAsEvidence={(evidence) => {
-        setEditing(true);
-        setProgressRequest({ complete: false, evidence });
-      }} />
-      <LearningWorkspace key={id} taskId={id} initialFile={taskGuidePath} />
+      <LearningWorkspace key={id} taskId={id} initialFile={learningLogPath} />
       <div className="detail-layout">
         <div>
           <section className="panel detail-panel">
@@ -277,18 +271,15 @@ function ProgressForm({
   const isMock = task.workType === "Mock";
   useEffect(() => {
     if (!progressRequest) return;
-    const { complete, evidence } = progressRequest;
-    if (complete || evidence) {
+    if (progressRequest.complete) {
       // Preserve any evidence already saved or drafted for this task.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setForm((previous) => ({
         ...previous,
-        ...(complete && { status: "Done", completedOn: previous.completedOn || studyDate(Date.now()) }),
-        evidence: evidence && !previous.evidence.includes(evidence)
-          ? [previous.evidence.trim(), evidence].filter(Boolean).join("\n\n")
-          : previous.evidence,
+        status: "Done",
+        completedOn: previous.completedOn || studyDate(Date.now()),
       }));
-      if (complete) setStatusEdited(true);
+      setStatusEdited(true);
     }
     evidenceRef.current?.scrollIntoView({ block: "center" });
     evidenceRef.current?.focus({ preventScroll: true });
@@ -340,7 +331,7 @@ function ProgressForm({
           required={form.status === "Done"}
           rows={4}
           onChange={(e) => patch({ evidence: e.target.value })}
-          placeholder="Command or test, observed result, and a commit or result path if available."
+          placeholder="Reference the journal entry and summarize the result."
         />
       </label>
       <label>

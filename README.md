@@ -17,13 +17,13 @@ Open [the local workspace](http://localhost:3000). For a production build, run `
 
 Open **Today** for your next checkpoint or **Projects → Warehouse Dispatch** for the six phases. Start with **JA05**. Build a Java terminal shipment flow yourself, then grow the same project through Spring Boot, PostgreSQL, React, and staging. The [project README](projects/warehouse-dispatch/README.md) gives the warehouse rules and test scenarios. The [HTML plan](sources/warehouse-dispatch/index.html), [Markdown task index](sources/warehouse-dispatch/README.md), and **Warehouse Learning** tab in [Final Tracker.xlsx](sources/Final%20Tracker.xlsx) carry the same practice briefs.
 
-Each task shows what to review, what to build, and how to check it. Keep one short **Learning log** entry per session. Write it in Learnspace or in the task’s `notes/journal.md`. Use **Task files** to read the saved file and **Copy to evidence draft** to reuse a browser entry when updating progress. Keep runnable code and tests in `projects/warehouse-dispatch/` and larger output in the task’s `results/` folder.
+Each task shows what to review, what to build, and how to check it. Write one short entry in the task’s `notes/journal.md` in your editor. Use language-tagged fences for snippets and `text` for terminal output. The workspace displays the saved Markdown, and GitHub Pages displays it after you commit, push, and deploy. Use **Update progress** separately for task status and evidence.
 
 New schedules start at five hours per study day. If you already have a saved schedule, choose your days in **Settings & backups**, select **Use 5 hours per selected day**, then preview and save. The workbook's **Master Plan** remains the place to record spreadsheet progress.
 
 ## How to use it
 
-Open **Plan & guidance** for the searchable in-app application handbook. Its nine chapters cover first-session setup, navigation, task folders, a practice routine, running code and separate web projects, file formats, progress backups, the application codebase, and troubleshooting. The handbook is also linked from the learning library and every task workspace. Original workbook guidance remains below it.
+Open **Handbook** for the short edit-and-publish workflow and a copyable Markdown log template.
 
 Use the moon/sun button in the header to switch between pastel light and dark themes. Your choice is remembered on this browser; on first visit the app follows your system preference. The theme reveals outward from the button when browser support is available. Reduced-motion preferences and older browsers receive an immediate change. The graduation-cap favicon matches the workspace identity.
 
@@ -37,7 +37,7 @@ Use the panel button beside the Learnspace logo to collapse the desktop navigati
 - **Practice bank** contains expandable patterns and questions; practice counts remain the supplied workbook snapshot.
 - **Projects** lists the requirements, 24 ordered build checkpoints, their supporting tasks, and the [advanced architecture labs](sources/warehouse-dispatch/architecture.md).
 - **Resource library** keeps original notes separate from newly added official learning guides. HTTP availability was checked on 4 October 2026; this does not verify all inherited claims.
-- **Handbook** explains the current self-coding workflow and keeps workbook guidance under an archive disclosure.
+- **Handbook** explains how to write and publish a learning log. The [original workbook guidance](sources/markdown/categories/guide-and-sources.md) is kept in the source archive.
 
 Browsing is the default. **Edit progress** enables task-only editing: status, evidence, next action, hours, confidence, completion date, and mock scores/results. Updates are stored in this browser under `learnspace-progress-v1`, without accounts or a cloud service. Editing is switched off on reload. Progress and filters persist. **Export local progress** downloads a JSON backup; reviewed backup import is available in Settings & backups. Clearing browser storage removes local updates. The original workbook is never rewritten.
 
@@ -180,10 +180,9 @@ Google access now survives client-side navigation between app pages until its to
 ## Installed app and daily learning tools
 
 - **Install Learnspace:** use the button above page content or in Settings. On supported Android/desktop browsers it opens the install prompt; iPhone/iPad users get Safari → Share → Add to Home Screen instructions. Published GitHub Pages builds include the manifest, PNG icons and service worker. No app store account or additional hosting is needed.
-- **Offline tasks:** open a task and use Download task for offline use below its journal. The app caches its page, documents and attachments (50 MB per-task limit), plus the core app shell. A first successful online visit is required. Undownloaded pages show an offline fallback. Google sign-in and sync require internet. Browser storage eviction can remove downloads. An activated app update clears task downloads to avoid mixing versions; re-download them. Local progress is retained.
 - **Today:** resume a task, see available hours from weekly capacity and selected days, and start a task whose referenced prerequisites are complete. Written prerequisites still need your judgment. This is an advisory daily budget; the app does not automatically move tasks between weeks.
 - **Reviews:** compare allocated estimates, saved session hours, completed tasks, blockers and low-confidence topics for any week. Complete spaced reviews at 1, 3, 7 and 14 days after the task completion date. Historical completion dates are retained.
-- **Learning log:** record what you learned, what you tried and observed, and your next step. Export entries as Markdown to append to `notes/journal.md`. Browser entries are included in full backups.
+- **Learning log:** edit `notes/journal.md` locally, then commit and push to publish. Existing browser entries remain in full progress backups.
 - **Focus mode:** enable it on a task timer. Set focus/break lengths in Settings. Prompts appear while the app is open; the task keeps counting until explicitly paused. The break countdown is temporary and resets on reload. A two-hour running reminder helps catch missed pauses. No background push-notification service is used.
 - **Search content:** searches deployed theory, notes, code, results and resources and opens the matching file. Text files over 1 MB, images and PDFs are excluded from indexing. Local Node mode reads current learning files on opening Search; Pages updates the index on deployment. Search displays up to 50 matches and filters by section.
 - **Sync status:** shows task records changed since the last verified sync and its timestamp. This is a local estimate; Review changes fetches exact Google cell differences and conflicts. No tokens are included in backups. Phone/computer progress is not automatically synchronized; transfer a backup when changing devices.

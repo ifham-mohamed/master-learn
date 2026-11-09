@@ -9,7 +9,7 @@ import {
   taskFolder,
   MAX_TEXT_BYTES,
 } from "../src/lib/learning-files";
-import { learningLogEntry, resolveLearningLink } from "../src/lib/learning-types";
+import { resolveLearningLink } from "../src/lib/learning-types";
 
 test("a task guide and log are served without exposing other root files", async () => {
   const manifest = await getLearningManifest("JA05");
@@ -20,14 +20,6 @@ test("a task guide and log are served without exposing other root files", async 
   assert.match(guide.content, /Build it in small steps/);
   assert.equal(resolveLearningLink("README.md", "notes/journal.md"), "notes/journal.md");
   await assert.rejects(resolveLearningFile("JA05", "package.json"), /Unsupported/);
-});
-
-test("learning logs omit empty prompts and keep observed results readable", () => {
-  assert.equal(learningLogEntry(" ", "\n", ""), "");
-  assert.equal(learningLogEntry("  A map looks up by key. ", "", "Test a missing key."),
-    "What I learned: A map looks up by key.\n\nNext step: Test a missing key.");
-  assert.equal(learningLogEntry("", "Ran a test.\nThe missing case passed.", ""),
-    "What I tried and what happened: Ran a test.\nThe missing case passed.");
 });
 
 test("learning files refresh on add, edit, remove; exclude generated and hidden files", async () => {
